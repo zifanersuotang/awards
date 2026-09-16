@@ -1,0 +1,67 @@
+@[reducible] def Erdos79.GraphCode : Type :=
+(n : ℕ) × SimpleGraph.{0} (Fin n)
+@[reducible] def Erdos79.GraphCode.graph : (G : Erdos79.GraphCode) → SimpleGraph.{0} (Fin G.vertexCount) :=
+fun G => Sigma.snd.{0, 0} G
+def Erdos79.GraphCode.edgeCount : Erdos79.GraphCode → ℕ :=
+fun G => Nat.card.{0} ↑(SimpleGraph.edgeSet.{0} G.graph)
+def Erdos79.NoIsolated : Erdos79.GraphCode → Prop :=
+fun G => ∀ (v : Fin G.vertexCount), ¬SimpleGraph.IsIsolated.{0} G.graph v
+@[reducible] def Erdos79.IsContained : Erdos79.GraphCode → Erdos79.GraphCode → Prop :=
+fun F G => SimpleGraph.IsContained.{0, 0} F.graph G.graph
+def Erdos79.RamseyAt : Erdos79.GraphCode → Erdos79.GraphCode → ℕ → Prop :=
+fun F H N =>
+  ∀ (C : SimpleGraph.{0} (Fin N)),
+    SimpleGraph.IsContained.{0, 0} F.graph C ∨ SimpleGraph.IsContained.{0, 0} H.graph (compl.{0} C)
+def Erdos79.graphRamseyNumber : Erdos79.GraphCode → Erdos79.GraphCode → ℕ :=
+fun F H => Nat.find ⋯
+def Erdos570.cycleCode : ℕ → Erdos79.GraphCode :=
+fun k => Sigma.mk.{0, 0} k (SimpleGraph.cycleGraph k)
+Erdos570.erdos_570 : ∀ (k : ℕ),
+  LE.le.{0} 3 k →
+    ∃ M,
+      ∀ (H : Erdos79.GraphCode),
+        Erdos79.NoIsolated H →
+          LE.le.{0} M H.edgeCount →
+            LE.le.{0} (Erdos79.graphRamseyNumber (Erdos570.cycleCode k) H)
+              (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 H.edgeCount)
+                (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} k 1) 2))
+'Erdos570.erdos_570' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos570.eventual_triangle_bound : ∃ M,
+  ∀ (H : Erdos79.GraphCode),
+    Erdos79.NoIsolated H →
+      LE.le.{0} M H.edgeCount →
+        LE.le.{0} (Erdos79.graphRamseyNumber (Erdos570.cycleCode 3) H)
+          (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 H.edgeCount) (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} 3 1) 2))
+'Erdos570.eventual_triangle_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos570.eventual_c4_bound : ∃ M,
+  ∀ (H : Erdos79.GraphCode),
+    Erdos79.NoIsolated H →
+      LE.le.{0} M H.edgeCount →
+        LE.le.{0} (Erdos79.graphRamseyNumber (Erdos570.cycleCode 4) H)
+          (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 H.edgeCount) (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} 4 1) 2))
+'Erdos570.eventual_c4_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos570.eventual_even_cycle_bound_six_le : ∀ {k : ℕ},
+  LE.le.{0} 6 k →
+    Eq.{1} (HMod.hMod.{0, 0, 0} k 2) 0 →
+      ∃ M,
+        ∀ (H : Erdos79.GraphCode),
+          Erdos79.NoIsolated H →
+            LE.le.{0} M H.edgeCount →
+              LE.le.{0} (Erdos79.graphRamseyNumber (Erdos570.cycleCode k) H)
+                (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 H.edgeCount)
+                  (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} k 1) 2))
+'Erdos570.eventual_even_cycle_bound_six_le' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos570.eventual_odd_cycle_bound : ∀ {k : ℕ},
+  LE.le.{0} 5 k →
+    Eq.{1} (HMod.hMod.{0, 0, 0} k 2) 1 →
+      ∃ M,
+        ∀ (H : Erdos79.GraphCode),
+          Erdos79.NoIsolated H →
+            LE.le.{0} M H.edgeCount →
+              LE.le.{0} (Erdos79.graphRamseyNumber (Erdos570.cycleCode k) H)
+                (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 H.edgeCount)
+                  (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} k 1) 2))
+'Erdos570.eventual_odd_cycle_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos79.ramseyAt_iff_graphRamseyNumber_le : ∀ {F H : Erdos79.GraphCode} {N : ℕ},
+  Erdos79.RamseyAt F H N ↔ LE.le.{0} (Erdos79.graphRamseyNumber F H) N
+'Erdos79.ramseyAt_iff_graphRamseyNumber_le' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
