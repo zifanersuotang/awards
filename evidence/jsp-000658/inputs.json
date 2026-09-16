@@ -1,0 +1,29 @@
+{
+  "jsp": "JSP-000658",
+  "erdos": 801,
+  "module": "Erdos801",
+  "harness_module": "Audit801",
+  "main_theorem": "Erdos801.erdos_801",
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_path": "src/latest/ErdosProblems/Erdos801.lean",
+  "source_sha256": {
+    "Erdos801.lean": "18372cda6179febbcc2b09e4dae158388276ef7f1692094b4b4ba252cb7158cf",
+    "Audit801.lean": "339ab666e41f37c7cac4b279c07a7b5aec67a35a67654a75e39b9cfd41f080f1"
+  },
+  "preparation_only": false,
+  "statement_scope": "All sufficiently large n and graphs with independence number ≤floor(sqrt n); subset ≤floor(sqrt n), induced edge count ≥sqrt(n)*log(n) up to an absolute constant. Explicit cutoff and base-two logarithm preserve asymptotic statement.",
+  "scope_cautions": [],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0601-0700.md#JSP-000658",
+  "original_problem_url": "https://www.erdosproblems.com/801",
+  "verification_limit": "Successful observed replay is recorded in verified-run/verification.json.",
+  "informal_authors_as_credited": [
+    "Noga Alon"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lean_version": "4.33.0"
+}

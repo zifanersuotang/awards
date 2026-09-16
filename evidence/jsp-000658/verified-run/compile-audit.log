@@ -1,0 +1,7 @@
+Erdos801.erdos_801 :
+  ∃ C N,
+    0 < C ∧
+      ∀ n ≥ N,
+        ∀ (G : SimpleGraph (Fin n)),
+          G.indepNum ≤ n.sqrt → ∃ S, S.card ≤ n.sqrt ∧ n.sqrt * Nat.log 2 n ≤ C * Erdos801.edgeCountInside G S
+'Erdos801.erdos_801' depends on axioms: [propext, Classical.choice, Quot.sound]
