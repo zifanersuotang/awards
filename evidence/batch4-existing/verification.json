@@ -7,6 +7,72 @@
   "note": "Attributed existing-proof reproduction. Source hashes identify the tested checkout bytes, including inherited CRLF; immutable upstream commit and source paths identify original Git blobs. No source authorship, official acceptance, independently implemented checker, or network-isolated certification is asserted. Previously successful unchanged-source dependency checks may be reused across targets.",
   "entries": [
     {
+      "jsp": "JSP-000810",
+      "erdos": 977,
+      "targets": [
+        "Erdos977.erdos_977"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos977",
+          "path": "ErdosProblems/Erdos977.lean",
+          "sha256": "d332a4882658bc8ab5bbb3906a9348f8da55956e7bfddc0432a93e04aee7fccf"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos977"
+      ],
+      "axioms_output": "'Erdos977.erdos_977' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "The target proves that the greatest prime factor of two to the n minus one, divided by n, tends to positive infinity along all natural exponents. The greatest-prime-factor definition uses the maximum of the number’s actual prime factors, with a harmless convention for the small values zero and one. The final theorem is unconditional: it applies a uniform Fermat-quotient estimate proved within the source with a specified numerical constant. It is therefore stronger in logical form than the nearby transfer lemmas that assume Stewart’s or Yamada’s estimates, and it establishes the complete limit rather than only a subsequence or limsup.",
+        "caveat": "This covers the displayed Mersenne-number question. It does not settle the separate n!+1 question mentioned in the page commentary, and the selected target does not assert Stewart’s precise stronger quantitative bound.",
+        "full_original_problem_coverage": true
+      },
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos977",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 23.153,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "d332a4882658bc8ab5bbb3906a9348f8da55956e7bfddc0432a93e04aee7fccf",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos977-compile.log",
+          "log_sha256": "f0be47ad267336c89a152345d355faa4cda06d7915ff04e8c5a512435b6155fe"
+        },
+        {
+          "module": "ExistingChecks.Erdos977",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 15.498,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "6c474f69eceacaaeb4535f194501373d340a68be2dcf11adb0b070ac58602b52",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos977-compile.log",
+          "log_sha256": "bc2190ddcdb6e57f29a1c6cb895a9863072233ffe7ff97ab0dccde6e335c71e9"
+        },
+        {
+          "module": "ErdosProblems.Erdos977",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 21.61,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "d332a4882658bc8ab5bbb3906a9348f8da55956e7bfddc0432a93e04aee7fccf",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "log": "logs/ErdosProblems-Erdos977-replay.log",
+          "log_sha256": "04bf70e608fa411c6691350646d31efdff4dbd7b698ed3ac60d722ad1d6b24d7"
+        }
+      ]
+    },
+    {
       "jsp": "JSP-000821",
       "erdos": 988,
       "targets": [
@@ -88,6 +154,11 @@
       ],
       "axioms_output": "'Erdos992.not_erdos_992' depends on axioms: [propext, Classical.choice, Quot.sound]",
       "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "There is one strictly increasing integer sequence and one constant c>0 such that, for Lebesgue-almost every α in [0,1], its interval discrepancy is at least c sqrt(N log N) for infinitely many N tending to infinity. The sequence is fixed before α is quantified; the theorem does not choose a different sequence for each α. This is the counterexample result attributed to Berkes and Philipp and refutes both proposed smaller almost-everywhere growth bounds. It does not assert the lower bound at every large N or for every α.",
+        "caveat": "Existing attributed proof reproduction; no priority or award claim.",
+        "full_original_problem_coverage": true
+      },
       "steps": [
         {
           "module": "ErdosProblems.Erdos992",
@@ -281,6 +352,264 @@
       ]
     },
     {
+      "jsp": "JSP-000845",
+      "erdos": 1015,
+      "targets": [
+        "Erdos1015.erdos_1015",
+        "Erdos1015.erdos1015_eventual_uniform",
+        "Erdos1015.uniformRemainder_not_isBigO_id",
+        "Erdos1015.uniformRoot_not_tendsto_one"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1015",
+          "path": "ErdosProblems/Erdos1015.lean",
+          "sha256": "5cc1b7cfbe7b26e6a6f830b359ae7f9d33c80afe83d114f1f147241b5a7f8ffe"
+        },
+        {
+          "module": "ErdosProblems.Erdos1037",
+          "path": "ErdosProblems/Erdos1037.lean",
+          "sha256": "8fdd891d610aa9d877029d58f9cc8ae1e2dff4aa63fccf4c6f13b23381478ca3"
+        },
+        {
+          "module": "Util.Ramsey",
+          "path": "Util/Ramsey.lean",
+          "sha256": "5e191a282cf403a10afc99065915a72ff832113cb46f5de1c3c7933d9716d75e"
+        }
+      ],
+      "compile_order": [
+        "Util.Ramsey",
+        "ErdosProblems.Erdos1037",
+        "ErdosProblems.Erdos1015"
+      ],
+      "axioms_output": "'Erdos1015.erdos_1015' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1015.erdos1015_eventual_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1015.uniformRemainder_not_isBigO_id' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1015.uniformRoot_not_tendsto_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "The selected targets resolve the intended question for sufficiently large host order, using vertex-disjoint monochromatic complete graphs in either color. For each t at least three, the exact optimum under the inclusive remaining-at-most convention is R minus one plus the residue of n minus (R minus one) modulo t, where R is the Ramsey number R(t,t-1). The optimal eventual bound independent of the host residue is R plus t minus two. Separate selected theorems prove that this optimal bound is not O(t) and that its t-th roots do not converge to one, addressing both asymptotic questions.",
+        "caveat": "The webpage mixes an inclusive wording with a formula for the strict threshold. The source explicitly separates them: Erdos1015.erdos1015_strict_exact proves the printed R+residue formula for remaining<b. Full coverage here uses the webpage’s stated intended sufficiently-large-n interpretation, not an optimal bound for every small host order. All four selected targets must be checked if all four conclusions are registered.",
+        "full_original_problem_coverage": true
+      },
+      "steps": [
+        {
+          "module": "Util.Ramsey",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 15.237,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "5e191a282cf403a10afc99065915a72ff832113cb46f5de1c3c7933d9716d75e",
+          "tool": "lean.exe",
+          "log": "logs/Util-Ramsey-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1037",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 28.863,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "8fdd891d610aa9d877029d58f9cc8ae1e2dff4aa63fccf4c6f13b23381478ca3",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1037-compile.log",
+          "log_sha256": "a02b4c1a9795454a3712abeb6dbee209be838eba3178e980154e070f81ebf2e5"
+        },
+        {
+          "module": "ErdosProblems.Erdos1015",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 16.265,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "5cc1b7cfbe7b26e6a6f830b359ae7f9d33c80afe83d114f1f147241b5a7f8ffe",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1015-compile.log",
+          "log_sha256": "18968683b31e6bcf0ca1089863d48b92e62e4047c1dc4fa4438bf50a06e90364"
+        },
+        {
+          "module": "ExistingChecks.Erdos1015",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 15.797,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "2742479bab9fc4f8127d12f3d052e0f027bdb173ff4c8afbaee99b5536030e8b",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1015-compile.log",
+          "log_sha256": "25a7ff4355c9e4c064958e021cac3087def7c06a9e09b71926b19ccdc4149932"
+        },
+        {
+          "module": "Util.Ramsey",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 26.698,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "5e191a282cf403a10afc99065915a72ff832113cb46f5de1c3c7933d9716d75e",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "log": "logs/Util-Ramsey-replay.log",
+          "log_sha256": "e5a81016cba9c9f3026897d10ec97a19d22c93c6dab6a0f96e558e862034e7e9"
+        },
+        {
+          "module": "ErdosProblems.Erdos1037",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 20.853,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "8fdd891d610aa9d877029d58f9cc8ae1e2dff4aa63fccf4c6f13b23381478ca3",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "log": "logs/ErdosProblems-Erdos1037-replay.log",
+          "log_sha256": "0deafc69201e6d0738223e7c39f12d21ed988dbf42f3d11158d01642fc54b697"
+        },
+        {
+          "module": "ErdosProblems.Erdos1015",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 21.756,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "5cc1b7cfbe7b26e6a6f830b359ae7f9d33c80afe83d114f1f147241b5a7f8ffe",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "log": "logs/ErdosProblems-Erdos1015-replay.log",
+          "log_sha256": "ce1052be60b0b8c918c860a1b0431f20ce2d38f72cf2b0d32e96b97e3dcdbe80"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-000851",
+      "erdos": 1021,
+      "targets": [
+        "Erdos1021.erdos_1021"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1021",
+          "path": "ErdosProblems/Erdos1021.lean",
+          "sha256": "93ae3f71ccfaf4dcd9107cdf5e3f48cb748af9e180d0739007630bf8567bf366"
+        },
+        {
+          "module": "ErdosProblems.Erdos182.Elementary",
+          "path": "ErdosProblems/Erdos182/Elementary.lean",
+          "sha256": "9543d87b16892cc9960c562b678026f41e589468124b1b3654235ced35c282d9"
+        },
+        {
+          "module": "ErdosProblems.Erdos182.Foundations",
+          "path": "ErdosProblems/Erdos182/Foundations.lean",
+          "sha256": "648d0c921196c211d0ece0bc5c23f92659a79620a711dfdfbbab0d680da59406"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos182.Foundations",
+        "ErdosProblems.Erdos182.Elementary",
+        "ErdosProblems.Erdos1021"
+      ],
+      "axioms_output": "'Erdos1021.erdos_1021' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "For every fixed natural k at least three, the target proves a positive power saving below n to the three-halves power for the extremal number of the one-subdivision of the complete graph on k vertices. The graph is defined by the incidence relation between the original k vertices and their two-element subsets, matching the graph in the question. The final theorem supplies the positive saving itself, using Janzer’s value one divided by (four k minus six), and proves the required asymptotic upper bound for this actual graph. Both the exponent and implicit constant may depend on k.",
+        "caveat": "Covers every fixed k at least three, not just the six-cycle case k=3. It does not claim the optimal saving, a matching lower bound, or an implicit constant uniform in k.",
+        "full_original_problem_coverage": true
+      },
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos182.Foundations",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 5.652,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "648d0c921196c211d0ece0bc5c23f92659a79620a711dfdfbbab0d680da59406",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos182-Foundations-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos182.Elementary",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 11.797,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "9543d87b16892cc9960c562b678026f41e589468124b1b3654235ced35c282d9",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos182-Elementary-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1021",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 21.361,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "93ae3f71ccfaf4dcd9107cdf5e3f48cb748af9e180d0739007630bf8567bf366",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1021-compile.log",
+          "log_sha256": "aa3c5208778f47d41b2226caa17f060efe971aa591a793cd608e3787f0e24e6d"
+        },
+        {
+          "module": "ExistingChecks.Erdos1021",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 9.465,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "cca4f2c1e7e2fe38139a03b369a4713dca97a664f68ec4d80ac73fa0a492e027",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1021-compile.log",
+          "log_sha256": "aa3c5208778f47d41b2226caa17f060efe971aa591a793cd608e3787f0e24e6d"
+        },
+        {
+          "module": "ErdosProblems.Erdos182.Foundations",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 21.052,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "648d0c921196c211d0ece0bc5c23f92659a79620a711dfdfbbab0d680da59406",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos182-Foundations-replay.log",
+          "log_sha256": "e52bbe2a1b897ece85688292eb6a482a4b8280e2410664e885c3d3e0696ebf96"
+        },
+        {
+          "module": "ErdosProblems.Erdos182.Elementary",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 21.073,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "9543d87b16892cc9960c562b678026f41e589468124b1b3654235ced35c282d9",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos182-Elementary-replay.log",
+          "log_sha256": "7aa00bd3624f346d8624be13cbf4a7a48295afd364ad29300f557a00f1cbe3ee"
+        },
+        {
+          "module": "ErdosProblems.Erdos1021",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 18.043,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "93ae3f71ccfaf4dcd9107cdf5e3f48cb748af9e180d0739007630bf8567bf366",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1021-replay.log",
+          "log_sha256": "8f9e56595c0eb51222808cac93f7e96dba0d5e1ac7709233223667abd52fd1f7"
+        }
+      ]
+    },
+    {
       "jsp": "JSP-000857",
       "erdos": 1031,
       "targets": [
@@ -368,6 +697,11 @@
       ],
       "axioms_output": "'Erdos1046.erdos_1046' depends on axioms: [propext, Classical.choice, Quot.sound]",
       "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "For every monic complex polynomial, if its open unit lemniscate is connected then that lemniscate is contained in an open disk of radius 2. The proof uses the centroid of its roots. This is Pommerenke’s affirmative radius-two result; the separate diameter/width questions mentioned in the problem discussion are outside the submitted target.",
+        "caveat": "Existing attributed proof reproduction; no priority or award claim.",
+        "full_original_problem_coverage": true
+      },
       "steps": [
         {
           "module": "ErdosProblems.Erdos1046.Erdos1046Jensen",
@@ -606,6 +940,11 @@
       ],
       "axioms_output": "'Erdos1079.erdos_problem_1079' depends on axioms: [propext, Classical.choice, Quot.sound]",
       "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "For every r ≥ 4 and n ≥ 2, any n-vertex graph with at least ex(n,K_r) edges has a maximum-degree vertex of degree d ≥ n/2 whose open neighbourhood contains at least ex(d,K_(r−1)) edges. The tested target is the non-strict threshold result. Mathematical attribution: Bollobás and Thomason; the source also credits Bondy for the separate strict strengthening.",
+        "caveat": "Existing attributed proof reproduction; no priority or award claim.",
+        "full_original_problem_coverage": true
+      },
       "steps": [
         {
           "module": "ErdosProblems.Erdos1079",
@@ -664,6 +1003,11 @@
       ],
       "axioms_output": "'Erdos1089.erdos_1089' depends on axioms: [propext, Classical.choice, Quot.sound]",
       "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "For every fixed n ≥ 2, the genuine minimal forcing number g_d(n) for distinct distances in Euclidean d-space lies between binomial(d+1,n−1)+1 and binomial(d+n−1,n−1)+1. Its quotient by d^(n−1) tends to 1/(n−1)! as d tends to infinity. This is the fixed-n asymptotic question, not an exact formula for every d,n. The lower construction is attributed to Aletheia and the upper bound to Bannai, Bannai and Stanton.",
+        "caveat": "Existing attributed proof reproduction; no priority or award claim.",
+        "full_original_problem_coverage": true
+      },
       "steps": [
         {
           "module": "ErdosProblems.Erdos1089",
@@ -700,6 +1044,249 @@
           "tool": "leanchecker.exe",
           "log": "logs/ErdosProblems-Erdos1089-replay.log",
           "log_sha256": "e567e9b942b8d76eb66a0ca3be56eded13bf5a72cede38cb97494062ebf05a5b"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-000912",
+      "erdos": 1099,
+      "targets": [
+        "Erdos1099.erdos_1099"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1099",
+          "path": "ErdosProblems/Erdos1099.lean",
+          "sha256": "f478bacb97dca82d3751f69cedb63ff2ab3d274ff2fc2ef6663de634604fb196"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Shell",
+          "path": "ErdosProblems/Erdos1099/Shell.lean",
+          "sha256": "9fb4aca4d3bea3a114d5e0b71a6d552a67be224a3efbb14f54f88c1f7c7897d8"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Refinement",
+          "path": "ErdosProblems/Erdos1099/Refinement.lean",
+          "sha256": "95a8a25f2fe44e794a459e1e7f5abee9d857fb2bb0058d4e5ce0e4da187a0c63"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Basic",
+          "path": "ErdosProblems/Erdos1099/Basic.lean",
+          "sha256": "08e0ffeb5c966d4f58aa1cfda5f62f8aa8a74c548a1e6410509321ed107e6c05"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Energy",
+          "path": "ErdosProblems/Erdos1099/Energy.lean",
+          "sha256": "08fc1dafebab791cf4ffca8292df0720e0063577fe9bcda388bfaa7b97ed6765"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Net",
+          "path": "ErdosProblems/Erdos1099/Net.lean",
+          "sha256": "e172a7100b45aaf1088a7849aacb7e259d44970bd85ce96812fef453c2bce8fe"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Construction",
+          "path": "ErdosProblems/Erdos1099/Construction.lean",
+          "sha256": "4e011fefb75289c26355ee0d0ef6dbb6c17b4124a895950d333c1d67ee27f129"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1099.Basic",
+        "ErdosProblems.Erdos1099.Construction",
+        "ErdosProblems.Erdos1099.Net",
+        "ErdosProblems.Erdos1099.Energy",
+        "ErdosProblems.Erdos1099.Refinement",
+        "ErdosProblems.Erdos1099.Shell",
+        "ErdosProblems.Erdos1099"
+      ],
+      "axioms_output": "'Erdos1099.erdos_1099' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "For every real alpha > 1, the target provides a finite nonnegative constant C, depending on alpha, such that h_alpha(n) <= C for arbitrarily large natural numbers n and the liminf of h_alpha is at most C. Here h_alpha sums the alpha-th powers of consecutive relative gaps in the complete increasing list of positive divisors, using (d_{i+1}/d_i-1)^alpha. The proof supplies an explicit cofinal Vose sequence, rather than relying on finitely many examples or a merely assumed sequence. This is the primary bounded-liminf assertion; it does not identify the separate factorial or least-common-multiple sequences as successful witnesses.",
+        "caveat": "The bound depends on alpha > 1 and holds for arbitrarily large n, not eventually for every n. The theorem establishes the main bounded-liminf question via its explicit Vose sequence. It does not resolve the page's separate questions for n!, lcm(1,...,n), or the alpha=1 logarithmic variant. The seven-file source closure and its notices must be preserved.",
+        "full_original_problem_coverage": true
+      },
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1099.Basic",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 8.82,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "08e0ffeb5c966d4f58aa1cfda5f62f8aa8a74c548a1e6410509321ed107e6c05",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1099-Basic-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Construction",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 8.459,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "4e011fefb75289c26355ee0d0ef6dbb6c17b4124a895950d333c1d67ee27f129",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1099-Construction-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Net",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 9.186,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "e172a7100b45aaf1088a7849aacb7e259d44970bd85ce96812fef453c2bce8fe",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1099-Net-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Energy",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 8.405,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "08fc1dafebab791cf4ffca8292df0720e0063577fe9bcda388bfaa7b97ed6765",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1099-Energy-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Refinement",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 9.145,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "95a8a25f2fe44e794a459e1e7f5abee9d857fb2bb0058d4e5ce0e4da187a0c63",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1099-Refinement-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Shell",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 10.194,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "9fb4aca4d3bea3a114d5e0b71a6d552a67be224a3efbb14f54f88c1f7c7897d8",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1099-Shell-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 8.513,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "f478bacb97dca82d3751f69cedb63ff2ab3d274ff2fc2ef6663de634604fb196",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1099-compile.log",
+          "log_sha256": "8d7275781316a4093470d87eea8172a431eec9d8189b9ed14d211d6d0d1b7378"
+        },
+        {
+          "module": "ExistingChecks.Erdos1099",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 8.202,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "63c2cf4d28a34e89f605d6dea9730ceb21c5a0b271ee29eeb51bea17cc20127d",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1099-compile.log",
+          "log_sha256": "8d7275781316a4093470d87eea8172a431eec9d8189b9ed14d211d6d0d1b7378"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Basic",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 15.256,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "08e0ffeb5c966d4f58aa1cfda5f62f8aa8a74c548a1e6410509321ed107e6c05",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1099-Basic-replay.log",
+          "log_sha256": "e7181fb402f92d979f71818d7affb4420066a385f1dc173a16af0427cee746fb"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Construction",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 15.914,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "4e011fefb75289c26355ee0d0ef6dbb6c17b4124a895950d333c1d67ee27f129",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1099-Construction-replay.log",
+          "log_sha256": "7d171236d574abf76da5a8894f880684fb446fcb4dc9fd80f29847c767af1100"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Net",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 15.888,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "e172a7100b45aaf1088a7849aacb7e259d44970bd85ce96812fef453c2bce8fe",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1099-Net-replay.log",
+          "log_sha256": "228522b13ffbb31f1ba176da62b8858095606830d62726d47e7d93cdc820d697"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Energy",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 17.621,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "08fc1dafebab791cf4ffca8292df0720e0063577fe9bcda388bfaa7b97ed6765",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1099-Energy-replay.log",
+          "log_sha256": "e5ecbb1bc5ac691a705656262b4ddcee2da7544d7b5b69bce333361ef7772724"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Refinement",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 16.361,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "95a8a25f2fe44e794a459e1e7f5abee9d857fb2bb0058d4e5ce0e4da187a0c63",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1099-Refinement-replay.log",
+          "log_sha256": "0800176d0d9cf059a22085eb17815907ee62614bf45db7d7c9fd145275bf0a43"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099.Shell",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 19.225,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "9fb4aca4d3bea3a114d5e0b71a6d552a67be224a3efbb14f54f88c1f7c7897d8",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1099-Shell-replay.log",
+          "log_sha256": "8ee421042457cbe4371eb14affc5470cf589f2929aedce7cf6d7f4b211d6592b"
+        },
+        {
+          "module": "ErdosProblems.Erdos1099",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 52.242,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "f478bacb97dca82d3751f69cedb63ff2ab3d274ff2fc2ef6663de634604fb196",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1099-replay.log",
+          "log_sha256": "3f79620867dbf5469205d37a82aaa170504636774d89f2bb0d3b09bed12d2181"
         }
       ]
     },
@@ -785,6 +1372,11 @@
       ],
       "axioms_output": "'Erdos1180.erdos_1180' depends on axioms: [propext, Classical.choice, Quot.sound]",
       "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "For every ε>0 there is a constant C depending only on ε such that, for every prime p, every residue modulo p is a sum of at most C inverses of admissible positive integers n≤p^ε. The source excludes denominators divisible by p and handles small primes too. This registers the uniform existence assertion, without claiming the optimal dependence of C on ε. The historical affirmative result is attributed to Shparlinski, with the later Glibichuk method used in the source.",
+        "caveat": "Existing attributed proof reproduction; no priority or award claim.",
+        "full_original_problem_coverage": true
+      },
       "steps": [
         {
           "module": "ErdosProblems.Erdos1180",
@@ -843,6 +1435,11 @@
       ],
       "axioms_output": "'Erdos1185.not_erdos_1185' depends on axioms: [propext, Classical.choice, Quot.sound]",
       "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "The uniform arithmetic-progression assertion is false already at density δ=1/200 and length k=3: for every proposed lower bound m on the size of B and every threshold N₀, the source constructs N≥N₀ and subsets A,B of {1,…,N}, with |A|≥δN and |B|≥m, having no nontrivial three-term progression in A whose step belongs to B−B. The historical negative result is attributed to Furstenberg.",
+        "caveat": "Existing attributed proof reproduction; no priority or award claim.",
+        "full_original_problem_coverage": true
+      },
       "steps": [
         {
           "module": "ErdosProblems.Erdos1185",
@@ -901,6 +1498,11 @@
       ],
       "axioms_output": "'Erdos1195.erdos_1195' depends on axioms: [propext, Classical.choice, Quot.sound]",
       "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "For every nonnegative nondecreasing real function F on [1,∞) tending to infinity, there is a measurable set S of infinite measure with no integer ratio between distinct members and |S∩(0,x)|≥F(x) for all sufficiently large x if and only if the integral of F(x)/x² on [1,∞) is finite. The growth bound is eventual, not asserted for all x≥1. This is the sharp criterion attributed in the linked discussion to Ho Boon Suan and GPT, building on Haight and Szemerédi.",
+        "caveat": "Existing attributed proof reproduction; no priority or award claim.",
+        "full_original_problem_coverage": true
+      },
       "steps": [
         {
           "module": "ErdosProblems.Erdos1195",
@@ -959,6 +1561,11 @@
       ],
       "axioms_output": "'Erdos1198.not_erdos_1198' depends on axioms: [propext, Classical.choice, Quot.sound]",
       "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "There exists a two-coloring of the positive integers with no infinite strictly increasing positive sequence for which every nontrivial sum of products over disjoint nonempty finite index blocks has one common color. Only a single one-element block is excluded as trivial. The source proves the negative answer attributed to Smith; this is the full sum/product assertion, not just the finite-sums special case.",
+        "caveat": "Existing attributed proof reproduction; no priority or award claim.",
+        "full_original_problem_coverage": true
+      },
       "steps": [
         {
           "module": "ErdosProblems.Erdos1198",
@@ -1017,6 +1624,11 @@
       ],
       "axioms_output": "'Erdos1205.erdos_1205' depends on axioms: [propext, Classical.choice, Quot.sound]",
       "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "Choose one residue class modulo each positive n≤x and maximize the number of these classes that cover every integer in {1,…,x}. The source defines this genuine optimal common coverage and proves it is asymptotic to log x. The submitted theorem asserts the leading asymptotic, without claiming the sharper secondary error term mentioned in the problem discussion. Provenance remains with the linked Erdős problem discussion and source header.",
+        "caveat": "Existing attributed proof reproduction; no priority or award claim.",
+        "full_original_problem_coverage": true
+      },
       "steps": [
         {
           "module": "ErdosProblems.Erdos1205",
@@ -1075,6 +1687,11 @@
       ],
       "axioms_output": "'Erdos1213.erdos_1213' depends on axioms: [propext, Classical.choice, Quot.sound]",
       "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "For all positive integers a and K there is a bound f(a,K) such that every finite strictly increasing integer sequence starting at a, with successive gaps at most K and last term greater than that bound, has two distinct nonempty index intervals with equal sums. This is Hegyvári’s affirmative bounded-gap result. The registered terminal statement is existence of the bound; no optimal dependence on K is claimed.",
+        "caveat": "Existing attributed proof reproduction; no priority or award claim.",
+        "full_original_problem_coverage": true
+      },
       "steps": [
         {
           "module": "ErdosProblems.Erdos1213",
@@ -1163,6 +1780,11 @@
       ],
       "axioms_output": "'Erdos1215.not_erdos_1215' depends on axioms: [propext, Classical.choice, Quot.sound]",
       "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "There is no uniform real bound on the length of an escape path for all positive-degree complex polynomials P with P(0)=1 and every root on the unit circle. Paths are continuous, start at 0, end on the unit circle, and satisfy |P(γ(t))|<1 at every noninitial point; length is total variation. Exempting the initial point is essential because |P(0)|=1. The source constructs polynomial labyrinth barriers, following the negative result attributed to Mac Lane.",
+        "caveat": "Existing attributed proof reproduction; no priority or award claim.",
+        "full_original_problem_coverage": true
+      },
       "steps": [
         {
           "module": "ErdosProblems.Erdos1215.Barrier",

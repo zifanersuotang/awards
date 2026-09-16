@@ -1,0 +1,4 @@
+'Erdos1015.erdos_1015' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1015.erdos1015_eventual_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1015.uniformRemainder_not_isBigO_id' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1015.uniformRoot_not_tendsto_one' depends on axioms: [propext, Classical.choice, Quot.sound]
