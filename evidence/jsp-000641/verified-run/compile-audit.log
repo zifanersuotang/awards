@@ -1,0 +1,4 @@
+Erdos781.erdos_781 :
+  (∀ (k : ℕ), 2 ^ 50 ≤ k → k ^ 3 ≤ 2 ^ 48 * Erdos781.waveRamsey k ∧ Erdos781.waveRamsey k ≤ 8 * k ^ 3 + 1) ∧
+    ¬∀ (k : ℕ), Erdos781.waveRamsey k = k ^ 2 - k + 1
+'Erdos781.erdos_781' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,16 @@
+{
+  ".gitattributes": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992",
+  "Audit781.lean": "0745f974b504f5601ce0cd6f003e06852cf6def63b0d7fc77160db6aaa6415a6",
+  "Erdos781.lean": "f01c2c45dffad88c0514a2d58a0573a837144afdc5a007eea85efaf8d7069403",
+  "inputs.json": "8f0b44ae10c7faec0f8cc5a265d32e1ad908ac22de35311644b2a3e103326321",
+  "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "LICENSE.upstream": "41e26750cf7403beef1b82310454ca79eb1da04b1dab82d4d42f377e15c01ea9",
+  "NOTICE": "68a47d17de0250aef2f3801f96479e24303006af4c8d6a81145fe7ae7c775b71",
+  "README.md": "5c1d03ecc1324bc6adfd353a6abd1c1f93caaf6cdcd3431b23d0c664c2f08e50",
+  "reproduce.py": "806af7378c944d2fc027c523a363c13bf73a14be16d950ca82fa0ad44fa9af1a",
+  "statement-review.md": "21a3d438e08763553647fc5319e1256f5ac39c74e5825f214598f9106f72a4a3",
+  "verified-run/compile-audit.log": "d15eb7430248b28c036d6cc0ac436d8d94e49d22ba2ff1a65015de6392bc97a5",
+  "verified-run/compile-source.log": "db9a0416f28d3a467acd9b47920ab5687cf9536510927cb8011cf22970c8f5e5",
+  "verified-run/leanchecker.log": "ca5ce25242ab9a60f1235e160fb31980844c0aa6dec58f9610fe310f951452ea",
+  "verified-run/verification.json": "b53a3db52376c8377fd4a0cd5d82057e0cd63d8367fd84785cc996020e07167b"
+}

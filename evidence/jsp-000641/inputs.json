@@ -1,0 +1,30 @@
+{
+  "jsp": "JSP-000641",
+  "erdos": 781,
+  "module": "Erdos781",
+  "harness_module": "Audit781",
+  "main_theorem": "Erdos781.erdos_781",
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_path": "src/latest/ErdosProblems/Erdos781.lean",
+  "source_sha256": {
+    "Erdos781.lean": "f01c2c45dffad88c0514a2d58a0573a837144afdc5a007eea85efaf8d7069403",
+    "Audit781.lean": "0745f974b504f5601ce0cd6f003e06852cf6def63b0d7fc77160db6aaa6415a6"
+  },
+  "preparation_only": false,
+  "statement_scope": "Two-sided cubic bounds for the exact monochromatic descending-wave Ramsey function and refutation of the proposed universal quadratic formula. Descending means strict increase and nonincreasing successive gaps.",
+  "scope_cautions": [],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0601-0700.md#JSP-000641",
+  "original_problem_url": "https://www.erdosproblems.com/781",
+  "verification_limit": "Successful observed replay is recorded in verified-run/verification.json.",
+  "informal_authors_as_credited": [
+    "Noga Alon",
+    "Joel Spencer"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lean_version": "4.33.0"
+}
