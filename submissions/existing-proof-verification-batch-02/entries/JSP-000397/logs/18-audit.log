@@ -1,0 +1,52 @@
+def Erdos491.CoprimeAdditive : (ℕ → ℝ) → Prop :=
+fun f => ∀ ⦃a b : ℕ⦄, a.Coprime b → Eq.{1} (f (HMul.hMul.{0, 0, 0} a b)) (HAdd.hAdd.{0, 0, 0} (f a) (f b))
+def Erdos491.PosCompletelyAdditive : (ℕ → ℝ) → Prop :=
+fun f =>
+  ∀ ⦃a b : ℕ⦄, LT.lt.{0} 0 a → LT.lt.{0} 0 b → Eq.{1} (f (HMul.hMul.{0, 0, 0} a b)) (HAdd.hAdd.{0, 0, 0} (f a) (f b))
+def Erdos491.HasBoundedForwardDifference : (ℕ → ℝ) → Prop :=
+fun f => ∃ C, ∀ (n : ℕ), LT.lt.{0} (abs.{0} (HSub.hSub.{0, 0, 0} (f (HAdd.hAdd.{0, 0, 0} n 1)) (f n))) C
+def Erdos491.HasLogarithmicMainTerm : (ℕ → ℝ) → Prop :=
+fun f =>
+  ∃ c,
+    Asymptotics.IsBigO.{0, 0, 0} Filter.atTop.{0}
+      (fun n => HSub.hSub.{0, 0, 0} (f n) (HMul.hMul.{0, 0, 0} c (Real.log ↑n))) fun x => 1
+def Erdos491.ProblemStatement : Prop :=
+∀ (f : ℕ → ℝ), Erdos491.CoprimeAdditive f → Erdos491.HasBoundedForwardDifference f → Erdos491.HasLogarithmicMainTerm f
+def Erdos491.CompletelyAdditiveBoundedGapRigidity : Prop :=
+∀ (g : ℕ → ℝ) (K : ℝ),
+  Erdos491.PosCompletelyAdditive g →
+    LE.le.{0} 0 K →
+      (∀ (n : ℕ), LT.lt.{0} 0 n → LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} (g (HAdd.hAdd.{0, 0, 0} n 1)) (g n))) K) →
+        ∃ c, ∀ (n : ℕ), LT.lt.{0} 0 n → Eq.{1} (g n) (HMul.hMul.{0, 0, 0} c (Real.log ↑n))
+@Erdos491.homogenization : ∀ {f : ℕ → ℝ} {M : ℝ},
+  Erdos491.CoprimeAdditive f →
+    LE.le.{0} 0 M →
+      (∀ (n : ℕ), LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} (f (HAdd.hAdd.{0, 0, 0} n 1)) (f n))) M) →
+        ∃ g,
+          Erdos491.PosCompletelyAdditive g ∧
+            (∀ (n : ℕ),
+                LT.lt.{0} 0 n → LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} (f n) (g n))) (HMul.hMul.{0, 0, 0} 2 M)) ∧
+              ∀ (n : ℕ),
+                LT.lt.{0} 0 n →
+                  LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} (g (HAdd.hAdd.{0, 0, 0} n 1)) (g n)))
+                    (HMul.hMul.{0, 0, 0} 5 M)
+'Erdos491.homogenization' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos491.completely_additive_bounded_gap_rigidity : Erdos491.CompletelyAdditiveBoundedGapRigidity
+'Erdos491.completely_additive_bounded_gap_rigidity' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos491.logarithmic_uniform_bound : ∀ {f : ℕ → ℝ} {M : ℝ},
+  Erdos491.CoprimeAdditive f →
+    LE.le.{0} 0 M →
+      (∀ (n : ℕ), LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} (f (HAdd.hAdd.{0, 0, 0} n 1)) (f n))) M) →
+        ∃ c,
+          ∀ (n : ℕ),
+            LT.lt.{0} 0 n →
+              LE.le.{0} (abs.{0} (HSub.hSub.{0, 0, 0} (f n) (HMul.hMul.{0, 0, 0} c (Real.log ↑n))))
+                (HMul.hMul.{0, 0, 0} 2 M)
+'Erdos491.logarithmic_uniform_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+erdos_491 : ∀ (f : ℕ → ℝ),
+  (∀ (a b : ℕ), a.Coprime b → Eq.{1} (f (HMul.hMul.{0, 0, 0} a b)) (HAdd.hAdd.{0, 0, 0} (f a) (f b))) →
+    (∃ C, ∀ (n : ℕ), LT.lt.{0} (abs.{0} (HSub.hSub.{0, 0, 0} (f (HAdd.hAdd.{0, 0, 0} n 1)) (f n))) C) →
+      ∃ c,
+        Asymptotics.IsBigO.{0, 0, 0} Filter.atTop.{0}
+          (fun n => HSub.hSub.{0, 0, 0} (f n) (HMul.hMul.{0, 0, 0} c (Real.log ↑n))) fun x => 1
+'erdos_491' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

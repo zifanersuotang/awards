@@ -1,0 +1,120 @@
+structure SimpleGraph.Copy.{u_4, u_5} {α : Type u_4} {β : Type u_5} (A : SimpleGraph.{u_4} α)
+  (B : SimpleGraph.{u_5} β) : Type (max u_4 u_5)
+number of parameters: 4
+fields:
+  SimpleGraph.Copy.toHom.{u_4, u_5} : SimpleGraph.Hom.{u_4, u_5} A B
+  SimpleGraph.Copy.injective'.{u_4,
+    u_5} : Function.Injective.{u_4 + 1, u_5 + 1} ⇑(SimpleGraph.Copy.toHom.{u_4, u_5} self)
+constructor:
+  SimpleGraph.Copy.mk.{u_4, u_5} {α : Type u_4} {β : Type u_5} {A : SimpleGraph.{u_4} α} {B : SimpleGraph.{u_5} β}
+    (toHom : SimpleGraph.Hom.{u_4, u_5} A B) (injective' : Function.Injective.{u_4 + 1, u_5 + 1} ⇑toHom) :
+    SimpleGraph.Copy.{u_4, u_5} A B
+@[reducible] def SimpleGraph.IsContained.{u_4, u_5} : {α : Type u_4} →
+  {β : Type u_5} → SimpleGraph.{u_4} α → SimpleGraph.{u_5} β → Prop :=
+fun {α} {β} A B => Nonempty.{max (u_5 + 1) (u_4 + 1)} (SimpleGraph.Copy.{u_4, u_5} A B)
+def SimpleGraph.pathGraph : (n : ℕ) → SimpleGraph.{0} (Fin n) :=
+fun n => SimpleGraph.hasse.{0} (Fin n)
+def SimpleGraph.cycleGraph : (n : ℕ) → SimpleGraph.{0} (Fin n) :=
+fun x =>
+  match x with
+  | 0 => Bot.bot.{0}
+  | 1 => Bot.bot.{0}
+  | n.succ.succ =>
+    SimpleGraph.mk.{0} (fun a b => Eq.{1} (HSub.hSub.{0, 0, 0} a b) 1 ∨ Eq.{1} (HSub.hSub.{0, 0, 0} b a) 1) ⋯ ⋯
+def Erdos720.Arrows.{u_1, u_2} : {V : Type u_1} → {W : Type u_2} → SimpleGraph.{u_1} V → SimpleGraph.{u_2} W → Prop :=
+fun {V} {W} H F =>
+  ∀ (R : SimpleGraph.{u_1} V),
+    LE.le.{u_1} R H → SimpleGraph.IsContained.{u_2, u_1} F R ∨ SimpleGraph.IsContained.{u_2, u_1} F (sdiff.{u_1} H R)
+def Erdos720.IsSizeRamseyWitness.{u_1} : {W : Type u_1} → SimpleGraph.{u_1} W → ℕ → Prop :=
+fun {W} F m => ∃ N H, Eq.{1} (Nat.card.{0} ↑(SimpleGraph.edgeSet.{0} H)) m ∧ Erdos720.Arrows.{0, u_1} H F
+def Erdos720.sizeRamsey.{u_1} : {W : Type u_1} → [Fintype.{u_1} W] → SimpleGraph.{u_1} W → ℕ :=
+fun {W} [Fintype.{u_1} W] F => Nat.find ⋯
+def Erdos720.cycleVertexConstant : ℕ :=
+8520192
+def Erdos720.cycleRamseyEdgeConstant : ℕ :=
+HMul.hMul.{0, 0, 0} 4
+  (HMul.hMul.{0, 0, 0}
+    (HMul.hMul.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 Erdos720.cycleVertexConstant) 2)
+      Erdos720.cycleVertexConstant)
+    Erdos720.cycleVertexConstant)
+@Erdos720.exists_sizeRamseyWitness.{u_1} : ∀ {W : Type u_1} [Finite.{u_1 + 1} W] (F : SimpleGraph.{u_1} W),
+  ∃ m, Erdos720.IsSizeRamseyWitness.{u_1} F m
+'Erdos720.exists_sizeRamseyWitness' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos720.sizeRamsey_spec.{u_1} : ∀ {W : Type u_1} [inst : Fintype.{u_1} W] (F : SimpleGraph.{u_1} W),
+  Erdos720.IsSizeRamseyWitness.{u_1} F (Erdos720.sizeRamsey.{u_1} F)
+'Erdos720.sizeRamsey_spec' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos720.sizeRamsey_le_of_witness.{u_1} : ∀ {W : Type u_1} [inst : Fintype.{u_1} W] {F : SimpleGraph.{u_1} W} {m : ℕ},
+  Erdos720.IsSizeRamseyWitness.{u_1} F m → LE.le.{0} (Erdos720.sizeRamsey.{u_1} F) m
+'Erdos720.sizeRamsey_le_of_witness' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos720.sizeRamsey_path_le : ∀ (k : ℕ),
+  LE.le.{0} 16 k → LE.le.{0} (Erdos720.sizeRamsey.{0} (SimpleGraph.pathGraph k)) (HMul.hMul.{0, 0, 0} 3136 k)
+'Erdos720.sizeRamsey_path_le' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos720.exists_linear_cycle_ramsey_host : ∀ (n : ℕ),
+  LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 Erdos720.cycleVertexConstant) 2) n →
+    ∃ H,
+      LE.le.{0} (Nat.card.{0} ↑(SimpleGraph.edgeSet.{0} H)) (HMul.hMul.{0, 0, 0} Erdos720.cycleRamseyEdgeConstant n) ∧
+        Erdos720.Arrows.{0, 0} H (SimpleGraph.cycleGraph n)
+'Erdos720.exists_linear_cycle_ramsey_host' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos720.sizeRamsey_cycle_le : ∀ (n : ℕ),
+  LE.le.{0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 2 Erdos720.cycleVertexConstant) 2) n →
+    LE.le.{0} (Erdos720.sizeRamsey.{0} (SimpleGraph.cycleGraph n))
+      (HMul.hMul.{0, 0, 0} Erdos720.cycleRamseyEdgeConstant n)
+'Erdos720.sizeRamsey_cycle_le' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos720.eventually_path_linear : ∀ᶠ (n : ℕ) in Filter.atTop.{0},
+  LE.le.{0} (Erdos720.sizeRamsey.{0} (SimpleGraph.pathGraph (HAdd.hAdd.{0, 0, 0} n 1))) (HMul.hMul.{0, 0, 0} 6272 n)
+'Erdos720.eventually_path_linear' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos720.eventually_cycle_linear : ∀ᶠ (n : ℕ) in Filter.atTop.{0},
+  LE.le.{0} (Erdos720.sizeRamsey.{0} (SimpleGraph.cycleGraph n))
+    (HMul.hMul.{0, 0, 0} Erdos720.cycleRamseyEdgeConstant n)
+'Erdos720.eventually_cycle_linear' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos720.path_sizeRamsey_ratio_not_tendsto_atTop : ¬Filter.Tendsto.{0, 0}
+    (fun n => HDiv.hDiv.{0, 0, 0} ↑(Erdos720.sizeRamsey.{0} (SimpleGraph.pathGraph (HAdd.hAdd.{0, 0, 0} n 1))) ↑n)
+    Filter.atTop.{0} Filter.atTop.{0}
+'Erdos720.path_sizeRamsey_ratio_not_tendsto_atTop' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos720.path_sizeRamsey_div_sq_tendsto_zero : Filter.Tendsto.{0, 0}
+  (fun n =>
+    HDiv.hDiv.{0, 0, 0} (↑(Erdos720.sizeRamsey.{0} (SimpleGraph.pathGraph (HAdd.hAdd.{0, 0, 0} n 1))))
+      (HPow.hPow.{0, 0, 0} (↑n) 2))
+  Filter.atTop.{0} (nhds.{0} 0)
+'Erdos720.path_sizeRamsey_div_sq_tendsto_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos720.cycle_sizeRamsey_div_sq_tendsto_zero : Filter.Tendsto.{0, 0}
+  (fun n => HDiv.hDiv.{0, 0, 0} (↑(Erdos720.sizeRamsey.{0} (SimpleGraph.cycleGraph n))) (HPow.hPow.{0, 0, 0} (↑n) 2))
+  Filter.atTop.{0} (nhds.{0} 0)
+'Erdos720.cycle_sizeRamsey_div_sq_tendsto_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos720.erdos_720 : ¬Filter.Tendsto.{0, 0}
+      (fun n => HDiv.hDiv.{0, 0, 0} ↑(Erdos720.sizeRamsey.{0} (SimpleGraph.pathGraph (HAdd.hAdd.{0, 0, 0} n 1))) ↑n)
+      Filter.atTop.{0} Filter.atTop.{0} ∧
+  Filter.Tendsto.{0, 0}
+      (fun n =>
+        HDiv.hDiv.{0, 0, 0} (↑(Erdos720.sizeRamsey.{0} (SimpleGraph.pathGraph (HAdd.hAdd.{0, 0, 0} n 1))))
+          (HPow.hPow.{0, 0, 0} (↑n) 2))
+      Filter.atTop.{0} (nhds.{0} 0) ∧
+    Filter.Tendsto.{0, 0}
+        (fun n =>
+          HDiv.hDiv.{0, 0, 0} (↑(Erdos720.sizeRamsey.{0} (SimpleGraph.cycleGraph n))) (HPow.hPow.{0, 0, 0} (↑n) 2))
+        Filter.atTop.{0} (nhds.{0} 0) ∧
+      (∀ᶠ (n : ℕ) in Filter.atTop.{0},
+          LE.le.{0} (Erdos720.sizeRamsey.{0} (SimpleGraph.pathGraph (HAdd.hAdd.{0, 0, 0} n 1)))
+            (HMul.hMul.{0, 0, 0} 6272 n)) ∧
+        ∀ᶠ (n : ℕ) in Filter.atTop.{0},
+          LE.le.{0} (Erdos720.sizeRamsey.{0} (SimpleGraph.cycleGraph n))
+            (HMul.hMul.{0, 0, 0} Erdos720.cycleRamseyEdgeConstant n)
+'Erdos720.erdos_720' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos720.erdos_problem_720 : ¬Filter.Tendsto.{0, 0}
+      (fun n => HDiv.hDiv.{0, 0, 0} ↑(Erdos720.sizeRamsey.{0} (SimpleGraph.pathGraph (HAdd.hAdd.{0, 0, 0} n 1))) ↑n)
+      Filter.atTop.{0} Filter.atTop.{0} ∧
+  Filter.Tendsto.{0, 0}
+      (fun n =>
+        HDiv.hDiv.{0, 0, 0} (↑(Erdos720.sizeRamsey.{0} (SimpleGraph.pathGraph (HAdd.hAdd.{0, 0, 0} n 1))))
+          (HPow.hPow.{0, 0, 0} (↑n) 2))
+      Filter.atTop.{0} (nhds.{0} 0) ∧
+    Filter.Tendsto.{0, 0}
+        (fun n =>
+          HDiv.hDiv.{0, 0, 0} (↑(Erdos720.sizeRamsey.{0} (SimpleGraph.cycleGraph n))) (HPow.hPow.{0, 0, 0} (↑n) 2))
+        Filter.atTop.{0} (nhds.{0} 0) ∧
+      (∀ᶠ (n : ℕ) in Filter.atTop.{0},
+          LE.le.{0} (Erdos720.sizeRamsey.{0} (SimpleGraph.pathGraph (HAdd.hAdd.{0, 0, 0} n 1)))
+            (HMul.hMul.{0, 0, 0} 6272 n)) ∧
+        ∀ᶠ (n : ℕ) in Filter.atTop.{0},
+          LE.le.{0} (Erdos720.sizeRamsey.{0} (SimpleGraph.cycleGraph n))
+            (HMul.hMul.{0, 0, 0} Erdos720.cycleRamseyEdgeConstant n)

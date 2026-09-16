@@ -1,0 +1,700 @@
+{
+  "schema_version": 1,
+  "jsp": "JSP-000588",
+  "erdos": 720,
+  "title": "How fast do the two-color size Ramsey numbers of prescribed paths and cycles grow?",
+  "scope": "For two-color size Ramsey numbers defined by the least edge count of actual finite hosts, paths of n edges and cycles of n edges have eventual O(n) upper bounds. Therefore the proposed path/n divergence is false, and both path/n^2 and cycle/n^2 tend to 0. All sufficiently large n, including both cycle parities, are covered.",
+  "attribution": "Existing plby/lean-proofs source. Primary header credits Jozsef Beck for the informal result and Codex / GPT-5.6 Sol for formalization (original accents preserved in copied source). All 23 sources and their notices are preserved byte-for-byte. No uploader-as-original-author, priority, recipient or new-proof claim.",
+  "target_module": "ErdosProblems.Erdos720",
+  "main_theorem": "Erdos720.erdos_720",
+  "theorems": [
+    "Erdos720.exists_sizeRamseyWitness",
+    "Erdos720.sizeRamsey_spec",
+    "Erdos720.sizeRamsey_le_of_witness",
+    "Erdos720.sizeRamsey_path_le",
+    "Erdos720.exists_linear_cycle_ramsey_host",
+    "Erdos720.sizeRamsey_cycle_le",
+    "Erdos720.eventually_path_linear",
+    "Erdos720.eventually_cycle_linear",
+    "Erdos720.path_sizeRamsey_ratio_not_tendsto_atTop",
+    "Erdos720.path_sizeRamsey_div_sq_tendsto_zero",
+    "Erdos720.cycle_sizeRamsey_div_sq_tendsto_zero",
+    "Erdos720.erdos_720"
+  ],
+  "environment": {
+    "lean_toolchain": "leanprover/lean4:v4.33.0",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "LEAN_NUM_THREADS": "1",
+    "compile_flags": [
+      "-j1",
+      "-M8192"
+    ],
+    "platform": "Windows"
+  },
+  "sources": [
+    {
+      "module": "Util.Ramsey",
+      "path": "Util/Ramsey.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/Util/Ramsey.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/Util/Ramsey.lean",
+      "sha256": "c1269d71fcd105835310b53e87a588fcb5628f87a76c9f16d7a007697f77b82a",
+      "bytes": 14293,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.Foundation",
+      "path": "ErdosProblems/Erdos720/Foundation.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Foundation.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Foundation.lean",
+      "sha256": "e3f8946bb462ac7876e4a95f81031ae28a0ca0be6d562efa3a8fd0ded87f5a15",
+      "bytes": 2379,
+      "imports": [
+        "Util.Ramsey"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.Extend",
+      "path": "ErdosProblems/Erdos720/Extend.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Extend.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Extend.lean",
+      "sha256": "3d74f70a1d80e3eb54031e2ba46a688f4b0d157ae76529815dc0493f251ded5e",
+      "bytes": 13908,
+      "imports": [
+        "ErdosProblems.Erdos720.Foundation",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.Fan",
+      "path": "ErdosProblems/Erdos720/Fan.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Fan.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Fan.lean",
+      "sha256": "e1fe0fa43b19daf021095ba03c22fc99ee45e7513dab82300811de0222eb0a73",
+      "bytes": 22289,
+      "imports": [
+        "ErdosProblems.Erdos720.Extend"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.Connector",
+      "path": "ErdosProblems/Erdos720/Connector.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Connector.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Connector.lean",
+      "sha256": "4d844f477cb858aae4facaceaf8597ae684f78acf335f1a99d33aaee9d064454",
+      "bytes": 4029,
+      "imports": [
+        "ErdosProblems.Erdos720.Fan"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.Prune",
+      "path": "ErdosProblems/Erdos720/Prune.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Prune.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Prune.lean",
+      "sha256": "0d8e415011bd82e79cd09faef96e6966c69c144d0b42f582857b251a4224948d",
+      "bytes": 9175,
+      "imports": [
+        "ErdosProblems.Erdos720.Connector"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.Join",
+      "path": "ErdosProblems/Erdos720/Join.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Join.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Join.lean",
+      "sha256": "52f31302b2696251518bb5ffa84a7e6046ad0672aa3326776b8ebd66c2039974",
+      "bytes": 6315,
+      "imports": [
+        "ErdosProblems.Erdos720.Connector",
+        "Mathlib.Data.List.Chain",
+        "Mathlib.Data.List.Nodup",
+        "Mathlib.Combinatorics.SimpleGraph.CycleGraph",
+        "Mathlib.Combinatorics.SimpleGraph.Paths"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.CycleCore",
+      "path": "ErdosProblems/Erdos720/CycleCore.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/CycleCore.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/CycleCore.lean",
+      "sha256": "d29c9e48a6fe0ef99cfa7beb60782f446d39b817c019cc38317081476a3a1db2",
+      "bytes": 12003,
+      "imports": [
+        "ErdosProblems.Erdos720.Prune",
+        "ErdosProblems.Erdos720.Join",
+        "Mathlib.Combinatorics.SimpleGraph.Bipartite"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.OddCycle",
+      "path": "ErdosProblems/Erdos720/OddCycle.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/OddCycle.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/OddCycle.lean",
+      "sha256": "a4f51d0f5c09755764374fd035d2e969ed49fa5662f883b8b50b0010ce2f316e",
+      "bytes": 4176,
+      "imports": [
+        "ErdosProblems.Erdos720.CycleCore"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.Tripartite",
+      "path": "ErdosProblems/Erdos720/Tripartite.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Tripartite.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Tripartite.lean",
+      "sha256": "3c2db899af8bd77a921ccf978fbe0f2c41e59c7e64f159ef22bd9985d27943b3",
+      "bytes": 5204,
+      "imports": [
+        "ErdosProblems.Erdos720.OddCycle"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.Arithmetic",
+      "path": "ErdosProblems/Erdos720/Arithmetic.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Arithmetic.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Arithmetic.lean",
+      "sha256": "196678fa0cc992a305769231d4d2bbf487f389eba0f253e812d1720f81f594fe",
+      "bytes": 3582,
+      "imports": [
+        "ErdosProblems.Erdos720.Tripartite",
+        "Mathlib.Data.Nat.Log",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.OneCycle",
+      "path": "ErdosProblems/Erdos720/OneCycle.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/OneCycle.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/OneCycle.lean",
+      "sha256": "46010e1c75fed43b933347e8e7c8dea64c9934b26366643fe12da49accd2caed",
+      "bytes": 1563,
+      "imports": [
+        "ErdosProblems.Erdos720.Arithmetic"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.PartiteCycle",
+      "path": "ErdosProblems/Erdos720/PartiteCycle.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/PartiteCycle.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/PartiteCycle.lean",
+      "sha256": "54911124721d1b093c4fa8500b77e8b20b5d06e687a3d1ceec51aebf4174206d",
+      "bytes": 2812,
+      "imports": [
+        "ErdosProblems.Erdos720.OneCycle"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.TripEmbedding",
+      "path": "ErdosProblems/Erdos720/TripEmbedding.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/TripEmbedding.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/TripEmbedding.lean",
+      "sha256": "726332658980bcfc1d98a371728dafa02528d054a954cef0376acf12e74a2c22",
+      "bytes": 2663,
+      "imports": [
+        "ErdosProblems.Erdos720.PartiteCycle"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.CycleRamsey",
+      "path": "ErdosProblems/Erdos720/CycleRamsey.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/CycleRamsey.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/CycleRamsey.lean",
+      "sha256": "02e7342dc16ef554aa0e7cdd1cca1aa94d5e61096745d65404cd41bebc125328",
+      "bytes": 6264,
+      "imports": [
+        "ErdosProblems.Erdos720.TripEmbedding"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.DFS",
+      "path": "ErdosProblems/Erdos720/DFS.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/DFS.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/DFS.lean",
+      "sha256": "ba9c756e36ded2c20aac2cb1201264f903ad5bb4a99a697cb486fb829de41bd2",
+      "bytes": 9848,
+      "imports": [
+        "ErdosProblems.Erdos720.Foundation",
+        "Mathlib.Combinatorics.SimpleGraph.Hasse"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.Random",
+      "path": "ErdosProblems/Erdos720/Random.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Random.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Random.lean",
+      "sha256": "c9ae5e4ce6bbdbf13eb15634e83d130ef1e121774565a8f04f8b17fbc6315b8e",
+      "bytes": 12755,
+      "imports": [
+        "ErdosProblems.Erdos720.DFS",
+        "Mathlib.Probability.Distributions.SetBernoulli"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.Analytic",
+      "path": "ErdosProblems/Erdos720/Analytic.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Analytic.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Analytic.lean",
+      "sha256": "a640f40c3d2c21f6781a822d2b9348609a027e894a4e83e8fc83f52b34f50c28",
+      "bytes": 13071,
+      "imports": [
+        "ErdosProblems.Erdos720.Random",
+        "Mathlib.Analysis.Complex.ExponentialBounds"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.GeneralAnalytic",
+      "path": "ErdosProblems/Erdos720/GeneralAnalytic.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/GeneralAnalytic.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/GeneralAnalytic.lean",
+      "sha256": "75ed65a77f8e54e117d9892e8fffe2c8fa8d793cfacb8076d967b2f2a8e1b876",
+      "bytes": 9659,
+      "imports": [
+        "ErdosProblems.Erdos720.CycleRamsey",
+        "ErdosProblems.Erdos720.Analytic"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.CycleHost",
+      "path": "ErdosProblems/Erdos720/CycleHost.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/CycleHost.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/CycleHost.lean",
+      "sha256": "1edeeed529a57b1bb03cc97ce77c15f73b31bf88a73d8f7172f6f617a2412c1d",
+      "bytes": 2718,
+      "imports": [
+        "ErdosProblems.Erdos720.GeneralAnalytic"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.PathHost",
+      "path": "ErdosProblems/Erdos720/PathHost.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/PathHost.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/PathHost.lean",
+      "sha256": "dadce91ed7f578b870fa11262c9b0c66970f97641d1879ffe5a78cdbc8480a82",
+      "bytes": 7262,
+      "imports": [
+        "ErdosProblems.Erdos720.Analytic"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720.Asymptotic",
+      "path": "ErdosProblems/Erdos720/Asymptotic.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Asymptotic.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720/Asymptotic.lean",
+      "sha256": "89dcda35b6a736727c05588025614bbf311d8787a7c5b620755c86f7cd38c6a7",
+      "bytes": 3441,
+      "imports": [
+        "ErdosProblems.Erdos720.CycleHost",
+        "ErdosProblems.Erdos720.PathHost"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos720",
+      "path": "ErdosProblems/Erdos720.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos720.lean",
+      "sha256": "03bd7204f8e62fe635492483d6fc552ec21062a1d521bb2345706b5b93af6fb9",
+      "bytes": 1797,
+      "imports": [
+        "ErdosProblems.Erdos720.Asymptotic"
+      ]
+    }
+  ],
+  "verification": {
+    "status": "verified_unchanged_source",
+    "source_bytes_unchanged": true,
+    "axioms": {
+      "Erdos720.exists_sizeRamseyWitness": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos720.sizeRamsey_spec": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos720.sizeRamsey_le_of_witness": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos720.sizeRamsey_path_le": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos720.exists_linear_cycle_ramsey_host": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos720.sizeRamsey_cycle_le": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos720.eventually_path_linear": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos720.eventually_cycle_linear": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos720.path_sizeRamsey_ratio_not_tendsto_atTop": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos720.path_sizeRamsey_div_sq_tendsto_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos720.cycle_sizeRamsey_div_sq_tendsto_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos720.erdos_720": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "checker_selected_modules": [
+      "ErdosProblems.Erdos720",
+      "ErdosProblems.Erdos720.TripEmbedding",
+      "ErdosProblems.Erdos720.Tripartite",
+      "ErdosProblems.Erdos720.Random",
+      "ErdosProblems.Erdos720.Prune",
+      "ErdosProblems.Erdos720.PathHost",
+      "ErdosProblems.Erdos720.PartiteCycle",
+      "ErdosProblems.Erdos720.OneCycle",
+      "ErdosProblems.Erdos720.OddCycle",
+      "ErdosProblems.Erdos720.Join",
+      "ErdosProblems.Erdos720.GeneralAnalytic",
+      "ErdosProblems.Erdos720.Foundation",
+      "ErdosProblems.Erdos720.Fan",
+      "ErdosProblems.Erdos720.Extend",
+      "ErdosProblems.Erdos720.DFS",
+      "ErdosProblems.Erdos720.CycleRamsey",
+      "ErdosProblems.Erdos720.CycleHost",
+      "ErdosProblems.Erdos720.CycleCore",
+      "ErdosProblems.Erdos720.Connector",
+      "ErdosProblems.Erdos720.Asymptotic",
+      "ErdosProblems.Erdos720.Arithmetic",
+      "ErdosProblems.Erdos720.Analytic"
+    ],
+    "events": [
+      {
+        "stage": "compile",
+        "module": "Util.Ramsey",
+        "exit_code": 0,
+        "seconds": 16.998,
+        "started": "2026-09-16T11:45:35.087775+00:00",
+        "finished": "2026-09-16T11:45:52.085859+00:00",
+        "log": "logs/00-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.Foundation",
+        "exit_code": 0,
+        "seconds": 15.229,
+        "started": "2026-09-16T11:45:52.089065+00:00",
+        "finished": "2026-09-16T11:46:07.317889+00:00",
+        "log": "logs/01-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.Extend",
+        "exit_code": 0,
+        "seconds": 16.158,
+        "started": "2026-09-16T11:46:07.318973+00:00",
+        "finished": "2026-09-16T11:46:23.477050+00:00",
+        "log": "logs/02-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.Fan",
+        "exit_code": 0,
+        "seconds": 18.496,
+        "started": "2026-09-16T11:46:23.478039+00:00",
+        "finished": "2026-09-16T11:46:41.973791+00:00",
+        "log": "logs/03-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.Connector",
+        "exit_code": 0,
+        "seconds": 14.755,
+        "started": "2026-09-16T11:46:41.974886+00:00",
+        "finished": "2026-09-16T11:46:56.729808+00:00",
+        "log": "logs/04-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.Prune",
+        "exit_code": 0,
+        "seconds": 15.837,
+        "started": "2026-09-16T11:46:56.730828+00:00",
+        "finished": "2026-09-16T11:47:12.567735+00:00",
+        "log": "logs/05-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.Join",
+        "exit_code": 0,
+        "seconds": 14.738,
+        "started": "2026-09-16T11:47:12.568786+00:00",
+        "finished": "2026-09-16T11:47:27.307007+00:00",
+        "log": "logs/06-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.CycleCore",
+        "exit_code": 0,
+        "seconds": 18.211,
+        "started": "2026-09-16T11:47:27.307954+00:00",
+        "finished": "2026-09-16T11:47:45.519095+00:00",
+        "log": "logs/07-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.OddCycle",
+        "exit_code": 0,
+        "seconds": 16.314,
+        "started": "2026-09-16T11:47:45.521042+00:00",
+        "finished": "2026-09-16T11:48:01.835263+00:00",
+        "log": "logs/08-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.Tripartite",
+        "exit_code": 0,
+        "seconds": 14.831,
+        "started": "2026-09-16T11:48:01.836208+00:00",
+        "finished": "2026-09-16T11:48:16.667158+00:00",
+        "log": "logs/09-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.Arithmetic",
+        "exit_code": 0,
+        "seconds": 15.366,
+        "started": "2026-09-16T11:48:16.668196+00:00",
+        "finished": "2026-09-16T11:48:32.034436+00:00",
+        "log": "logs/10-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.OneCycle",
+        "exit_code": 0,
+        "seconds": 15.18,
+        "started": "2026-09-16T11:48:32.035363+00:00",
+        "finished": "2026-09-16T11:48:47.215315+00:00",
+        "log": "logs/11-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.PartiteCycle",
+        "exit_code": 0,
+        "seconds": 14.402,
+        "started": "2026-09-16T11:48:47.216395+00:00",
+        "finished": "2026-09-16T11:49:01.618742+00:00",
+        "log": "logs/12-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.TripEmbedding",
+        "exit_code": 0,
+        "seconds": 14.272,
+        "started": "2026-09-16T11:49:01.619829+00:00",
+        "finished": "2026-09-16T11:49:15.892265+00:00",
+        "log": "logs/13-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.CycleRamsey",
+        "exit_code": 0,
+        "seconds": 15.456,
+        "started": "2026-09-16T11:49:15.893408+00:00",
+        "finished": "2026-09-16T11:49:31.349574+00:00",
+        "log": "logs/14-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.DFS",
+        "exit_code": 0,
+        "seconds": 15.117,
+        "started": "2026-09-16T11:49:31.350726+00:00",
+        "finished": "2026-09-16T11:49:46.467946+00:00",
+        "log": "logs/15-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.Random",
+        "exit_code": 0,
+        "seconds": 15.547,
+        "started": "2026-09-16T11:49:46.468997+00:00",
+        "finished": "2026-09-16T11:50:02.016429+00:00",
+        "log": "logs/16-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.Analytic",
+        "exit_code": 0,
+        "seconds": 16.901,
+        "started": "2026-09-16T11:50:02.017481+00:00",
+        "finished": "2026-09-16T11:50:18.918239+00:00",
+        "log": "logs/17-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.GeneralAnalytic",
+        "exit_code": 0,
+        "seconds": 16.64,
+        "started": "2026-09-16T11:50:18.919243+00:00",
+        "finished": "2026-09-16T11:50:35.558814+00:00",
+        "log": "logs/18-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.CycleHost",
+        "exit_code": 0,
+        "seconds": 15.535,
+        "started": "2026-09-16T11:50:35.559951+00:00",
+        "finished": "2026-09-16T11:50:51.094651+00:00",
+        "log": "logs/19-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.PathHost",
+        "exit_code": 0,
+        "seconds": 16.082,
+        "started": "2026-09-16T11:50:51.095812+00:00",
+        "finished": "2026-09-16T11:51:07.178145+00:00",
+        "log": "logs/20-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720.Asymptotic",
+        "exit_code": 0,
+        "seconds": 15.635,
+        "started": "2026-09-16T11:51:07.179130+00:00",
+        "finished": "2026-09-16T11:51:22.814221+00:00",
+        "log": "logs/21-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos720",
+        "exit_code": 0,
+        "seconds": 16.242,
+        "started": "2026-09-16T11:51:22.815469+00:00",
+        "finished": "2026-09-16T11:51:39.057769+00:00",
+        "log": "logs/22-compile.log",
+        "log_sha256": "b29b71623d01d137700bde34b19b26c37b3cc1a9ac8bff136cfea81f224e8766",
+        "original_log_sha256": "b29b71623d01d137700bde34b19b26c37b3cc1a9ac8bff136cfea81f224e8766",
+        "redactions": []
+      },
+      {
+        "stage": "audit",
+        "module": "Audit720",
+        "exit_code": 0,
+        "seconds": 15.237,
+        "started": "2026-09-16T11:51:39.065667+00:00",
+        "finished": "2026-09-16T11:51:54.302923+00:00",
+        "log": "logs/23-audit.log",
+        "log_sha256": "f323f9dbfbe83710acc97bf65019d319a7d51bdea50959547eaf3882208e2ec6",
+        "original_log_sha256": "f323f9dbfbe83710acc97bf65019d319a7d51bdea50959547eaf3882208e2ec6",
+        "redactions": []
+      },
+      {
+        "stage": "leanchecker",
+        "module": "ErdosProblems.Erdos720",
+        "exit_code": 0,
+        "seconds": 150.512,
+        "started": "2026-09-16T11:51:54.319799+00:00",
+        "finished": "2026-09-16T11:54:24.831986+00:00",
+        "log": "logs/24-leanchecker.log",
+        "log_sha256": "46c0f94447fe9258064cd4ac9972f30732552bffec67f9b712d4ffb3df209d13",
+        "original_log_sha256": "46c0f94447fe9258064cd4ac9972f30732552bffec67f9b712d4ffb3df209d13",
+        "redactions": []
+      }
+    ],
+    "limits": [
+      "The bundled Lean checker reuses the imported environment; Mathlib was not freshly replayed.",
+      "Compilation and replay use Lean's kernel, not independently implemented checkers.",
+      "This is existing-proof evidence intake, not new authorship, acceptance, nomination or an award record."
+    ]
+  }
+}
