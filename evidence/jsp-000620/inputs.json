@@ -1,0 +1,84 @@
+{
+  "jsp": "JSP-000620",
+  "erdos": 754,
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "main_module": "ErdosProblems.Erdos754",
+  "main_theorem": "Erdos754.erdos_754",
+  "harness_module": "Audit754",
+  "harness_sha256": "e2a9dfa4957b2f51a1910b2254831c28d53c6b68aa87978abba24cd922ee4bb4",
+  "ordered_modules": [
+    {
+      "module": "ErdosProblems.Erdos755",
+      "path": "ErdosProblems/Erdos755.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos755.lean",
+      "sha256": "d44e68625df9579164c3b61d61ee96b89467679d2b456cd6e02f963d517e116c",
+      "bytes": 58571,
+      "imports": [
+        "Mathlib.Analysis.Asymptotics.Lemmas",
+        "Mathlib.Analysis.InnerProductSpace.EuclideanDist",
+        "Mathlib.Analysis.InnerProductSpace.PiL2",
+        "Mathlib.Combinatorics.Enumerative.DoubleCounting",
+        "Mathlib.Combinatorics.SimpleGraph.Clique",
+        "Mathlib.Combinatorics.SimpleGraph.CompleteMultipartite",
+        "Mathlib.Combinatorics.SimpleGraph.DegreeSum",
+        "Mathlib.Combinatorics.SimpleGraph.Extremal.ErdosStoneSimonovits",
+        "Mathlib.Combinatorics.SimpleGraph.Extremal.TuranDensity",
+        "Mathlib.Combinatorics.SimpleGraph.Finite",
+        "Mathlib.Combinatorics.SimpleGraph.Triangle.Basic",
+        "Mathlib.Data.Nat.Choose.Bounds",
+        "Mathlib.Geometry.Euclidean.Sphere.Basic",
+        "Mathlib.Tactic.Abel",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.LinearCombination",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos754",
+      "path": "ErdosProblems/Erdos754.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos754.lean",
+      "sha256": "283f05a45942be33aa589020a8e26fc0f253409d909b3bac77c81ae3bfbca7bf",
+      "bytes": 50804,
+      "imports": [
+        "ErdosProblems.Erdos755",
+        "Mathlib.Analysis.MeanInequalitiesPow"
+      ]
+    }
+  ],
+  "source_bytes": 109375,
+  "source_audit": "audit-603-656/audit.json",
+  "scope": "The extremal minimum favorite-distance degree among n-point subsets of real four-dimensional Euclidean space is <=n/2+202. Distances are separately chosen positive values at each point and other points are counted.",
+  "scope_cautions": [],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0601-0700.md#JSP-000620",
+  "preparation_only": false,
+  "compiled": true,
+  "replayed": true,
+  "resource_plan": "Future coordinator must acquire/release shared mutex separately for each source module. Do not wrap whole multi-module build in a second mutex.",
+  "checker_plan": "Replay every locally compiled proof module, selecting Lean Name-prefix roots and comparing the actual verbose replay module set to this exact local closure. Treat imported Mathlib separately as trusted pinned caches.",
+  "audit_targets": [
+    "Erdos754.erdos_754"
+  ],
+  "informal_authors_as_credited": [
+    "Konrad J. Swanepoel"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "verification_limit": "Same Lean kernel. Replay of the entire compiled local source closure, checked against actual verbose module names; imported pinned Mathlib caches are trusted, not freshly replayed. No independently implemented checker.",
+  "module": "ErdosProblems.Erdos754",
+  "statement_scope": "The extremal minimum favorite-distance degree among n-point subsets of real four-dimensional Euclidean space is <=n/2+202. Distances are separately chosen positive values at each point and other points are counted.",
+  "source_path": "src/latest/ErdosProblems/Erdos754.lean",
+  "source_sha256": {
+    "ErdosProblems/Erdos755.lean": "d44e68625df9579164c3b61d61ee96b89467679d2b456cd6e02f963d517e116c",
+    "ErdosProblems/Erdos754.lean": "283f05a45942be33aa589020a8e26fc0f253409d909b3bac77c81ae3bfbca7bf",
+    "Audit754.lean": "e2a9dfa4957b2f51a1910b2254831c28d53c6b68aa87978abba24cd922ee4bb4"
+  },
+  "main_source_sha256": "283f05a45942be33aa589020a8e26fc0f253409d909b3bac77c81ae3bfbca7bf",
+  "original_problem_url": "https://www.erdosproblems.com/754"
+}

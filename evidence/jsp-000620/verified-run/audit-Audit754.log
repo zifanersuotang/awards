@@ -1,0 +1,2 @@
+Erdos754.erdos_754 : ∃ C, ∀ (n : ℕ), ↑(Erdos754.f n) ≤ ↑n / 2 + C
+'Erdos754.erdos_754' depends on axioms: [propext, Classical.choice, Quot.sound]
