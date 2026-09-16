@@ -1,0 +1,1 @@
+'Erdos922.erdos_922' depends on axioms: [propext, Classical.choice, Quot.sound]

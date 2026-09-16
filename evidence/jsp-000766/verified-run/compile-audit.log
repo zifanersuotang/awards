@@ -1,0 +1,3 @@
+Erdos922.erdos_922.{u} {V : Type u} [Finite V] (G : SimpleGraph V) (k : ℕ) (hG : Erdos922.HasLargeIndependentSets G k) :
+  G.chromaticNumber ≤ ↑(k + 2)
+'Erdos922.erdos_922' depends on axioms: [propext, Classical.choice, Quot.sound]
