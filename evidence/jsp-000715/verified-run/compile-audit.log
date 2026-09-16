@@ -1,0 +1,3 @@
+Erdos863.erdos_863 {r : ℕ} (hr : 2 ≤ r) {cSum cDiff : ℝ} (hsum : Erdos863.HasSqrtAsymptotic (Erdos863.sumMax r) cSum)
+  (hdiff : Erdos863.HasSqrtAsymptotic (Erdos863.diffMax r) cDiff) : cDiff < cSum
+'Erdos863.erdos_863' depends on axioms: [propext, Classical.choice, Quot.sound]
