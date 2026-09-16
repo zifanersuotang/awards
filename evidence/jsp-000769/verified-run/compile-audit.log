@@ -1,0 +1,3 @@
+Erdos926.erdos_926 (k : ℕ) :
+  4 ≤ k → (fun n => ↑(SimpleGraph.extremalNumber n (Erdos926.Hk k))) =O[Filter.atTop] fun n => ↑n ^ (3 / 2)
+'Erdos926.erdos_926' depends on axioms: [propext, Classical.choice, Quot.sound]
