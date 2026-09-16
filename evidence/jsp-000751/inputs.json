@@ -1,0 +1,32 @@
+{
+  "jsp": "JSP-000751",
+  "erdos": 903,
+  "module": "Erdos903",
+  "harness_module": "Audit903",
+  "main_theorem": "Erdos903.erdos_903",
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_path": "src/latest/ErdosProblems/Erdos903.lean",
+  "source_sha256": {
+    "Erdos903.lean": "dc1d3d8895b3fd73d780c0ed7693d5b5268ea8eccfcfe861a5b9438672b65f19",
+    "Audit903.lean": "75957727a9b17314b20af9e400f15c0fa20010d4d1ad76a596c55fe582cd51b4"
+  },
+  "preparation_only": false,
+  "statement_scope": "Pairwise balanced design with p²+p+1 points and more than that many blocks has at least p more.",
+  "scope_cautions": "Definition excludes singleton/empty blocks as standard linear-space convention. Generalizes integer p, hence includes prime powers.",
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0701-0800.md#JSP-000751",
+  "original_problem_url": "https://www.erdosproblems.com/903",
+  "verification_limit": "Successful observed replay is recorded in verified-run/verification.json.",
+  "informal_authors_as_credited": [
+    "Paul Erdős",
+    "Joel Fowler",
+    "Vera T. Sós",
+    "Richard Wilson"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lean_version": "4.33.0"
+}
