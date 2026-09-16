@@ -1,0 +1,53 @@
+def Erdos518.IsPath.{u} : {V : Type u} → SimpleGraph.{u} V → List.{u} V → Prop :=
+fun {V} G p => Ne.{u + 1} p List.nil.{u} ∧ List.Nodup.{u} p ∧ List.IsChain.{u} (SimpleGraph.Adj.{u} G) p
+def Erdos518.pathWalk.{u} : {V : Type u} →
+  {G : SimpleGraph.{u} V} →
+    {p : List.{u} V} →
+      (hp : Erdos518.IsPath.{u} G p) → SimpleGraph.Walk.{u} G (List.head.{u} p ⋯) (List.getLast.{u} p ⋯) :=
+fun {V} {G} {p} hp => SimpleGraph.Walk.ofSupport.{u} p ⋯ ⋯
+def Erdos518.IsPathCover.{u} : {V : Type u} → SimpleGraph.{u} V → List.{u} (List.{u} V) → Prop :=
+fun {V} G ps =>
+  (∀ (p : List.{u} V), Membership.mem.{u, u} ps p → Erdos518.IsPath.{u} G p) ∧
+    ∀ (v : V), ∃ p, Membership.mem.{u, u} ps p ∧ Membership.mem.{u, u} p v
+def Erdos518.HasPathCoverAtMost.{u} : {V : Type u} → SimpleGraph.{u} V → ℕ → Prop :=
+fun {V} G k => ∃ ps, LE.le.{0} (List.length.{u} ps) k ∧ Erdos518.IsPathCover.{u} G ps
+def Erdos518.Erdos518For : (n : ℕ) → SimpleGraph.{0} (Fin n) → Prop :=
+fun n G => Erdos518.HasPathCoverAtMost.{0} G n.sqrt ∨ Erdos518.HasPathCoverAtMost.{0} (compl.{0} G) n.sqrt
+def Erdos518.Erdos518ForType.{u} : {V : Type u} → [Fintype.{u} V] → SimpleGraph.{u} V → Prop :=
+fun {V} [Fintype.{u} V] G =>
+  Erdos518.HasPathCoverAtMost.{u} G (Fintype.card.{u} V).sqrt ∨
+    Erdos518.HasPathCoverAtMost.{u} (compl.{u} G) (Fintype.card.{u} V).sqrt
+Erdos518.erdos_518 : ∀ (n : ℕ) (G : SimpleGraph.{0} (Fin n)), Erdos518.Erdos518For n G
+'Erdos518.erdos_518' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos518.configuration_impossible.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V]
+  (C : Erdos518.Configuration.{u_1} V), False
+'Erdos518.configuration_impossible' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos518.Configuration.impossible.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V]
+  (C : Erdos518.Configuration.{u_1} V), False
+'Erdos518.Configuration.impossible' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos518.erdos518For_of_configuration_impossible : (∀ {V : Type} [inst : Fintype.{0} V]
+    (a : Erdos518.Configuration.{0} V), False) →
+  ∀ (n : ℕ) (G : SimpleGraph.{0} (Fin n)), Erdos518.Erdos518For n G
+'Erdos518.erdos518For_of_configuration_impossible' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos518.erdos518ForType_of_configuration_impossible.{u_1} : (∀ {V : Type u_1} [inst : Fintype.{u_1} V]
+    (a : Erdos518.Configuration.{u_1} V), False) →
+  ∀ {V : Type u_1} [inst : Fintype.{u_1} V] (G : SimpleGraph.{u_1} V), Erdos518.Erdos518ForType.{u_1} G
+'Erdos518.erdos518ForType_of_configuration_impossible' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Erdos518.erdos518For_iff_forType : ∀ (n : ℕ) (G : SimpleGraph.{0} (Fin n)),
+  Erdos518.Erdos518For n G ↔ Erdos518.Erdos518ForType.{0} G
+'Erdos518.erdos518For_iff_forType' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos518.isPath_singleton.{u_1} : ∀ {V : Type u_1} (G : SimpleGraph.{u_1} V) (v : V),
+  Erdos518.IsPath.{u_1} G (List.cons.{u_1} v List.nil.{u_1})
+'Erdos518.isPath_singleton' depends on axioms: [propext]
+@Erdos518.support_pathWalk.{u_1} : ∀ {V : Type u_1} {G : SimpleGraph.{u_1} V} {p : List.{u_1} V}
+  (hp : Erdos518.IsPath.{u_1} G p), Eq.{u_1 + 1} (SimpleGraph.Walk.support.{u_1} (Erdos518.pathWalk.{u_1} hp)) p
+'Erdos518.support_pathWalk' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos518.isPath_pathWalk.{u_1} : ∀ {V : Type u_1} {G : SimpleGraph.{u_1} V} {p : List.{u_1} V}
+  (hp : Erdos518.IsPath.{u_1} G p), SimpleGraph.Walk.IsPath.{u_1} (Erdos518.pathWalk.{u_1} hp)
+'Erdos518.isPath_pathWalk' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos518.hasPathCoverAtMost_fin_zero : ∀ (G : SimpleGraph.{0} (Fin 0)), Erdos518.HasPathCoverAtMost.{0} G 0
+'Erdos518.hasPathCoverAtMost_fin_zero' depends on axioms: [propext, Quot.sound.{u}]
+Erdos518.nat_le_real_sqrt_iff : ∀ (k n : ℕ), LE.le.{0} ↑k √↑n ↔ LE.le.{0} k n.sqrt
+'Erdos518.nat_le_real_sqrt_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
