@@ -1,0 +1,4 @@
+Erdos795.erdos_795 (ε : ℝ) :
+  ε > 0 →
+    ∀ᶠ (N : ℕ) in Filter.atTop, ↑(Erdos795.g N) ≤ ↑N.primeCounting + ↑N.sqrt.primeCounting + ε * (√↑N / Real.log ↑N)
+'Erdos795.erdos_795' depends on axioms: [propext, Classical.choice, Quot.sound]
