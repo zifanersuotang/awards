@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Audit833.lean",
+    "sha256": "c82eb385cd064598f52944406d61a1277bf21f2dc6777fce56837f1f4ee2b57a"
+  },
+  {
+    "name": "compile-audit.log",
+    "sha256": "9f135b9491296f98bf69dc52922b2b78ec6fe916014655179559a101091bdcf5"
+  },
+  {
+    "name": "compile-source.log",
+    "sha256": "97c80613ce578dd0d9e7399a877390fa87b8962b950732e3b2aa9a764914d158"
+  },
+  {
+    "name": "Erdos833.lean",
+    "sha256": "5cad260bdd589d4be977765c3934f8389395c6e6b480efee4dd8e325a7bf7cdb"
+  },
+  {
+    "name": "leanchecker.log",
+    "sha256": "083264e4fabb27e0ed5552eb06e4affae7775fa28e792b6b6af361bb1a5f2f85"
+  },
+  {
+    "name": "LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "name": "README.md",
+    "sha256": "9d05977472a3b6150ee5e8cfbed43c085fa30c5a70953471cf5dfd52c95f466f"
+  },
+  {
+    "name": "reproduce.py",
+    "sha256": "a2bc2ceea6e57251fb77b8b53a5973b9bfc5e2d45e64f9437a7152823fb4ddbd"
+  },
+  {
+    "name": "statement-review.md",
+    "sha256": "91e2c70c8c5f0ac707dbafd71cb608d0f5bc9b12649c9847dbf849bf7fec63be"
+  },
+  {
+    "name": "verification.json",
+    "sha256": "67f560e67bc481e1c16f4138e1ce0dcd811010523c1e0c157be332db1385eac2"
+  },
+  {
+    "name": "version.log",
+    "sha256": "b8d335ab8351a408bac4208701a6e820c84b47cae026393a5e88ffbd40c5447e"
+  }
+]

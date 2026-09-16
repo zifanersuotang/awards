@@ -1,0 +1,17 @@
+Erdos833.erdos_833.{u} :
+  ∃ c,
+    0 < c ∧
+      ∀ (W : Type u) [inst : Fintype W] [inst_1 : DecidableEq W] (r : ℕ),
+        2 ≤ r →
+          ∀ (H : Erdos833.Hypergraph W),
+            Erdos833.IsUniform H r → Erdos833.HasChromaticNumber H 3 → ∃ v, (1 + c) ^ r ≤ ↑(Erdos833.degree H v)
+Erdos833.erdos_833_degree_bound.{u} {V : Type u} [Fintype V] [DecidableEq V] (H : Erdos833.Hypergraph V) (r : ℕ)
+  (hr : 2 ≤ r) (hunif : Erdos833.IsUniform H r) (hχ : Erdos833.HasChromaticNumber H 3) :
+  ∃ v, 2 ^ (r - 1) / (4 * ↑r) ≤ ↑(Erdos833.degree H v)
+'Erdos833.erdos_833' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos833.erdos_833_degree_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos833.erdos_lovasz_degree_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos833.erdos_lovasz_degree_bound_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos833.finite_symmetric_local_lemma' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos833.monoEvent_inter_avoid_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos833.exists_degree_two_of_not_colorable' depends on axioms: [propext, Classical.choice, Quot.sound]
