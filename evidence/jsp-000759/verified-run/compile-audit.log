@@ -1,0 +1,8 @@
+Erdos915.not_erdos_915 :
+  ¬∀ (m n : ℕ),
+      2 ≤ m →
+        1 ≤ n →
+          ∀ (V : Type) [inst : Fintype V] (G : SimpleGraph V),
+            Fintype.card V = 1 + n * (m - 1) →
+              G.edgeSet.ncard = 1 + n * m.choose 2 → Erdos915.HasMInternallyVertexDisjointPaths G m
+'Erdos915.not_erdos_915' depends on axioms: [propext, Classical.choice, Quot.sound]
