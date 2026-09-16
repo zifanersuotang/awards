@@ -7,6 +7,69 @@
   "note": "Attributed existing-proof reproduction. Source hashes identify the tested checkout bytes, including inherited CRLF; immutable upstream commit and source paths identify original Git blobs. No source authorship, official acceptance, independently implemented checker, or network-isolated certification is asserted. Previously successful unchanged-source dependency checks may be reused across targets.",
   "entries": [
     {
+      "jsp": "JSP-000821",
+      "erdos": 988,
+      "targets": [
+        "Erdos988.erdos_988"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos988",
+          "path": "ErdosProblems/Erdos988.lean",
+          "sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos988"
+      ],
+      "axioms_output": "'Erdos988.erdos_988' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "The target proves that the infimum of spherical-cap discrepancies over all sets of exactly n distinct points on the unit two-sphere tends to positive infinity as n grows. Discrepancy is the supremum of absolute differences between the cap point count and n times normalized cap area. The source constructs probability-normalized surface measure from ambient Euclidean volume and proves the required cap-area identity, rather than leaving this identification as a hypothesis. Its proof supplies the uniform inequality that the number of points is at most 512 times the fourth power of discrepancy, which yields the requested divergence.",
+        "caveat": "The registered question concerns the two-sphere. Do not extend this target to Schmidt’s higher-dimensional generalization or claim an optimal discrepancy constant. The code uses supremum and infimum formulations; these directly establish the original uniform divergence question.",
+        "full_original_problem_coverage": true
+      },
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos988",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 23.207,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos988-compile.log",
+          "log_sha256": "43077b211081a378be3e9d514e1c8081f11472f3a36d00dc04fed767be65e8a1"
+        },
+        {
+          "module": "ExistingChecks.Erdos988",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 17.639,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "0dcfe22de6c3c12719d65604281389c553359b5f969870e7d657b8728f130ef1",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos988-compile.log",
+          "log_sha256": "43077b211081a378be3e9d514e1c8081f11472f3a36d00dc04fed767be65e8a1"
+        },
+        {
+          "module": "ErdosProblems.Erdos988",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 29.356,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos988-replay.log",
+          "log_sha256": "ffdd3c17bf5b4e9f8d34869ffd2d1da8505db745e7c39e0d4397578067e84bf5"
+        }
+      ]
+    },
+    {
       "jsp": "JSP-000825",
       "erdos": 992,
       "targets": [

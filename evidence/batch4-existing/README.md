@@ -1,6 +1,6 @@
 # Existing Lean proof verification evidence: batch 4
 
-This directory contains actual local verification metadata and logs for 16 existing public formalizations. The official registration is [Issue 24](https://github.com/TheJustinSunPrize/awards/issues/24); a successful local result does not establish official acceptance.
+This directory contains actual local verification metadata and logs for 17 existing public formalizations. The official registration is [Issue 24](https://github.com/TheJustinSunPrize/awards/issues/24); a successful local result does not establish official acceptance.
 
 The original proof sources and their attributions remain at the immutable plby commit referenced in verification.json. No third-party proof source is distributed here. Every listed local proof module was compiled and explicitly replayed with Lean 4.33.0 and the pinned Mathlib environment. Each exported target has a separately compiled axiom report. The metadata records exact source hashes, successful process exits, durations and checksummed public logs.
 
