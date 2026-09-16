@@ -1,0 +1,1 @@
+'Erdos180.not_erdos_180' depends on axioms: [propext, Classical.choice, Quot.sound]

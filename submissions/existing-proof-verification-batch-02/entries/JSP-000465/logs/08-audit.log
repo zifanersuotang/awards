@@ -1,0 +1,99 @@
+@[reducible] def SimpleGraph.Free.{u_4, u_5} : {α : Type u_4} →
+  {β : Type u_5} → SimpleGraph.{u_4} α → SimpleGraph.{u_5} β → Prop :=
+fun {α} {β} A B => ¬SimpleGraph.IsContained.{u_4, u_5} A B
+def SimpleGraph.extremalNumber.{u_1} : ℕ → {W : Type u_1} → SimpleGraph.{u_1} W → ℕ :=
+fun n {W} H =>
+  Finset.sup.{0, 0} {G | SimpleGraph.Free.{u_1, 0} H G} fun x => Finset.card.{0} (SimpleGraph.edgeFinset.{0} x)
+structure Erdos180.FiniteGraph : Type
+number of parameters: 0
+fields:
+  Erdos180.FiniteGraph.order : ℕ
+  Erdos180.FiniteGraph.graph : SimpleGraph.{0} (Fin self.order)
+constructor:
+  Erdos180.FiniteGraph.mk (order : ℕ) (graph : SimpleGraph.{0} (Fin order)) : Erdos180.FiniteGraph
+def Erdos180.FamilyFree : Finset.{0} Erdos180.FiniteGraph → {n : ℕ} → SimpleGraph.{0} (Fin n) → Prop :=
+fun family {n} host =>
+  ∀ (forbidden : Erdos180.FiniteGraph),
+    Membership.mem.{0, 0} family forbidden → SimpleGraph.Free.{0, 0} forbidden.graph host
+def Erdos180.familyExtremal : Finset.{0} Erdos180.FiniteGraph → ℕ → ℕ :=
+fun family n =>
+  Finset.sup.{0, 0} (Finset.filter.{0} (Erdos180.FamilyFree family) Finset.univ.{0}) fun host =>
+    Finset.card.{0} (SimpleGraph.edgeFinset.{0} host)
+def Erdos180.IsCompactFamily : Finset.{0} Erdos180.FiniteGraph → Prop :=
+fun family =>
+  ∃ forbidden,
+    Membership.mem.{0, 0} family forbidden ∧
+      ∃ C,
+        LT.lt.{0} 0 C ∧
+          ∀ᶠ (n : ℕ) in Filter.atTop.{0},
+            LE.le.{0} (↑(SimpleGraph.extremalNumber.{0} n forbidden.graph))
+              (HMul.hMul.{0, 0, 0} C ↑(Erdos180.familyExtremal family n))
+def Erdos180.CompactnessConjectureStatement : Prop :=
+∀ (family : Finset.{0} Erdos180.FiniteGraph),
+  Finset.Nonempty.{0} family → Erdos180.IsCyclicFamily family → Erdos180.IsCompactFamily family
+def Erdos180.extremalScale : ℕ → ℝ :=
+fun n => HPow.hPow.{0, 0, 0} (↑n) (4 / 3)
+def Erdos180.UniformMemberLower : Finset.{0} Erdos180.FiniteGraph → ℝ → Prop :=
+fun family c =>
+  ∀ (forbidden : Erdos180.FiniteGraph),
+    Membership.mem.{0, 0} family forbidden →
+      ∀ᶠ (n : ℕ) in Filter.atTop.{0},
+        LE.le.{0} (HMul.hMul.{0, 0, 0} c (Erdos180.extremalScale n)) ↑(SimpleGraph.extremalNumber.{0} n forbidden.graph)
+Erdos180.compactnessCounterexample_bigO : ∃ family c,
+  Finset.Nonempty.{0} family ∧
+    (∀ (forbidden : Erdos180.FiniteGraph),
+        Membership.mem.{0, 0} family forbidden →
+          SimpleGraph.Connected.{0} forbidden.graph ∧
+            SimpleGraph.IsBipartite.{0} forbidden.graph ∧ ¬SimpleGraph.IsAcyclic.{0} forbidden.graph) ∧
+      LT.lt.{0} 0 c ∧
+        Erdos180.UniformMemberLower family c ∧
+          (Asymptotics.IsBigO.{0, 0, 0} Filter.atTop.{0} (fun n => ↑(Erdos180.familyExtremal family n)) fun n =>
+              HPow.hPow.{0, 0, 0} (↑n) (HSub.hSub.{0, 0, 0} (4 / 3) (1 / 48))) ∧
+            ¬Erdos180.IsCompactFamily family ∧ ¬Erdos180.CompactnessConjectureStatement
+'Erdos180.compactnessCounterexample_bigO' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos180.checkedManuscriptCounterexample : Finset.Nonempty.{0} Erdos180.proposedFamily ∧
+  (∀ (forbidden : Erdos180.FiniteGraph),
+      Membership.mem.{0, 0} Erdos180.proposedFamily forbidden →
+        SimpleGraph.Connected.{0} forbidden.graph ∧
+          SimpleGraph.IsBipartite.{0} forbidden.graph ∧ ¬SimpleGraph.IsAcyclic.{0} forbidden.graph) ∧
+    LT.lt.{0} 0 Erdos180.manuscriptLowerConstant ∧
+      Erdos180.UniformMemberLower Erdos180.proposedFamily Erdos180.manuscriptLowerConstant ∧
+        (∀ (n : ℕ) (host : SimpleGraph.{0} (Fin n)),
+            Erdos180.FamilyFree Erdos180.proposedFamily host →
+              LE.le.{0} (HPow.hPow.{0, 0, 0} (↑(Finset.card.{0} (SimpleGraph.edgeFinset.{0} host))) 16)
+                (HMul.hMul.{0, 0, 0} Erdos180.compactnessHostPowerConstant (HPow.hPow.{0, 0, 0} (↑n) 21))) ∧
+          (∀ (n : ℕ),
+              LE.le.{0} (HPow.hPow.{0, 0, 0} (↑(Erdos180.familyExtremal Erdos180.proposedFamily n)) 16)
+                (HMul.hMul.{0, 0, 0} Erdos180.compactnessHostPowerConstant (HPow.hPow.{0, 0, 0} (↑n) 21))) ∧
+            LT.lt.{0} 0 (1 / 48) ∧
+              Eq.{1} (21 / 16) (HSub.hSub.{0, 0, 0} (4 / 3) (1 / 48)) ∧
+                ¬Erdos180.IsCompactFamily Erdos180.proposedFamily ∧ ¬Erdos180.CompactnessConjectureStatement
+'Erdos180.checkedManuscriptCounterexample' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos180.quantitativeCompactnessCounterexample : ∃ family c C,
+  Finset.Nonempty.{0} family ∧
+    (∀ (forbidden : Erdos180.FiniteGraph),
+        Membership.mem.{0, 0} family forbidden →
+          SimpleGraph.Connected.{0} forbidden.graph ∧
+            SimpleGraph.IsBipartite.{0} forbidden.graph ∧ ¬SimpleGraph.IsAcyclic.{0} forbidden.graph) ∧
+      LT.lt.{0} 0 c ∧
+        LT.lt.{0} 0 C ∧
+          Erdos180.UniformMemberLower family c ∧
+            (∀ (n : ℕ) (host : SimpleGraph.{0} (Fin n)),
+                Erdos180.FamilyFree family host →
+                  LE.le.{0} (HPow.hPow.{0, 0, 0} (↑(Finset.card.{0} (SimpleGraph.edgeFinset.{0} host))) 16)
+                    (HMul.hMul.{0, 0, 0} C (HPow.hPow.{0, 0, 0} (↑n) 21))) ∧
+              (∀ (n : ℕ),
+                  LE.le.{0} (HPow.hPow.{0, 0, 0} (↑(Erdos180.familyExtremal family n)) 16)
+                    (HMul.hMul.{0, 0, 0} C (HPow.hPow.{0, 0, 0} (↑n) 21))) ∧
+                LT.lt.{0} 0 (1 / 48) ∧
+                  Eq.{1} (21 / 16) (HSub.hSub.{0, 0, 0} (4 / 3) (1 / 48)) ∧
+                    ¬Erdos180.IsCompactFamily family ∧ ¬Erdos180.CompactnessConjectureStatement
+'Erdos180.quantitativeCompactnessCounterexample' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos180.proposedFamily_uniformMemberLower : Erdos180.UniformMemberLower Erdos180.proposedFamily
+  Erdos180.manuscriptLowerConstant
+'Erdos180.proposedFamily_uniformMemberLower' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos180.proposedFamily_familyExtremal_isBigO : Asymptotics.IsBigO.{0, 0, 0} Filter.atTop.{0}
+  (fun n => ↑(Erdos180.familyExtremal Erdos180.proposedFamily n)) fun n => HPow.hPow.{0, 0, 0} (↑n) (21 / 16)
+'Erdos180.proposedFamily_familyExtremal_isBigO' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos180.proposedFamily_not_compact : ¬Erdos180.IsCompactFamily Erdos180.proposedFamily
+'Erdos180.proposedFamily_not_compact' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

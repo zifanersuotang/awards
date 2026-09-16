@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "jsp": "JSP-000465",
+  "erdos": 575,
+  "title": "For a forbidden family containing a bipartite graph, can the asymptotic extremal problem be reduced to forbidding a single graph?",
+  "scope": "There exists a nonempty finite family F of connected bipartite finite graphs, each containing a cycle, and c>0 such that ex(n,G)>=c*n^(4/3) eventually for every G in F, while ex(n,F)=O(n^(4/3-1/48)); no member G has ex(n,G)=O(ex(n,F)). This gives a negative answer to JSP-000465 / Erdos 575, whose hypothesis asks only that F contain a bipartite member. The subgraphs are ordinary copies, not induced copies. The lower-bound threshold may depend on G as printed; finiteness permits a common threshold. No new or first formalization is claimed.",
+  "attribution": "Existing Apache-2.0 plby/lean-proofs port. The headers credit Astra (an internal OpenAI model) for the informal proof and Astra / OpenAI team for formalization, and explicitly say the source was modified and ported from Lean/Mathlib 4.32.0 to 4.33.0. All selected plby source bytes and notices are preserved; this work only supplies verification evidence.",
+  "target_module": "ErdosProblems.Erdos180",
+  "main_theorem": "Erdos180.compactnessCounterexample_bigO",
+  "theorems": [
+    "Erdos180.compactnessCounterexample_bigO",
+    "Erdos180.checkedManuscriptCounterexample",
+    "Erdos180.quantitativeCompactnessCounterexample",
+    "Erdos180.proposedFamily_uniformMemberLower",
+    "Erdos180.proposedFamily_familyExtremal_isBigO",
+    "Erdos180.proposedFamily_not_compact"
+  ],
+  "environment": {
+    "lean_toolchain": "leanprover/lean4:v4.33.0",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "LEAN_NUM_THREADS": "1",
+    "compile_flags": [
+      "-j1",
+      "-M8192"
+    ],
+    "platform": "Windows"
+  },
+  "sources": [
+    {
+      "module": "ErdosProblems.Erdos180.Foundations",
+      "path": "ErdosProblems/Erdos180/Foundations.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Foundations.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Foundations.lean",
+      "sha256": "070993af86c49059521f2a4500353eaea5173b011f7f8b1c234ec8b8816bfad5",
+      "bytes": 27478,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos180.Geometry",
+      "path": "ErdosProblems/Erdos180/Geometry.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Geometry.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Geometry.lean",
+      "sha256": "2e44104c297a0330f2429a6be3808ad78cc4150c7f4f8195a971adfa4abea086",
+      "bytes": 65772,
+      "imports": [
+        "ErdosProblems.Erdos180.Foundations"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos180.Subgraphs",
+      "path": "ErdosProblems/Erdos180/Subgraphs.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Subgraphs.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Subgraphs.lean",
+      "sha256": "f337768bb0dd4607f1d8ede15984571ec99821c1318d5571a25845b0dfc3a300",
+      "bytes": 58021,
+      "imports": [
+        "ErdosProblems.Erdos180.Geometry"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos180.Counting",
+      "path": "ErdosProblems/Erdos180/Counting.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Counting.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Counting.lean",
+      "sha256": "e477accd07bf3984a8f4b67173d6189f45f5738185fdb42d5bfee2ea965444f9",
+      "bytes": 86489,
+      "imports": [
+        "ErdosProblems.Erdos180.Subgraphs"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos180.Coordinates",
+      "path": "ErdosProblems/Erdos180/Coordinates.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Coordinates.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Coordinates.lean",
+      "sha256": "fc483689a0735b88c18a73adcda7094bb52ecec2e8f4d26aca8e304f0381a359",
+      "bytes": 63018,
+      "imports": [
+        "ErdosProblems.Erdos180.Counting"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos180.Counterexample",
+      "path": "ErdosProblems/Erdos180/Counterexample.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Counterexample.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Counterexample.lean",
+      "sha256": "7d90d312ce26b5fde73c3b24cbc495cc6f74b7a2876b083786bb8456540dbafc",
+      "bytes": 33461,
+      "imports": [
+        "ErdosProblems.Erdos180.Coordinates"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos180.Quantitative",
+      "path": "ErdosProblems/Erdos180/Quantitative.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Quantitative.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180/Quantitative.lean",
+      "sha256": "dab124356489c351ebe49e01fb13303a9e0fa471406c96a37e634c193dfda38e",
+      "bytes": 17208,
+      "imports": [
+        "ErdosProblems.Erdos180.Counterexample"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos180",
+      "path": "ErdosProblems/Erdos180.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos180.lean",
+      "sha256": "326a3a8ab299c0c24bb512760c6ebc58605dd9e2fb8bf89ba3112995fcff3769",
+      "bytes": 1080,
+      "imports": [
+        "ErdosProblems.Erdos180.Quantitative"
+      ]
+    }
+  ],
+  "verification": {
+    "status": "verified_unchanged_source",
+    "source_bytes_unchanged": true,
+    "axioms": {
+      "Erdos180.compactnessCounterexample_bigO": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos180.checkedManuscriptCounterexample": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos180.quantitativeCompactnessCounterexample": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos180.proposedFamily_uniformMemberLower": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos180.proposedFamily_familyExtremal_isBigO": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos180.proposedFamily_not_compact": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "checker_selected_modules": [
+      "ErdosProblems.Erdos180",
+      "ErdosProblems.Erdos180.Subgraphs",
+      "ErdosProblems.Erdos180.Quantitative",
+      "ErdosProblems.Erdos180.Geometry",
+      "ErdosProblems.Erdos180.Foundations",
+      "ErdosProblems.Erdos180.Counting",
+      "ErdosProblems.Erdos180.Counterexample",
+      "ErdosProblems.Erdos180.Coordinates"
+    ],
+    "events": [
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos180.Foundations",
+        "exit_code": 0,
+        "seconds": 16.569,
+        "started": "2026-09-16T11:56:59.102262+00:00",
+        "finished": "2026-09-16T11:57:15.671090+00:00",
+        "log": "logs/00-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos180.Geometry",
+        "exit_code": 0,
+        "seconds": 24.536,
+        "started": "2026-09-16T11:57:15.672190+00:00",
+        "finished": "2026-09-16T11:57:40.208180+00:00",
+        "log": "logs/01-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos180.Subgraphs",
+        "exit_code": 0,
+        "seconds": 32.58,
+        "started": "2026-09-16T11:57:40.209409+00:00",
+        "finished": "2026-09-16T11:58:12.789640+00:00",
+        "log": "logs/02-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos180.Counting",
+        "exit_code": 0,
+        "seconds": 24.342,
+        "started": "2026-09-16T11:58:12.790669+00:00",
+        "finished": "2026-09-16T11:58:37.132920+00:00",
+        "log": "logs/03-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos180.Coordinates",
+        "exit_code": 0,
+        "seconds": 27.295,
+        "started": "2026-09-16T11:58:37.134008+00:00",
+        "finished": "2026-09-16T11:59:04.429492+00:00",
+        "log": "logs/04-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos180.Counterexample",
+        "exit_code": 0,
+        "seconds": 16.721,
+        "started": "2026-09-16T11:59:04.430648+00:00",
+        "finished": "2026-09-16T11:59:21.151612+00:00",
+        "log": "logs/05-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos180.Quantitative",
+        "exit_code": 0,
+        "seconds": 14.977,
+        "started": "2026-09-16T11:59:21.152686+00:00",
+        "finished": "2026-09-16T11:59:36.129769+00:00",
+        "log": "logs/06-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos180",
+        "exit_code": 0,
+        "seconds": 13.818,
+        "started": "2026-09-16T11:59:36.130798+00:00",
+        "finished": "2026-09-16T11:59:49.948483+00:00",
+        "log": "logs/07-compile.log",
+        "log_sha256": "f65b1d8f3a5621bb710b7b4295eef775fa83cbe2e91f63f9051d8b8121cb910b",
+        "original_log_sha256": "f65b1d8f3a5621bb710b7b4295eef775fa83cbe2e91f63f9051d8b8121cb910b",
+        "redactions": []
+      },
+      {
+        "stage": "audit",
+        "module": "Audit575",
+        "exit_code": 0,
+        "seconds": 13.766,
+        "started": "2026-09-16T11:59:49.956754+00:00",
+        "finished": "2026-09-16T12:00:03.722759+00:00",
+        "log": "logs/08-audit.log",
+        "log_sha256": "5c16bc5475b44f089be189aa9377305443c9224022a52a9651295d62d4c018ad",
+        "original_log_sha256": "5c16bc5475b44f089be189aa9377305443c9224022a52a9651295d62d4c018ad",
+        "redactions": []
+      },
+      {
+        "stage": "leanchecker",
+        "module": "ErdosProblems.Erdos180",
+        "exit_code": 0,
+        "seconds": 95.648,
+        "started": "2026-09-16T12:00:03.734424+00:00",
+        "finished": "2026-09-16T12:01:39.382907+00:00",
+        "log": "logs/09-leanchecker.log",
+        "log_sha256": "7fd0237cc453ec0dd366432479e5f219c4610c15746a6fb84e9668ba20803dad",
+        "original_log_sha256": "7fd0237cc453ec0dd366432479e5f219c4610c15746a6fb84e9668ba20803dad",
+        "redactions": []
+      }
+    ],
+    "limits": [
+      "The bundled Lean checker reuses the imported environment; Mathlib was not freshly replayed.",
+      "Compilation and replay use Lean's kernel, not independently implemented checkers.",
+      "This is existing-proof evidence intake, not new authorship, acceptance, nomination or an award record."
+    ]
+  },
+  "source_history_notes": [
+    "The selected source is the existing plby/lean-proofs 8822f7ddef30fadbd92e1c6ab4ed897af356af5e decomposition, already advertised upstream as a Lean/Mathlib 4.32.0 to 4.33.0 port. This verification preserves those selected plby bytes unchanged.",
+    "Its headers cite OpenAI commit a13547c6be4563746881d0b3b4c9fd03f72f0484 as the original source. The GitHub Git-tree API returned HTTP 404 for that reference during preparation, so this is retained as a header attribution rather than a successfully retrieved original revision.",
+    "The independently available OpenAI revision 94bc0feb6a9ff12c7d31d6de640a725c9d43d2b6 uses Lean 4.32.0 and Mathlib 81a5d257c8e410db227a6665ed08f64fea08e997. Its compactnessCounterexample_bigO signature matches the selected plby theorem after whitespace normalization and namespace relocation; no byte-identity claim between the two OpenAI revisions is made.",
+    "This entry registers the connected, bipartite, cyclic-family counterexample for JSP-000465 / Erdos 575 via Erdos180.compactnessCounterexample_bigO. Using the Erdos180 module does not independently register or count the different JSP-000174 / Erdos 180 statement."
+  ]
+}
