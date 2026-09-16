@@ -1,0 +1,218 @@
+{
+  "schema": "existing-public-proof-evidence-v1",
+  "checked_date": "2026-09-16",
+  "catalog_commit": "f4e7173d89dfe91022a185427d63452c8ffbf6ae",
+  "lean_version": "4.33.0",
+  "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "verification_scope": "All local proof modules recompiled. Explicit bundled leanchecker target replay succeeded. Imports, including Mathlib and standard libraries, trusted. No fresh empty-environment replay; no separately implemented checker.",
+  "claims": {
+    "new_mathematical_proof": false,
+    "original_formalization": false,
+    "first_formalization": false,
+    "official_verification": false,
+    "award_eligibility": false
+  },
+  "records": [
+    {
+      "jsp": "JSP-000139",
+      "erdos": 133,
+      "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "source_files": [
+        {
+          "module": "ErdosProblems.Erdos133",
+          "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos133.lean",
+          "raw_sha256": "460aafc3b7581703739b1d3d8edd0fad2470ed476b3fe4b15e99220aa2a96c5e",
+          "raw_bytes": 21811,
+          "compiled_sha256": "0745d08367e9f3c6d9556db9f64325ef9d403c32c30b52def381569fa06e8b58",
+          "compiled_bytes": 22423
+        }
+      ],
+      "compilation": [
+        {
+          "module": "ErdosProblems.Erdos133",
+          "exit_code": 0,
+          "elapsed_seconds": 20.89,
+          "source_sha256": "0745d08367e9f3c6d9556db9f64325ef9d403c32c30b52def381569fa06e8b58",
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+          "log_sha256": "c0c94def24eca82150bc995544929cf9e521f9d6803e95ba1ddf4d86f7f510de",
+          "output": "'Erdos133.erdos_133' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+        }
+      ],
+      "main_theorem": "Erdos133.erdos_133",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "checker": {
+        "jsp": "JSP139",
+        "results": [
+          {
+            "module": "ErdosProblems.Erdos133",
+            "command": [
+              "leanchecker",
+              "ErdosProblems.Erdos133",
+              "--verbose"
+            ],
+            "exit_code": 0,
+            "elapsed_seconds": 14.782,
+            "log": "ErdosProblems.Erdos133.log",
+            "log_sha256": "cd30b511c16dc7a422785b13bea840bd323c32f59d102f1e7ed90c82228b67b4",
+            "output": "replaying ErdosProblems.Erdos133\n"
+          }
+        ],
+        "complete": true,
+        "scope": "Default leanchecker replays target-module declarations with imported environment trusted; Mathlib and bundled Lean libraries are not rebuilt.",
+        "independent_implementation": false
+      },
+      "scope": "Minimum achievable maximum degree in triangle-free diameter-at-most-two graphs: Theta(sqrt(n)), including all n >= 64 bounds. Nonempty feasible set established."
+    },
+    {
+      "jsp": "JSP-000183",
+      "erdos": 193,
+      "source_commit": "b156ed0039b5c1b028e210aa80d28d2644fad976",
+      "source_files": [
+        {
+          "path": "Hilbert193/GaussianValuation.lean",
+          "url": "https://github.com/ekalvi/erdos-193/blob/b156ed0039b5c1b028e210aa80d28d2644fad976/formal/Hilbert193/Hilbert193/GaussianValuation.lean",
+          "sha256": "9dd606d6da93413c4d245230137d81cbf515de61bda5d29ad796078aa2337eb0",
+          "compile_exit_code": 0,
+          "elapsed_seconds": 6.213,
+          "log": "replay-01.log"
+        },
+        {
+          "path": "Hilbert193/Gaussian.lean",
+          "url": "https://github.com/ekalvi/erdos-193/blob/b156ed0039b5c1b028e210aa80d28d2644fad976/formal/Hilbert193/Hilbert193/Gaussian.lean",
+          "sha256": "405078597700227d6cdd52c00dac0d2556cf48a4211d787b77b93a43073ec687",
+          "compile_exit_code": 0,
+          "elapsed_seconds": 6.837,
+          "log": "replay-02.log"
+        },
+        {
+          "path": "Hilbert193/Construction.lean",
+          "url": "https://github.com/ekalvi/erdos-193/blob/b156ed0039b5c1b028e210aa80d28d2644fad976/formal/Hilbert193/Hilbert193/Construction.lean",
+          "sha256": "376eaaa489d288f0e10f635c298f60aecb7ec56f9671dbd8e5352533093793db",
+          "compile_exit_code": 0,
+          "elapsed_seconds": 14.643,
+          "log": "replay-03.log"
+        },
+        {
+          "path": "Hilbert193/Continuity.lean",
+          "url": "https://github.com/ekalvi/erdos-193/blob/b156ed0039b5c1b028e210aa80d28d2644fad976/formal/Hilbert193/Hilbert193/Continuity.lean",
+          "sha256": "420b27f0d7afff026cfe0f17670c1ed6064b167886a9ab166026d5be8f59cf7a",
+          "compile_exit_code": 0,
+          "elapsed_seconds": 26.166,
+          "log": "replay-04.log"
+        }
+      ],
+      "compilation": [
+        {
+          "module": "Hilbert193.GaussianValuation",
+          "exit_code": 0,
+          "elapsed_seconds": 6.213,
+          "output": ""
+        },
+        {
+          "module": "Hilbert193.Gaussian",
+          "exit_code": 0,
+          "elapsed_seconds": 6.837,
+          "output": ""
+        },
+        {
+          "module": "Hilbert193.Construction",
+          "exit_code": 0,
+          "elapsed_seconds": 14.643,
+          "output": ""
+        },
+        {
+          "module": "Hilbert193.Continuity",
+          "exit_code": 0,
+          "elapsed_seconds": 26.166,
+          "output": ""
+        }
+      ],
+      "main_theorem": "Hilbert193.erdos193_unconditional",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "checker": {
+        "jsp": "JSP183",
+        "results": [
+          {
+            "module": "Hilbert193.GaussianValuation",
+            "command": [
+              "leanchecker",
+              "Hilbert193.GaussianValuation",
+              "--verbose"
+            ],
+            "exit_code": 0,
+            "elapsed_seconds": 9.093,
+            "log": "Hilbert193.GaussianValuation.log",
+            "log_sha256": "d5bd17b2b35843f712859c7efdeda7b7e028279371ce713406a0767fdf858337",
+            "output": "replaying Hilbert193.GaussianValuation\n"
+          },
+          {
+            "module": "Hilbert193.Gaussian",
+            "command": [
+              "leanchecker",
+              "Hilbert193.Gaussian",
+              "--verbose"
+            ],
+            "exit_code": 0,
+            "elapsed_seconds": 10.155,
+            "log": "Hilbert193.Gaussian.log",
+            "log_sha256": "e333513f8c357ad3a9210104928c05ec3d74fcbb76e656b9beef4d5d0ad2df8e",
+            "output": "replaying Hilbert193.Gaussian\n"
+          },
+          {
+            "module": "Hilbert193.Construction",
+            "command": [
+              "leanchecker",
+              "Hilbert193.Construction",
+              "--verbose"
+            ],
+            "exit_code": 0,
+            "elapsed_seconds": 10.237,
+            "log": "Hilbert193.Construction.log",
+            "log_sha256": "23229d24463e66e0e095e87a9faf84cd4f32e2fcf90efc4bcf2ef670caa9905f",
+            "output": "replaying Hilbert193.Construction\n"
+          },
+          {
+            "module": "Hilbert193.Continuity",
+            "command": [
+              "leanchecker",
+              "Hilbert193.Continuity",
+              "--verbose"
+            ],
+            "exit_code": 0,
+            "elapsed_seconds": 10.158,
+            "log": "Hilbert193.Continuity.log",
+            "log_sha256": "98511fc800169e3b6664f690683aacb53db087bf2854df9988fac020fd18d3aa",
+            "output": "replaying Hilbert193.Continuity\n"
+          }
+        ],
+        "complete": true,
+        "scope": "Default leanchecker replays target-module declarations with imported environment trusted; Mathlib and bundled Lean libraries are not rebuilt.",
+        "independent_implementation": false
+      },
+      "scope": {
+        "original_finite_step_counterexample": "complete",
+        "infinite_distinct_vertices": "proved injectivity of explicit witness",
+        "ordinary_real_collinearity_bridge": "mathematically audited; no additional Mathlib affine Collinear lemma compiled",
+        "unit_step_extensions_claimed": false
+      },
+      "authors": [
+        "Stijn Cambie",
+        "Erik Kalviainen"
+      ],
+      "paper_url": "https://arxiv.org/abs/2609.01766",
+      "audit_source": "import Hilbert193.Continuity\n\n/-! Independent scope/axiom audit for the existing Cambie–Kalviainen proof.\nThis file does not claim authorship of the construction or its proof. -/\n\nnamespace JSP183Replay\n\n/-- The displayed witness has infinitely many distinct vertices. -/\ntheorem taggedLift_injective : Function.Injective Hilbert193.taggedLift := by\n  intro m n h\n  apply Hilbert193.taggedHeight_strictMono.injective\n  have hz := congrArg Hilbert193.Point3.z h\n  simpa only [Hilbert193.taggedLift, Nat.cast_inj] using hz\n\n/-- Re-expose the original theorem without adding mathematical hypotheses. -/\ntheorem original_statement :\n    ∃ (S : Set Hilbert193.Point3) (P : ℕ → Hilbert193.Point3),\n      S.Finite ∧\n      (∀ n, Hilbert193.displacement (P n) (P (n + 1)) ∈ S) ∧\n      (∀ ⦃i j k⦄, i < j → j < k →\n        ¬ Hilbert193.OrderedCollinear (P i) (P j) (P k)) :=\n  Hilbert193.erdos193_unconditional\n\n#print axioms taggedLift_injective\n#print axioms original_statement\n#print axioms Hilbert193.erdos193_unconditional\n#print axioms Hilbert193.taggedLift_no_three\n#print axioms Hilbert193.tagged_pair_law\n#print axioms Hilbert193.gaussian_same_state_pair_law\n\nend JSP183Replay\n\n",
+      "axiom_audit_output": "'JSP183Replay.taggedLift_injective' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP183Replay.original_statement' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Hilbert193.erdos193_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Hilbert193.taggedLift_no_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Hilbert193.tagged_pair_law' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Hilbert193.gaussian_same_state_pair_law' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    }
+  ]
+}
