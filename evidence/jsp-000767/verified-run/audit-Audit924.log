@@ -1,0 +1,2 @@
+Erdos924.erdos_924 (k l : ℕ) : 2 ≤ k → 3 ≤ l → ∃ V x G, G.CliqueFree (l + 1) ∧ Erdos924.IsEdgeRamseyForClique G k l
+'Erdos924.erdos_924' depends on axioms: [propext, Classical.choice, Quot.sound]
