@@ -1,0 +1,31 @@
+{
+  "jsp": "JSP-000655",
+  "erdos": 797,
+  "module": "Erdos797",
+  "harness_module": "Audit797",
+  "main_theorem": "Erdos797.erdos_797",
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_path": "src/latest/ErdosProblems/Erdos797.lean",
+  "source_sha256": {
+    "Erdos797.lean": "069c7310c36492867fdc8492041022a2b5d64f366db29cea253edb22025317a5",
+    "Audit797.lean": "cd4b5a0bd9bf7c9b16e23d012cd17c640285906376caa14df0856c64127e2693"
+  },
+  "preparation_only": false,
+  "statement_scope": "Cube-form upper and lower acyclic-chromatic bounds yield the requested f(d)=o(d^2). The target includes f(d)^3=O(d^4) and d^4=O(log d*f(d)^3).",
+  "scope_cautions": [],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0601-0700.md#JSP-000655",
+  "original_problem_url": "https://www.erdosproblems.com/797",
+  "verification_limit": "Successful observed replay is recorded in verified-run/verification.json.",
+  "informal_authors_as_credited": [
+    "Noga Alon",
+    "Colin McDiarmid",
+    "Bruce Reed"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lean_version": "4.33.0"
+}

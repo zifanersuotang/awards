@@ -1,0 +1,5 @@
+Erdos797.erdos_797 :
+  (∀ (d : ℕ), 1 ≤ d → f₇₉₇ d ^ 3 ≤ 1024 ^ 3 * d ^ 4) ∧
+    (∀ (d : ℕ), Erdos797.LowerBound.lowerD 1 ≤ d → d ^ 4 ≤ 2 ^ 67 * Nat.log 2 d * f₇₉₇ d ^ 3) ∧
+      (fun d => ↑(f₇₉₇ d)) =o[Filter.atTop] fun d => ↑d ^ 2
+'Erdos797.erdos_797' depends on axioms: [propext, Classical.choice, Quot.sound]
