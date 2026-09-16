@@ -1,0 +1,45 @@
+def Erdos485.termCount : Polynomial.{0} ℚ → ℕ :=
+fun P => Finset.card.{0} (Polynomial.support.{0} P)
+def Erdos485.squareTermCounts : ℕ → Set.{0} ℕ :=
+fun k =>
+  Set.ofPred.{0} fun m => ∃ P, Eq.{1} (Erdos485.termCount P) k ∧ Eq.{1} (Erdos485.termCount (HPow.hPow.{0, 0, 0} P 2)) m
+def Erdos485.f : ℕ → ℕ :=
+fun k => sInf.{0} (Erdos485.squareTermCounts k)
+def Erdos485.B : ℕ → ℕ :=
+fun t =>
+  HAdd.hAdd.{0, 0, 0} 1
+    (HPow.hPow.{0, 0, 0} 32 (HSub.hSub.{0, 0, 0} (HPow.hPow.{0, 0, 0} 2 (HSub.hSub.{0, 0, 0} t 3)) 1))
+def Erdos485.SchinzelReduction : Prop :=
+∀ (P : Polynomial.{0} ℚ),
+  LE.le.{0} 2 (Erdos485.termCount P) →
+    have t := Erdos485.termCount (HPow.hPow.{0, 0, 0} P 2);
+    Eq.{1} t 3 ∧ Eq.{1} (Erdos485.termCount P) 2 ∨
+      LE.le.{0} 4 t ∧
+        (LE.le.{0} (Erdos485.termCount P)
+            (HAdd.hAdd.{0, 0, 0} 1 (HDiv.hDiv.{0, 0, 0} (HPow.hPow.{0, 0, 0} 8 (HSub.hSub.{0, 0, 0} t 2)) 2)) ∨
+          ∃ G,
+            LE.le.{0} 2 (Erdos485.termCount G) ∧
+              LT.lt.{0} (Erdos485.termCount (HPow.hPow.{0, 0, 0} G 2)) t ∧
+                LE.le.{0} (Erdos485.termCount P) (HPow.hPow.{0, 0, 0} (Erdos485.termCount G) 2))
+Erdos485.squareTermCounts_nonempty : ∀ (k : ℕ), Set.Nonempty.{0} (Erdos485.squareTermCounts k)
+'Erdos485.squareTermCounts_nonempty' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos485.f_attained : ∀ (k : ℕ),
+  ∃ P, Eq.{1} (Erdos485.termCount P) k ∧ Eq.{1} (Erdos485.termCount (HPow.hPow.{0, 0, 0} P 2)) (Erdos485.f k)
+'Erdos485.f_attained' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos485.f_minimal : ∀ {k : ℕ} {P : Polynomial.{0} ℚ},
+  Eq.{1} (Erdos485.termCount P) k → LE.le.{0} (Erdos485.f k) (Erdos485.termCount (HPow.hPow.{0, 0, 0} P 2))
+'Erdos485.f_minimal' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos485.schinzel_reduction : Erdos485.SchinzelReduction
+'Erdos485.schinzel_reduction' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos485.schinzel_support_bound : ∀ (P : Polynomial.{0} ℚ),
+  LE.le.{0} 2 (Erdos485.termCount P) →
+    LE.le.{0} (Erdos485.termCount P) (Erdos485.B (Erdos485.termCount (HPow.hPow.{0, 0, 0} P 2)))
+'Erdos485.schinzel_support_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos485.schinzel_term_bound : ∀ (P : Polynomial.{0} ℚ),
+  LE.le.{0} 2 (Erdos485.termCount P) →
+    LE.le.{0} (Erdos485.termCount P)
+      (HAdd.hAdd.{0, 0, 0} 1
+        (HPow.hPow.{0, 0, 0} 32 (HPow.hPow.{0, 0, 0} 2 (Erdos485.termCount (HPow.hPow.{0, 0, 0} P 2)))))
+'Erdos485.schinzel_term_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos485.erdos_485 : Filter.Tendsto.{0, 0} Erdos485.f Filter.atTop.{0} Filter.atTop.{0}
+'Erdos485.erdos_485' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
