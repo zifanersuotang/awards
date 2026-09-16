@@ -1,0 +1,452 @@
+{
+  "schema": "existing-public-proof-evidence-v1",
+  "checked_date": "2026-09-16",
+  "catalog_commit": "f4e7173d89dfe91022a185427d63452c8ffbf6ae",
+  "lean_version": "4.33.0",
+  "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "verification_scope": "All ten upstream local proof modules compiled from source, plus three local audit files. Eleven explicit same-implementation bundled leanchecker target replays succeeded. Erdos346 entry wrapper checked by compilation, with Proof and typed Audit replayed. Imported Mathlib and standard libraries trusted, not fresh-replayed. No independent implementation or official attestation.",
+  "claims": {
+    "new_mathematical_proof": false,
+    "original_formalization": false,
+    "first_formalization": false,
+    "official_verification": false,
+    "award_eligibility": false
+  },
+  "records": [
+    {
+      "jsp": "JSP-000139",
+      "erdos": 133,
+      "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "source_files": [
+        {
+          "module": "ErdosProblems.Erdos133",
+          "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos133.lean",
+          "raw_sha256": "460aafc3b7581703739b1d3d8edd0fad2470ed476b3fe4b15e99220aa2a96c5e",
+          "raw_bytes": 21811,
+          "compiled_sha256": "0745d08367e9f3c6d9556db9f64325ef9d403c32c30b52def381569fa06e8b58",
+          "compiled_bytes": 22423
+        }
+      ],
+      "compilation": [
+        {
+          "module": "ErdosProblems.Erdos133",
+          "exit_code": 0,
+          "elapsed_seconds": 20.89,
+          "source_sha256": "0745d08367e9f3c6d9556db9f64325ef9d403c32c30b52def381569fa06e8b58",
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+          "log_sha256": "c0c94def24eca82150bc995544929cf9e521f9d6803e95ba1ddf4d86f7f510de",
+          "output": "'Erdos133.erdos_133' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+        }
+      ],
+      "main_theorem": "Erdos133.erdos_133",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "checker": {
+        "jsp": "JSP139",
+        "results": [
+          {
+            "module": "ErdosProblems.Erdos133",
+            "command": [
+              "leanchecker",
+              "ErdosProblems.Erdos133",
+              "--verbose"
+            ],
+            "exit_code": 0,
+            "elapsed_seconds": 14.782,
+            "log": "ErdosProblems.Erdos133.log",
+            "log_sha256": "cd30b511c16dc7a422785b13bea840bd323c32f59d102f1e7ed90c82228b67b4",
+            "output": "replaying ErdosProblems.Erdos133\n"
+          }
+        ],
+        "complete": true,
+        "scope": "Default leanchecker replays target-module declarations with imported environment trusted; Mathlib and bundled Lean libraries are not rebuilt.",
+        "independent_implementation": false
+      },
+      "scope": "Minimum achievable maximum degree in triangle-free diameter-at-most-two graphs: Theta(sqrt(n)), including all n >= 64 bounds. Nonempty feasible set established."
+    },
+    {
+      "jsp": "JSP-000183",
+      "erdos": 193,
+      "source_commit": "b156ed0039b5c1b028e210aa80d28d2644fad976",
+      "source_files": [
+        {
+          "path": "Hilbert193/GaussianValuation.lean",
+          "url": "https://github.com/ekalvi/erdos-193/blob/b156ed0039b5c1b028e210aa80d28d2644fad976/formal/Hilbert193/Hilbert193/GaussianValuation.lean",
+          "sha256": "9dd606d6da93413c4d245230137d81cbf515de61bda5d29ad796078aa2337eb0",
+          "compile_exit_code": 0,
+          "elapsed_seconds": 6.213,
+          "log": "replay-01.log"
+        },
+        {
+          "path": "Hilbert193/Gaussian.lean",
+          "url": "https://github.com/ekalvi/erdos-193/blob/b156ed0039b5c1b028e210aa80d28d2644fad976/formal/Hilbert193/Hilbert193/Gaussian.lean",
+          "sha256": "405078597700227d6cdd52c00dac0d2556cf48a4211d787b77b93a43073ec687",
+          "compile_exit_code": 0,
+          "elapsed_seconds": 6.837,
+          "log": "replay-02.log"
+        },
+        {
+          "path": "Hilbert193/Construction.lean",
+          "url": "https://github.com/ekalvi/erdos-193/blob/b156ed0039b5c1b028e210aa80d28d2644fad976/formal/Hilbert193/Hilbert193/Construction.lean",
+          "sha256": "376eaaa489d288f0e10f635c298f60aecb7ec56f9671dbd8e5352533093793db",
+          "compile_exit_code": 0,
+          "elapsed_seconds": 14.643,
+          "log": "replay-03.log"
+        },
+        {
+          "path": "Hilbert193/Continuity.lean",
+          "url": "https://github.com/ekalvi/erdos-193/blob/b156ed0039b5c1b028e210aa80d28d2644fad976/formal/Hilbert193/Hilbert193/Continuity.lean",
+          "sha256": "420b27f0d7afff026cfe0f17670c1ed6064b167886a9ab166026d5be8f59cf7a",
+          "compile_exit_code": 0,
+          "elapsed_seconds": 26.166,
+          "log": "replay-04.log"
+        }
+      ],
+      "compilation": [
+        {
+          "module": "Hilbert193.GaussianValuation",
+          "exit_code": 0,
+          "elapsed_seconds": 6.213,
+          "output": ""
+        },
+        {
+          "module": "Hilbert193.Gaussian",
+          "exit_code": 0,
+          "elapsed_seconds": 6.837,
+          "output": ""
+        },
+        {
+          "module": "Hilbert193.Construction",
+          "exit_code": 0,
+          "elapsed_seconds": 14.643,
+          "output": ""
+        },
+        {
+          "module": "Hilbert193.Continuity",
+          "exit_code": 0,
+          "elapsed_seconds": 26.166,
+          "output": ""
+        }
+      ],
+      "main_theorem": "Hilbert193.erdos193_unconditional",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "checker": {
+        "jsp": "JSP183",
+        "results": [
+          {
+            "module": "Hilbert193.GaussianValuation",
+            "command": [
+              "leanchecker",
+              "Hilbert193.GaussianValuation",
+              "--verbose"
+            ],
+            "exit_code": 0,
+            "elapsed_seconds": 9.093,
+            "log": "Hilbert193.GaussianValuation.log",
+            "log_sha256": "d5bd17b2b35843f712859c7efdeda7b7e028279371ce713406a0767fdf858337",
+            "output": "replaying Hilbert193.GaussianValuation\n"
+          },
+          {
+            "module": "Hilbert193.Gaussian",
+            "command": [
+              "leanchecker",
+              "Hilbert193.Gaussian",
+              "--verbose"
+            ],
+            "exit_code": 0,
+            "elapsed_seconds": 10.155,
+            "log": "Hilbert193.Gaussian.log",
+            "log_sha256": "e333513f8c357ad3a9210104928c05ec3d74fcbb76e656b9beef4d5d0ad2df8e",
+            "output": "replaying Hilbert193.Gaussian\n"
+          },
+          {
+            "module": "Hilbert193.Construction",
+            "command": [
+              "leanchecker",
+              "Hilbert193.Construction",
+              "--verbose"
+            ],
+            "exit_code": 0,
+            "elapsed_seconds": 10.237,
+            "log": "Hilbert193.Construction.log",
+            "log_sha256": "23229d24463e66e0e095e87a9faf84cd4f32e2fcf90efc4bcf2ef670caa9905f",
+            "output": "replaying Hilbert193.Construction\n"
+          },
+          {
+            "module": "Hilbert193.Continuity",
+            "command": [
+              "leanchecker",
+              "Hilbert193.Continuity",
+              "--verbose"
+            ],
+            "exit_code": 0,
+            "elapsed_seconds": 10.158,
+            "log": "Hilbert193.Continuity.log",
+            "log_sha256": "98511fc800169e3b6664f690683aacb53db087bf2854df9988fac020fd18d3aa",
+            "output": "replaying Hilbert193.Continuity\n"
+          }
+        ],
+        "complete": true,
+        "scope": "Default leanchecker replays target-module declarations with imported environment trusted; Mathlib and bundled Lean libraries are not rebuilt.",
+        "independent_implementation": false
+      },
+      "scope": {
+        "original_finite_step_counterexample": "complete",
+        "infinite_distinct_vertices": "proved injectivity of explicit witness",
+        "ordinary_real_collinearity_bridge": "mathematically audited; no additional Mathlib affine Collinear lemma compiled",
+        "unit_step_extensions_claimed": false
+      },
+      "authors": [
+        "Stijn Cambie",
+        "Erik Kalviainen"
+      ],
+      "paper_url": "https://arxiv.org/abs/2609.01766",
+      "audit_source": "import Hilbert193.Continuity\n\n/-! Independent scope/axiom audit for the existing Cambie–Kalviainen proof.\nThis file does not claim authorship of the construction or its proof. -/\n\nnamespace JSP183Replay\n\n/-- The displayed witness has infinitely many distinct vertices. -/\ntheorem taggedLift_injective : Function.Injective Hilbert193.taggedLift := by\n  intro m n h\n  apply Hilbert193.taggedHeight_strictMono.injective\n  have hz := congrArg Hilbert193.Point3.z h\n  simpa only [Hilbert193.taggedLift, Nat.cast_inj] using hz\n\n/-- Re-expose the original theorem without adding mathematical hypotheses. -/\ntheorem original_statement :\n    ∃ (S : Set Hilbert193.Point3) (P : ℕ → Hilbert193.Point3),\n      S.Finite ∧\n      (∀ n, Hilbert193.displacement (P n) (P (n + 1)) ∈ S) ∧\n      (∀ ⦃i j k⦄, i < j → j < k →\n        ¬ Hilbert193.OrderedCollinear (P i) (P j) (P k)) :=\n  Hilbert193.erdos193_unconditional\n\n#print axioms taggedLift_injective\n#print axioms original_statement\n#print axioms Hilbert193.erdos193_unconditional\n#print axioms Hilbert193.taggedLift_no_three\n#print axioms Hilbert193.tagged_pair_law\n#print axioms Hilbert193.gaussian_same_state_pair_law\n\nend JSP183Replay\n\n",
+      "axiom_audit_output": "'JSP183Replay.taggedLift_injective' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP183Replay.original_statement' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Hilbert193.erdos193_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Hilbert193.taggedLift_no_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Hilbert193.tagged_pair_law' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Hilbert193.gaussian_same_state_pair_law' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "jsp": "JSP-000281",
+      "erdos": 339,
+      "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "source_files": [
+        {
+          "module": "ErdosProblems.Erdos339",
+          "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos339.lean",
+          "raw_sha256": "2ff897f1d26d160f01ad2a50c94050aab55f80ef00d4a2545a15f3eabfcfd87d",
+          "raw_bytes": 23606
+        },
+        {
+          "module": "ErdosProblems.Erdos868",
+          "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos868.lean",
+          "raw_sha256": "532f2a680d9c96881d6ea5db745d684048548a80384ea9bdb6de3650a53b92d2",
+          "raw_bytes": 283882
+        },
+        {
+          "module": "Util.Density",
+          "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/Util/Density.lean",
+          "raw_sha256": "42bab8e8913462b6c0ef71cb7d4694d64c7c74a5ec4365827610f55947c57b0a",
+          "raw_bytes": 4653
+        }
+      ],
+      "main_theorem": "Erdos339.erdos_339",
+      "compilation": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+        "modules": [
+          {
+            "module": "ErdosProblems/Erdos868",
+            "exit_code": 0,
+            "elapsed_seconds": 47.4064801,
+            "started_at_utc": "2026-09-16T09:49:36.2122740Z",
+            "log": "logs/ErdosProblems-Erdos868.log",
+            "source_sha256": "532f2a680d9c96881d6ea5db745d684048548a80384ea9bdb6de3650a53b92d2",
+            "olean_sha256": "332f630f5018ff47c04e4e138294c122e087be106b25b4619c5064a0192230a3",
+            "output": "Command: lean -R source -j 1 -M 8192 -o build/ErdosProblems/Erdos868.olean source/ErdosProblems/Erdos868.lean\nStarted UTC: 2026-09-16T09:49:36.2122740Z\n'Erdos868.not_erdos_868' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos868.not_erdos_868_part_ii' depends on axioms: [propext, Classical.choice, Quot.sound]\nExit code: 0; elapsed seconds: 47.4064801\n"
+          },
+          {
+            "module": "Util/Density",
+            "exit_code": 0,
+            "elapsed_seconds": 14.8965037,
+            "started_at_utc": "2026-09-16T09:50:23.6498167Z",
+            "log": "logs/Util-Density.log",
+            "source_sha256": "42bab8e8913462b6c0ef71cb7d4694d64c7c74a5ec4365827610f55947c57b0a",
+            "olean_sha256": "b3a45b34ddffd608a49bdf49c68f0576942f98c35208baba57b7825b2682f6d0",
+            "output": "Command: lean -R source -j 1 -M 8192 -o build/Util/Density.olean source/Util/Density.lean\nStarted UTC: 2026-09-16T09:50:23.6498167Z\nExit code: 0; elapsed seconds: 14.8965037\n"
+          },
+          {
+            "module": "ErdosProblems/Erdos339",
+            "exit_code": 0,
+            "elapsed_seconds": 18.1879847,
+            "started_at_utc": "2026-09-16T09:50:38.5559409Z",
+            "log": "logs/ErdosProblems-Erdos339.log",
+            "source_sha256": "2ff897f1d26d160f01ad2a50c94050aab55f80ef00d4a2545a15f3eabfcfd87d",
+            "olean_sha256": "c030441e1e5d90b0fc1311ca46746e34bea623421fe16ca55c110f200c1e6096",
+            "output": "Command: lean -R source -j 1 -M 8192 -o build/ErdosProblems/Erdos339.olean source/ErdosProblems/Erdos339.lean\nStarted UTC: 2026-09-16T09:50:38.5559409Z\n'Erdos339.erdos_339' depends on axioms: [propext, Classical.choice, Quot.sound]\nExit code: 0; elapsed seconds: 18.1879847\n"
+          },
+          {
+            "module": "Audit",
+            "exit_code": 0,
+            "elapsed_seconds": 14.8298028,
+            "started_at_utc": "2026-09-16T09:50:56.7589496Z",
+            "log": "logs/Audit.log",
+            "source_sha256": "aea10a81273682ea89326ce2522afd9c3a12a2de3f150d5099cbafd032a72963",
+            "olean_sha256": "35986498cbe157c5b3a7ad591da3c96d9ced45faa4b8680ef311dd99b828715f",
+            "output": "Command: lean -R source -j 1 -M 8192 -o build/Audit.olean source/Audit.lean\nStarted UTC: 2026-09-16T09:50:56.7589496Z\n@Erdos339.erdos_339 : ∀ {A : Set ℕ} {r : ℕ},\n  A.IsAsymptoticAddBasisOfOrder r → 0 < (Erdos339.restrictedSums r A).lowerDensity\ndef Erdos339.restrictedSums : ℕ → Set ℕ → Set ℕ :=\nfun r A => {n | ∃ f, Function.Injective f ∧ (∀ (i : Fin r), f i ∈ A) ∧ ∑ i, f i = n}\ndef Set.IsAsymptoticAddBasisOfOrder.{u_1} : {M : Type u_1} → [AddCommMonoid M] → Set M → ℕ → Prop :=\nfun {M} [AddCommMonoid M] A o => ∀ᶠ (m : M) in Filter.cofinite, m ∈ o • A\ndef Set.lowerDensity.{u_1} : {β : Type u_1} →\n  [inst : Preorder β] → [LocallyFiniteOrderBot β] → Set β → optParam (Set β) Set.univ → ℝ :=\nfun {β} [Preorder β] [LocallyFiniteOrderBot β] S A => Filter.liminf (fun b => S.partialDensity A b) Filter.atTop\n@[reducible] def Set.partialDensity.{u_1} : {β : Type u_1} →\n  [inst : Preorder β] → [LocallyFiniteOrderBot β] → Set β → optParam (Set β) Set.univ → β → ℝ :=\nfun {β} [Preorder β] [LocallyFiniteOrderBot β] S A b => ↑(S ∩ A ∩ Set.Iio b).ncard / ↑(A ∩ Set.Iio b).ncard\n'Erdos339.erdos_339' depends on axioms: [propext, Classical.choice, Quot.sound]\nExit code: 0; elapsed seconds: 14.8298028\n"
+          }
+        ],
+        "completed_all_modules": true,
+        "check_kind": "Local Lean elaboration and kernel checking of copied source, using shared prebuilt Mathlib oleans",
+        "independent_checker_completed": false,
+        "official_verification": false,
+        "network_disabled": false,
+        "prebuilt_dependency_artifacts_ignored": false
+      },
+      "checker": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "modules": [
+          {
+            "module": "ErdosProblems.Erdos868",
+            "exit_code": 0,
+            "elapsed_seconds": 12.3314096,
+            "started_at_utc": "2026-09-16T09:51:11.6030109Z",
+            "log": "logs/checker-ErdosProblems.Erdos868.log",
+            "output": "Command: leanchecker ErdosProblems.Erdos868 --verbose\nStarted UTC: 2026-09-16T09:51:11.6030109Z\nreplaying ErdosProblems.Erdos868\nExit code: 0; elapsed seconds: 12.3314096\n"
+          },
+          {
+            "module": "Util.Density",
+            "exit_code": 0,
+            "elapsed_seconds": 14.0116914,
+            "started_at_utc": "2026-09-16T09:51:23.9418607Z",
+            "log": "logs/checker-Util.Density.log",
+            "output": "Command: leanchecker Util.Density --verbose\nStarted UTC: 2026-09-16T09:51:23.9418607Z\nreplaying Util.Density\nExit code: 0; elapsed seconds: 14.0116914\n"
+          },
+          {
+            "module": "ErdosProblems.Erdos339",
+            "exit_code": 0,
+            "elapsed_seconds": 14.7581524,
+            "started_at_utc": "2026-09-16T09:51:37.9600931Z",
+            "log": "logs/checker-ErdosProblems.Erdos339.log",
+            "output": "Command: leanchecker ErdosProblems.Erdos339 --verbose\nStarted UTC: 2026-09-16T09:51:37.9600931Z\nreplaying ErdosProblems.Erdos339\nExit code: 0; elapsed seconds: 14.7581524\n"
+          },
+          {
+            "module": "Audit",
+            "exit_code": 0,
+            "elapsed_seconds": 13.008682,
+            "started_at_utc": "2026-09-16T09:51:52.7259449Z",
+            "log": "logs/checker-Audit.log",
+            "output": "Command: leanchecker Audit --verbose\nStarted UTC: 2026-09-16T09:51:52.7259449Z\nreplaying Audit\nExit code: 0; elapsed seconds: 13.008682\n"
+          }
+        ],
+        "completed_all_modules": true,
+        "checker_kind": "Lean bundled leanchecker: replay each target module new declarations using the same Lean kernel, trusting its imports",
+        "fresh_replay": false,
+        "independent_implementation": false,
+        "official_verification": false,
+        "imported_mathlib_replayed_from_empty_environment": false
+      },
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "axiom_audit_output": "'Erdos339.erdos_339' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "audit_source": "import ErdosProblems.Erdos339\n\n/- Existing public proof registration only.  No new mathematical or formal proof\nis claimed by the author of this audit wrapper.  The three upstream modules are\ncopied without changes, with their original author notices retained. -/\n\nexample {A : Set ℕ} {r : ℕ} (hA : A.IsAsymptoticAddBasisOfOrder r) :\n    0 < (Erdos339.restrictedSums r A).lowerDensity :=\n  Erdos339.erdos_339 hA\n\n#check @Erdos339.erdos_339\n#print Erdos339.restrictedSums\n#print Set.IsAsymptoticAddBasisOfOrder\n#print Set.lowerDensity\n#print Set.partialDensity\n#print axioms Erdos339.erdos_339\n",
+      "scope": "Every finite-order asymptotic basis has positive lower density of sums of exactly r distinct elements."
+    },
+    {
+      "jsp": "JSP-000288",
+      "erdos": 346,
+      "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "source_files": [
+        {
+          "module": "ErdosProblems.Erdos346.Proof",
+          "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos346/Proof.lean",
+          "raw_sha256": "58844d223a1a48cba766328204b781f57981a8851d0a2a004e62f3a1802b615a",
+          "raw_bytes": 85871,
+          "compiled_sha256": "3672bdc1a9a930ff350885ddd0357d9229fec8eb0b89e63f1badf45092685f27",
+          "compiled_bytes": 88029
+        },
+        {
+          "module": "ErdosProblems.Erdos346",
+          "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos346.lean",
+          "raw_sha256": "be9697c4eadb237e98d9a0e1c5a01120845ed538e6b482e1c57dc5a2e31a7295",
+          "raw_bytes": 2001,
+          "compiled_sha256": "003810ac5133a32482584ac558b38c89aec900e23054dabc1ac91065f7d711b5",
+          "compiled_bytes": 2050
+        }
+      ],
+      "main_theorem": "Erdos346.not_erdos_346",
+      "compilation": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+        "modules": [
+          {
+            "module": "ErdosProblems/Erdos346/Proof",
+            "exit_code": 0,
+            "elapsed_seconds": 65.1358698,
+            "started_at_utc": "2026-09-16T09:33:53.8683146Z",
+            "log": "logs/ErdosProblems-Erdos346-Proof.log",
+            "source_sha256": "3672bdc1a9a930ff350885ddd0357d9229fec8eb0b89e63f1badf45092685f27",
+            "olean_sha256": "948740f5ebba08701434512b4c87121ecba2b87dab88e3f57787257931fbe82b",
+            "output": "Command: lean -R source -j 2 -M 8192 -o build/ErdosProblems/Erdos346/Proof.olean source/ErdosProblems/Erdos346/Proof.lean\nStarted UTC: 2026-09-16T09:33:53.8683146Z\n'Erdos346.erdos346' depends on axioms: [propext, Classical.choice, Quot.sound]\nExit code: 0; elapsed seconds: 65.1358698\n"
+          },
+          {
+            "module": "ErdosProblems/Erdos346",
+            "exit_code": 0,
+            "elapsed_seconds": 16.5043448,
+            "started_at_utc": "2026-09-16T09:48:16.8695423Z",
+            "log": "logs/ErdosProblems-Erdos346.log",
+            "source_sha256": "003810ac5133a32482584ac558b38c89aec900e23054dabc1ac91065f7d711b5",
+            "olean_sha256": "e0050ff990941fbd0694191fcfc6c7d62a47c94f66078d5a0037b0640812e7fe",
+            "output": "Command: lean -R source -j 1 -M 6144 -o build/ErdosProblems/Erdos346.olean source/ErdosProblems/Erdos346.lean\nStarted UTC: 2026-09-16T09:48:16.8695423Z\n'Erdos346.erdos_346_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos346.not_erdos_346' depends on axioms: [propext, Classical.choice, Quot.sound]\nExit code: 0; elapsed seconds: 16.5043448\n"
+          },
+          {
+            "module": "Audit",
+            "exit_code": 0,
+            "elapsed_seconds": 15.2513931,
+            "started_at_utc": "2026-09-16T09:48:33.3987042Z",
+            "log": "logs/Audit.log",
+            "source_sha256": "c8a99305f5c4731db2ae69372f70785056d73c7d65fb87948e377c45542726ec",
+            "olean_sha256": "30099e1309271c6a773e1d028e338ae76a1584d68cf56b2dba11e2e843cee98d",
+            "output": "Command: lean -R source -j 1 -M 6144 -o build/Audit.olean source/Audit.lean\nStarted UTC: 2026-09-16T09:48:33.3987042Z\nErdos346.erdos346 :\n  ∃ a,\n    StrictMono a ∧\n      (∀ (n : ℕ), 0 < a n) ∧\n        (∀ (D : Set ℕ), D.Finite → ∃ H, ∀ (n : ℕ), H ≤ n → n ∈ Erdos346.subsetSums a Dᶜ) ∧\n          (∀ (D : Set ℕ), D.Infinite → ∀ (H : ℕ), ∃ n, H ≤ n ∧ n ∉ Erdos346.subsetSums a Dᶜ) ∧\n            (∀ (n : ℕ), 6 / 5 ≤ ↑(a (n + 1)) / ↑(a n)) ∧\n              (∃ N,\n                  StrictMono N ∧\n                    Filter.Tendsto (fun j => ↑(a (N j)) / ↑(a (N j - 1))) Filter.atTop (nhds Real.goldenRatio) ∧\n                      Filter.Tendsto (fun j => ↑(a (N j + 1)) / ↑(a (N j))) Filter.atTop\n                        (nhds (Real.goldenRatio + 1 / 4))) ∧\n                ¬∃ x, Filter.Tendsto (fun n => ↑(a (n + 1)) / ↑(a n)) Filter.atTop (nhds x)\nErdos346.erdos_346_counterexample :\n  ∃ a,\n    StrictMono a ∧\n      (∀ (n : ℕ), 0 < a n) ∧\n        (∀ (D : Set ℕ), D.Finite → ∃ H, ∀ (n : ℕ), H ≤ n → n ∈ Erdos346.subsetSums a Dᶜ) ∧\n          (∀ (D : Set ℕ), D.Infinite → ∀ (H : ℕ), ∃ n, H ≤ n ∧ n ∉ Erdos346.subsetSums a Dᶜ) ∧\n            (∀ (n : ℕ), 6 / 5 ≤ ↑(a (n + 1)) / ↑(a n)) ∧\n              (∃ N,\n                  StrictMono N ∧\n                    Filter.Tendsto (fun j => ↑(a (N j)) / ↑(a (N j - 1))) Filter.atTop (nhds Real.goldenRatio) ∧\n                      Filter.Tendsto (fun j => ↑(a (N j + 1)) / ↑(a (N j))) Filter.atTop\n                        (nhds (Real.goldenRatio + 1 / 4))) ∧\n                ¬∃ x, Filter.Tendsto (fun n => ↑(a (n + 1)) / ↑(a n)) Filter.atTop (nhds x)\nErdos346.not_erdos_346 :\n  ¬∀ (a : ℕ → ℕ),\n      StrictMono a →\n        (∀ (n : ℕ), 0 < a n) →\n          (∀ (D : Set ℕ), D.Finite → ∃ H, ∀ (n : ℕ), H ≤ n → n ∈ Erdos346.subsetSums a Dᶜ) →\n            (∀ (D : Set ℕ), D.Infinite → ∀ (H : ℕ), ∃ n, H ≤ n ∧ n ∉ Erdos346.subsetSums a Dᶜ) →\n              (∃ ε, 0 < ε ∧ ∀ (n : ℕ), 1 + ε ≤ ↑(a (n + 1)) / ↑(a n)) →\n                Filter.Tendsto (fun n => ↑(a (n + 1)) / ↑(a n)) Filter.atTop (nhds Real.goldenRatio)\n'Erdos346.erdos346' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos346.erdos_346_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos346.not_erdos_346' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP288Audit.catalog_claim_false' depends on axioms: [propext, Classical.choice, Quot.sound]\nExit code: 0; elapsed seconds: 15.2513931\n"
+          }
+        ],
+        "completed_all_modules": true,
+        "check_kind": "Local Lean elaboration and kernel checking of upstream source with CRLF line endings, using prebuilt Mathlib oleans",
+        "independent_checker_completed": false,
+        "official_verification": false,
+        "network_disabled": false,
+        "prebuilt_dependency_artifacts_ignored": false
+      },
+      "checker": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+        "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+        "targets": [
+          {
+            "target": "ErdosProblems.Erdos346.Proof",
+            "exit_code": 0,
+            "started_at_utc": "2026-09-16T09:52:06.5851272Z",
+            "elapsed_seconds": 16.6350378,
+            "log": "logs/replay-Proof.log",
+            "output": "Command: leanchecker ErdosProblems.Erdos346.Proof --verbose\nStarted UTC: 2026-09-16T09:52:06.5851272Z\nreplaying ErdosProblems.Erdos346.Proof\nExit code: 0; elapsed seconds: 16.6350378\n"
+          },
+          {
+            "target": "Audit",
+            "exit_code": 0,
+            "started_at_utc": "2026-09-16T09:52:23.2406475Z",
+            "elapsed_seconds": 13.7251938,
+            "log": "logs/replay-Audit.log",
+            "output": "Command: leanchecker Audit --verbose\nStarted UTC: 2026-09-16T09:52:23.2406475Z\nreplaying Audit\nExit code: 0; elapsed seconds: 13.7251938\n"
+          }
+        ],
+        "completed_all_targets": true,
+        "same_lean_kernel": true,
+        "independent_implementation": false,
+        "imported_mathlib_oleans_trusted": true,
+        "upstream_wrapper_replayed_directly": false,
+        "upstream_wrapper_checked_by_compilation": true,
+        "target_selection": "Explicit leaf module prefixes; one target per sequential process; no --fresh",
+        "official_verification": false
+      },
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "axiom_audit_output": "'Erdos346.erdos346' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos346.erdos_346_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos346.not_erdos_346' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP288Audit.catalog_claim_false' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "audit_source": "import ErdosProblems.Erdos346\n\n/- Local audit wrapper; the mathematical proofs remain unchanged upstream. -/\nnamespace JSP288Audit\n\n/-- The convergence-from-hypotheses reading recorded in JSP-000288. -/\ndef CatalogClaim : Prop :=\n  ∀ a : ℕ → ℕ, StrictMono a → (∀ n, 0 < a n) →\n    (∀ D : Set ℕ, D.Finite →\n      ∃ H, ∀ n, H ≤ n → n ∈ Erdos346.subsetSums a Dᶜ) →\n    (∀ D : Set ℕ, D.Infinite →\n      ∀ H, ∃ n, H ≤ n ∧ n ∉ Erdos346.subsetSums a Dᶜ) →\n    (∃ ε : ℝ, 0 < ε ∧ ∀ n, 1 + ε ≤ (a (n + 1) : ℝ) / a n) →\n    Filter.Tendsto (fun n => (a (n + 1) : ℝ) / a n) Filter.atTop\n      (nhds Real.goldenRatio)\n\n/-- Audit glue only: all mathematical work is the attributed upstream proof. -/\ntheorem catalog_claim_false : ¬ CatalogClaim := Erdos346.not_erdos_346\n\nend JSP288Audit\n\n#check Erdos346.erdos346\n#check Erdos346.erdos_346_counterexample\n#check Erdos346.not_erdos_346\n#print axioms Erdos346.erdos346\n#print axioms Erdos346.erdos_346_counterexample\n#print axioms Erdos346.not_erdos_346\n#print axioms JSP288Audit.catalog_claim_false\n",
+      "scope": "Counterexample to convergence under finite/infinite deletion hypotheses and uniform ratio gap; not the variant assuming a limit exists."
+    }
+  ]
+}
