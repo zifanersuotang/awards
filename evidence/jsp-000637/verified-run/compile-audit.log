@@ -1,0 +1,20 @@
+Erdos777.erdos_777 :
+  (∀ (ε : ℝ),
+      0 < ε →
+        ∃ n₀,
+          ∀ (n : ℕ),
+            n₀ ≤ n →
+              ∀ (𝓕 : Finset (Finset (Fin n))), ↑𝓕.card ≤ (2 - ε) * 2 ^ (↑n / 2) → Erdos777.comparableEdges 𝓕 < 2 ^ n) ∧
+    (¬∀ (c : ℝ),
+          0 < c →
+            ∃ C,
+              0 < C ∧
+                ∀ (n : ℕ) (𝓕 : Finset (Finset (Fin n))),
+                  c * ↑𝓕.card ^ 2 ≤ ↑(Erdos777.comparableEdges 𝓕) → ↑𝓕.card ≤ C * 2 ^ (↑n / 2)) ∧
+      ∀ (ε : ℝ),
+        0 < ε →
+          ∃ δ,
+            0 < δ ∧
+              ∀ (n : ℕ) (𝓕 : Finset (Finset (Fin n))),
+                ↑𝓕.card ^ (2 - δ) < ↑(Erdos777.comparableEdges 𝓕) → ↑𝓕.card < (2 + ε) ^ (↑n / 2)
+'Erdos777.erdos_777' depends on axioms: [propext, Classical.choice, Quot.sound]

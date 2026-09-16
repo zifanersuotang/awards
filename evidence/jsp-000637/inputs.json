@@ -1,0 +1,33 @@
+{
+  "jsp": "JSP-000637",
+  "erdos": 777,
+  "module": "Erdos777",
+  "harness_module": "Audit777",
+  "main_theorem": "Erdos777.erdos_777",
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_path": "src/latest/ErdosProblems/Erdos777.lean",
+  "source_sha256": {
+    "Erdos777.lean": "669aec65a87d49ce7b1996434a3491cd1d4fec98270a0a0f61e1eae650d8f181",
+    "Audit777.lean": "f04e4d24cec34be680f319b56d798e5d1b4128d6aa4e22c4ba98c348dccc7823"
+  },
+  "preparation_only": false,
+  "statement_scope": "All three Daykin–Erdős comparable-pair questions are assembled: yes, no, yes, with explicit cardinality and edge-count inequalities and the correct quantifier order.",
+  "scope_cautions": [],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0601-0700.md#JSP-000637",
+  "original_problem_url": "https://www.erdosproblems.com/777",
+  "verification_limit": "Successful observed replay is recorded in verified-run/verification.json.",
+  "informal_authors_as_credited": [
+    "Noga Alon",
+    "Péter Frankl",
+    "Shagnik Das",
+    "Roman Glebov",
+    "Benny Sudakov"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lean_version": "4.33.0"
+}
