@@ -1,0 +1,4 @@
+Erdos880.not_erdos_880 :
+  (∀ (A : Set ℕ), Erdos880.IsAdditiveBasisOfOrder A 2 → Erdos880.HasBoundedGaps (Erdos880.restrictedSums A 2)) ∧
+    ∀ (h : ℕ), 3 ≤ h → ∃ A, Erdos880.IsAdditiveBasisOfOrder A h ∧ ¬Erdos880.HasBoundedGaps (Erdos880.restrictedSums A h)
+'Erdos880.not_erdos_880' depends on axioms: [propext, Classical.choice, Quot.sound]
