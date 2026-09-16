@@ -1,0 +1,12 @@
+Erdos804.erdos_804 :
+  ∃ c₂ C₂ c₃ C₃,
+    0 < c₂ ∧
+      0 < C₂ ∧
+        0 < c₃ ∧
+          0 < C₃ ∧
+            ∀ᶠ (n : ℕ) in Filter.atTop,
+              c₂ * Erdos804.resolutionScale n ≤ ↑(Erdos804.squareValue n) ∧
+                ↑(Erdos804.squareValue n) ≤ C₂ * Real.log ↑n ^ 2 ∧
+                  c₃ * Erdos804.resolutionScale n ≤ ↑(Erdos804.cubicValue n) ∧
+                    ↑(Erdos804.cubicValue n) ≤ C₃ * Erdos804.resolutionScale n
+'Erdos804.erdos_804' depends on axioms: [propext, Classical.choice, Quot.sound]
