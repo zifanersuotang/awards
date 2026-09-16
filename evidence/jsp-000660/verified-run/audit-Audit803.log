@@ -1,0 +1,12 @@
+Erdos803.not_erdos_803 :
+  ¬∃ ε,
+      0 < ε ∧
+        ∃ D,
+          1 ≤ D ∧
+            ∀ (m : ℕ),
+              1 ≤ m →
+                ∀ᶠ (n : ℕ) in Filter.atTop,
+                  ∀ (G : SimpleGraph (Fin n)),
+                    ↑n * Real.log ↑n ≤ ↑G.edgeSet.ncard →
+                      ∃ H, H.verts.ncard = m ∧ H.coe.IsBalanced D ∧ ε * ↑m * Real.log ↑m ≤ ↑H.edgeSet.ncard
+'Erdos803.not_erdos_803' depends on axioms: [propext, Classical.choice, Quot.sound]

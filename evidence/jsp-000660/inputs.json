@@ -1,0 +1,77 @@
+{
+  "jsp": "JSP-000660",
+  "erdos": 803,
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "main_module": "ErdosProblems.Erdos803",
+  "main_theorem": "Erdos803.not_erdos_803",
+  "harness_module": "Audit803",
+  "harness_sha256": "ab6438216dd24faf844014e75ee71e30f4d066ffd217a72ef7ebd27bb5401a29",
+  "ordered_modules": [
+    {
+      "module": "ErdosProblems.Erdos1077",
+      "path": "ErdosProblems/Erdos1077.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos1077.lean",
+      "sha256": "2694fd6dc6117ecb4524523892ed56625d60245a4ea6aec57944627a892bae8f",
+      "bytes": 13799,
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Combinatorics.SimpleGraph.Bipartite",
+        "Mathlib.Combinatorics.SimpleGraph.Subgraph",
+        "Mathlib.Data.Set.Card",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos803",
+      "path": "ErdosProblems/Erdos803.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos803.lean",
+      "sha256": "760348fe8cc39c9ae83a3a546022bb7c76d95677eae3abd791c0c88e7980c5bf",
+      "bytes": 21963,
+      "imports": [
+        "ErdosProblems.Erdos1077",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Combinatorics.SimpleGraph.Maps",
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Nat.Choose.Bounds",
+        "Mathlib.Data.Nat.Factorial.BigOperators",
+        "Mathlib.Tactic.FieldSimp"
+      ]
+    }
+  ],
+  "source_bytes": 35762,
+  "source_audit": "audit-657-725/audit.json",
+  "scope": "Negates absolute ε,D preceding ∀m and eventual n; counterexamples have ≥n log n edges but no m-vertex subgraph with ε*m log m edges, regardless of balance. Covers original disproof, not stronger unrelated regular-subgraph bounds.",
+  "scope_cautions": [],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0601-0700.md#JSP-000660",
+  "preparation_only": false,
+  "compiled": true,
+  "replayed": true,
+  "resource_plan": "Future coordinator must acquire/release shared mutex separately for each source module. Do not wrap whole multi-module build in a second mutex.",
+  "checker_plan": "Replay every locally compiled proof module, selecting Lean Name-prefix roots and comparing the actual verbose replay module set to this exact local closure. Treat imported Mathlib separately as trusted pinned caches.",
+  "audit_targets": [
+    "Erdos803.not_erdos_803"
+  ],
+  "informal_authors_as_credited": [
+    "Noga Alon"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "verification_limit": "Same Lean kernel. Replay of the entire compiled local source closure, checked against actual verbose module names; imported pinned Mathlib caches are trusted, not freshly replayed. No independently implemented checker.",
+  "module": "ErdosProblems.Erdos803",
+  "statement_scope": "Negates absolute ε,D preceding ∀m and eventual n; counterexamples have ≥n log n edges but no m-vertex subgraph with ε*m log m edges, regardless of balance. Covers original disproof, not stronger unrelated regular-subgraph bounds.",
+  "source_path": "src/latest/ErdosProblems/Erdos803.lean",
+  "source_sha256": {
+    "ErdosProblems/Erdos1077.lean": "2694fd6dc6117ecb4524523892ed56625d60245a4ea6aec57944627a892bae8f",
+    "ErdosProblems/Erdos803.lean": "760348fe8cc39c9ae83a3a546022bb7c76d95677eae3abd791c0c88e7980c5bf",
+    "Audit803.lean": "ab6438216dd24faf844014e75ee71e30f4d066ffd217a72ef7ebd27bb5401a29"
+  },
+  "main_source_sha256": "760348fe8cc39c9ae83a3a546022bb7c76d95677eae3abd791c0c88e7980c5bf",
+  "original_problem_url": "https://www.erdosproblems.com/803"
+}
