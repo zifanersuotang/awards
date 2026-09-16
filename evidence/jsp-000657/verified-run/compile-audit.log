@@ -1,0 +1,3 @@
+Erdos800.erdos_800_linear :
+  ∃ C, ∀ (n : ℕ) (H : SimpleGraph (Fin n)), Erdos800.NoAdjacentHighDegree H → Erdos800.RamseyFor H (C * n)
+'Erdos800.erdos_800_linear' depends on axioms: [propext, Classical.choice, Quot.sound]

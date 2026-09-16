@@ -1,0 +1,29 @@
+{
+  "jsp": "JSP-000657",
+  "erdos": 800,
+  "module": "Erdos800",
+  "harness_module": "Audit800",
+  "main_theorem": "Erdos800.erdos_800_linear",
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_path": "src/latest/ErdosProblems/Erdos800.lean",
+  "source_sha256": {
+    "Erdos800.lean": "81f994c47a531c23b79ef6a9a1389638a311162ba403529754fe9248045e882c",
+    "Audit800.lean": "c02fa96608f3c8204833bd72dc52abd839d932489ae8a0a33658fdf5a024cc21"
+  },
+  "preparation_only": false,
+  "statement_scope": "No adjacent vertices both degree ≥3; all n; explicit RamseyFor H (12*n) means every red/blue complete graph on 12*n vertices contains H. Full original linear bound.",
+  "scope_cautions": [],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0601-0700.md#JSP-000657",
+  "original_problem_url": "https://www.erdosproblems.com/800",
+  "verification_limit": "Successful observed replay is recorded in verified-run/verification.json.",
+  "informal_authors_as_credited": [
+    "Noga Alon"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lean_version": "4.33.0"
+}
