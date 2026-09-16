@@ -1,0 +1,75 @@
+{
+  "jsp": "JSP-000720",
+  "erdos": 869,
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "main_module": "ErdosProblems.Erdos869",
+  "main_theorem": "Erdos869.not_erdos_869",
+  "harness_module": "Audit869",
+  "harness_sha256": "bba2db949a6296637c04678c0971cb25755d370debc9277ff64359f40675c8fb",
+  "ordered_modules": [
+    {
+      "module": "ErdosProblems.Erdos868",
+      "path": "ErdosProblems/Erdos868.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos868.lean",
+      "sha256": "532f2a680d9c96881d6ea5db745d684048548a80384ea9bdb6de3650a53b92d2",
+      "bytes": 283882,
+      "imports": [
+        "Mathlib.Algebra.Group.Pointwise.Set.BigOperators",
+        "Mathlib.Algebra.Group.Pointwise.Set.Finite",
+        "Mathlib.Algebra.Order.Monoid.Canonical.Defs",
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics",
+        "Mathlib.Analysis.Complex.ExponentialBounds",
+        "Mathlib.Data.Set.Card",
+        "Mathlib.Order.Filter.Cofinite",
+        "Mathlib.Probability.Distributions.Bernoulli",
+        "Mathlib.Probability.Independence.InfinitePi",
+        "Mathlib.Probability.Moments.Basic"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos869",
+      "path": "ErdosProblems/Erdos869.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos869.lean",
+      "sha256": "01ff3c6c7e90b6f6cfd31782c97e0bb388eee08bb829cf123b588c11011eb155",
+      "bytes": 145964,
+      "imports": [
+        "ErdosProblems.Erdos868",
+        "Mathlib.Algebra.Order.Floor.Div",
+        "Mathlib.Probability.Distributions.Uniform"
+      ]
+    }
+  ],
+  "source_bytes": 429846,
+  "source_audit": "audit-657-725/audit.json",
+  "scope": "Constructs two disjoint asymptotic additive bases of order two whose union contains no minimal subbasis. Every basis contained in that union remains a basis after any one-element deletion. A recursive certificate is actually constructed; the final theorem is unconditional.",
+  "scope_cautions": [],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0701-0800.md#JSP-000720",
+  "preparation_only": false,
+  "compiled": true,
+  "replayed": true,
+  "resource_plan": "Future coordinator must acquire/release shared mutex separately for each source module. Do not wrap whole multi-module build in a second mutex.",
+  "checker_plan": "Replay every locally compiled proof module, selecting Lean Name-prefix roots and comparing the actual verbose replay module set to this exact local closure. Treat imported Mathlib separately as trusted pinned caches.",
+  "audit_targets": [
+    "Erdos869.not_erdos_869"
+  ],
+  "informal_authors_as_credited": [
+    "Daniel Larsen"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "verification_limit": "Same Lean kernel. Replay of the entire compiled local source closure, checked against actual verbose module names; imported pinned Mathlib caches are trusted, not freshly replayed. No independently implemented checker.",
+  "module": "ErdosProblems.Erdos869",
+  "statement_scope": "Constructs two disjoint asymptotic additive bases of order two whose union contains no minimal subbasis. Every basis contained in that union remains a basis after any one-element deletion. A recursive certificate is actually constructed; the final theorem is unconditional.",
+  "source_path": "src/latest/ErdosProblems/Erdos869.lean",
+  "source_sha256": {
+    "ErdosProblems/Erdos868.lean": "532f2a680d9c96881d6ea5db745d684048548a80384ea9bdb6de3650a53b92d2",
+    "ErdosProblems/Erdos869.lean": "01ff3c6c7e90b6f6cfd31782c97e0bb388eee08bb829cf123b588c11011eb155",
+    "Audit869.lean": "bba2db949a6296637c04678c0971cb25755d370debc9277ff64359f40675c8fb"
+  },
+  "main_source_sha256": "01ff3c6c7e90b6f6cfd31782c97e0bb388eee08bb829cf123b588c11011eb155",
+  "original_problem_url": "https://www.erdosproblems.com/869"
+}

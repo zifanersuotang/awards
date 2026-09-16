@@ -1,0 +1,9 @@
+# JSP-000720 / Erdős 869: statement review
+
+[Original problem](https://www.erdosproblems.com/869).
+
+IsBasis2 means an asymptotic additive basis of order two on the natural numbers. Minimality is the conjunction of this basis property with the failure of the basis property after deleting each one of its elements. The final audited statement negates the universal assertion that the union of any two disjoint order-two bases contains such a minimal subbasis. The source constructs the recursive CounterexampleCertificate used in this negation: its two sets are disjoint bases, and every basis contained in their union remains a basis after any one-element deletion. This is an unconditional theorem, not a conditional consequence of a hypothetical certificate or a probabilistic event assumed nonempty. The order-two representations permit equal summands. The claim concerns asymptotic bases and minimal subbases; it does not say these bases represent every small natural number or establish a stronger different notion of minimality.
+
+The root review inspected the pinned original definitions and terminal declarations. Original mathematical/formal credits and all copyright/license notices remain byte-for-byte intact in every proof file. This documents existing public work and makes no claim of new proof authorship, recipient identity, or worldwide priority by the submitting account.
+
+This statement review is not a claim of compilation success. Actual success, if present, is recorded only in verified-run/verification.json with the audited target names, individual axiom sets, and successful command logs. The checker must replay exactly the compiled local proof closure. It uses Lean's own kernel and trusts imported pinned Mathlib/package caches; it is not an independently implemented checker or a fresh whole-Mathlib replay.

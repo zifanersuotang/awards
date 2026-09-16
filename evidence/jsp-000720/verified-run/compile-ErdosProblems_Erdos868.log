@@ -1,0 +1,2 @@
+'Erdos868.not_erdos_868' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos868.not_erdos_868_part_ii' depends on axioms: [propext, Classical.choice, Quot.sound]
