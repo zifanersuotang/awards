@@ -1,0 +1,4 @@
+Erdos816.erdos_816.{u_1} {V : Type u_1} [Fintype V] (G : SimpleGraph V) [DecidableRel G.Adj] (n : ℕ) (hn : 2 ≤ n)
+  (hcard : Fintype.card V = 2 * n + 1) (hedges : G.edgeFinset.card = n ^ 2 + n + 1) :
+  ∃ u v, u ≠ v ∧ G.degree u = G.degree v ∧ Erdos816.JoinedByPathThree G u v
+'Erdos816.erdos_816' depends on axioms: [propext, Classical.choice, Quot.sound]

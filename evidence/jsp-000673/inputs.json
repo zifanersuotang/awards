@@ -1,0 +1,34 @@
+{
+  "jsp": "JSP-000673",
+  "erdos": 816,
+  "module": "Erdos816",
+  "harness_module": "Audit816",
+  "main_theorem": "Erdos816.erdos_816",
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_path": "src/latest/ErdosProblems/Erdos816.lean",
+  "source_sha256": {
+    "Erdos816.lean": "e58fc21bbdf3557ac680b0115cf71687624f2c5fe39ef23150c40f6d62964f71",
+    "Audit816.lean": "5ac46e5decd34dd0b38c8d2ad20a6ba50aa2cb00b24d147246e64c4ce3623ddf"
+  },
+  "preparation_only": false,
+  "statement_scope": "Full valid n≥2 range for 2n+1 vertices and n²+n+1 edges. Three-edge path explicitly has four distinct vertices. n=1 is correctly excluded because K3 is a counterexample; stronger ≥ edge bound also proved.",
+  "scope_cautions": [
+    "n=1 is a mathematical counterexample; source theorem correctly uses n>=2"
+  ],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0601-0700.md#JSP-000673",
+  "original_problem_url": "https://www.erdosproblems.com/816",
+  "verification_limit": "Successful observed replay is recorded in verified-run/verification.json.",
+  "informal_authors_as_credited": [
+    "Kaizhe Chen",
+    "Jie Ma",
+    "Zhen Liu",
+    "Qinghou Zeng"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lean_version": "4.33.0"
+}
