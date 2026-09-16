@@ -1,0 +1,93 @@
+{
+  "jsp": "JSP-000616",
+  "erdos": 748,
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "main_module": "ErdosProblems.Erdos748",
+  "main_theorem": "Erdos748.erdos_748",
+  "harness_module": "Audit748",
+  "harness_sha256": "ae4bee732cc46ffd592997cc404ab4434700979d315b3279a5a78e6a2ba2168d",
+  "ordered_modules": [
+    {
+      "module": "ErdosProblems.Erdos748.GraphContainer",
+      "path": "ErdosProblems/Erdos748/GraphContainer.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos748/GraphContainer.lean",
+      "sha256": "311df13f7f2775bdf287d588f77ec6ecfd90cecbc20102699d5b0a4728fa481d",
+      "bytes": 30854,
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Combinatorics.SimpleGraph.Clique",
+        "Mathlib.Combinatorics.SimpleGraph.Finite",
+        "Mathlib.Data.Finset.Sort",
+        "Mathlib.Data.Nat.Choose.Sum",
+        "Mathlib.Tactic.Common",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos748",
+      "path": "ErdosProblems/Erdos748.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos748.lean",
+      "sha256": "20e918e7f20aef7cd9585e6f1e83307461662e23e6e46c4843e27b8ff85bc7c4",
+      "bytes": 53245,
+      "imports": [
+        "ErdosProblems.Erdos748.GraphContainer",
+        "Mathlib.Algebra.Order.Floor.Semifield",
+        "Mathlib.Analysis.Complex.ExponentialBounds",
+        "Mathlib.Analysis.SpecialFunctions.Log.Base",
+        "Mathlib.Analysis.SpecificLimits.Basic",
+        "Mathlib.Combinatorics.SimpleGraph.Cayley",
+        "Mathlib.Combinatorics.SimpleGraph.Circulant",
+        "Mathlib.Combinatorics.SimpleGraph.DegreeSum",
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.ZMod.Basic",
+        "Mathlib.Tactic.Common",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.GCongr",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Push",
+        "Mathlib.Tactic.Ring"
+      ]
+    }
+  ],
+  "source_bytes": 84099,
+  "source_audit": "audit-603-656/audit.json",
+  "scope": "The base-two logarithm of the number of sum-free subsets of [1,n], divided by n, tends to 1/2. This is exactly the requested 2^((1+o(1))*n/2) rate.",
+  "scope_cautions": [
+    "No claim is made here that the stronger parity-dependent constant asymptotic from the bibliography is formalized."
+  ],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0601-0700.md#JSP-000616",
+  "preparation_only": false,
+  "compiled": true,
+  "replayed": true,
+  "resource_plan": "Future coordinator must acquire/release shared mutex separately for each source module. Do not wrap whole multi-module build in a second mutex.",
+  "checker_plan": "Replay every locally compiled proof module, selecting Lean Name-prefix roots and comparing the actual verbose replay module set to this exact local closure. Treat imported Mathlib separately as trusted pinned caches.",
+  "audit_targets": [
+    "Erdos748.erdos_748"
+  ],
+  "informal_authors_as_credited": [
+    "Ben Green",
+    "Alexander Sapozhenko"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "verification_limit": "Same Lean kernel. Replay of the entire compiled local source closure, checked against actual verbose module names; imported pinned Mathlib caches are trusted, not freshly replayed. No independently implemented checker.",
+  "module": "ErdosProblems.Erdos748",
+  "statement_scope": "The base-two logarithm of the number of sum-free subsets of [1,n], divided by n, tends to 1/2. This is exactly the requested 2^((1+o(1))*n/2) rate.",
+  "source_path": "src/latest/ErdosProblems/Erdos748.lean",
+  "source_sha256": {
+    "ErdosProblems/Erdos748/GraphContainer.lean": "311df13f7f2775bdf287d588f77ec6ecfd90cecbc20102699d5b0a4728fa481d",
+    "ErdosProblems/Erdos748.lean": "20e918e7f20aef7cd9585e6f1e83307461662e23e6e46c4843e27b8ff85bc7c4",
+    "Audit748.lean": "ae4bee732cc46ffd592997cc404ab4434700979d315b3279a5a78e6a2ba2168d"
+  },
+  "main_source_sha256": "20e918e7f20aef7cd9585e6f1e83307461662e23e6e46c4843e27b8ff85bc7c4",
+  "original_problem_url": "https://www.erdosproblems.com/748"
+}

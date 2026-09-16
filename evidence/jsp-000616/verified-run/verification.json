@@ -1,0 +1,137 @@
+{
+  "jsp": "JSP-000616",
+  "erdos": 748,
+  "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_sha256": {
+    "ErdosProblems/Erdos748/GraphContainer.lean": "311df13f7f2775bdf287d588f77ec6ecfd90cecbc20102699d5b0a4728fa481d",
+    "ErdosProblems/Erdos748.lean": "20e918e7f20aef7cd9585e6f1e83307461662e23e6e46c4843e27b8ff85bc7c4",
+    "Audit748.lean": "ae4bee732cc46ffd592997cc404ab4434700979d315b3279a5a78e6a2ba2168d"
+  },
+  "main_theorem": "Erdos748.erdos_748",
+  "fingerprint": "b39edaf315252c371e85177de67e3d2d65b8a1916e0eaf4aa42d1db0521dc89f",
+  "started_utc": "2026-09-16T12:41:40.035526+00:00",
+  "success": true,
+  "steps": [
+    {
+      "stage": "compile",
+      "name": "ErdosProblems.Erdos748.GraphContainer",
+      "fingerprint": "b39edaf315252c371e85177de67e3d2d65b8a1916e0eaf4aa42d1db0521dc89f",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M4096",
+        "-o",
+        "<packet>\\verified-run\\lib\\ErdosProblems\\Erdos748\\GraphContainer.olean",
+        "./ErdosProblems/Erdos748/GraphContainer.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 10.767,
+      "log": "compile-ErdosProblems_Erdos748_GraphContainer.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "LEAN_NUM_THREADS": "1",
+      "olean": "lib/ErdosProblems/Erdos748/GraphContainer.olean",
+      "olean_sha256": "c5cc3d7ab8c50ee7d8e1cb2215d7da1c5564d0153178a7bc6107b8f0f41a5ea3"
+    },
+    {
+      "stage": "compile",
+      "name": "ErdosProblems.Erdos748",
+      "fingerprint": "b39edaf315252c371e85177de67e3d2d65b8a1916e0eaf4aa42d1db0521dc89f",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M4096",
+        "-o",
+        "<packet>\\verified-run\\lib\\ErdosProblems\\Erdos748.olean",
+        "./ErdosProblems/Erdos748.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 13.156,
+      "log": "compile-ErdosProblems_Erdos748.log",
+      "log_sha256": "322def9c5fa6220d5a0028ec09c02f1748070372fffcb1b5a3760e6071b425f8",
+      "LEAN_NUM_THREADS": "1",
+      "olean": "lib/ErdosProblems/Erdos748.olean",
+      "olean_sha256": "e3aa56968f576d39aba60b21a0a15bbcca9641a190f23f7b4e7e75bf3674909d"
+    },
+    {
+      "stage": "audit",
+      "name": "Audit748",
+      "fingerprint": "b39edaf315252c371e85177de67e3d2d65b8a1916e0eaf4aa42d1db0521dc89f",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M4096",
+        "-o",
+        "<packet>\\verified-run\\lib\\Audit748.olean",
+        "./Audit748.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 6.816,
+      "log": "audit-Audit748.log",
+      "log_sha256": "3fa3b013b792611dfaf67fe10e5f834a80a7a27945f4b2e37c20635386b5543d",
+      "LEAN_NUM_THREADS": "1",
+      "olean": "lib/Audit748.olean",
+      "olean_sha256": "8278a3f0488218e7440d8fa861556cca22e8d26a240e30112e2f7eccdb885a69",
+      "audited_targets": {
+        "Erdos748.erdos_748": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "target_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "stage": "checker",
+      "name": "ErdosProblems",
+      "fingerprint": "b39edaf315252c371e85177de67e3d2d65b8a1916e0eaf4aa42d1db0521dc89f",
+      "command": [
+        "leanchecker.exe",
+        "--verbose",
+        "ErdosProblems"
+      ],
+      "exit_code": 0,
+      "seconds": 13.486,
+      "log": "checker-ErdosProblems.log",
+      "log_sha256": "642e9291aac341210fd00450d3ea3db6bad2335e31c081d1a396508d9e432851",
+      "LEAN_NUM_THREADS": "1",
+      "replayed_modules": [
+        "ErdosProblems.Erdos748",
+        "ErdosProblems.Erdos748.GraphContainer"
+      ]
+    }
+  ],
+  "network_isolation": false,
+  "LEAN_NUM_THREADS": "1",
+  "imported_mathlib_cache_used": true,
+  "expected_replayed_modules": [
+    "ErdosProblems.Erdos748",
+    "ErdosProblems.Erdos748.GraphContainer"
+  ],
+  "checker_selectors": [
+    "ErdosProblems"
+  ],
+  "checker_scope": "Same Lean kernel. Replay of the entire compiled local source closure, checked against actual verbose module names; imported pinned Mathlib caches are trusted, not freshly replayed. No independently implemented checker.",
+  "actual_replayed_modules": [
+    "ErdosProblems.Erdos748",
+    "ErdosProblems.Erdos748.GraphContainer"
+  ],
+  "target_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "audited_targets": {
+    "Erdos748.erdos_748": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "finished_utc": "2026-09-16T12:59:33.666803+00:00"
+}
