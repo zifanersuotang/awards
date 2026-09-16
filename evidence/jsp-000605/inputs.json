@@ -1,0 +1,65 @@
+{
+  "jsp": "JSP-000605",
+  "erdos": 737,
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "main_module": "ErdosProblems.Erdos737",
+  "main_theorem": "erdos_737",
+  "harness_module": "Audit737",
+  "harness_sha256": "18e6cc96d0366cd3db09a8a9517a20dbdcb30c0ce14180d2c888224ace891817",
+  "ordered_modules": [
+    {
+      "module": "ErdosProblems.Erdos594",
+      "path": "ErdosProblems/Erdos594.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos594.lean",
+      "sha256": "1094d126231b4c4b4547e183da93922f8a649a757338fb21f850d9c944670104",
+      "bytes": 41217,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos737",
+      "path": "ErdosProblems/Erdos737.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos737.lean",
+      "sha256": "4ba61f9cfbcc8a6e5f06cb9c79f865e4771861cbe095fe9fecc25e82ecb38ed9",
+      "bytes": 54369,
+      "imports": [
+        "ErdosProblems.Erdos594",
+        "Mathlib.Combinatorics.SimpleGraph.Acyclic"
+      ]
+    }
+  ],
+  "source_bytes": 95586,
+  "source_audit": "audit-603-656/audit.json",
+  "scope": "An edge of an uncountably chromatic graph lies in cycles of every sufficiently large length. Public theorem assumes exact aleph-one chromatic number; its proved helper eventually_cycles_through_fixed_edge only assumes no countable coloring and covers the catalog wording.",
+  "scope_cautions": [],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0601-0700.md#JSP-000605",
+  "preparation_only": false,
+  "compiled": true,
+  "replayed": true,
+  "resource_plan": "Future coordinator must acquire/release shared mutex separately for each source module. Do not wrap whole multi-module build in a second mutex.",
+  "checker_plan": "Replay every locally compiled proof module, selecting Lean Name-prefix roots and comparing the actual verbose replay module set to this exact local closure. Treat imported Mathlib separately as trusted pinned caches.",
+  "audit_targets": [
+    "erdos_737",
+    "Erdos737.eventually_cycles_through_fixed_edge"
+  ],
+  "informal_authors_as_credited": [
+    "Carsten Thomassen"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "verification_limit": "Same Lean kernel. Replay of the entire compiled local source closure, checked against actual verbose module names; imported pinned Mathlib caches are trusted, not freshly replayed. No independently implemented checker.",
+  "module": "ErdosProblems.Erdos737",
+  "statement_scope": "An edge of an uncountably chromatic graph lies in cycles of every sufficiently large length. Public theorem assumes exact aleph-one chromatic number; its proved helper eventually_cycles_through_fixed_edge only assumes no countable coloring and covers the catalog wording.",
+  "source_path": "src/latest/ErdosProblems/Erdos737.lean",
+  "source_sha256": {
+    "ErdosProblems/Erdos594.lean": "1094d126231b4c4b4547e183da93922f8a649a757338fb21f850d9c944670104",
+    "ErdosProblems/Erdos737.lean": "4ba61f9cfbcc8a6e5f06cb9c79f865e4771861cbe095fe9fecc25e82ecb38ed9",
+    "Audit737.lean": "18e6cc96d0366cd3db09a8a9517a20dbdcb30c0ce14180d2c888224ace891817"
+  },
+  "main_source_sha256": "4ba61f9cfbcc8a6e5f06cb9c79f865e4771861cbe095fe9fecc25e82ecb38ed9",
+  "original_problem_url": "https://www.erdosproblems.com/737"
+}

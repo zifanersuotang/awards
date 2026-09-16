@@ -1,0 +1,7 @@
+erdos_737 (V : Type) (G : SimpleGraph V) :
+  Erdos737.ChromaticNumberAlephOne G → ∃ e ∈ G.edgeSet, ∃ N, ∀ (n : ℕ), N ≤ n → CycleThroughEdgeOfLength G e n
+'erdos_737' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos737.eventually_cycles_through_fixed_edge.{u} {V : Type u} {G : SimpleGraph V}
+  (hG : Erdos594.IsUncountablyChromatic G) :
+  ∃ a r, G.Adj a r ∧ ∃ N, ∀ (n : ℕ), N ≤ n → ∃ c, c.IsCycle ∧ c.length = n ∧ s(a, r) ∈ c.edges
+'Erdos737.eventually_cycles_through_fixed_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
