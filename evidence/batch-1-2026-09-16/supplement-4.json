@@ -1,0 +1,708 @@
+{
+  "jsp": "JSP-000096",
+  "erdos": 79,
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_files": [
+    {
+      "module": "Util.Ramsey",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/Util/Ramsey.lean",
+      "raw_sha256": "c1269d71fcd105835310b53e87a588fcb5628f87a76c9f16d7a007697f77b82a",
+      "raw_bytes": 14293,
+      "compiled_sha256": "5e191a282cf403a10afc99065915a72ff832113cb46f5de1c3c7933d9716d75e",
+      "compiled_bytes": 14633,
+      "source_change": "Only LF-to-CRLF checkout conversion"
+    },
+    {
+      "module": "ErdosProblems.Erdos79.Core",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos79/Core.lean",
+      "raw_sha256": "39708c168960004b60990912f279becfa24345b8f8864d6be9090c5b025dbb64",
+      "raw_bytes": 14907,
+      "compiled_sha256": "af30755b7ac61fb13d6c4454fabbbc421f09333590b970c5dc2750c3c1325fe7",
+      "compiled_bytes": 15268,
+      "source_change": "Only LF-to-CRLF checkout conversion"
+    },
+    {
+      "module": "ErdosProblems.Erdos79.Forest",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos79/Forest.lean",
+      "raw_sha256": "e3f0a3f91fa4dd2f487df82cd7821c538631b17e1b18e67b3a03dc28ae2b6a2a",
+      "raw_bytes": 12204,
+      "compiled_sha256": "fd2eb807ca45dda02e1c87ef23ba335e692813fa9bcd8d400105140a78a1c628",
+      "compiled_bytes": 12495,
+      "source_change": "Only LF-to-CRLF checkout conversion"
+    },
+    {
+      "module": "ErdosProblems.Erdos79.Uniform",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos79/Uniform.lean",
+      "raw_sha256": "e4f2b89f2bf584fae9c5264e3d2fcf54a7ade6a4078ee69a40973610c7cbc575",
+      "raw_bytes": 10569,
+      "compiled_sha256": "b94b720afdc5948de0f17f0bd775ca54d8ff36d3bd5340d3ae8b80a41d3dbfd3",
+      "compiled_bytes": 10841,
+      "source_change": "Only LF-to-CRLF checkout conversion"
+    },
+    {
+      "module": "ErdosProblems.Erdos79.HighGirth",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos79/HighGirth.lean",
+      "raw_sha256": "8acb7df1c5bdd16f9018c224a28e90f177eb4f7a3a9730f3d57d20109a3138e0",
+      "raw_bytes": 20546,
+      "compiled_sha256": "a212867067b556c1601c96668cf2f5081ff97f56c6c869dc9c5e2ba8f68f069f",
+      "compiled_bytes": 21026,
+      "source_change": "Only LF-to-CRLF checkout conversion"
+    },
+    {
+      "module": "ErdosProblems.Erdos79.Minimal",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos79/Minimal.lean",
+      "raw_sha256": "44ebfe6468ffe996813ec64903a4ce312b74c28c4f26809cd5a8a2916d3c815d",
+      "raw_bytes": 14752,
+      "compiled_sha256": "a74f5b6f945ff1ba49e3e0fe7ad333fa84fc34b5ec5875e4bca14110b3402fe3",
+      "compiled_bytes": 15092,
+      "source_change": "Only LF-to-CRLF checkout conversion"
+    },
+    {
+      "module": "ErdosProblems.Erdos79.Nonlinear",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos79/Nonlinear.lean",
+      "raw_sha256": "26f1bca0639449ec51b1bea5d8b9d9222ad62996a57bb9c9ebfc71f9957ec9e2",
+      "raw_bytes": 20680,
+      "compiled_sha256": "cd5188fa04ad1f45f305ce2543f1247c71c1afe3892ab54d5b60156bea926238",
+      "compiled_bytes": 21156,
+      "source_change": "Only LF-to-CRLF checkout conversion"
+    },
+    {
+      "module": "ErdosProblems.Erdos79",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos79.lean",
+      "raw_sha256": "d95b81b55587e6d38eb263a2bfb4665148ee1e90f39c0aa064a89637f09ab181",
+      "raw_bytes": 2238,
+      "compiled_sha256": "0569e82a6d7618013e03c789263c90bcac976a75d73a3d2f304836e6198772ca",
+      "compiled_bytes": 2302,
+      "source_change": "Only LF-to-CRLF checkout conversion"
+    }
+  ],
+  "registration_status": "verified_ready",
+  "source_code_changed": false,
+  "compilation": [
+    {
+      "module": "Util.Ramsey",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\Util\\Ramsey.olean",
+        "SOURCE_ROOT\\Util\\Ramsey.lean"
+      ],
+      "started_at_utc": "2026-09-16T11:04:50.669962+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 15.672,
+      "output": "",
+      "log": "logs/01-compilation-Util.Ramsey.log",
+      "log_sha256": "2f7379f566e9ce86073aff9605b41470942814d3a0bc7df8804d08475fce66ac",
+      "input_sha256": "5e191a282cf403a10afc99065915a72ff832113cb46f5de1c3c7933d9716d75e",
+      "olean_sha256": "4579a2389a0e455293e4ce249d5c8886bd386b67ffacd5bda56986e220f516fb",
+      "full_log": "Command argv: [\"LEAN_BIN\\\\lean.exe\", \"-j\", \"1\", \"-M\", \"6144\", \"-R\", \"SOURCE_ROOT\", \"-o\", \"PACKAGE\\\\build\\\\Util\\\\Ramsey.olean\", \"SOURCE_ROOT\\\\Util\\\\Ramsey.lean\"]\nStarted UTC: 2026-09-16T11:04:50.669962+00:00\n\nExit code: 0; elapsed seconds: 15.672\n",
+      "full_log_sha256": "2f7379f566e9ce86073aff9605b41470942814d3a0bc7df8804d08475fce66ac",
+      "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved"
+    },
+    {
+      "module": "ErdosProblems.Erdos79.Core",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\ErdosProblems\\Erdos79\\Core.olean",
+        "SOURCE_ROOT\\ErdosProblems\\Erdos79\\Core.lean"
+      ],
+      "started_at_utc": "2026-09-16T11:06:11.157775+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 16.015,
+      "output": "",
+      "log": "logs/03-compilation-ErdosProblems.Erdos79.Core.log",
+      "log_sha256": "1e8d27b57439190e52d82f19caab3ebaf579b0d4f0a4cf90d3b671b519706e5b",
+      "input_sha256": "af30755b7ac61fb13d6c4454fabbbc421f09333590b970c5dc2750c3c1325fe7",
+      "olean_sha256": "3b75fda70f40fc3fdd9978d1010dd2959fc357cc30728db23ce575318f03e0e8",
+      "full_log": "Command argv: [\"LEAN_BIN\\\\lean.exe\", \"-j\", \"1\", \"-M\", \"6144\", \"-R\", \"SOURCE_ROOT\", \"-o\", \"PACKAGE\\\\build\\\\ErdosProblems\\\\Erdos79\\\\Core.olean\", \"SOURCE_ROOT\\\\ErdosProblems\\\\Erdos79\\\\Core.lean\"]\nStarted UTC: 2026-09-16T11:06:11.157775+00:00\n\nExit code: 0; elapsed seconds: 16.015\n",
+      "full_log_sha256": "1e8d27b57439190e52d82f19caab3ebaf579b0d4f0a4cf90d3b671b519706e5b",
+      "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved"
+    },
+    {
+      "module": "ErdosProblems.Erdos79.Forest",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\ErdosProblems\\Erdos79\\Forest.olean",
+        "SOURCE_ROOT\\ErdosProblems\\Erdos79\\Forest.lean"
+      ],
+      "started_at_utc": "2026-09-16T11:07:44.333164+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 15.89,
+      "output": "",
+      "log": "logs/05-compilation-ErdosProblems.Erdos79.Forest.log",
+      "log_sha256": "31677a33f222c8f9a640d5a6631450b02852912af594d3c5d706329551dd493e",
+      "input_sha256": "fd2eb807ca45dda02e1c87ef23ba335e692813fa9bcd8d400105140a78a1c628",
+      "olean_sha256": "970de977c79bd4d1e30aebc5f8e039dedd1c5067b7be61d03df7bf57115ca007",
+      "full_log": "Command argv: [\"LEAN_BIN\\\\lean.exe\", \"-j\", \"1\", \"-M\", \"6144\", \"-R\", \"SOURCE_ROOT\", \"-o\", \"PACKAGE\\\\build\\\\ErdosProblems\\\\Erdos79\\\\Forest.olean\", \"SOURCE_ROOT\\\\ErdosProblems\\\\Erdos79\\\\Forest.lean\"]\nStarted UTC: 2026-09-16T11:07:44.333164+00:00\n\nExit code: 0; elapsed seconds: 15.89\n",
+      "full_log_sha256": "31677a33f222c8f9a640d5a6631450b02852912af594d3c5d706329551dd493e",
+      "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved"
+    },
+    {
+      "module": "ErdosProblems.Erdos79.Uniform",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\ErdosProblems\\Erdos79\\Uniform.olean",
+        "SOURCE_ROOT\\ErdosProblems\\Erdos79\\Uniform.lean"
+      ],
+      "started_at_utc": "2026-09-16T11:09:34.530450+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 16.922,
+      "output": "",
+      "log": "logs/07-compilation-ErdosProblems.Erdos79.Uniform.log",
+      "log_sha256": "6602d833950750886d26ab387797451dd1109044540f37188db4a4149dc5355b",
+      "input_sha256": "b94b720afdc5948de0f17f0bd775ca54d8ff36d3bd5340d3ae8b80a41d3dbfd3",
+      "olean_sha256": "15a0ad17eb25dcc0d2145aa8765a0ff887f4c4546b681c31bfe427ff985ec4e0",
+      "full_log": "Command argv: [\"LEAN_BIN\\\\lean.exe\", \"-j\", \"1\", \"-M\", \"6144\", \"-R\", \"SOURCE_ROOT\", \"-o\", \"PACKAGE\\\\build\\\\ErdosProblems\\\\Erdos79\\\\Uniform.olean\", \"SOURCE_ROOT\\\\ErdosProblems\\\\Erdos79\\\\Uniform.lean\"]\nStarted UTC: 2026-09-16T11:09:34.530450+00:00\n\nExit code: 0; elapsed seconds: 16.922\n",
+      "full_log_sha256": "6602d833950750886d26ab387797451dd1109044540f37188db4a4149dc5355b",
+      "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved"
+    },
+    {
+      "module": "ErdosProblems.Erdos79.HighGirth",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\ErdosProblems\\Erdos79\\HighGirth.olean",
+        "SOURCE_ROOT\\ErdosProblems\\Erdos79\\HighGirth.lean"
+      ],
+      "started_at_utc": "2026-09-16T11:14:46.031237+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 19.109,
+      "output": "",
+      "log": "logs/09-compilation-ErdosProblems.Erdos79.HighGirth.log",
+      "log_sha256": "328590fc9426dc94c6fc0612c401fc9f091d180e5de20677b76136c605cfe857",
+      "input_sha256": "a212867067b556c1601c96668cf2f5081ff97f56c6c869dc9c5e2ba8f68f069f",
+      "olean_sha256": "594cdfe96c5b3e622be482efacf356a2231dda1b585d50b37a23511428d35f2f",
+      "full_log": "Command argv: [\"LEAN_BIN\\\\lean.exe\", \"-j\", \"1\", \"-M\", \"6144\", \"-R\", \"SOURCE_ROOT\", \"-o\", \"PACKAGE\\\\build\\\\ErdosProblems\\\\Erdos79\\\\HighGirth.olean\", \"SOURCE_ROOT\\\\ErdosProblems\\\\Erdos79\\\\HighGirth.lean\"]\nStarted UTC: 2026-09-16T11:14:46.031237+00:00\n\nExit code: 0; elapsed seconds: 19.109\n",
+      "full_log_sha256": "328590fc9426dc94c6fc0612c401fc9f091d180e5de20677b76136c605cfe857",
+      "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved"
+    },
+    {
+      "module": "ErdosProblems.Erdos79.Minimal",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\ErdosProblems\\Erdos79\\Minimal.olean",
+        "SOURCE_ROOT\\ErdosProblems\\Erdos79\\Minimal.lean"
+      ],
+      "started_at_utc": "2026-09-16T11:19:20.895420+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 14.656,
+      "output": "",
+      "log": "logs/11-compilation-ErdosProblems.Erdos79.Minimal.log",
+      "log_sha256": "3b6404bd3c95d44201633e15f11da6e31edd146ccec135e76c0adf4b0640dbfc",
+      "input_sha256": "a74f5b6f945ff1ba49e3e0fe7ad333fa84fc34b5ec5875e4bca14110b3402fe3",
+      "olean_sha256": "a939e49058d2a0ea26a5dd5d156528b23c39627254ae2dafadeb08f82a586050",
+      "full_log": "Command argv: [\"LEAN_BIN\\\\lean.exe\", \"-j\", \"1\", \"-M\", \"6144\", \"-R\", \"SOURCE_ROOT\", \"-o\", \"PACKAGE\\\\build\\\\ErdosProblems\\\\Erdos79\\\\Minimal.olean\", \"SOURCE_ROOT\\\\ErdosProblems\\\\Erdos79\\\\Minimal.lean\"]\nStarted UTC: 2026-09-16T11:19:20.895420+00:00\n\nExit code: 0; elapsed seconds: 14.656\n",
+      "full_log_sha256": "3b6404bd3c95d44201633e15f11da6e31edd146ccec135e76c0adf4b0640dbfc",
+      "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved"
+    },
+    {
+      "module": "ErdosProblems.Erdos79.Nonlinear",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\ErdosProblems\\Erdos79\\Nonlinear.olean",
+        "SOURCE_ROOT\\ErdosProblems\\Erdos79\\Nonlinear.lean"
+      ],
+      "started_at_utc": "2026-09-16T11:29:19.184898+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 27.047,
+      "output": "",
+      "log": "logs/13-compilation-ErdosProblems.Erdos79.Nonlinear.log",
+      "log_sha256": "86567ef3c4ca290e2549e0cc4659596b26b4a34f7d47e6ad38504ef561b1af46",
+      "input_sha256": "cd5188fa04ad1f45f305ce2543f1247c71c1afe3892ab54d5b60156bea926238",
+      "olean_sha256": "eb7e25ac0b215e7a497e34813af5b9ada0b883476f242eedeee89fb07eaa0907",
+      "full_log": "Command argv: [\"LEAN_BIN\\\\lean.exe\", \"-j\", \"1\", \"-M\", \"6144\", \"-R\", \"SOURCE_ROOT\", \"-o\", \"PACKAGE\\\\build\\\\ErdosProblems\\\\Erdos79\\\\Nonlinear.olean\", \"SOURCE_ROOT\\\\ErdosProblems\\\\Erdos79\\\\Nonlinear.lean\"]\nStarted UTC: 2026-09-16T11:29:19.184898+00:00\n\nExit code: 0; elapsed seconds: 27.047\n",
+      "full_log_sha256": "86567ef3c4ca290e2549e0cc4659596b26b4a34f7d47e6ad38504ef561b1af46",
+      "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved"
+    },
+    {
+      "module": "ErdosProblems.Erdos79",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\ErdosProblems\\Erdos79.olean",
+        "SOURCE_ROOT\\ErdosProblems\\Erdos79.lean"
+      ],
+      "started_at_utc": "2026-09-16T11:31:12.984291+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 13.781,
+      "output": "'Erdos79.erdos_79' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "log": "logs/15-compilation-ErdosProblems.Erdos79.log",
+      "log_sha256": "816826d2f0bf6fd990fc31a824b9830c5f4e0326a226c3e4c4bfab2c91db737b",
+      "input_sha256": "0569e82a6d7618013e03c789263c90bcac976a75d73a3d2f304836e6198772ca",
+      "olean_sha256": "9a9ed0c6f174c09fffbddb33a85ac9ddd86dc3c9968c5c36cfbbfe802624b10e",
+      "full_log": "Command argv: [\"LEAN_BIN\\\\lean.exe\", \"-j\", \"1\", \"-M\", \"6144\", \"-R\", \"SOURCE_ROOT\", \"-o\", \"PACKAGE\\\\build\\\\ErdosProblems\\\\Erdos79.olean\", \"SOURCE_ROOT\\\\ErdosProblems\\\\Erdos79.lean\"]\nStarted UTC: 2026-09-16T11:31:12.984291+00:00\n'Erdos79.erdos_79' depends on axioms: [propext, Classical.choice, Quot.sound]\n\nExit code: 0; elapsed seconds: 13.781\n",
+      "full_log_sha256": "816826d2f0bf6fd990fc31a824b9830c5f4e0326a226c3e4c4bfab2c91db737b",
+      "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved"
+    },
+    {
+      "module": "JSP096Audit",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "PACKAGE\\audit",
+        "-o",
+        "PACKAGE\\build\\JSP096Audit.olean",
+        "PACKAGE\\audit\\JSP096Audit.lean"
+      ],
+      "started_at_utc": "2026-09-16T11:33:54.325545+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 13.921,
+      "output": "'Erdos79.erdos_79' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos79.infinitudeInputs' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos79.ramseySizeLinear_of_isAcyclic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos79.not_ramseySizeLinear_of_five_mul_vertexCount_lt_edgeCount' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Erdos79.exists_dense_highGirth' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP096Audit.uniform_bound_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP096Audit.original_infinitude' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "log": "logs/16-compilation-JSP096Audit.log",
+      "log_sha256": "9eb719049d067cd53b9f3606f177e8493acad0812fecb56485a14d7eb23784d3",
+      "input_sha256": "74503b51a3741c599596250dd417393ac163530e8247381b85adb67286c8fecd",
+      "olean_sha256": "11401f9a3f9313cdec912db2f6a9f194946038c6f2a2452c795472fc76feab62",
+      "full_log": "Command argv: [\"LEAN_BIN\\\\lean.exe\", \"-j\", \"1\", \"-M\", \"6144\", \"-R\", \"PACKAGE\\\\audit\", \"-o\", \"PACKAGE\\\\build\\\\JSP096Audit.olean\", \"PACKAGE\\\\audit\\\\JSP096Audit.lean\"]\nStarted UTC: 2026-09-16T11:33:54.325545+00:00\n'Erdos79.erdos_79' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos79.infinitudeInputs' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos79.ramseySizeLinear_of_isAcyclic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos79.not_ramseySizeLinear_of_five_mul_vertexCount_lt_edgeCount' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Erdos79.exists_dense_highGirth' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP096Audit.uniform_bound_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP096Audit.original_infinitude' depends on axioms: [propext, Classical.choice, Quot.sound]\n\nExit code: 0; elapsed seconds: 13.921\n",
+      "full_log_sha256": "9eb719049d067cd53b9f3606f177e8493acad0812fecb56485a14d7eb23784d3",
+      "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved"
+    }
+  ],
+  "main_theorem": "Erdos79.erdos_79",
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axioms_by_declaration": {
+    "Erdos79.erdos_79": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos79.infinitudeInputs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos79.ramseySizeLinear_of_isAcyclic": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos79.not_ramseySizeLinear_of_five_mul_vertexCount_lt_edgeCount": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos79.exists_dense_highGirth": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP096Audit.uniform_bound_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP096Audit.original_infinitude": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "axiom_audit_output": "'Erdos79.erdos_79' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos79.infinitudeInputs' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos79.ramseySizeLinear_of_isAcyclic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos79.not_ramseySizeLinear_of_five_mul_vertexCount_lt_edgeCount' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Erdos79.exists_dense_highGirth' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP096Audit.uniform_bound_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP096Audit.original_infinitude' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "audit_source": "import ErdosProblems.Erdos79\n\nopen scoped SimpleGraph\n\n/- Existing public proof evidence. This audit does not replace the upstream proof. -/\nnamespace JSP096Audit\n\ntheorem uniform_bound_iff (F : Erdos79.GraphCode) :\n    Erdos79.RamseySizeLinear F ↔\n      ∃ C : ℕ, ∀ H : Erdos79.GraphCode,\n        (∀ v, ¬ H.graph.IsIsolated v) →\n        Erdos79.graphRamseyNumber F H ≤ C * Nat.card H.graph.edgeSet :=\n  Erdos79.RamseySizeLinear.iff_graphRamseyNumber_le\n\n/- This spells out the original infinitude question in terms of least Ramsey\nnumbers, ordinary graph copies, and ordinary graph isomorphisms. -/\ntheorem original_infinitude :\n    ∃ f : ℕ → Erdos79.GraphCode,\n      (∀ n,\n        (¬ ∃ C : ℕ, ∀ H : Erdos79.GraphCode,\n          (∀ v, ¬ H.graph.IsIsolated v) →\n          Erdos79.graphRamseyNumber (f n) H ≤ C * Nat.card H.graph.edgeSet) ∧\n        (∀ F : Erdos79.GraphCode,\n          F.graph ⊑ (f n).graph →\n          ¬ Nonempty (F.graph ≃g (f n).graph) →\n          ∃ C : ℕ, ∀ H : Erdos79.GraphCode,\n            (∀ v, ¬ H.graph.IsIsolated v) →\n            Erdos79.graphRamseyNumber F H ≤ C * Nat.card H.graph.edgeSet)) ∧\n      Pairwise fun i j ↦ ¬ Nonempty ((f i).graph ≃g (f j).graph) := by\n  obtain ⟨f, hminimal, hnoniso⟩ := Erdos79.erdos_79\n  refine ⟨f, ?_, hnoniso⟩\n  intro n\n  constructor\n  · intro h\n    exact (hminimal n).1 ((uniform_bound_iff (f n)).mpr h)\n  · intro F hcopy hnonisoF\n    exact (uniform_bound_iff F).mp ((hminimal n).2 F ⟨hcopy, hnonisoF⟩)\n\n#print axioms Erdos79.erdos_79\n#print axioms Erdos79.infinitudeInputs\n#print axioms Erdos79.ramseySizeLinear_of_isAcyclic\n#print axioms Erdos79.not_ramseySizeLinear_of_five_mul_vertexCount_lt_edgeCount\n#print axioms Erdos79.exists_dense_highGirth\n#print axioms uniform_bound_iff\n#print axioms original_infinitude\n\nend JSP096Audit\n",
+  "audit_status": "compiled_and_axiom_audited",
+  "checker": {
+    "targets": [
+      {
+        "module": "Util.Ramsey",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "Util.Ramsey",
+          "--verbose"
+        ],
+        "started_at_utc": "2026-09-16T11:05:06.801298+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 13.907,
+        "output": "replaying Util.Ramsey\n",
+        "log": "logs/02-checker-Util.Ramsey.log",
+        "log_sha256": "71b652ddeb025aab47b4bdb996f5de2582f9fc3b2235e3204e44cea144788999",
+        "input_sha256": "5e191a282cf403a10afc99065915a72ff832113cb46f5de1c3c7933d9716d75e",
+        "olean_sha256": "4579a2389a0e455293e4ce249d5c8886bd386b67ffacd5bda56986e220f516fb",
+        "full_log": "Command argv: [\"LEAN_BIN\\\\leanchecker.exe\", \"Util.Ramsey\", \"--verbose\"]\nStarted UTC: 2026-09-16T11:05:06.801298+00:00\nreplaying Util.Ramsey\n\nExit code: 0; elapsed seconds: 13.907\n",
+        "full_log_sha256": "71b652ddeb025aab47b4bdb996f5de2582f9fc3b2235e3204e44cea144788999",
+        "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved",
+        "matched_modules": [
+          "Util.Ramsey"
+        ]
+      },
+      {
+        "module": "ErdosProblems.Erdos79.Core",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "ErdosProblems.Erdos79.Core",
+          "--verbose"
+        ],
+        "started_at_utc": "2026-09-16T11:06:27.594186+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 13.188,
+        "output": "replaying ErdosProblems.Erdos79.Core\n",
+        "log": "logs/04-checker-ErdosProblems.Erdos79.Core.log",
+        "log_sha256": "62c648e72c8af347e0af80f8d3a799eb4fdff7645e566f10789118c5d94c1b7d",
+        "input_sha256": "af30755b7ac61fb13d6c4454fabbbc421f09333590b970c5dc2750c3c1325fe7",
+        "olean_sha256": "3b75fda70f40fc3fdd9978d1010dd2959fc357cc30728db23ce575318f03e0e8",
+        "full_log": "Command argv: [\"LEAN_BIN\\\\leanchecker.exe\", \"ErdosProblems.Erdos79.Core\", \"--verbose\"]\nStarted UTC: 2026-09-16T11:06:27.594186+00:00\nreplaying ErdosProblems.Erdos79.Core\n\nExit code: 0; elapsed seconds: 13.188\n",
+        "full_log_sha256": "62c648e72c8af347e0af80f8d3a799eb4fdff7645e566f10789118c5d94c1b7d",
+        "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved",
+        "matched_modules": [
+          "ErdosProblems.Erdos79.Core"
+        ]
+      },
+      {
+        "module": "ErdosProblems.Erdos79.Forest",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "ErdosProblems.Erdos79.Forest",
+          "--verbose"
+        ],
+        "started_at_utc": "2026-09-16T11:08:00.682451+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 15.969,
+        "output": "replaying ErdosProblems.Erdos79.Forest\n",
+        "log": "logs/06-checker-ErdosProblems.Erdos79.Forest.log",
+        "log_sha256": "65b651cfea15d4808e6b3649a8b641866a96f9ce4433d98531ff326018ab79d1",
+        "input_sha256": "fd2eb807ca45dda02e1c87ef23ba335e692813fa9bcd8d400105140a78a1c628",
+        "olean_sha256": "970de977c79bd4d1e30aebc5f8e039dedd1c5067b7be61d03df7bf57115ca007",
+        "full_log": "Command argv: [\"LEAN_BIN\\\\leanchecker.exe\", \"ErdosProblems.Erdos79.Forest\", \"--verbose\"]\nStarted UTC: 2026-09-16T11:08:00.682451+00:00\nreplaying ErdosProblems.Erdos79.Forest\n\nExit code: 0; elapsed seconds: 15.969\n",
+        "full_log_sha256": "65b651cfea15d4808e6b3649a8b641866a96f9ce4433d98531ff326018ab79d1",
+        "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved",
+        "matched_modules": [
+          "ErdosProblems.Erdos79.Forest"
+        ]
+      },
+      {
+        "module": "ErdosProblems.Erdos79.Uniform",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "ErdosProblems.Erdos79.Uniform",
+          "--verbose"
+        ],
+        "started_at_utc": "2026-09-16T11:09:51.911803+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 14.343,
+        "output": "replaying ErdosProblems.Erdos79.Uniform\n",
+        "log": "logs/08-checker-ErdosProblems.Erdos79.Uniform.log",
+        "log_sha256": "0d59f4f3c97660423b87282f236628bd97162cd9fd8022f523cbe6d040a6629b",
+        "input_sha256": "b94b720afdc5948de0f17f0bd775ca54d8ff36d3bd5340d3ae8b80a41d3dbfd3",
+        "olean_sha256": "15a0ad17eb25dcc0d2145aa8765a0ff887f4c4546b681c31bfe427ff985ec4e0",
+        "full_log": "Command argv: [\"LEAN_BIN\\\\leanchecker.exe\", \"ErdosProblems.Erdos79.Uniform\", \"--verbose\"]\nStarted UTC: 2026-09-16T11:09:51.911803+00:00\nreplaying ErdosProblems.Erdos79.Uniform\n\nExit code: 0; elapsed seconds: 14.343\n",
+        "full_log_sha256": "0d59f4f3c97660423b87282f236628bd97162cd9fd8022f523cbe6d040a6629b",
+        "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved",
+        "matched_modules": [
+          "ErdosProblems.Erdos79.Uniform"
+        ]
+      },
+      {
+        "module": "ErdosProblems.Erdos79.HighGirth",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "ErdosProblems.Erdos79.HighGirth",
+          "--verbose"
+        ],
+        "started_at_utc": "2026-09-16T11:15:05.562409+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 13.437,
+        "output": "replaying ErdosProblems.Erdos79.HighGirth\n",
+        "log": "logs/10-checker-ErdosProblems.Erdos79.HighGirth.log",
+        "log_sha256": "2733b74076cf6af851252b355aaca455018c0b7ac8794ac49031770c3b6b619b",
+        "input_sha256": "a212867067b556c1601c96668cf2f5081ff97f56c6c869dc9c5e2ba8f68f069f",
+        "olean_sha256": "594cdfe96c5b3e622be482efacf356a2231dda1b585d50b37a23511428d35f2f",
+        "full_log": "Command argv: [\"LEAN_BIN\\\\leanchecker.exe\", \"ErdosProblems.Erdos79.HighGirth\", \"--verbose\"]\nStarted UTC: 2026-09-16T11:15:05.562409+00:00\nreplaying ErdosProblems.Erdos79.HighGirth\n\nExit code: 0; elapsed seconds: 13.437\n",
+        "full_log_sha256": "2733b74076cf6af851252b355aaca455018c0b7ac8794ac49031770c3b6b619b",
+        "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved",
+        "matched_modules": [
+          "ErdosProblems.Erdos79.HighGirth"
+        ]
+      },
+      {
+        "module": "ErdosProblems.Erdos79.Minimal",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "ErdosProblems.Erdos79.Minimal",
+          "--verbose"
+        ],
+        "started_at_utc": "2026-09-16T11:19:35.978303+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 16.86,
+        "output": "replaying ErdosProblems.Erdos79.Minimal\n",
+        "log": "logs/12-checker-ErdosProblems.Erdos79.Minimal.log",
+        "log_sha256": "a5858e0a36d230e6c28dcb7d459cff5de7d4b360acf4458f245c56ee49f9b4ad",
+        "input_sha256": "a74f5b6f945ff1ba49e3e0fe7ad333fa84fc34b5ec5875e4bca14110b3402fe3",
+        "olean_sha256": "a939e49058d2a0ea26a5dd5d156528b23c39627254ae2dafadeb08f82a586050",
+        "full_log": "Command argv: [\"LEAN_BIN\\\\leanchecker.exe\", \"ErdosProblems.Erdos79.Minimal\", \"--verbose\"]\nStarted UTC: 2026-09-16T11:19:35.978303+00:00\nreplaying ErdosProblems.Erdos79.Minimal\n\nExit code: 0; elapsed seconds: 16.86\n",
+        "full_log_sha256": "a5858e0a36d230e6c28dcb7d459cff5de7d4b360acf4458f245c56ee49f9b4ad",
+        "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved",
+        "matched_modules": [
+          "ErdosProblems.Erdos79.Minimal"
+        ]
+      },
+      {
+        "module": "ErdosProblems.Erdos79.Nonlinear",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "ErdosProblems.Erdos79.Nonlinear",
+          "--verbose"
+        ],
+        "started_at_utc": "2026-09-16T11:29:46.713366+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 14.375,
+        "output": "replaying ErdosProblems.Erdos79.Nonlinear\n",
+        "log": "logs/14-checker-ErdosProblems.Erdos79.Nonlinear.log",
+        "log_sha256": "7d55289c9d87cb6e71adf9b86ef29e683da2fdcd55d9d83bddf7c906afe10c48",
+        "input_sha256": "cd5188fa04ad1f45f305ce2543f1247c71c1afe3892ab54d5b60156bea926238",
+        "olean_sha256": "eb7e25ac0b215e7a497e34813af5b9ada0b883476f242eedeee89fb07eaa0907",
+        "full_log": "Command argv: [\"LEAN_BIN\\\\leanchecker.exe\", \"ErdosProblems.Erdos79.Nonlinear\", \"--verbose\"]\nStarted UTC: 2026-09-16T11:29:46.713366+00:00\nreplaying ErdosProblems.Erdos79.Nonlinear\n\nExit code: 0; elapsed seconds: 14.375\n",
+        "full_log_sha256": "7d55289c9d87cb6e71adf9b86ef29e683da2fdcd55d9d83bddf7c906afe10c48",
+        "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved",
+        "matched_modules": [
+          "ErdosProblems.Erdos79.Nonlinear"
+        ]
+      },
+      {
+        "module": "JSP096Audit",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "JSP096Audit",
+          "--verbose"
+        ],
+        "started_at_utc": "2026-09-16T11:34:08.663516+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 14.218,
+        "output": "replaying JSP096Audit\n",
+        "log": "logs/17-checker-JSP096Audit.log",
+        "log_sha256": "fce1333ab29b140fe48a75e68b3d2a6d6af3f4a71b155ef5248a46dae29ea258",
+        "input_sha256": "74503b51a3741c599596250dd417393ac163530e8247381b85adb67286c8fecd",
+        "olean_sha256": "11401f9a3f9313cdec912db2f6a9f194946038c6f2a2452c795472fc76feab62",
+        "full_log": "Command argv: [\"LEAN_BIN\\\\leanchecker.exe\", \"JSP096Audit\", \"--verbose\"]\nStarted UTC: 2026-09-16T11:34:08.663516+00:00\nreplaying JSP096Audit\n\nExit code: 0; elapsed seconds: 14.218\n",
+        "full_log_sha256": "fce1333ab29b140fe48a75e68b3d2a6d6af3f4a71b155ef5248a46dae29ea258",
+        "log_hash_normalization": "Exact full_log encoded as UTF-8 without BOM; existing CRLF/LF bytes preserved",
+        "matched_modules": [
+          "JSP096Audit"
+        ]
+      }
+    ],
+    "completed_all_targets": true,
+    "same_lean_kernel": true,
+    "independent_implementation": false,
+    "imported_modules_trusted": true,
+    "compile_only_targets": [
+      "ErdosProblems.Erdos79"
+    ],
+    "entry_module_replayed_directly": false,
+    "entry_endpoints_reexported_and_axiom_audited_in": "JSP096Audit",
+    "target_selection": "Eight explicit leaves, each selecting exactly one module; no --fresh",
+    "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+    "official_verification": false
+  },
+  "scope": "Complete original infinitude of pairwise nonisomorphic minimally non-Ramsey-size-linear finite graphs. No full classification or explicit new example.",
+  "scope_review": "scope-review.md",
+  "attribution": {
+    "mathematical_author": "Yuval Wigderson",
+    "formal_source_notice": [
+      "Codex",
+      "GPT-5.6 Sol"
+    ],
+    "upstream_header_name_error": "Yufei Wigderson"
+  },
+  "license": {
+    "clear_license_grant_for_source_asserted": false,
+    "upstream_proof_source_redistributed": false
+  },
+  "claims": {
+    "new_mathematical_proof": false,
+    "original_formalization": false,
+    "first_formalization": false,
+    "official_verification": false,
+    "award_eligibility": false
+  },
+  "status": "verified_ready",
+  "completed_all_compilations": true,
+  "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "scope_review_markdown": "# Source-scope review: JSP-000096 / Erdős 79\n\nSource-level verdict: the final theorem covers the original infinitude question. It does not classify all minimal obstructions or exhibit an explicit new obstruction. Runtime verification completed on 2026-09-16: nine compilations and eight explicit leaf replays exited 0; all seven named axiom reports contain only propext, Classical.choice and Quot.sound. Exact receipts and logs are embedded in public-evidence.json.\n\n## Original question and catalogue wording\n\nThe fixed [JSP catalogue entry](https://github.com/TheJustinSunPrize/awards/blob/f4e7173d89dfe91022a185427d63452c8ffbf6ae/problems/catalog-0001-0100.md#jsp-000096) links the same historical problem and Wigderson paper as [Erdős 79](https://www.erdosproblems.com/forum/thread/79). The original question asks for infinitely many finite graphs that fail Ramsey size linearity while all their proper subgraphs satisfy it. The published answer is affirmative. [Yuval Wigderson's paper](https://arxiv.org/abs/2409.05931) has the title *Infinitely many minimally non-Ramsey size-linear graphs*.\n\nThe catalogue instead says “Characterize these obstructions” and omits “non-” from its linked paper title. Those are broader/inaccurate metadata, not extra conclusions proved by the source. [The paper](https://arxiv.org/html/2409.05931v2) leaves an explicit example apart from K4 open. Registration should identify the original infinitude result and request clarification of the catalogue wording; it must not claim a full classification.\n\n## Definition audit\n\nThe pinned [Core module](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos79/Core.lean) uses `GraphCode = Σ n : ℕ, SimpleGraph (Fin n)`. Every finite simple graph has such a presentation by a bijection of its vertex set with `Fin n`. `IsContained` is ordinary, non-induced graph-copy containment. `Isomorphic` is nonemptiness of an actual graph isomorphism, which also reflects adjacency.\n\n`RamseyAt F H N` universally quantifies over every simple graph C on `Fin N`, requiring a copy of F in C or a copy of H in its complement. This is exactly a red/blue coloring of the complete graph, with red edges C and blue edges its complement. It is not an induced Ramsey condition. `graphRamseyNumber` is `Nat.find` of a proved finite existence theorem, not an infimum with an empty-set default. `ramseyAt_iff_graphRamseyNumber_le` proves its least-number semantics.\n\n`NoIsolated H` quantifies over every vertex and excludes isolated vertices. The empty graph satisfies it vacuously; a nonempty edgeless graph does not. For empty H, a blue empty copy exists already at N = 0, so requiring `R(F,H) ≤ C * e(H)` when e(H) = 0 adds no unwanted restriction.\n\n`RamseySizeLinear F` is `∃ C : ℕ, ∀ H, NoIsolated H → RamseyAt F H (C * H.edgeCount)`. The quantifier order makes one constant depend on F and work for every H. The source proves equivalence to `R(F,H) ≤ C * e(H)`. Allowing a real positive constant instead gives the same property: increase it to a positive natural ceiling; conversely increase a natural witness to a positive real witness. This arithmetic observation is a mathematical scope identification, not an additional compiled real-constant equivalence. `GraphCode.edgeCount` is the number of unordered undirected edges, via `Nat.card edgeSet`.\n\nThe pinned [Minimal module](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos79/Minimal.lean) defines a proper subgraph by ordinary containment and failure of isomorphism. For finite graphs, an embedding with equal vertex and edge counts is an isomorphism, as proved there. Thus proper containment strictly decreases the sum of these counts. This includes edge deletion and vertex deletion; it is not merely induced-subgraph minimality. The extraction of a minimal bad subgraph uses `Nat.sInf_mem` with an explicit witness that the set of bad-subgraph sizes is nonempty (the original bad graph itself). There is no empty-infimum loophole.\n\n## Closed inputs and final theorem\n\nThe final [Erdos79 module](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos79.lean) supplies all three inputs to its infinitude argument from imported proofs:\n\n1. Every finite forest is Ramsey size linear (`ramseySizeLinear_of_isAcyclic`), including disconnected forests and the empty forest.\n2. If `5 * vertexCount < edgeCount`, the graph is not Ramsey size linear (`not_ramseySizeLinear_of_five_mul_vertexCount_lt_edgeCount`). The first-moment construction uses red edge probability 1/k, ambient order k^5 and blue target K_(k^2); the witness is chosen after the candidate constant. This weaker density criterion than the paper's suffices here.\n3. For every natural girth bound g there is a graph with extended girth at least g and `6 * vertexCount < edgeCount` (`exists_dense_highGirth`). A finite random construction and removal of short cycles prove this input. The stronger density guarantees the preceding strict 5-times criterion. `egirth : ℕ∞` treats acyclic graphs by infinite girth consistently; strict positive density prevents an empty witness from doing the work.\n\nAlthough the reusable `exists_pairwise_nonisomorphic_sequence` accepts an `InfinitudeInputs` hypothesis, `Erdos79.erdos_79` has no such hypothesis: `Erdos79.infinitudeInputs` constructs it from these proved endpoints. The minimization/avoidance argument selects a new minimal obstruction outside each finite family and returns an ℕ-indexed sequence whose members are pairwise nonisomorphic. This establishes infinitely many isomorphism classes, not just infinitely many vertex relabelings.\n\nThe compiled local `JSP096Audit.original_infinitude` expands minimality, no-isolated-vertex bounds and pairwise nonisomorphism in a typed statement. It deliberately claims no enumeration algorithm or complete obstruction list. It compiled and its module received an explicit single-target replay.\n\n## Attribution, permissions and verification limits\n\nThe upstream header says “Yufei Wigderson”; the primary paper identifies **Yuval Wigderson**. Our metadata uses the paper's name and records the header discrepancy without editing the upstream source. The formal-author notice lists **Codex** and **GPT-5.6 Sol**. Those notices are preserved as attribution records, not as a claim that we authored the formalization.\n\nThe pinned `src/latest/LICENSE` says only that some external files use Apache 2.0; it does not identify Erdos79 or Util.Ramsey as covered. No clear license grant for redistributing this proof source is asserted. The public package contains immutable upstream links, hashes, our audit and review, and sanitized logs; the original proof source is not copied into it.\n\nThe eight source modules (2624 lines) have no flagged tokens in the comment/string-masked lexical scan. This is not an axiom trace. The completed verification compiled all eight modules and the typed audit into an isolated build directory. It explicitly replayed the seven upstream leaf modules and the typed audit: **nine compilations, eight checker targets**. The main `ErdosProblems.Erdos79` wrapper is compile-only because leanchecker uses module-prefix selection and would also select the child modules. Its full original statement is reexported by the typed audit, which also prints the main theorem's axioms; this is not an explicit replay of the main wrapper. Imported modules remain trusted by each replay, including the compile-only main wrapper when Audit is replayed; Mathlib and standard-library artifacts are prebuilt. The checker shares Lean's implementation; no independent checker implementation, official verifier, prize eligibility, or original/first formalization is claimed.\n",
+  "scope_review_provenance": "Source-level review with its verification-status text updated after successful runtime receipts; mathematical scope unchanged",
+  "official_verification": false,
+  "first_formalization_claim": false,
+  "execution_environment": {
+    "registration_sha256": "2ebaf04e58aa03a67e74287fe3c001862c896dcac84d4ce20d1ed48fc2e2541a",
+    "original_replay_receipts_modified": false,
+    "evidence_kind": "Actual external mutex stdout/stderr logs, supplementary to unchanged Lean receipts",
+    "groups": [
+      {
+        "index": 1,
+        "action": "pair",
+        "module": "Util.Ramsey",
+        "exit_code": 0,
+        "elapsed_seconds": 255.922,
+        "replay_script_sha256": "1ea96aa701b7613441619be58211796466a8bd9acded15ec53dca040742ad0c1",
+        "wrapper_announced_lean_num_threads": null,
+        "observation": "No environment announcement in this older wrapper log; the inherited thread environment is unknown.",
+        "full_dispatch_log": "[lean-queue] waiting tag=batch1-096-01 wrapper_pid=67800\r\n[lean-queue] acquired tag=batch1-096-01 wait_seconds=225.0\r\n[lean-queue] child_pid=65612 tag=batch1-096-01\r\ncompilation Util.Ramsey started\r\ncompilation Util.Ramsey: exit=0, elapsed=15.672s; in_progress\r\nchecker Util.Ramsey started\r\nchecker Util.Ramsey: exit=0, elapsed=13.907s; in_progress\r\n[lean-queue] finished tag=batch1-096-01 exit=0\r\n",
+        "dispatch_log_sha256": "4e48f922ccc6193025ebcfa6d82f0231400b21875fc8fbbae50d65ac95cc453d",
+        "log_hash_normalization": "Exact UTF-8 bytes of full_dispatch_log; no normalization"
+      },
+      {
+        "index": 2,
+        "action": "pair",
+        "module": "ErdosProblems.Erdos79.Core",
+        "exit_code": 0,
+        "elapsed_seconds": 80.063,
+        "replay_script_sha256": "1ea96aa701b7613441619be58211796466a8bd9acded15ec53dca040742ad0c1",
+        "wrapper_announced_lean_num_threads": null,
+        "observation": "No environment announcement in this older wrapper log; the inherited thread environment is unknown.",
+        "full_dispatch_log": "[lean-queue] waiting tag=batch1-096-02 wrapper_pid=65948\r\n[lean-queue] acquired tag=batch1-096-02 wait_seconds=49.8\r\n[lean-queue] child_pid=37968 tag=batch1-096-02\r\ncompilation ErdosProblems.Erdos79.Core started\r\ncompilation ErdosProblems.Erdos79.Core: exit=0, elapsed=16.015s; in_progress\r\nchecker ErdosProblems.Erdos79.Core started\r\nchecker ErdosProblems.Erdos79.Core: exit=0, elapsed=13.188s; in_progress\r\n[lean-queue] finished tag=batch1-096-02 exit=0\r\n",
+        "dispatch_log_sha256": "77343f46fc64ca1d81cb60ac422ec4d1ff2f3d08efd54c85a8817d620262cc1a",
+        "log_hash_normalization": "Exact UTF-8 bytes of full_dispatch_log; no normalization"
+      },
+      {
+        "index": 3,
+        "action": "pair",
+        "module": "ErdosProblems.Erdos79.Forest",
+        "exit_code": 0,
+        "elapsed_seconds": 95.843,
+        "replay_script_sha256": "1ea96aa701b7613441619be58211796466a8bd9acded15ec53dca040742ad0c1",
+        "wrapper_announced_lean_num_threads": "1",
+        "observation": "The external mutex wrapper announced the environment passed to its child; no in-Lean environment sample was added.",
+        "full_dispatch_log": "[lean-queue] waiting tag=batch1-096-03 wrapper_pid=39676\r\n[lean-queue] acquired tag=batch1-096-03 wait_seconds=63.0\r\n[lean-queue] child_environment LEAN_NUM_THREADS=1\r\n[lean-queue] child_pid=21156 tag=batch1-096-03\r\ncompilation ErdosProblems.Erdos79.Forest started\r\ncompilation ErdosProblems.Erdos79.Forest: exit=0, elapsed=15.89s; in_progress\r\nchecker ErdosProblems.Erdos79.Forest started\r\nchecker ErdosProblems.Erdos79.Forest: exit=0, elapsed=15.969s; in_progress\r\n[lean-queue] finished tag=batch1-096-03 exit=0\r\n",
+        "dispatch_log_sha256": "b61f256d5a3d670b51875375ed8b447dd0aba71487b6b0a707419b70b9b1c9ce",
+        "log_hash_normalization": "Exact UTF-8 bytes of full_dispatch_log; no normalization"
+      },
+      {
+        "index": 4,
+        "action": "pair",
+        "module": "ErdosProblems.Erdos79.Uniform",
+        "exit_code": 0,
+        "elapsed_seconds": 109.594,
+        "replay_script_sha256": "1ea96aa701b7613441619be58211796466a8bd9acded15ec53dca040742ad0c1",
+        "wrapper_announced_lean_num_threads": "1",
+        "observation": "The external mutex wrapper announced the environment passed to its child; no in-Lean environment sample was added.",
+        "full_dispatch_log": "[lean-queue] waiting tag=batch1-096-04 wrapper_pid=56432\r\n[lean-queue] acquired tag=batch1-096-04 wait_seconds=77.3\r\n[lean-queue] child_environment LEAN_NUM_THREADS=1\r\n[lean-queue] child_pid=67100 tag=batch1-096-04\r\ncompilation ErdosProblems.Erdos79.Uniform started\r\ncompilation ErdosProblems.Erdos79.Uniform: exit=0, elapsed=16.922s; in_progress\r\nchecker ErdosProblems.Erdos79.Uniform started\r\nchecker ErdosProblems.Erdos79.Uniform: exit=0, elapsed=14.343s; in_progress\r\n[lean-queue] finished tag=batch1-096-04 exit=0\r\n",
+        "dispatch_log_sha256": "615a2bfac0acca287d7c432c2eb32a88df7b095e39de71e9a1aad54a0fb86ba6",
+        "log_hash_normalization": "Exact UTF-8 bytes of full_dispatch_log; no normalization"
+      },
+      {
+        "index": 5,
+        "action": "pair",
+        "module": "ErdosProblems.Erdos79.HighGirth",
+        "exit_code": 0,
+        "elapsed_seconds": 312.735,
+        "replay_script_sha256": "1ea96aa701b7613441619be58211796466a8bd9acded15ec53dca040742ad0c1",
+        "wrapper_announced_lean_num_threads": "1",
+        "observation": "The external mutex wrapper announced the environment passed to its child; no in-Lean environment sample was added.",
+        "full_dispatch_log": "[lean-queue] waiting tag=batch1-096-05 wrapper_pid=59028\r\n[lean-queue] acquired tag=batch1-096-05 wait_seconds=279.2\r\n[lean-queue] child_environment LEAN_NUM_THREADS=1\r\n[lean-queue] child_pid=51252 tag=batch1-096-05\r\ncompilation ErdosProblems.Erdos79.HighGirth started\r\ncompilation ErdosProblems.Erdos79.HighGirth: exit=0, elapsed=19.109s; in_progress\r\nchecker ErdosProblems.Erdos79.HighGirth started\r\nchecker ErdosProblems.Erdos79.HighGirth: exit=0, elapsed=13.437s; in_progress\r\n[lean-queue] finished tag=batch1-096-05 exit=0\r\n",
+        "dispatch_log_sha256": "3f006a6bc81865422067c1486298b9631a8d7b49963cc1476b5d1c54070c2eef",
+        "log_hash_normalization": "Exact UTF-8 bytes of full_dispatch_log; no normalization"
+      },
+      {
+        "index": 6,
+        "action": "pair",
+        "module": "ErdosProblems.Erdos79.Minimal",
+        "exit_code": 0,
+        "elapsed_seconds": 273.797,
+        "replay_script_sha256": "1ea96aa701b7613441619be58211796466a8bd9acded15ec53dca040742ad0c1",
+        "wrapper_announced_lean_num_threads": "1",
+        "observation": "The external mutex wrapper announced the environment passed to its child; no in-Lean environment sample was added.",
+        "full_dispatch_log": "[lean-queue] waiting tag=batch1-096-06 wrapper_pid=49060\r\n[lean-queue] acquired tag=batch1-096-06 wait_seconds=241.3\r\n[lean-queue] child_environment LEAN_NUM_THREADS=1\r\n[lean-queue] child_pid=65636 tag=batch1-096-06\r\ncompilation ErdosProblems.Erdos79.Minimal started\r\ncompilation ErdosProblems.Erdos79.Minimal: exit=0, elapsed=14.656s; in_progress\r\nchecker ErdosProblems.Erdos79.Minimal started\r\nchecker ErdosProblems.Erdos79.Minimal: exit=0, elapsed=16.86s; in_progress\r\n[lean-queue] finished tag=batch1-096-06 exit=0\r\n",
+        "dispatch_log_sha256": "af64bb7ad73678d52f46da40418de1cca19a1142497472948113445e71f5962c",
+        "log_hash_normalization": "Exact UTF-8 bytes of full_dispatch_log; no normalization"
+      },
+      {
+        "index": 7,
+        "action": "pair",
+        "module": "ErdosProblems.Erdos79.Nonlinear",
+        "exit_code": 0,
+        "elapsed_seconds": 608.234,
+        "replay_script_sha256": "1ea96aa701b7613441619be58211796466a8bd9acded15ec53dca040742ad0c1",
+        "wrapper_announced_lean_num_threads": "1",
+        "observation": "The external mutex wrapper announced the environment passed to its child; no in-Lean environment sample was added.",
+        "full_dispatch_log": "[lean-queue] waiting tag=batch1-096-07 wrapper_pid=59696\r\n[lean-queue] acquired tag=batch1-096-07 wait_seconds=565.8\r\n[lean-queue] child_environment LEAN_NUM_THREADS=1\r\n[lean-queue] child_pid=13824 tag=batch1-096-07\r\ncompilation ErdosProblems.Erdos79.Nonlinear started\r\ncompilation ErdosProblems.Erdos79.Nonlinear: exit=0, elapsed=27.047s; in_progress\r\nchecker ErdosProblems.Erdos79.Nonlinear started\r\nchecker ErdosProblems.Erdos79.Nonlinear: exit=0, elapsed=14.375s; in_progress\r\n[lean-queue] finished tag=batch1-096-07 exit=0\r\n",
+        "dispatch_log_sha256": "df326eb868fd8411d7e7a48f02dcba90d533bac87c0df9dd748e8f37a1dd5a9c",
+        "log_hash_normalization": "Exact UTF-8 bytes of full_dispatch_log; no normalization"
+      },
+      {
+        "index": 8,
+        "action": "compile",
+        "module": "ErdosProblems.Erdos79",
+        "exit_code": 0,
+        "elapsed_seconds": 85.687,
+        "replay_script_sha256": "1ea96aa701b7613441619be58211796466a8bd9acded15ec53dca040742ad0c1",
+        "wrapper_announced_lean_num_threads": "1",
+        "observation": "The external mutex wrapper announced the environment passed to its child; no in-Lean environment sample was added.",
+        "full_dispatch_log": "[lean-queue] waiting tag=batch1-096-08 wrapper_pid=18272\r\n[lean-queue] acquired tag=batch1-096-08 wait_seconds=71.4\r\n[lean-queue] child_environment LEAN_NUM_THREADS=1\r\n[lean-queue] child_pid=50148 tag=batch1-096-08\r\ncompilation ErdosProblems.Erdos79 started\r\ncompilation ErdosProblems.Erdos79: exit=0, elapsed=13.781s; in_progress\r\n[lean-queue] finished tag=batch1-096-08 exit=0\r\n",
+        "dispatch_log_sha256": "d97d94ecea0b32efe687119dffd52cf23822d3384cfceb238fa0dddde6e22311",
+        "log_hash_normalization": "Exact UTF-8 bytes of full_dispatch_log; no normalization"
+      },
+      {
+        "index": 9,
+        "action": "pair",
+        "module": "JSP096Audit",
+        "exit_code": 0,
+        "elapsed_seconds": 176.094,
+        "replay_script_sha256": "1ea96aa701b7613441619be58211796466a8bd9acded15ec53dca040742ad0c1",
+        "wrapper_announced_lean_num_threads": "1",
+        "observation": "The external mutex wrapper announced the environment passed to its child; no in-Lean environment sample was added.",
+        "full_dispatch_log": "[lean-queue] waiting tag=batch1-096-09 wrapper_pid=67792\r\n[lean-queue] acquired tag=batch1-096-09 wait_seconds=147.0\r\n[lean-queue] child_environment LEAN_NUM_THREADS=1\r\n[lean-queue] child_pid=51120 tag=batch1-096-09\r\ncompilation JSP096Audit started\r\ncompilation JSP096Audit: exit=0, elapsed=13.921s; in_progress\r\nchecker JSP096Audit started\r\nchecker JSP096Audit: exit=0, elapsed=14.218s; verified_ready\r\n[lean-queue] finished tag=batch1-096-09 exit=0\r\n",
+        "dispatch_log_sha256": "aba7623304d7b89485be35e591c7c884ece67d12cc42b27717d93caece2b57ad",
+        "log_hash_normalization": "Exact UTF-8 bytes of full_dispatch_log; no normalization"
+      }
+    ]
+  }
+}
