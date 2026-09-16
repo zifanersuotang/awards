@@ -1,0 +1,67 @@
+{
+  "jsp": "JSP-000612",
+  "erdos": 744,
+  "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_sha256": {
+    "Erdos744.lean": "8d1dfd9d20c39de7e9367193bafd8fda8b5aec81847668958aa9c9c3810885a5",
+    "Audit744.lean": "5106408e0e19a441c0316b1e6ce919d6ca645c8341d73d4f0c608564b0c197a5"
+  },
+  "main_theorem": "Erdos744.erdos_744_eventually",
+  "started_utc": "2026-09-16T12:01:39.697742+00:00",
+  "steps": [
+    {
+      "name": "compile-source",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M4096",
+        "-o",
+        "<packet>\\verified-run\\Erdos744.olean",
+        "./Erdos744.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 24.099,
+      "log": "compile-source.log",
+      "log_sha256": "6427d4f43b437b0ccbafacfaa0552520f1f8a7e2c68b7593fd2c6fd1dadad21f"
+    },
+    {
+      "name": "compile-audit",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M4096",
+        "-o",
+        "<packet>\\verified-run\\Audit744.olean",
+        "./Audit744.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 8.74,
+      "log": "compile-audit.log",
+      "log_sha256": "dff4fc39b7b968b522fa611d55900cf9149371a30bf1c3ed1a18df9d3ace5f68"
+    },
+    {
+      "name": "leanchecker",
+      "command": [
+        "leanchecker.exe",
+        "--verbose",
+        "Erdos744"
+      ],
+      "exit_code": 0,
+      "seconds": 15.709,
+      "log": "leanchecker.log",
+      "log_sha256": "e0777c0dfa28f975a76a5039f33ac3eba347fdc29dca886170d091666edca899"
+    }
+  ],
+  "success": true,
+  "network_isolation": false,
+  "imported_mathlib_cache_used": true,
+  "checker_scope": "Bundled same-kernel replay of the target module against pinned imported dependencies; not an independently implemented checker or fresh whole-dependency replay.",
+  "target_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "finished_utc": "2026-09-16T12:02:28.267010+00:00"
+}

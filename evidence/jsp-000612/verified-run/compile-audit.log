@@ -1,0 +1,2 @@
+Erdos744.erdos_744_eventually (k : ℕ) (hk : 4 ≤ k) : ∀ᶠ (n : ℕ) in Filter.atTop, Erdos744.f k n = (k - 1).choose 2
+'Erdos744.erdos_744_eventually' depends on axioms: [propext, Classical.choice, Quot.sound]
