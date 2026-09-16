@@ -1,0 +1,12 @@
+Erdos832.not_erdos_832 :
+  ¬∀ (r : ℕ),
+      3 ≤ r →
+        ∃ K,
+          ∀ (k : ℕ),
+            K ≤ k →
+              ∀ (H : Erdos832.FiniteHypergraph),
+                H.IsUniform r →
+                  H.HasChromaticNumber k →
+                    ((r - 1) * (k - 1) + 1).choose r ≤ H.edges.card ∧
+                      (H.edges.card = ((r - 1) * (k - 1) + 1).choose r → H.IsCompleteOn r ((r - 1) * (k - 1) + 1))
+'Erdos832.not_erdos_832' depends on axioms: [propext, Classical.choice, Quot.sound]
