@@ -1,0 +1,2 @@
+Erdos894.erdos_894 {n : ℕ → ℕ} (hn : Erdos894.IsLacunary n) : Erdos894.HasAvoidingColoring n
+'Erdos894.erdos_894' depends on axioms: [propext, Classical.choice, Quot.sound]
