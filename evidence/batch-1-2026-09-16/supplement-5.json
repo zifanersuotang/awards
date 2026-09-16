@@ -1,0 +1,1640 @@
+{
+  "jsp": "JSP-000208",
+  "erdos": 235,
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_files": [
+    {
+      "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/Wikipedia/GreenTao/Sieve/CongruenceAverage.lean",
+      "raw_sha256": "f1db169605684aee4902e3bff55c26241487a0c528428ee05e73111a46082515",
+      "raw_bytes": 18277,
+      "compiled_sha256": "12198eb50fbfcdacdb68ba54ba75e0eb0eac4e7af7ac6c689a0369f14685e8d9",
+      "compiled_bytes": 18760
+    },
+    {
+      "module": "ErdosProblems.Erdos387.BrunSieve",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos387/BrunSieve.lean",
+      "raw_sha256": "e99eef68936ac9def7858e0dbed7754e8a895ce267307d8fd93c19e537ec4322",
+      "raw_bytes": 16737,
+      "compiled_sha256": "5a855ac9782afd71db25a951056354a51e3c5af040c50bf42cb9c84029c48b8c",
+      "compiled_bytes": 17179
+    },
+    {
+      "module": "ErdosProblems.Erdos235",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos235.lean",
+      "raw_sha256": "19277cc90b17f2fdef1f7b53b1011760ed8ba2509acb4b35c84e728b434a495e",
+      "raw_bytes": 169820,
+      "compiled_sha256": "2066846911ab9fa223fc47a076b2e6e6287c0e7433814daea580580ded41c024",
+      "compiled_bytes": 174097
+    }
+  ],
+  "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "runtime": {
+    "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+    "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+    "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+    "dependency_artifact_fingerprint": null,
+    "imported_mathlib_and_standard_libraries_trusted": true,
+    "automatic_cache_eligible": false
+  },
+  "compilation": [
+    {
+      "schema": "configured-pack-bound-run-v1",
+      "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+      "mode": "compile",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\Wikipedia\\GreenTao\\Sieve\\CongruenceAverage.olean",
+        "SOURCE_ROOT\\Wikipedia\\GreenTao\\Sieve\\CongruenceAverage.lean"
+      ],
+      "started_at_utc": "2026-09-16T11:42:54.160184+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 10.137,
+      "log": "logs/compile-Wikipedia.GreenTao.Sieve.CongruenceAverage-0b3f312b8e6040c989a38f73d88d3c5f.log",
+      "output": "",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+      "source_sha256": "12198eb50fbfcdacdb68ba54ba75e0eb0eac4e7af7ac6c689a0369f14685e8d9",
+      "source_bytes": 18760,
+      "source_before": {
+        "kind": "upstream",
+        "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+        "sha256": "12198eb50fbfcdacdb68ba54ba75e0eb0eac4e7af7ac6c689a0369f14685e8d9",
+        "bytes": 18760,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/Wikipedia/GreenTao/Sieve/CongruenceAverage.lean",
+        "raw_sha256": "f1db169605684aee4902e3bff55c26241487a0c528428ee05e73111a46082515",
+        "raw_bytes": 18277
+      },
+      "source_after": {
+        "kind": "upstream",
+        "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+        "sha256": "12198eb50fbfcdacdb68ba54ba75e0eb0eac4e7af7ac6c689a0369f14685e8d9",
+        "bytes": 18760,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/Wikipedia/GreenTao/Sieve/CongruenceAverage.lean",
+        "raw_sha256": "f1db169605684aee4902e3bff55c26241487a0c528428ee05e73111a46082515",
+        "raw_bytes": 18277
+      },
+      "artifact_bundle_before": {
+        "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+        "files": [
+          {
+            "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "217b9f4767d28851f1f772aa7c61ce29b4d65f7ceb4ab254896779236a7acae5",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "artifact_bundle_after": {
+        "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+        "files": [
+          {
+            "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+            "present": true,
+            "bytes": 418664,
+            "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+          },
+          {
+            "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "configured_local_artifacts_before": [],
+      "configured_local_artifacts_after": [],
+      "compile_receipt_sha256": null,
+      "matched_modules": [],
+      "child_environment": {
+        "LEAN_NUM_THREADS": "1",
+        "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+      },
+      "runtime": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+        "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+        "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+        "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+        "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+        "dependency_artifact_fingerprint": null,
+        "imported_mathlib_and_standard_libraries_trusted": true,
+        "automatic_cache_eligible": false
+      },
+      "runtime_unchanged": true,
+      "configuration_sha256": "eb89fca720d01e2dd61c8af06e96eae52c1dfa626326b63d462faf12a8c05f2e",
+      "binding_passed": true,
+      "automatic_cache_eligible": false,
+      "receipt_archive": "logs/compile-Wikipedia.GreenTao.Sieve.CongruenceAverage-0b3f312b8e6040c989a38f73d88d3c5f.json"
+    },
+    {
+      "schema": "configured-pack-bound-run-v1",
+      "module": "ErdosProblems.Erdos387.BrunSieve",
+      "mode": "compile",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\ErdosProblems\\Erdos387\\BrunSieve.olean",
+        "SOURCE_ROOT\\ErdosProblems\\Erdos387\\BrunSieve.lean"
+      ],
+      "started_at_utc": "2026-09-16T11:43:46.763529+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 6.917,
+      "log": "logs/compile-ErdosProblems.Erdos387.BrunSieve-db57183941ae4ebe84a7f70f8155e7e1.log",
+      "output": "",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+      "source_sha256": "5a855ac9782afd71db25a951056354a51e3c5af040c50bf42cb9c84029c48b8c",
+      "source_bytes": 17179,
+      "source_before": {
+        "kind": "upstream",
+        "module": "ErdosProblems.Erdos387.BrunSieve",
+        "sha256": "5a855ac9782afd71db25a951056354a51e3c5af040c50bf42cb9c84029c48b8c",
+        "bytes": 17179,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/ErdosProblems/Erdos387/BrunSieve.lean",
+        "raw_sha256": "e99eef68936ac9def7858e0dbed7754e8a895ce267307d8fd93c19e537ec4322",
+        "raw_bytes": 16737
+      },
+      "source_after": {
+        "kind": "upstream",
+        "module": "ErdosProblems.Erdos387.BrunSieve",
+        "sha256": "5a855ac9782afd71db25a951056354a51e3c5af040c50bf42cb9c84029c48b8c",
+        "bytes": 17179,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/ErdosProblems/Erdos387/BrunSieve.lean",
+        "raw_sha256": "e99eef68936ac9def7858e0dbed7754e8a895ce267307d8fd93c19e537ec4322",
+        "raw_bytes": 16737
+      },
+      "artifact_bundle_before": {
+        "module": "ErdosProblems.Erdos387.BrunSieve",
+        "files": [
+          {
+            "path": "build/ErdosProblems/Erdos387/BrunSieve.olean",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "efd2c1803fb1d8de9ac58d2c1e66a2a6d34892f330fd3e91832252f488d43785",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "artifact_bundle_after": {
+        "module": "ErdosProblems.Erdos387.BrunSieve",
+        "files": [
+          {
+            "path": "build/ErdosProblems/Erdos387/BrunSieve.olean",
+            "present": true,
+            "bytes": 449160,
+            "sha256": "d50c277c7ad969e86c1b1e4168c2962e4fd68cf55fdfe2173d2e6c02931e0f4a"
+          },
+          {
+            "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "3f83eeb5fe8fe627b095464329f837a2813a1879fbd4bd2fb918117d04a5aa9b",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "configured_local_artifacts_before": [
+        {
+          "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+          "files": [
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+              "present": true,
+              "bytes": 418664,
+              "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "configured_local_artifacts_after": [
+        {
+          "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+          "files": [
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+              "present": true,
+              "bytes": 418664,
+              "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "compile_receipt_sha256": null,
+      "matched_modules": [],
+      "child_environment": {
+        "LEAN_NUM_THREADS": "1",
+        "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+      },
+      "runtime": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+        "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+        "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+        "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+        "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+        "dependency_artifact_fingerprint": null,
+        "imported_mathlib_and_standard_libraries_trusted": true,
+        "automatic_cache_eligible": false
+      },
+      "runtime_unchanged": true,
+      "configuration_sha256": "eb89fca720d01e2dd61c8af06e96eae52c1dfa626326b63d462faf12a8c05f2e",
+      "binding_passed": true,
+      "automatic_cache_eligible": false,
+      "receipt_archive": "logs/compile-ErdosProblems.Erdos387.BrunSieve-db57183941ae4ebe84a7f70f8155e7e1.json"
+    },
+    {
+      "schema": "configured-pack-bound-run-v1",
+      "module": "ErdosProblems.Erdos235",
+      "mode": "compile",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\ErdosProblems\\Erdos235.olean",
+        "SOURCE_ROOT\\ErdosProblems\\Erdos235.lean"
+      ],
+      "started_at_utc": "2026-09-16T11:44:25.993885+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 34.331,
+      "log": "logs/compile-ErdosProblems.Erdos235-928f73c2082c43dba5919e6c6dac46da.log",
+      "output": "'Erdos235.erdos_235_limit' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos235.erdos_235' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "log_sha256": "817bec8f09768b74ea4b707c306da37d371824e2a41dd979393355692c34aa82",
+      "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+      "source_sha256": "2066846911ab9fa223fc47a076b2e6e6287c0e7433814daea580580ded41c024",
+      "source_bytes": 174097,
+      "source_before": {
+        "kind": "upstream",
+        "module": "ErdosProblems.Erdos235",
+        "sha256": "2066846911ab9fa223fc47a076b2e6e6287c0e7433814daea580580ded41c024",
+        "bytes": 174097,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/ErdosProblems/Erdos235.lean",
+        "raw_sha256": "19277cc90b17f2fdef1f7b53b1011760ed8ba2509acb4b35c84e728b434a495e",
+        "raw_bytes": 169820
+      },
+      "source_after": {
+        "kind": "upstream",
+        "module": "ErdosProblems.Erdos235",
+        "sha256": "2066846911ab9fa223fc47a076b2e6e6287c0e7433814daea580580ded41c024",
+        "bytes": 174097,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/ErdosProblems/Erdos235.lean",
+        "raw_sha256": "19277cc90b17f2fdef1f7b53b1011760ed8ba2509acb4b35c84e728b434a495e",
+        "raw_bytes": 169820
+      },
+      "artifact_bundle_before": {
+        "module": "ErdosProblems.Erdos235",
+        "files": [
+          {
+            "path": "build/ErdosProblems/Erdos235.olean",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos235.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos235.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "55bc666075bfee130bccb91543473db8d48ad08d7bd5e9a9af05d827b2861c2d",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "artifact_bundle_after": {
+        "module": "ErdosProblems.Erdos235",
+        "files": [
+          {
+            "path": "build/ErdosProblems/Erdos235.olean",
+            "present": true,
+            "bytes": 4859120,
+            "sha256": "3d99fead11e475a46bfd5e391ed168fca95dd1b42d91ab41a7b5537afd7b2fb7"
+          },
+          {
+            "path": "build/ErdosProblems/Erdos235.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos235.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "cfdfef98bb4c7eb3a1ff079c9da68f5ceebdc4e76c685a521b8e80bdb3f07504",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "configured_local_artifacts_before": [
+        {
+          "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+          "files": [
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+              "present": true,
+              "bytes": 418664,
+              "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos387.BrunSieve",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean",
+              "present": true,
+              "bytes": 449160,
+              "sha256": "d50c277c7ad969e86c1b1e4168c2962e4fd68cf55fdfe2173d2e6c02931e0f4a"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "3f83eeb5fe8fe627b095464329f837a2813a1879fbd4bd2fb918117d04a5aa9b",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "configured_local_artifacts_after": [
+        {
+          "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+          "files": [
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+              "present": true,
+              "bytes": 418664,
+              "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos387.BrunSieve",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean",
+              "present": true,
+              "bytes": 449160,
+              "sha256": "d50c277c7ad969e86c1b1e4168c2962e4fd68cf55fdfe2173d2e6c02931e0f4a"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "3f83eeb5fe8fe627b095464329f837a2813a1879fbd4bd2fb918117d04a5aa9b",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "compile_receipt_sha256": null,
+      "matched_modules": [],
+      "child_environment": {
+        "LEAN_NUM_THREADS": "1",
+        "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+      },
+      "runtime": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+        "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+        "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+        "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+        "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+        "dependency_artifact_fingerprint": null,
+        "imported_mathlib_and_standard_libraries_trusted": true,
+        "automatic_cache_eligible": false
+      },
+      "runtime_unchanged": true,
+      "configuration_sha256": "eb89fca720d01e2dd61c8af06e96eae52c1dfa626326b63d462faf12a8c05f2e",
+      "binding_passed": true,
+      "automatic_cache_eligible": false,
+      "receipt_archive": "logs/compile-ErdosProblems.Erdos235-928f73c2082c43dba5919e6c6dac46da.json"
+    },
+    {
+      "schema": "configured-pack-bound-run-v1",
+      "module": "JSP208Audit",
+      "mode": "compile",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "PACKAGE",
+        "-o",
+        "PACKAGE\\build\\JSP208Audit.olean",
+        "PACKAGE\\JSP208Audit.lean"
+      ],
+      "started_at_utc": "2026-09-16T11:54:31.527212+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 13.637,
+      "log": "logs/compile-JSP208Audit-5bada55ac86649699c65faf222cd468f.log",
+      "output": "'Erdos235.erdos_235_limit' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos235.erdos_235' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP208Audit.catalog_limit' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP208Audit.catalog_statement' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "log_sha256": "66ff328cb738932d5a76928dddf7dcbaf12f61c1513acad7b5e511a3818965ea",
+      "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+      "source_sha256": "df2228ede4106704fe706176455e5feb6f76194326b6eaffa6729c8993e62f18",
+      "source_bytes": 1339,
+      "source_before": {
+        "kind": "typed_audit",
+        "module": "JSP208Audit",
+        "sha256": "df2228ede4106704fe706176455e5feb6f76194326b6eaffa6729c8993e62f18",
+        "bytes": 1339
+      },
+      "source_after": {
+        "kind": "typed_audit",
+        "module": "JSP208Audit",
+        "sha256": "df2228ede4106704fe706176455e5feb6f76194326b6eaffa6729c8993e62f18",
+        "bytes": 1339
+      },
+      "artifact_bundle_before": {
+        "module": "JSP208Audit",
+        "files": [
+          {
+            "path": "build/JSP208Audit.olean",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/JSP208Audit.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/JSP208Audit.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "2a33a2405bdbedcc8efb9b9a4aefe51f2474f6dc5fdadc2142f0d2cd326c4348",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "artifact_bundle_after": {
+        "module": "JSP208Audit",
+        "files": [
+          {
+            "path": "build/JSP208Audit.olean",
+            "present": true,
+            "bytes": 17656,
+            "sha256": "72ddab8fee2f0ebe2e95fe2abb8cf5f6069893bc0f8071e2b9df1b738382fba0"
+          },
+          {
+            "path": "build/JSP208Audit.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/JSP208Audit.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "43a44d67077e252feb6038700647be6460dff448fab8ed70e8e5150ffdaa6086",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "configured_local_artifacts_before": [
+        {
+          "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+          "files": [
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+              "present": true,
+              "bytes": 418664,
+              "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos387.BrunSieve",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean",
+              "present": true,
+              "bytes": 449160,
+              "sha256": "d50c277c7ad969e86c1b1e4168c2962e4fd68cf55fdfe2173d2e6c02931e0f4a"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "3f83eeb5fe8fe627b095464329f837a2813a1879fbd4bd2fb918117d04a5aa9b",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos235",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos235.olean",
+              "present": true,
+              "bytes": 4859120,
+              "sha256": "3d99fead11e475a46bfd5e391ed168fca95dd1b42d91ab41a7b5537afd7b2fb7"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos235.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos235.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "cfdfef98bb4c7eb3a1ff079c9da68f5ceebdc4e76c685a521b8e80bdb3f07504",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "configured_local_artifacts_after": [
+        {
+          "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+          "files": [
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+              "present": true,
+              "bytes": 418664,
+              "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos387.BrunSieve",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean",
+              "present": true,
+              "bytes": 449160,
+              "sha256": "d50c277c7ad969e86c1b1e4168c2962e4fd68cf55fdfe2173d2e6c02931e0f4a"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "3f83eeb5fe8fe627b095464329f837a2813a1879fbd4bd2fb918117d04a5aa9b",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos235",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos235.olean",
+              "present": true,
+              "bytes": 4859120,
+              "sha256": "3d99fead11e475a46bfd5e391ed168fca95dd1b42d91ab41a7b5537afd7b2fb7"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos235.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos235.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "cfdfef98bb4c7eb3a1ff079c9da68f5ceebdc4e76c685a521b8e80bdb3f07504",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "compile_receipt_sha256": null,
+      "matched_modules": [],
+      "child_environment": {
+        "LEAN_NUM_THREADS": "1",
+        "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+      },
+      "runtime": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+        "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+        "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+        "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+        "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+        "dependency_artifact_fingerprint": null,
+        "imported_mathlib_and_standard_libraries_trusted": true,
+        "automatic_cache_eligible": false
+      },
+      "runtime_unchanged": true,
+      "configuration_sha256": "eb89fca720d01e2dd61c8af06e96eae52c1dfa626326b63d462faf12a8c05f2e",
+      "binding_passed": true,
+      "automatic_cache_eligible": false,
+      "receipt_archive": "logs/compile-JSP208Audit-5bada55ac86649699c65faf222cd468f.json"
+    }
+  ],
+  "checker": {
+    "targets": [
+      {
+        "schema": "configured-pack-bound-run-v1",
+        "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+        "mode": "checker",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "--verbose",
+          "Wikipedia.GreenTao.Sieve.CongruenceAverage"
+        ],
+        "started_at_utc": "2026-09-16T11:43:04.679022+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 12.969,
+        "log": "logs/checker-Wikipedia.GreenTao.Sieve.CongruenceAverage-dbf294ed2bcb41718f7435491d4d7a14.log",
+        "output": "replaying Wikipedia.GreenTao.Sieve.CongruenceAverage\n",
+        "log_sha256": "a8849b7494fb841baac2e17ca59c029001c0e2d9b298c1cfbf0f012f908316a9",
+        "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+        "source_sha256": "12198eb50fbfcdacdb68ba54ba75e0eb0eac4e7af7ac6c689a0369f14685e8d9",
+        "source_bytes": 18760,
+        "source_before": {
+          "kind": "upstream",
+          "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+          "sha256": "12198eb50fbfcdacdb68ba54ba75e0eb0eac4e7af7ac6c689a0369f14685e8d9",
+          "bytes": 18760,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/Wikipedia/GreenTao/Sieve/CongruenceAverage.lean",
+          "raw_sha256": "f1db169605684aee4902e3bff55c26241487a0c528428ee05e73111a46082515",
+          "raw_bytes": 18277
+        },
+        "source_after": {
+          "kind": "upstream",
+          "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+          "sha256": "12198eb50fbfcdacdb68ba54ba75e0eb0eac4e7af7ac6c689a0369f14685e8d9",
+          "bytes": 18760,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/Wikipedia/GreenTao/Sieve/CongruenceAverage.lean",
+          "raw_sha256": "f1db169605684aee4902e3bff55c26241487a0c528428ee05e73111a46082515",
+          "raw_bytes": 18277
+        },
+        "artifact_bundle_before": {
+          "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+          "files": [
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+              "present": true,
+              "bytes": 418664,
+              "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "artifact_bundle_after": {
+          "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+          "files": [
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+              "present": true,
+              "bytes": 418664,
+              "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "configured_local_artifacts_before": [],
+        "configured_local_artifacts_after": [],
+        "compile_receipt_sha256": "a49172d9ad4933b37b620a0329f94a34be11256a62a5901b3bc0b4f505fd155d",
+        "matched_modules": [
+          "Wikipedia.GreenTao.Sieve.CongruenceAverage"
+        ],
+        "child_environment": {
+          "LEAN_NUM_THREADS": "1",
+          "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+        },
+        "runtime": {
+          "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+          "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "dependency_artifact_fingerprint": null,
+          "imported_mathlib_and_standard_libraries_trusted": true,
+          "automatic_cache_eligible": false
+        },
+        "runtime_unchanged": true,
+        "configuration_sha256": "eb89fca720d01e2dd61c8af06e96eae52c1dfa626326b63d462faf12a8c05f2e",
+        "binding_passed": true,
+        "automatic_cache_eligible": false,
+        "receipt_archive": "logs/checker-Wikipedia.GreenTao.Sieve.CongruenceAverage-dbf294ed2bcb41718f7435491d4d7a14.json"
+      },
+      {
+        "schema": "configured-pack-bound-run-v1",
+        "module": "ErdosProblems.Erdos387.BrunSieve",
+        "mode": "checker",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "--verbose",
+          "ErdosProblems.Erdos387.BrunSieve"
+        ],
+        "started_at_utc": "2026-09-16T11:43:54.034029+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 10.439,
+        "log": "logs/checker-ErdosProblems.Erdos387.BrunSieve-1baef891a1504e1d8f900d5599d72809.log",
+        "output": "replaying ErdosProblems.Erdos387.BrunSieve\n",
+        "log_sha256": "fe902a70136c8c62a4e36571769d6ebb6be097c5a6d57914bca02d9f10e7db90",
+        "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+        "source_sha256": "5a855ac9782afd71db25a951056354a51e3c5af040c50bf42cb9c84029c48b8c",
+        "source_bytes": 17179,
+        "source_before": {
+          "kind": "upstream",
+          "module": "ErdosProblems.Erdos387.BrunSieve",
+          "sha256": "5a855ac9782afd71db25a951056354a51e3c5af040c50bf42cb9c84029c48b8c",
+          "bytes": 17179,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/ErdosProblems/Erdos387/BrunSieve.lean",
+          "raw_sha256": "e99eef68936ac9def7858e0dbed7754e8a895ce267307d8fd93c19e537ec4322",
+          "raw_bytes": 16737
+        },
+        "source_after": {
+          "kind": "upstream",
+          "module": "ErdosProblems.Erdos387.BrunSieve",
+          "sha256": "5a855ac9782afd71db25a951056354a51e3c5af040c50bf42cb9c84029c48b8c",
+          "bytes": 17179,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/ErdosProblems/Erdos387/BrunSieve.lean",
+          "raw_sha256": "e99eef68936ac9def7858e0dbed7754e8a895ce267307d8fd93c19e537ec4322",
+          "raw_bytes": 16737
+        },
+        "artifact_bundle_before": {
+          "module": "ErdosProblems.Erdos387.BrunSieve",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean",
+              "present": true,
+              "bytes": 449160,
+              "sha256": "d50c277c7ad969e86c1b1e4168c2962e4fd68cf55fdfe2173d2e6c02931e0f4a"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "3f83eeb5fe8fe627b095464329f837a2813a1879fbd4bd2fb918117d04a5aa9b",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "artifact_bundle_after": {
+          "module": "ErdosProblems.Erdos387.BrunSieve",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean",
+              "present": true,
+              "bytes": 449160,
+              "sha256": "d50c277c7ad969e86c1b1e4168c2962e4fd68cf55fdfe2173d2e6c02931e0f4a"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "3f83eeb5fe8fe627b095464329f837a2813a1879fbd4bd2fb918117d04a5aa9b",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "configured_local_artifacts_before": [
+          {
+            "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+            "files": [
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+                "present": true,
+                "bytes": 418664,
+                "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+              },
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "configured_local_artifacts_after": [
+          {
+            "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+            "files": [
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+                "present": true,
+                "bytes": 418664,
+                "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+              },
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "compile_receipt_sha256": "03b02bda80fc30ebb17f560556172f741c89b0e5159514077a69b8c19b0849bf",
+        "matched_modules": [
+          "ErdosProblems.Erdos387.BrunSieve"
+        ],
+        "child_environment": {
+          "LEAN_NUM_THREADS": "1",
+          "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+        },
+        "runtime": {
+          "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+          "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "dependency_artifact_fingerprint": null,
+          "imported_mathlib_and_standard_libraries_trusted": true,
+          "automatic_cache_eligible": false
+        },
+        "runtime_unchanged": true,
+        "configuration_sha256": "eb89fca720d01e2dd61c8af06e96eae52c1dfa626326b63d462faf12a8c05f2e",
+        "binding_passed": true,
+        "automatic_cache_eligible": false,
+        "receipt_archive": "logs/checker-ErdosProblems.Erdos387.BrunSieve-1baef891a1504e1d8f900d5599d72809.json"
+      },
+      {
+        "schema": "configured-pack-bound-run-v1",
+        "module": "ErdosProblems.Erdos235",
+        "mode": "checker",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "--verbose",
+          "ErdosProblems.Erdos235"
+        ],
+        "started_at_utc": "2026-09-16T11:45:00.705579+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 16.351,
+        "log": "logs/checker-ErdosProblems.Erdos235-f8929bafcfa54c6b93180d0e9e905e3f.log",
+        "output": "replaying ErdosProblems.Erdos235\n",
+        "log_sha256": "86281d730c36f6a2abc15fd0031f306b1ca4d9cebfccfaa3cba1cc6f93286d65",
+        "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+        "source_sha256": "2066846911ab9fa223fc47a076b2e6e6287c0e7433814daea580580ded41c024",
+        "source_bytes": 174097,
+        "source_before": {
+          "kind": "upstream",
+          "module": "ErdosProblems.Erdos235",
+          "sha256": "2066846911ab9fa223fc47a076b2e6e6287c0e7433814daea580580ded41c024",
+          "bytes": 174097,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/ErdosProblems/Erdos235.lean",
+          "raw_sha256": "19277cc90b17f2fdef1f7b53b1011760ed8ba2509acb4b35c84e728b434a495e",
+          "raw_bytes": 169820
+        },
+        "source_after": {
+          "kind": "upstream",
+          "module": "ErdosProblems.Erdos235",
+          "sha256": "2066846911ab9fa223fc47a076b2e6e6287c0e7433814daea580580ded41c024",
+          "bytes": 174097,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/ErdosProblems/Erdos235.lean",
+          "raw_sha256": "19277cc90b17f2fdef1f7b53b1011760ed8ba2509acb4b35c84e728b434a495e",
+          "raw_bytes": 169820
+        },
+        "artifact_bundle_before": {
+          "module": "ErdosProblems.Erdos235",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos235.olean",
+              "present": true,
+              "bytes": 4859120,
+              "sha256": "3d99fead11e475a46bfd5e391ed168fca95dd1b42d91ab41a7b5537afd7b2fb7"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos235.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos235.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "cfdfef98bb4c7eb3a1ff079c9da68f5ceebdc4e76c685a521b8e80bdb3f07504",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "artifact_bundle_after": {
+          "module": "ErdosProblems.Erdos235",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos235.olean",
+              "present": true,
+              "bytes": 4859120,
+              "sha256": "3d99fead11e475a46bfd5e391ed168fca95dd1b42d91ab41a7b5537afd7b2fb7"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos235.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos235.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "cfdfef98bb4c7eb3a1ff079c9da68f5ceebdc4e76c685a521b8e80bdb3f07504",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "configured_local_artifacts_before": [
+          {
+            "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+            "files": [
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+                "present": true,
+                "bytes": 418664,
+                "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+              },
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos387.BrunSieve",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos387/BrunSieve.olean",
+                "present": true,
+                "bytes": 449160,
+                "sha256": "d50c277c7ad969e86c1b1e4168c2962e4fd68cf55fdfe2173d2e6c02931e0f4a"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "3f83eeb5fe8fe627b095464329f837a2813a1879fbd4bd2fb918117d04a5aa9b",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "configured_local_artifacts_after": [
+          {
+            "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+            "files": [
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+                "present": true,
+                "bytes": 418664,
+                "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+              },
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos387.BrunSieve",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos387/BrunSieve.olean",
+                "present": true,
+                "bytes": 449160,
+                "sha256": "d50c277c7ad969e86c1b1e4168c2962e4fd68cf55fdfe2173d2e6c02931e0f4a"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "3f83eeb5fe8fe627b095464329f837a2813a1879fbd4bd2fb918117d04a5aa9b",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "compile_receipt_sha256": "431a3ae10f245ab6af43db67236592c6a7a8241a6bac1c57415fb6c119ccf2e7",
+        "matched_modules": [
+          "ErdosProblems.Erdos235"
+        ],
+        "child_environment": {
+          "LEAN_NUM_THREADS": "1",
+          "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+        },
+        "runtime": {
+          "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+          "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "dependency_artifact_fingerprint": null,
+          "imported_mathlib_and_standard_libraries_trusted": true,
+          "automatic_cache_eligible": false
+        },
+        "runtime_unchanged": true,
+        "configuration_sha256": "eb89fca720d01e2dd61c8af06e96eae52c1dfa626326b63d462faf12a8c05f2e",
+        "binding_passed": true,
+        "automatic_cache_eligible": false,
+        "receipt_archive": "logs/checker-ErdosProblems.Erdos235-f8929bafcfa54c6b93180d0e9e905e3f.json"
+      },
+      {
+        "schema": "configured-pack-bound-run-v1",
+        "module": "JSP208Audit",
+        "mode": "checker",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "--verbose",
+          "JSP208Audit"
+        ],
+        "started_at_utc": "2026-09-16T11:54:45.442269+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 13.707,
+        "log": "logs/checker-JSP208Audit-fe1cd1402103496e85b801b7c5becf45.log",
+        "output": "replaying JSP208Audit\n",
+        "log_sha256": "66adf52a55618b6f985088f25cc66edaeaaecfa45e7ddc311739ad60b787f0ca",
+        "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+        "source_sha256": "df2228ede4106704fe706176455e5feb6f76194326b6eaffa6729c8993e62f18",
+        "source_bytes": 1339,
+        "source_before": {
+          "kind": "typed_audit",
+          "module": "JSP208Audit",
+          "sha256": "df2228ede4106704fe706176455e5feb6f76194326b6eaffa6729c8993e62f18",
+          "bytes": 1339
+        },
+        "source_after": {
+          "kind": "typed_audit",
+          "module": "JSP208Audit",
+          "sha256": "df2228ede4106704fe706176455e5feb6f76194326b6eaffa6729c8993e62f18",
+          "bytes": 1339
+        },
+        "artifact_bundle_before": {
+          "module": "JSP208Audit",
+          "files": [
+            {
+              "path": "build/JSP208Audit.olean",
+              "present": true,
+              "bytes": 17656,
+              "sha256": "72ddab8fee2f0ebe2e95fe2abb8cf5f6069893bc0f8071e2b9df1b738382fba0"
+            },
+            {
+              "path": "build/JSP208Audit.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/JSP208Audit.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "43a44d67077e252feb6038700647be6460dff448fab8ed70e8e5150ffdaa6086",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "artifact_bundle_after": {
+          "module": "JSP208Audit",
+          "files": [
+            {
+              "path": "build/JSP208Audit.olean",
+              "present": true,
+              "bytes": 17656,
+              "sha256": "72ddab8fee2f0ebe2e95fe2abb8cf5f6069893bc0f8071e2b9df1b738382fba0"
+            },
+            {
+              "path": "build/JSP208Audit.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/JSP208Audit.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "43a44d67077e252feb6038700647be6460dff448fab8ed70e8e5150ffdaa6086",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "configured_local_artifacts_before": [
+          {
+            "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+            "files": [
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+                "present": true,
+                "bytes": 418664,
+                "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+              },
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos387.BrunSieve",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos387/BrunSieve.olean",
+                "present": true,
+                "bytes": 449160,
+                "sha256": "d50c277c7ad969e86c1b1e4168c2962e4fd68cf55fdfe2173d2e6c02931e0f4a"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "3f83eeb5fe8fe627b095464329f837a2813a1879fbd4bd2fb918117d04a5aa9b",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos235",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos235.olean",
+                "present": true,
+                "bytes": 4859120,
+                "sha256": "3d99fead11e475a46bfd5e391ed168fca95dd1b42d91ab41a7b5537afd7b2fb7"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos235.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos235.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "cfdfef98bb4c7eb3a1ff079c9da68f5ceebdc4e76c685a521b8e80bdb3f07504",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "configured_local_artifacts_after": [
+          {
+            "module": "Wikipedia.GreenTao.Sieve.CongruenceAverage",
+            "files": [
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean",
+                "present": true,
+                "bytes": 418664,
+                "sha256": "b0d953a4d08b5f895adf42e2f7d9604e5226f406e362951f59e598843c949847"
+              },
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/Wikipedia/GreenTao/Sieve/CongruenceAverage.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "3d272db202d0e186bb56a2e06a2dbc17d805e9a435e46315fd315cd57b89402f",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos387.BrunSieve",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos387/BrunSieve.olean",
+                "present": true,
+                "bytes": 449160,
+                "sha256": "d50c277c7ad969e86c1b1e4168c2962e4fd68cf55fdfe2173d2e6c02931e0f4a"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos387/BrunSieve.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "3f83eeb5fe8fe627b095464329f837a2813a1879fbd4bd2fb918117d04a5aa9b",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos235",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos235.olean",
+                "present": true,
+                "bytes": 4859120,
+                "sha256": "3d99fead11e475a46bfd5e391ed168fca95dd1b42d91ab41a7b5537afd7b2fb7"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos235.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos235.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "cfdfef98bb4c7eb3a1ff079c9da68f5ceebdc4e76c685a521b8e80bdb3f07504",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "compile_receipt_sha256": "2b781bcd7f28e9669716e12be74f6a533553b36e5af742734b59089b640bcdd4",
+        "matched_modules": [
+          "JSP208Audit"
+        ],
+        "child_environment": {
+          "LEAN_NUM_THREADS": "1",
+          "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+        },
+        "runtime": {
+          "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+          "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "dependency_artifact_fingerprint": null,
+          "imported_mathlib_and_standard_libraries_trusted": true,
+          "automatic_cache_eligible": false
+        },
+        "runtime_unchanged": true,
+        "configuration_sha256": "eb89fca720d01e2dd61c8af06e96eae52c1dfa626326b63d462faf12a8c05f2e",
+        "binding_passed": true,
+        "automatic_cache_eligible": false,
+        "receipt_archive": "logs/checker-JSP208Audit-fe1cd1402103496e85b801b7c5becf45.json"
+      }
+    ],
+    "complete": true,
+    "same_lean_implementation": true,
+    "imported_mathlib_and_standard_libraries_trusted": true,
+    "fresh_replay": false,
+    "output_bundles_bound": true,
+    "dependency_artifact_fingerprint": null,
+    "automatic_cache_eligible": false
+  },
+  "main_theorem": "Erdos235.erdos_235",
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axioms_by_declaration": {
+    "Erdos235.erdos_235_limit": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos235.erdos_235": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP208Audit.catalog_limit": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP208Audit.catalog_statement": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "axiom_audit_output": "'Erdos235.erdos_235_limit' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos235.erdos_235' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP208Audit.catalog_limit' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP208Audit.catalog_statement' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "audit_source": "import ErdosProblems.Erdos235\n\nopen Filter\nopen scoped Topology\n\nnamespace JSP208Audit\n\n/-- The internal consecutive-gap count, divided by phi of the primorial,\nconverges to the explicit exponential distribution at every nonnegative c. -/\ntheorem catalog_limit (c : ℝ) (hc : 0 ≤ c) :\n    Tendsto (fun k ↦\n      ((Erdos235.internalShortGaps (Erdos235.primeProduct k)\n        ⌊c * (Erdos235.primeProduct k : ℝ) /\n          ((Erdos235.primeProduct k).totient : ℝ)⌋₊).card : ℝ) /\n      ((Erdos235.primeProduct k).totient : ℝ))\n      atTop (𝓝 (1 - Real.exp (-c))) := by\n  simpa only [Erdos235.gapCDF, Erdos235.normalizedThreshold,\n    Erdos235.exponentialGapCDF] using Erdos235.erdos_235_limit c hc\n\ntheorem catalog_statement :\n    ∃ f : ℝ → ℝ, Continuous f ∧ ∀ c : ℝ, 0 ≤ c →\n      Tendsto (fun k ↦\n        ((Erdos235.internalShortGaps (Erdos235.primeProduct k)\n          ⌊c * (Erdos235.primeProduct k : ℝ) /\n            ((Erdos235.primeProduct k).totient : ℝ)⌋₊).card : ℝ) /\n        ((Erdos235.primeProduct k).totient : ℝ)) atTop (𝓝 (f c)) := by\n  simpa only [Erdos235.gapCDF, Erdos235.normalizedThreshold] using Erdos235.erdos_235\n\n#print axioms Erdos235.erdos_235_limit\n#print axioms Erdos235.erdos_235\n#print axioms catalog_limit\n#print axioms catalog_statement\n\nend JSP208Audit\n",
+  "scope": "The internal consecutive reduced-residue gap count below a primorial, normalized by phi of that primorial, tends to 1-exp(-c) at every c>=0. The resulting limiting function is continuous. No uniform relative-error rate or prime-gap version is claimed.",
+  "scope_review_markdown": "# JSP-000208 / Erdős 235: source-scope review\n\nThe source-scope review is supported by the completed run on 2026-09-16: three upstream modules and the typed audit compiled and were individually replayed, all eight processes exiting 0. Both upstream endpoints and both typed statements use only propext, Classical.choice and Quot.sound. The exact receipts and output-bundle bindings remain the verification evidence; this prose is their scope interpretation.\n\nThe [original question](https://www.erdosproblems.com/235), also available in its [LaTeX record](https://www.erdosproblems.com/latex/235), asks for existence and continuity of the limiting distribution of normalized internal consecutive gaps between reduced residues below the product of the first k primes. The catalog maps to this question, not to gaps between consecutive primes.\n\nThe pinned proof is [Erdos235.lean](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos235.lean). `primeProduct k` multiplies the first k actual primes using Mathlib's increasing prime enumeration. The initial k=0 value is 1 and has no effect on the limit. Positivity of the product and its totient is proved.\n\n`IsInternalConsecutive N a b` requires a<b<N, both endpoints coprime to N and no intermediate coprime integer. Its finite pair set counts each internal gap once. For N>1 the possible a=0 is automatically excluded by coprimality. The natural floor in `normalizedThreshold` exactly matches the real gap inequality at nonnegative c; actual gaps are nonnegative integers. The denominator is phi(N), as in the source question, not the number phi(N)-1 of internal gaps.\n\nThe proof first establishes the exponential law for cyclic gaps and then proves the absolute internal/cyclic discrepancy is at most 1/phi(N). The totient tends to infinity, so the missing wraparound gap disappears in the limit. The final `erdos_235_limit` quantifies every real c>=0; c=0 is treated separately. `erdos_235` supplies the continuous function c ↦ 1-exp(-c). There is no unresolved moment, sieve-error or uniformity hypothesis in these endpoints.\n\nIts three-file local dependency closure is CongruenceAverage, Erdos387.BrunSieve and Erdos235. The first supplies finite congruence averaging and imports only Mathlib; the second supplies finite sieve/Bonferroni inequalities and also imports only Mathlib. Importing BrunSieve does not assume any Erdos387 endpoint. No external non-Mathlib package or unproved number-theory input is required by this source closure. The actual endpoint axiom traces report only the standard three axioms; imported Mathlib and standard artifacts remain trusted.\n\nThe published reference is Christopher Hooley, *On the difference between consecutive numbers prime to n. II.*, Publicationes Mathematicae Debrecen 12 (1965), 39–49, verified against the [journal record](https://publi.math.unideb.hu/paper/2953), DOI [10.5486/PMD.1965.12.1-4.06](https://doi.org/10.5486/PMD.1965.12.1-4.06). The Lean header credits Codex and GPT-5.6 Sol. This package preserves those credits; it contributes only reproduction and a typed statement audit.\n\nThe result covers the original existence-and-continuity question and gives the explicit limiting function. It does not claim the stronger uniform relative-error wording in the webpage's historical commentary, a quantitative convergence rate, or the distinct prime-gap problem 234.\n",
+  "attribution": {
+    "mathematics": "Christopher Hooley",
+    "formal_source_notices": [
+      "Codex",
+      "GPT-5.6 Sol"
+    ],
+    "journal_reference": "https://publi.math.unideb.hu/paper/2953",
+    "doi": "https://doi.org/10.5486/PMD.1965.12.1-4.06"
+  },
+  "registration_status": "verified_ready",
+  "official_verification": false,
+  "first_formalization_claim": false,
+  "third_party_source_redistributed": false,
+  "automatic_cache_eligible": false,
+  "artifact_binding_scope": "Exact configured target .olean/private/server bundles and bounded configured local inputs; non-target Mathlib/standard artifacts remain trusted, not fully fingerprinted"
+}
