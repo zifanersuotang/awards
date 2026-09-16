@@ -1354,6 +1354,243 @@
       ]
     },
     {
+      "jsp": "JSP-000935",
+      "erdos": 1127,
+      "targets": [
+        "Erdos1127.erdos_1127",
+        "Erdos1127.erdos_1127_real_line"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1127",
+          "path": "ErdosProblems/Erdos1127.lean",
+          "sha256": "bac42f447ce3995c6a488f3583fb98be9c97d8e0eed1a2034072741765e9a5b4",
+          "source_kind": "plby",
+          "source_root": "plby/src/latest",
+          "source_path": "plby/src/latest/ErdosProblems/Erdos1127.lean",
+          "provenance": {
+            "repository": "https://github.com/plby/lean-proofs",
+            "commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+            "repository_path": "src/latest/ErdosProblems/Erdos1127.lean"
+          }
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1127"
+      ],
+      "axioms_output": "'Erdos1127.erdos_1127' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1127.erdos_1127_real_line' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "The target proves an equivalence between the continuum hypothesis and the following all-dimensional statement: for every natural number n, Euclidean n-space admits a coloring by natural numbers such that each color class has distinct distances between different unordered pairs of distinct points. Equality of two distances within a color class forces equality of the endpoint pairs up to reversal. Both the CH-to-coloring construction and the reverse implication are terminal proved directions; the real-line equivalence is also provided separately. The use of EuclideanSpace fixes the Euclidean metric. This records the exact conditional-equivalence resolution, without asserting an unconditional coloring or a formal metatheoretic consistency proof.",
+        "caveat": "The positive answer is equivalent to CH; it is not asserted unconditionally. Distances refer to different unordered nondegenerate pairs, so reversal is identified and diagonal pairs are excluded. Use EuclideanSpace, not the sup metric on coordinate functions. Both directions are proved, but this is not a formal metatheoretic consistency/independence proof for ZFC.",
+        "full_original_problem_coverage": true
+      },
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1127",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 84.51,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "bac42f447ce3995c6a488f3583fb98be9c97d8e0eed1a2034072741765e9a5b4",
+          "tool": "lean.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "log": "logs/ErdosProblems-Erdos1127-compile.log",
+          "log_sha256": "0377f26be4f68982dba2d199af74bfc72026b0a20b44ea832a0b5bfaf640c310"
+        },
+        {
+          "module": "ExistingChecks.Erdos1127",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 14.049,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "827548851779b2c99c91c54503d8d3726a6db3bedaffe37cc903aaadea8c584a",
+          "tool": "lean.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "log": "logs/ExistingChecks-Erdos1127-compile.log",
+          "log_sha256": "e0cefe48c108814d02ede1a8211be378a52934b04b09a9f3787b6f353095d328"
+        },
+        {
+          "module": "ErdosProblems.Erdos1127",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 90.688,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "bac42f447ce3995c6a488f3583fb98be9c97d8e0eed1a2034072741765e9a5b4",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "log": "logs/ErdosProblems-Erdos1127-replay.log",
+          "log_sha256": "4054988adcaebc0d59ae2ed35a08a009a8656246f17d13a965826f7ca4a9a3a1"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-000984",
+      "erdos": 1179,
+      "targets": [
+        "Erdos1179.erdos_1179"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1179",
+          "path": "ErdosProblems/Erdos1179.lean",
+          "sha256": "6bfc35ec3c9a139ca8f6938e64d71976b00193f7942a43fbe40efeba869e27db",
+          "source_kind": "plby",
+          "source_root": "plby/src/latest",
+          "source_path": "plby/src/latest/ErdosProblems/Erdos1179.lean",
+          "provenance": {
+            "repository": "https://github.com/plby/lean-proofs",
+            "commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+            "repository_path": "src/latest/ErdosProblems/Erdos1179.lean"
+          }
+        },
+        {
+          "module": "ErdosProblems.Erdos807.Parameters",
+          "path": "ErdosProblems/Erdos807/Parameters.lean",
+          "sha256": "cdd81d1b44a8462830909429ee003daa429e82093bd982aa64f1282bee3840f4",
+          "source_kind": "plby",
+          "source_root": "plby/src/latest",
+          "source_path": "plby/src/latest/ErdosProblems/Erdos807/Parameters.lean",
+          "provenance": {
+            "repository": "https://github.com/plby/lean-proofs",
+            "commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+            "repository_path": "src/latest/ErdosProblems/Erdos807/Parameters.lean"
+          }
+        },
+        {
+          "module": "ErdosProblems.Erdos807.SecondMoment",
+          "path": "ErdosProblems/Erdos807/SecondMoment.lean",
+          "sha256": "aadb17aac37d005bf425ed4cab0e8cf69507ee24014d8c0753c30a00a0a5453d",
+          "source_kind": "plby",
+          "source_root": "plby/src/latest",
+          "source_path": "plby/src/latest/ErdosProblems/Erdos807/SecondMoment.lean",
+          "provenance": {
+            "repository": "https://github.com/plby/lean-proofs",
+            "commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+            "repository_path": "src/latest/ErdosProblems/Erdos807/SecondMoment.lean"
+          }
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos807.SecondMoment",
+        "ErdosProblems.Erdos807.Parameters",
+        "ErdosProblems.Erdos1179"
+      ],
+      "axioms_output": "'Erdos1179.erdos_1179' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "For every fixed epsilon strictly between zero and one, the theorem gives an explicit subset size asymptotic to log base two of the group order and proves that a uniformly chosen subset of this size is balanced with probability tending to one along every growing sequence of finite abelian groups. Balancedness simultaneously bounds every subset-sum representation count by the required relative error. A separate universal lower bound proves that any balanced subset has at least logarithmic size. The sample space consists of genuine finite subsets, with distinct elements; the proof explicitly transfers from independent tuples and handles eventual nonemptiness.",
+        "caveat": "Covers the original leading asymptotic question. It does not define or compute an exact finite-order minimum g_epsilon(N), or claim the best lower-order error. No unresolved definition bridge was found at the inspected endpoints.",
+        "full_original_problem_coverage": true
+      },
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos807.SecondMoment",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 14.437,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "aadb17aac37d005bf425ed4cab0e8cf69507ee24014d8c0753c30a00a0a5453d",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos807-SecondMoment-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos807.Parameters",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 45.17,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "cdd81d1b44a8462830909429ee003daa429e82093bd982aa64f1282bee3840f4",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos807-Parameters-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1179",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 19.037,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "6bfc35ec3c9a139ca8f6938e64d71976b00193f7942a43fbe40efeba869e27db",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1179-compile.log",
+          "log_sha256": "e2d0d2aec20bde2b4d368cedf8afce4c8421cd23e874b6487d275ec2ec996245"
+        },
+        {
+          "module": "ExistingChecks.Erdos1179",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 13.974,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "8c13c4736080d42323cf8047981b6d9c41602dc621e40f0b44b020508b794f23",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1179-compile.log",
+          "log_sha256": "e2d0d2aec20bde2b4d368cedf8afce4c8421cd23e874b6487d275ec2ec996245"
+        },
+        {
+          "module": "ErdosProblems.Erdos807.SecondMoment",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 19.945,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "aadb17aac37d005bf425ed4cab0e8cf69507ee24014d8c0753c30a00a0a5453d",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "log": "logs/ErdosProblems-Erdos807-SecondMoment-replay.log",
+          "log_sha256": "52ef665d6dba3d67d25f984f871bdefc1c780eb5ee3cf4a93323f93446ae5075"
+        },
+        {
+          "module": "ErdosProblems.Erdos807.Parameters",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 19.897,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "cdd81d1b44a8462830909429ee003daa429e82093bd982aa64f1282bee3840f4",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "log": "logs/ErdosProblems-Erdos807-Parameters-replay.log",
+          "log_sha256": "c124a09aea68118c8ce57af866634f787db21de01c76f60c39017c30706338c3"
+        },
+        {
+          "module": "ErdosProblems.Erdos1179",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 20.265,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "6bfc35ec3c9a139ca8f6938e64d71976b00193f7942a43fbe40efeba869e27db",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "log": "logs/ErdosProblems-Erdos1179-replay.log",
+          "log_sha256": "79530ea2da9aafeb215f29f9f2614921574be3abbdb8bf1a4b276f98363f221c"
+        }
+      ]
+    },
+    {
       "jsp": "JSP-000985",
       "erdos": 1180,
       "targets": [

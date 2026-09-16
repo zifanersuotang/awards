@@ -1,0 +1,21 @@
+'Erdos1127.erdos_1127_oriented_pair_formulation_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1127.erdos_1127_degenerate_pair_formulation_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1127.hasDistinctPairDistances_iff_avoidsP3_and_avoidsP4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos1127.distancePolynomial3_strongOneAvoidable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1127.distancePolynomial4_strongOneAvoidable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1127.real_isRealClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1127.realAlgebraic_isRealClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'_private.ErdosProblems.Erdos1127.0.Erdos1127.exists_realTranscendenceSupportFingerprint' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos1127.distancePolynomialMasterColoring_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1127.distancePolynomialMasterColoring_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1127.distancePolynomialMasterColoring_of_continuumHypothesis' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos1127.erdos_1127_only_if' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1127.erdos_1127_if' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1127.erdos_1127' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1127.erdos_1127_real_line' depends on axioms: [propext, Classical.choice, Quot.sound]

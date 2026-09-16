@@ -1,0 +1,2 @@
+'Erdos1127.erdos_1127' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1127.erdos_1127_real_line' depends on axioms: [propext, Classical.choice, Quot.sound]
