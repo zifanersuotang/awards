@@ -1,0 +1,3 @@
+Erdos858.erdos_858 :
+  Filter.Tendsto (fun N => Erdos858.extremalMass N / Real.log ↑N) Filter.atTop (nhds Erdos858.constant)
+'Erdos858.erdos_858' depends on axioms: [propext, Classical.choice, Quot.sound]

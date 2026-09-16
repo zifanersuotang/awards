@@ -1,0 +1,23 @@
+{
+  ".gitattributes": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992",
+  "inputs.json": "fd4f4777fba7ad2cdec4d39fbf212d2bf02ab96cc82f9ca77fe34a8d0fab45d9",
+  "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "LICENSE.upstream": "41e26750cf7403beef1b82310454ca79eb1da04b1dab82d4d42f377e15c01ea9",
+  "NOTICE": "a6e3af64a9f51f041365b505fb3b8356b965547c094f111642870721fedeedc0",
+  "README.md": "7b13bcc3e6764dc83da9231619110c5fb04096e22dcd0c9ff86d6d32335472d1",
+  "reproduce.py": "19d361a20267f910638c675c9d83dd531048918009e8dcb9b524210989213ce9",
+  "source/Audit858.lean": "3c0ed3264084bda2b9a6208e33b12e02129d85e0d6445e4a1dac8c85b793306f",
+  "source/ErdosProblems/Erdos858.lean": "451d79df1d9576b6e4873e6ab5e48b6785565cbd218ac2b281a8956b25d83309",
+  "source/UnitFractions/ForMathlib/BasicEstimates.lean": "1475f84517f02f43f91563e7852b147d677d661d57e7cac6b4b3120570613775",
+  "source/UnitFractions/ForMathlib/IntegralRPow.lean": "884ed8b4343eb10c4e5fa123069c9ac584d74123aea3173974bf3afdb6c48134",
+  "source/UnitFractions/ForMathlib/Misc.lean": "99e31b4fcb5ff24d26b0c9261ca280f4d96aea91e9f1cde7b8ae59a43361f3dd",
+  "statement-review.md": "6903a74fbf921d9c85bfb144e9964987aaf8e30c781ba449d9c82adc71d355b9",
+  "verified-run/audit-Audit858.log": "c08696d4256633d82c3109c0d766ffcdabee9dbbcde65d0b107427cb299d4478",
+  "verified-run/checker-ErdosProblems.log": "93ce38fb1bc73c094762a8b3315ba8e05366870d9a200671ff6dc02c6034e7ce",
+  "verified-run/checker-UnitFractions.log": "69e49404880b627b23e50c099be267851767b476d490ec79fe8a4472cd1923e1",
+  "verified-run/compile-ErdosProblems_Erdos858.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "verified-run/compile-UnitFractions_ForMathlib_BasicEstimates.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "verified-run/compile-UnitFractions_ForMathlib_IntegralRPow.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "verified-run/compile-UnitFractions_ForMathlib_Misc.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "verified-run/verification.json": "4f98d036e0448a99b8ba9969c891dcd94bbfaac47e0b010139a0f44675180a3b"
+}

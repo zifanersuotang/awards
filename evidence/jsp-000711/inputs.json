@@ -1,0 +1,90 @@
+{
+  "jsp": "JSP-000711",
+  "erdos": 858,
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "main_module": "ErdosProblems.Erdos858",
+  "main_theorem": "Erdos858.erdos_858",
+  "harness_module": "Audit858",
+  "harness_sha256": "3c0ed3264084bda2b9a6208e33b12e02129d85e0d6445e4a1dac8c85b793306f",
+  "ordered_modules": [
+    {
+      "module": "UnitFractions.ForMathlib.IntegralRPow",
+      "path": "UnitFractions/ForMathlib/IntegralRPow.lean",
+      "upstream_path": "src/latest/UnitFractions/ForMathlib/IntegralRPow.lean",
+      "sha256": "884ed8b4343eb10c4e5fa123069c9ac584d74123aea3173974bf3afdb6c48134",
+      "bytes": 3978,
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.ImproperIntegrals",
+        "Mathlib.Analysis.SpecialFunctions.Integrals.Basic"
+      ]
+    },
+    {
+      "module": "UnitFractions.ForMathlib.Misc",
+      "path": "UnitFractions/ForMathlib/Misc.lean",
+      "upstream_path": "src/latest/UnitFractions/ForMathlib/Misc.lean",
+      "sha256": "99e31b4fcb5ff24d26b0c9261ca280f4d96aea91e9f1cde7b8ae59a43361f3dd",
+      "bytes": 5104,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "UnitFractions.ForMathlib.BasicEstimates",
+      "path": "UnitFractions/ForMathlib/BasicEstimates.lean",
+      "upstream_path": "src/latest/UnitFractions/ForMathlib/BasicEstimates.lean",
+      "sha256": "1475f84517f02f43f91563e7852b147d677d661d57e7cac6b4b3120570613775",
+      "bytes": 157200,
+      "imports": [
+        "Mathlib",
+        "UnitFractions.ForMathlib.IntegralRPow",
+        "UnitFractions.ForMathlib.Misc"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos858",
+      "path": "ErdosProblems/Erdos858.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos858.lean",
+      "sha256": "451d79df1d9576b6e4873e6ab5e48b6785565cbd218ac2b281a8956b25d83309",
+      "bytes": 211603,
+      "imports": [
+        "Mathlib",
+        "UnitFractions.ForMathlib.BasicEstimates"
+      ]
+    }
+  ],
+  "source_bytes": 377885,
+  "source_audit": "audit-657-725/audit.json",
+  "scope": "Exact finite extremal reciprocal mass over subsets [1,N] with no proper multiplicative pair b=a*t, t>1, minFac(t)>a; divided by log N tends to explicitly defined constant. t>1 avoids self-pair artifact.",
+  "scope_cautions": [],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0701-0800.md#JSP-000711",
+  "preparation_only": false,
+  "compiled": true,
+  "replayed": true,
+  "resource_plan": "Future coordinator must acquire/release shared mutex separately for each source module. Do not wrap whole multi-module build in a second mutex.",
+  "checker_plan": "Replay every locally compiled proof module, selecting Lean Name-prefix roots and comparing the actual verbose replay module set to this exact local closure. Treat imported Mathlib separately as trusted pinned caches.",
+  "audit_targets": [
+    "Erdos858.erdos_858"
+  ],
+  "informal_authors_as_credited": [
+    "Przemek Chojecki",
+    "GPT-5.4 Pro"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "verification_limit": "Same Lean kernel. Replay of the entire compiled local source closure, checked against actual verbose module names; imported pinned Mathlib caches are trusted, not freshly replayed. No independently implemented checker.",
+  "module": "ErdosProblems.Erdos858",
+  "statement_scope": "Exact finite extremal reciprocal mass over subsets [1,N] with no proper multiplicative pair b=a*t, t>1, minFac(t)>a; divided by log N tends to explicitly defined constant. t>1 avoids self-pair artifact.",
+  "source_path": "src/latest/ErdosProblems/Erdos858.lean",
+  "source_sha256": {
+    "UnitFractions/ForMathlib/IntegralRPow.lean": "884ed8b4343eb10c4e5fa123069c9ac584d74123aea3173974bf3afdb6c48134",
+    "UnitFractions/ForMathlib/Misc.lean": "99e31b4fcb5ff24d26b0c9261ca280f4d96aea91e9f1cde7b8ae59a43361f3dd",
+    "UnitFractions/ForMathlib/BasicEstimates.lean": "1475f84517f02f43f91563e7852b147d677d661d57e7cac6b4b3120570613775",
+    "ErdosProblems/Erdos858.lean": "451d79df1d9576b6e4873e6ab5e48b6785565cbd218ac2b281a8956b25d83309",
+    "Audit858.lean": "3c0ed3264084bda2b9a6208e33b12e02129d85e0d6445e4a1dac8c85b793306f"
+  },
+  "main_source_sha256": "451d79df1d9576b6e4873e6ab5e48b6785565cbd218ac2b281a8956b25d83309",
+  "original_problem_url": "https://www.erdosproblems.com/858"
+}
