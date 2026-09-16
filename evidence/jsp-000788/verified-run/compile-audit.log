@@ -1,0 +1,7 @@
+Erdos948.not_erdos_948 :
+  ¬∃ f k,
+      0 < k ∧
+        ∀ (colouring : ℤ → Fin k),
+          ∃ a,
+            StrictMono a ∧ {n | a n < ↑(f n)}.Infinite ∧ ∃ omitted, ∀ (I : Finset ℕ), colouring (∑ i ∈ I, a i) ≠ omitted
+'Erdos948.not_erdos_948' depends on axioms: [propext, Classical.choice, Quot.sound]
