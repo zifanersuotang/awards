@@ -1,0 +1,170 @@
+{
+  "jsp": "JSP-000203",
+  "erdos": 225,
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "status": "verified_ready",
+  "source_files": [
+    {
+      "module": "ErdosProblems.Erdos228.Bernstein",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos228/Bernstein.lean",
+      "raw_sha256": "ac152224e8a17587c5406daeb074f98be6d50724bc2abe9ccb2487f332eb0066",
+      "raw_bytes": 16313,
+      "compiled_sha256": "b8ccef2eb21d70e93f9f34b18e8c9fabf4077f0be2a42b91ec2d137447bcf3e5",
+      "compiled_bytes": 16682
+    },
+    {
+      "module": "ErdosProblems.Erdos1215.Reciprocal",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1215/Reciprocal.lean",
+      "raw_sha256": "a0d515eaaa371e07d12214d6f878ab500221b280da0e57495ab9754d95292d50",
+      "raw_bytes": 12848,
+      "compiled_sha256": "282c2e5192698d52bcd86a44495e3872bb15789f000b2b1680b70a9df6ad13f4",
+      "compiled_bytes": 13121
+    },
+    {
+      "module": "ErdosProblems.Erdos225",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos225.lean",
+      "raw_sha256": "ddcc9a8f0e5c075c496e9628f255b71dd1bf775b62dee2a4869722d60d6df3e8",
+      "raw_bytes": 85451,
+      "compiled_sha256": "d6f0c49ff03d00bb30405b6e25d3e2456e21ed4a4ad6b0c33ea24115d56d69f4",
+      "compiled_bytes": 87499
+    }
+  ],
+  "compilation": [
+    {
+      "module": "ErdosProblems.Erdos228.Bernstein",
+      "mode": "compile",
+      "command": "[LEAN_BIN]\\lean.exe -j 1 -M 6144 -R [WORKSPACE]\\sources\\lean-proofs\\src\\latest -o [WORKSPACE]\\pack\\existing-JSP203\\build\\ErdosProblems\\Erdos228\\Bernstein.olean [WORKSPACE]\\sources\\lean-proofs\\src\\latest\\ErdosProblems\\Erdos228\\Bernstein.lean",
+      "started_at_utc": "2026-09-16T10:41:21.763908+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 11.068,
+      "log": "compile-ErdosProblems.Erdos228.Bernstein-1789555281.log",
+      "output": "",
+      "source_sha256": "b8ccef2eb21d70e93f9f34b18e8c9fabf4077f0be2a42b91ec2d137447bcf3e5",
+      "source_bytes": 16682,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_hash_normalization": "UTF-8 without BOM, exactly the embedded output"
+    },
+    {
+      "module": "ErdosProblems.Erdos1215.Reciprocal",
+      "mode": "compile",
+      "command": "[LEAN_BIN]\\lean.exe -j 1 -M 6144 -R [WORKSPACE]\\sources\\lean-proofs\\src\\latest -o [WORKSPACE]\\pack\\existing-JSP203\\build\\ErdosProblems\\Erdos1215\\Reciprocal.olean [WORKSPACE]\\sources\\lean-proofs\\src\\latest\\ErdosProblems\\Erdos1215\\Reciprocal.lean",
+      "started_at_utc": "2026-09-16T10:47:02.446753+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 23.114,
+      "log": "compile-ErdosProblems.Erdos1215.Reciprocal-1789555622.log",
+      "output": "'Erdos1215.exists_macLanePolynomial_for_all_large_degrees' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "source_sha256": "282c2e5192698d52bcd86a44495e3872bb15789f000b2b1680b70a9df6ad13f4",
+      "source_bytes": 13121,
+      "log_sha256": "02bcffba1928990d3fa6058aa17530f145a337f4db6834f362727dfc0eb88d6a",
+      "log_hash_normalization": "UTF-8 without BOM, exactly the embedded output"
+    },
+    {
+      "module": "ErdosProblems.Erdos225",
+      "mode": "compile",
+      "command": "[LEAN_BIN]\\lean.exe -j 1 -M 6144 -R [WORKSPACE]\\sources\\lean-proofs\\src\\latest -o [WORKSPACE]\\pack\\existing-JSP203\\build\\ErdosProblems\\Erdos225.olean [WORKSPACE]\\sources\\lean-proofs\\src\\latest\\ErdosProblems\\Erdos225.lean",
+      "started_at_utc": "2026-09-16T10:55:57.225580+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 20.204,
+      "log": "compile-ErdosProblems.Erdos225-1789556157.log",
+      "output": "",
+      "source_sha256": "d6f0c49ff03d00bb30405b6e25d3e2456e21ed4a4ad6b0c33ea24115d56d69f4",
+      "source_bytes": 87499,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_hash_normalization": "UTF-8 without BOM, exactly the embedded output"
+    },
+    {
+      "module": "JSP203Audit",
+      "mode": "compile",
+      "command": "[LEAN_BIN]\\lean.exe -j 1 -M 6144 -R [WORKSPACE]\\pack\\existing-JSP203 -o [WORKSPACE]\\pack\\existing-JSP203\\build\\JSP203Audit.olean [WORKSPACE]\\pack\\existing-JSP203\\JSP203Audit.lean",
+      "started_at_utc": "2026-09-16T10:59:09.663724+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 8.329,
+      "log": "compile-JSP203Audit-1789556349.log",
+      "output": "'JSP203Audit.published_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos225.erdos_225' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos225.erdos_225_of_onlyRealAngularRoots' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "source_sha256": "a088c636241cc0db3770dd0640f9222e688c1651320d985ca4fad2d87ef3cdcb",
+      "source_bytes": 918,
+      "log_sha256": "364c46b7e822cf9fbce735b974c5f37d3a85755fbb07a037a467dcba1192ac02",
+      "log_hash_normalization": "UTF-8 without BOM, exactly the embedded output"
+    }
+  ],
+  "checker": {
+    "targets": [
+      {
+        "module": "ErdosProblems.Erdos228.Bernstein",
+        "mode": "checker",
+        "command": "[LEAN_BIN]\\leanchecker.exe --verbose ErdosProblems.Erdos228.Bernstein",
+        "started_at_utc": "2026-09-16T10:41:32.913306+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 11.267,
+        "log": "checker-ErdosProblems.Erdos228.Bernstein-1789555292.log",
+        "output": "replaying ErdosProblems.Erdos228.Bernstein\n",
+        "source_sha256": "b8ccef2eb21d70e93f9f34b18e8c9fabf4077f0be2a42b91ec2d137447bcf3e5",
+        "source_bytes": 16682,
+        "log_sha256": "bf39b0b2d212631c19f36e27ffdac0e731ac2431e97c4b3eb21abe0ed094d32b",
+        "log_hash_normalization": "UTF-8 without BOM, exactly the embedded output"
+      },
+      {
+        "module": "ErdosProblems.Erdos1215.Reciprocal",
+        "mode": "checker",
+        "command": "[LEAN_BIN]\\leanchecker.exe --verbose ErdosProblems.Erdos1215.Reciprocal",
+        "started_at_utc": "2026-09-16T10:47:25.641232+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 17.845,
+        "log": "checker-ErdosProblems.Erdos1215.Reciprocal-1789555645.log",
+        "output": "replaying ErdosProblems.Erdos1215.Reciprocal\n",
+        "source_sha256": "282c2e5192698d52bcd86a44495e3872bb15789f000b2b1680b70a9df6ad13f4",
+        "source_bytes": 13121,
+        "log_sha256": "3484682f05db23689d88f2923646419e383be4ecf30981ba537d74278d95c1c6",
+        "log_hash_normalization": "UTF-8 without BOM, exactly the embedded output"
+      },
+      {
+        "module": "ErdosProblems.Erdos225",
+        "mode": "checker",
+        "command": "[LEAN_BIN]\\leanchecker.exe --verbose ErdosProblems.Erdos225",
+        "started_at_utc": "2026-09-16T10:56:17.512639+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 11.191,
+        "log": "checker-ErdosProblems.Erdos225-1789556177.log",
+        "output": "replaying ErdosProblems.Erdos225\n",
+        "source_sha256": "d6f0c49ff03d00bb30405b6e25d3e2456e21ed4a4ad6b0c33ea24115d56d69f4",
+        "source_bytes": 87499,
+        "log_sha256": "63166906d8d32643366a174446cbf56d15fe3765432ebcb66476f199b4e3b819",
+        "log_hash_normalization": "UTF-8 without BOM, exactly the embedded output"
+      },
+      {
+        "module": "JSP203Audit",
+        "mode": "checker",
+        "command": "[LEAN_BIN]\\leanchecker.exe --verbose JSP203Audit",
+        "started_at_utc": "2026-09-16T10:59:18.068216+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 9.161,
+        "log": "checker-JSP203Audit-1789556358.log",
+        "output": "replaying JSP203Audit\n",
+        "source_sha256": "a088c636241cc0db3770dd0640f9222e688c1651320d985ca4fad2d87ef3cdcb",
+        "source_bytes": 918,
+        "log_sha256": "f8ab9c77cafa3f352648870127ba91d1c719b048e8ab9ea6c351a998e87cec27",
+        "log_hash_normalization": "UTF-8 without BOM, exactly the embedded output"
+      }
+    ],
+    "complete": true,
+    "independent_implementation": false,
+    "imports_trusted": true,
+    "fresh": false
+  },
+  "main_theorem": "Erdos225.erdos_225",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "axiom_audit_output": "'JSP203Audit.published_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos225.erdos_225' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos225.erdos_225_of_onlyRealAngularRoots' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "audit_source": "import ErdosProblems.Erdos225\n\nopen Set MeasureTheory\nopen scoped Interval Topology\n\nnamespace JSP203Audit\n\n/-- A typed restatement of the published unit-circle-root formulation.\nAll original mathematics is the attributed upstream proof. -/\ntheorem published_bound\n    (n : ℕ) (c : ℕ → ℂ) (hn : 0 < n) (hcn : c n ≠ 0) (hc0 : c 0 ≠ 0)\n    (hroots : Erdos225.RootsOnUnitCircle (Erdos225.coeffPolynomial n c))\n    (hmax :\n      (∀ θ ∈ Icc (0 : ℝ) (2 * Real.pi),\n        ‖Erdos225.trigPolynomial n c θ‖ ≤ 1) ∧\n      ∃ θ ∈ Icc (0 : ℝ) (2 * Real.pi),\n        ‖Erdos225.trigPolynomial n c θ‖ = 1) :\n    (∫ θ : ℝ in (0 : ℝ)..(2 * Real.pi),\n      ‖Erdos225.trigPolynomial n c θ‖) ≤ 4 :=\n  Erdos225.erdos_225 n c hn hcn hc0 hroots hmax\n\n#print axioms published_bound\n#print axioms Erdos225.erdos_225\n#print axioms Erdos225.erdos_225_of_onlyRealAngularRoots\n\nend JSP203Audit\n",
+  "scope": "Published nondegenerate unit-circle-root formulation, q=1 and M=1. Not the literal webpage interpreted to include zero-free pure monomials.",
+  "primary_reference": "https://math.vanderbilt.edu/saffeb/texts/16.pdf (author-hosted scan, Theorems 1 and 2)",
+  "scope_review_markdown": "# JSP-000203 / Erdős 225: scope of the published inequality\n\nThe intended published inequality is covered by the existing algebraic unit-circle-root theorem. Do not reproduce the problem webpage's underspecified angular-root sentence without its nondegeneracy conditions.\n\nPrimary source: E. B. Saff and T. Sheil-Small, *Coefficient and integral mean estimates for algebraic and trigonometric polynomials with restricted zeros*, Journal of the London Mathematical Society (2), 9 (1974), 16–22, DOI https://doi.org/10.1112/jlms/s2-9.1.16 . The author-hosted scan is https://math.vanderbilt.edu/saffeb/texts/16.pdf, linked from https://my.dev.vanderbilt.edu/edsaff/research-articles/ . This scan is a seven-page galley, with draft page numbers rather than the final journal pagination. Its first three pages were rendered at 150 dpi and read visually on 2026-09-16; the PDF's text layer is empty.\n\nOn scan page 1, Conjecture 1 specifies a degree-n trigonometric polynomial with 2n real zeros in one period. On page 2, Theorem 1 states the integral-mean inequality for a polynomial of positive degree whose algebraic roots all lie on the unit circle. On page 3, Theorem 2's proof explicitly represents the trigonometric polynomial as exp(-inθ)P_(2n)(exp(iθ)); taking q=1 gives the bound 4M.\n\nThe Lean endpoint `Erdos225.erdos_225` uses a positive degree n, nonzero leading and constant coefficients, all algebraic roots on the unit circle, maximum boundary norm exactly one, and the ordinary interval integral of the norm over [0,2π]. The leading-coefficient condition states the true degree. For a positive-degree polynomial with all algebraic roots on the unit circle, the constant coefficient cannot be zero. Thus these hypotheses match the published algebraic formulation rather than weaken it. Multiplication by exp(-inθ) has norm one for real θ, so the published trigonometric reformulation preserves both the maximum and integral. The coefficient-to-polynomial and real-angular-root-to-circle-root bridges are also proved in the source. We do not claim that an additional Laurent-polynomial bridge to a separately defined Mathlib trigonometric degree was compiled.\n\nThere is a real wording defect if the current webpage is read literally with no nondegeneracy: exp(iθ) has no angular zeros, so “all zeros real” holds vacuously, but its norm integral is 2π>4. The source theorem explicitly avoids this degenerate interpretation. A submission must cite the primary paper and state these conditions, not call the literal monomial-inclusive webpage formulation proved.\n\nNo claim is made here of the paper's complete q>0 extension or characterization of equality. The catalog's intended q=1 bound is the registration target. Public source: https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos225.lean . Its local closure consists of that module and `ErdosProblems.Erdos228.Bernstein`, `ErdosProblems.Erdos1215.Reciprocal`; all other imports are Mathlib.\n\nThis is a source-scope review. Actual compilation and explicit replay results are recorded separately in the package receipts; this document alone is not a successful-verification claim. No new mathematical proof or first formalization is claimed.\n",
+  "lean_version": "4.33.0 (d8b18978322de05a8f3dba51ef03cf5461676c17, x86_64-w64-windows-gnu)",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "authors": "E. B. Saff and T. Sheil-Small (mathematics); source credits Codex and GPT-5.6 Sol (formalization).",
+  "official_verification": false,
+  "first_formalization_claim": false
+}
