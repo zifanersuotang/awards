@@ -86,6 +86,18 @@ Exact target conjunction: `Erdos1021.erdos_1021`.
 
 All 3 local source modules compiled and replayed; the independent importing-file axiom report covers every listed target. This uses the same Lean kernel and is not an independent verifier implementation.
 
+## JSP-000852 — Erdős 1024
+
+[Pinned main source](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1024.lean)
+
+The target proves that the largest universally guaranteed independent-set size in an n-vertex three-uniform linear hypergraph is of order square root of n log n. Its quantity is the minimum, over all such hypergraphs, of the maximum independent-set cardinality; a separate equivalence proves that this is exactly the largest universal guarantee. Linearity requires distinct edges to intersect in at most one vertex, and independence forbids containing an entire edge. The terminal theorem assembles a proved universal eventual lower bound and a proved construction giving the matching upper bound, with no remaining assumed probabilistic estimate or parameter package.
+
+This is a two-sided asymptotic order estimate, not an exact finite-n formula or an optimal leading constant. The lower bound holds for all sufficiently large n; the upper bound is proved for n>=3. The source supplies positive lower constant 1/1000000 and upper constant 201. The result applies to linear triple systems, not arbitrary three-uniform hypergraphs or only complete Steiner triple systems. All 14 local modules remain required for actual source-closure verification.
+
+Exact target conjunction: `Erdos1024.erdos_1024`.
+
+All 14 local source modules compiled and replayed; the independent importing-file axiom report covers every listed target. This uses the same Lean kernel and is not an independent verifier implementation.
+
 ## JSP-000857 — Erdős 1031
 
 [Pinned main source](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1031.lean)

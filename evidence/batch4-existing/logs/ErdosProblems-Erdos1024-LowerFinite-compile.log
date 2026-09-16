@@ -1,0 +1,1 @@
+'Erdos1024.Lower.exists_independent_gt_of_parameters' depends on axioms: [propext, Classical.choice, Quot.sound]

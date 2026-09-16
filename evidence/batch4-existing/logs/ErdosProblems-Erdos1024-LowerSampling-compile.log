@@ -1,0 +1,1 @@
+'Erdos1024.Lower.totalTruncatedExtension_le_choose' depends on axioms: [propext, Classical.choice, Quot.sound]

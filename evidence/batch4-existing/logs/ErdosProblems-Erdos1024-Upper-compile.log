@@ -1,0 +1,1 @@
+'Erdos1024.Upper.exists_linear_hitting_system_of_charges' depends on axioms: [propext, Classical.choice, Quot.sound]

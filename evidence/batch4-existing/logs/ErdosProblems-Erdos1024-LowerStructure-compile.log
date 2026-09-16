@@ -1,0 +1,1 @@
+'Erdos1024.Lower.independent_union_available' depends on axioms: [propext, Classical.choice, Quot.sound]

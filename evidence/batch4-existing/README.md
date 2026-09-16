@@ -1,6 +1,6 @@
 # Existing Lean proof verification evidence: batch 4
 
-This directory contains actual local verification metadata and logs for 24 existing public formalizations. The official registration is [Issue 24](https://github.com/TheJustinSunPrize/awards/issues/24); a successful local result does not establish official acceptance.
+This directory contains actual local verification metadata and logs for 25 existing public formalizations. The official registration is [Issue 24](https://github.com/TheJustinSunPrize/awards/issues/24); a successful local result does not establish official acceptance.
 
 [Read the exact mathematical scope and caveats for every entry](SCOPES.md).
 

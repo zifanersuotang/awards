@@ -1,0 +1,1 @@
+'Erdos1024.Lower.four_mul_sum_min_coveredPairs' depends on axioms: [propext, Classical.choice, Quot.sound]
