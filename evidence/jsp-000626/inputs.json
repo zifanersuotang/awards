@@ -1,0 +1,29 @@
+{
+  "jsp": "JSP-000626",
+  "erdos": 764,
+  "module": "Erdos764",
+  "harness_module": "Audit764",
+  "main_theorem": "Erdos764.not_erdos_764",
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_path": "src/latest/ErdosProblems/Erdos764.lean",
+  "source_sha256": {
+    "Erdos764.lean": "4f88ab2966354e6860fa89d72aaeeac303950a2b1989cb89a3120ed29930b535",
+    "Audit764.lean": "46675a45fabc8a18dc24382caac75e9d2ed0c48ed6fc098bd4b5409ebf366274"
+  },
+  "preparation_only": false,
+  "statement_scope": "There is no subset A of naturals and positive real c whose ordered three-term summatory representation count differs from cN by O(1).",
+  "scope_cautions": [],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0601-0700.md#JSP-000626",
+  "original_problem_url": "https://www.erdosproblems.com/764",
+  "verification_limit": "Successful observed replay is recorded in verified-run/verification.json.",
+  "informal_authors_as_credited": [
+    "Robert Vaughan"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lean_version": "4.33.0"
+}
