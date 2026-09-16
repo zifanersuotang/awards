@@ -1,0 +1,6 @@
+'Erdos730.DensityAssembly.liminf_goodDensity_eq_one_sub_limsup_badDensity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.DensityAssembly.hasCandidatePositiveDensity_of_limsup_bad_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

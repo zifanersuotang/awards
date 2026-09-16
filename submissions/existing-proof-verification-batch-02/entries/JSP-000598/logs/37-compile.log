@@ -1,0 +1,4 @@
+'Erdos730.LimsupSeries.limsup_finset_sum_le_sum_limsup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.LimsupSeries.limsup_le_tsum_of_finite_depth_and_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

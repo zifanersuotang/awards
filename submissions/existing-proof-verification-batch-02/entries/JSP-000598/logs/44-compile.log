@@ -1,0 +1,8 @@
+'chebyshev_asymptotic_pnt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WeakPNT_AP' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.FullDensity.primeAPCountingReal_eq_thetaAP_div_log_add_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FullDensity.primeAPCountingReal_normalized_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.FullDensity.pntAPInputAtModulus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.FullDensity.requiredFixedModulusPNTAPInput' depends on axioms: [propext, Classical.choice, Quot.sound]

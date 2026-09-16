@@ -1,0 +1,3 @@
+'Erdos730.DigitBoxes.lowerHalfResiduesNat_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.DigitBoxes.lowerHalfResidues_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.DigitBoxes.natCast_mem_lowerHalfResidues' depends on axioms: [propext, Classical.choice, Quot.sound]

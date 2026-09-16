@@ -1,0 +1,164 @@
+def Nat.centralBinom : ℕ → ℕ :=
+fun n => (HMul.hMul.{0, 0, 0} 2 n).choose n
+def Nat.primeFactors : ℕ → Finset.{0} ℕ :=
+fun n => List.toFinset.{0} n.primeFactorsList
+def Erdos730.FullDensityCore.n : ℕ → ℕ :=
+fun x => HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} (Erdos730.FullDensityCore.P x) (Erdos730.FullDensityCore.Q x)) 1
+@[reducible] def Erdos730.FullDensityCore.PairSet : Set.{0} (Prod.{0, 0} ℕ ℕ) :=
+Set.ofPred.{0} fun z => LT.lt.{0} z.1 z.2 ∧ Eq.{1} z.1.centralBinom.primeFactors z.2.centralBinom.primeFactors
+def Erdos730.FullDensityCore.familyPair : ℕ → Prod.{0, 0} ℕ ℕ :=
+fun x => Prod.mk.{0, 0} (Erdos730.FullDensityCore.n x) (HAdd.hAdd.{0, 0, 0} (Erdos730.FullDensityCore.n x) 1)
+def Erdos730.FullDensityCore.GoodParameter : ℕ → Prop :=
+fun x =>
+  LE.le.{0} 1 x ∧
+    Eq.{1} (Erdos730.FullDensityCore.n x).centralBinom.primeFactors
+      (HAdd.hAdd.{0, 0, 0} (Erdos730.FullDensityCore.n x) 1).centralBinom.primeFactors
+def Erdos730.FullDensityCore.GoodParameters : Set.{0} ℕ :=
+Set.ofPred.{0} fun x => Erdos730.FullDensityCore.GoodParameter x
+def Erdos730.FullDensity.parameterCount : (good : ℕ → Prop) → [DecidablePred.{1} good] → ℕ → ℕ :=
+fun good [DecidablePred.{1} good] X => Finset.card.{0} (Finset.filter.{0} good (Finset.Icc.{0} 1 X))
+def Erdos730.FullDensity.HasCandidatePositiveDensity : (good : ℕ → Prop) → [DecidablePred.{1} good] → Prop :=
+fun good [DecidablePred.{1} good] =>
+  LT.lt.{0} (107 / 2500)
+    (Filter.liminf.{0, 0} (fun X => HDiv.hDiv.{0, 0, 0} ↑(Erdos730.FullDensity.parameterCount good X) ↑X)
+      Filter.atTop.{0})
+def Erdos730.FullDensityReduction.CandidatePositiveDensityClaim : Prop :=
+Erdos730.FullDensity.HasCandidatePositiveDensity Erdos730.FullDensityCore.GoodParameter
+def Erdos730.KummerTransition.LowerHalfDigits : ℕ → ℕ → Prop :=
+fun p t =>
+  ∀ (d : ℕ), Membership.mem.{0, 0} (p.digits t) d → LE.le.{0} d (HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} p 1) 2)
+def Erdos730.ConsecutiveTransition.TransitionConditions : ℕ → Prop :=
+fun n => Erdos730.ConsecutiveTransition.DropCondition n ∧ Erdos730.ConsecutiveTransition.EntryCondition n
+def Erdos730.FullDensity.PNTAPInputAtModulus : ℕ → Prop :=
+fun A =>
+  LT.lt.{0} 0 A ∧
+    ∀ (a : ℕ),
+      LT.lt.{0} a A →
+        a.Coprime A →
+          Filter.Tendsto.{0, 0}
+            (fun N =>
+              HDiv.hDiv.{0, 0, 0} (↑(Erdos730.FullDensity.primeAPCount A a N)) (HDiv.hDiv.{0, 0, 0} (↑N) (Real.log ↑N)))
+            Filter.atTop.{0} (nhds.{0} (Inv.inv.{0} ↑A.totient))
+def Erdos730.FullDensity.RequiredFixedModulusPNTAPInput : Prop :=
+Erdos730.FullDensity.PNTAPInputAtModulus 1 ∧
+  Erdos730.FullDensity.PNTAPInputAtModulus 222138 ∧ Erdos730.FullDensity.PNTAPInputAtModulus 148092
+def Erdos730.FullDensity.MertensReciprocalPrimeInput : Prop :=
+∃ M C,
+  LT.lt.{0} 0 C ∧
+    ∀ (N : ℕ),
+      LE.le.{0} 3 N →
+        LE.le.{0}
+          (abs.{0}
+            (HSub.hSub.{0, 0, 0}
+              (HSub.hSub.{0, 0, 0} (Erdos730.FullDensity.reciprocalPrimeSum N) (Real.log (Real.log ↑N))) M))
+          (HDiv.hDiv.{0, 0, 0} C (Real.log ↑N))
+Erdos730.erdos_730_consecutive : Set.Infinite.{0}
+  (Set.ofPred.{0} fun n => Eq.{1} n.centralBinom.primeFactors (HAdd.hAdd.{0, 0, 0} n 1).centralBinom.primeFactors)
+'Erdos730.erdos_730_consecutive' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos730.erdos_730 : Set.Infinite.{0}
+  (Set.ofPred.{0} fun z => LT.lt.{0} z.1 z.2 ∧ Eq.{1} z.1.centralBinom.primeFactors z.2.centralBinom.primeFactors)
+'Erdos730.erdos_730' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos730.FullDensityTheorem.candidatePositiveDensity : Erdos730.FullDensityReduction.CandidatePositiveDensityClaim
+'Erdos730.FullDensityTheorem.candidatePositiveDensity' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Erdos730.FullDensityTheorem.pairSet_infinite : Set.Infinite.{0} Erdos730.FullDensityCore.PairSet
+'Erdos730.FullDensityTheorem.pairSet_infinite' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos730.FullDensityCore.n_expansion : ∀ (x : ℕ),
+  Eq.{1} (Erdos730.FullDensityCore.n x)
+    (HAdd.hAdd.{0, 0, 0}
+      (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 84591927504 (HPow.hPow.{0, 0, 0} x 2)) (HMul.hMul.{0, 0, 0} 7076682 x))
+      142)
+'Erdos730.FullDensityCore.n_expansion' depends on axioms: [propext, Quot.sound.{u}]
+Erdos730.FullDensityCore.n_strictMono : StrictMono.{0, 0} Erdos730.FullDensityCore.n
+'Erdos730.FullDensityCore.n_strictMono' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos730.FullDensityCore.familyPair_injective : Function.Injective.{1, 1} Erdos730.FullDensityCore.familyPair
+'Erdos730.FullDensityCore.familyPair_injective' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos730.FullDensityReduction.goodParameters_infinite_of_candidatePositiveDensity : Erdos730.FullDensityReduction.CandidatePositiveDensityClaim →
+  Set.Infinite.{0} Erdos730.FullDensityCore.GoodParameters
+'Erdos730.FullDensityReduction.goodParameters_infinite_of_candidatePositiveDensity' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@Erdos730.ConsecutiveTransition.consecutive_primeFactors_eq_iff_transitionConditions : ∀ {n : ℕ},
+  LT.lt.{0} 0 n →
+    (Eq.{1} n.centralBinom.primeFactors (HAdd.hAdd.{0, 0, 0} n 1).centralBinom.primeFactors ↔
+      Erdos730.ConsecutiveTransition.TransitionConditions n)
+'Erdos730.ConsecutiveTransition.consecutive_primeFactors_eq_iff_transitionConditions' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@Erdos730.KummerTransition.not_dvd_centralBinom_primePow_mul_iff : ∀ {p a c : ℕ},
+  Nat.Prime p →
+    Ne.{1} p 2 →
+      LT.lt.{0} 0 c →
+        (¬Dvd.dvd.{0} p (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} p a) c).centralBinom ↔
+          Erdos730.KummerTransition.LowerHalfDigits p c)
+'Erdos730.KummerTransition.not_dvd_centralBinom_primePow_mul_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Erdos730.RangeAssembly.hasCandidatePositiveDensity_of_range_estimates : Filter.Tendsto.{0, 0}
+    Erdos730.RangeAssembly.normalizedHigherPowerWitnessCount Filter.atTop.{0} (nhds.{0} 0) →
+  Filter.IsBoundedUnder.{0, 0} (fun x1 x2 => LE.le.{0} x1 x2) Filter.atTop.{0}
+      Erdos730.RangeAssembly.normalizedSmallPrimeWitnessCount →
+    LE.le.{0} (Filter.limsup.{0, 0} Erdos730.RangeAssembly.normalizedSmallPrimeWitnessCount Filter.atTop.{0})
+        (HMul.hMul.{0, 0, 0} 4 Erdos730.densityBudgetSeries) →
+      Filter.IsBoundedUnder.{0, 0} (fun x1 x2 => LE.le.{0} x1 x2) Filter.atTop.{0}
+          Erdos730.RangeAssembly.normalizedTopPrimeWitnessCount →
+        LE.le.{0} (Filter.limsup.{0, 0} Erdos730.RangeAssembly.normalizedTopPrimeWitnessCount Filter.atTop.{0})
+            (HMul.hMul.{0, 0, 0} (2 / 3) (Real.log 2)) →
+          Erdos730.FullDensity.HasCandidatePositiveDensity Erdos730.FullDensityCore.GoodParameter
+'Erdos730.RangeAssembly.hasCandidatePositiveDensity_of_range_estimates' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Erdos730.FullDensity.mertensReciprocalPrimeInput : Erdos730.FullDensity.MertensReciprocalPrimeInput
+'Erdos730.FullDensity.mertensReciprocalPrimeInput' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos730.FullDensity.requiredFixedModulusPNTAPInput : Erdos730.FullDensity.RequiredFixedModulusPNTAPInput
+'Erdos730.FullDensity.requiredFixedModulusPNTAPInput' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@chebyshev_asymptotic_pnt : ∀ {q a : ℕ},
+  GE.ge.{0} q 1 →
+    a.Coprime q →
+      LT.lt.{0} a q →
+        Asymptotics.IsEquivalent.{0, 0} Filter.atTop.{0}
+          (fun x =>
+            ∑ p ≤ Nat.floor.{0} x with Nat.Prime p, ite.{1} (Eq.{1} (HMod.hMod.{0, 0, 0} p q) a) (Real.log ↑p) 0)
+          fun x => HDiv.hDiv.{0, 0, 0} x ↑q.totient
+'chebyshev_asymptotic_pnt' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@WeakPNT_AP : ∀ {q a : ℕ},
+  GE.ge.{0} q 1 →
+    a.Coprime q →
+      LT.lt.{0} a q →
+        Filter.Tendsto.{0, 0}
+          (fun N =>
+            HDiv.hDiv.{0, 0, 0}
+              (cumsum.{0} (fun n => ite.{1} (Eq.{1} (HMod.hMod.{0, 0, 0} n q) a) (ArithmeticFunction.vonMangoldt n) 0)
+                N)
+              ↑N)
+          Filter.atTop.{0} (nhds.{0} (HDiv.hDiv.{0, 0, 0} 1 ↑q.totient))
+'WeakPNT_AP' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos730.HigherPowerEvents.tendsto_normalizedHigherPowerWitnessCount_zero : Filter.Tendsto.{0, 0}
+  Erdos730.RangeAssembly.normalizedHigherPowerWitnessCount Filter.atTop.{0} (nhds.{0} 0)
+'Erdos730.HigherPowerEvents.tendsto_normalizedHigherPowerWitnessCount_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Erdos730.SmallPrimeEvents.normalizedSmallPrimeWitnessCount_isBoundedUnder : Filter.IsBoundedUnder.{0, 0}
+  (fun x1 x2 => LE.le.{0} x1 x2) Filter.atTop.{0} Erdos730.RangeAssembly.normalizedSmallPrimeWitnessCount
+'Erdos730.SmallPrimeEvents.normalizedSmallPrimeWitnessCount_isBoundedUnder' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Erdos730.SmallPrimeEvents.limsup_normalizedSmallPrimeWitnessCount_le : LE.le.{0}
+  (Filter.limsup.{0, 0} Erdos730.RangeAssembly.normalizedSmallPrimeWitnessCount Filter.atTop.{0})
+  (HMul.hMul.{0, 0, 0} 4 Erdos730.densityBudgetSeries)
+'Erdos730.SmallPrimeEvents.limsup_normalizedSmallPrimeWitnessCount_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Erdos730.DivisorSwitching.normalizedTopPrimeWitnessCount_isBoundedUnder : Filter.IsBoundedUnder.{0, 0}
+  (fun x1 x2 => LE.le.{0} x1 x2) Filter.atTop.{0} Erdos730.RangeAssembly.normalizedTopPrimeWitnessCount
+'Erdos730.DivisorSwitching.normalizedTopPrimeWitnessCount_isBoundedUnder' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Erdos730.DivisorSwitching.limsup_normalizedTopPrimeWitnessCount_le : LE.le.{0}
+  (Filter.limsup.{0, 0} Erdos730.RangeAssembly.normalizedTopPrimeWitnessCount Filter.atTop.{0})
+  (HMul.hMul.{0, 0, 0} (2 / 3) (Real.log 2))
+'Erdos730.DivisorSwitching.limsup_normalizedTopPrimeWitnessCount_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Nat.centralBinom_strictMono : StrictMono.{0, 0} Nat.centralBinom

@@ -1,0 +1,2 @@
+'Erdos730.FullDensityTheorem.candidatePositiveDensity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.FullDensityTheorem.pairSet_infinite' depends on axioms: [propext, Classical.choice, Quot.sound]

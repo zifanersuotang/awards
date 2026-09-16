@@ -1,0 +1,18 @@
+'Erdos730.DensityEvents.exactPrimePowerCofactor_coordinate_bounds' depends on axioms: [propext, Quot.sound]
+'Erdos730.DensityEvents.dropWitness_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.DensityEvents.entryWitness_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.DensityEvents.bad_mem_dropParameters_or_entryParameters' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.DensityEvents.bad_card_le_witnessed_obstruction_count' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.DensityEvents.drop_entry_witnesses_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.DensityEvents.bad_card_le_obstructionWitnesses_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.DensityEvents.obstructionWitnesses_fourRange' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.DensityEvents.obstructionWitnesses_card_fourRange' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.DensityEvents.witnessed_obstruction_count_card_fourRange' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

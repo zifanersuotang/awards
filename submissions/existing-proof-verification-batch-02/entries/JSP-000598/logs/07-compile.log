@@ -1,0 +1,6 @@
+'Erdos730.FullDensity.parameterSet_infinite_of_candidatePositiveDensity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FullDensity.target_infinite_of_candidatePositiveDensity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

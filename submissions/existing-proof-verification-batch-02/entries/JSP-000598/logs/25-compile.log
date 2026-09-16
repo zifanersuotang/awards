@@ -1,0 +1,9 @@
+'Erdos730.RangeAssembly.badDensity_le_normalizedFourRangeCount' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.RangeAssembly.limsup_badDensity_le_budget_of_range_estimates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.RangeAssembly.hasCandidatePositiveDensity_of_range_estimates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

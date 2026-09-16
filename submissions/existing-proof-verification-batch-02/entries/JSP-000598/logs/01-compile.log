@@ -1,0 +1,27 @@
+'Erdos730.KummerTransition.factorization_centralBinom_eq_carryCount' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.KummerTransition.lowerHalfDigits_iff_noSelfCarry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.KummerTransition.factorization_centralBinom_eq_zero_iff_noSelfCarry' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.KummerTransition.not_dvd_centralBinom_iff_lowerHalfDigits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.KummerTransition.dvd_centralBinom_iff_not_lowerHalfDigits' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.KummerTransition.lowerHalfDigits_primePow_mul_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.KummerTransition.lowerHalfDigits_mul_pow_add_pow_sub_one_div_two_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.KummerTransition.not_lowerHalfDigits_mul_pow_add_pow_add_one_div_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.KummerTransition.not_dvd_centralBinom_primePow_mul_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.KummerTransition.not_dvd_centralBinom_lowerHalfBlock_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.KummerTransition.dvd_centralBinom_upperHalfBlock' depends on axioms: [propext, Classical.choice, Quot.sound]

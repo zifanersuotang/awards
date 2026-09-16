@@ -1,0 +1,5 @@
+'Erdos730.tendsto_tsum_higherPowerEnvelope_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.tendsto_higherPrimePowerPairs_scaled_card_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.tendsto_four_mul_higherPowerEnvelope_and_terminal_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

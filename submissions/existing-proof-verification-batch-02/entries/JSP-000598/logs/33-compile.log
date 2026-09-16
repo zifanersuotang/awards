@@ -1,0 +1,12 @@
+'Erdos730.FullDensityReduction.candidatePositiveDensityClaim_iff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FullDensityReduction.goodParameters_infinite_of_candidatePositiveDensity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FullDensityReduction.pairSet_infinite_of_candidatePositiveDensity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FullDensityReduction.supplied_density_budget_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

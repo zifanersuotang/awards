@@ -1,0 +1,39 @@
+'Erdos730.FixedDepthFourier.finiteFourier_inversion_at' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.FixedDepthFourier.intervalHitCount_fourier_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FixedDepthFourier.finiteCompletion_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.FixedDepthFourier.intervalHitCount_discrepancy_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.FixedDepthFourier.completeSum_eq_zero_of_constantShift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FixedDepthFourier.primePow_topLayer_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.FixedDepthFourier.completeQuadraticSum_eq_zero_of_not_dvd' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FixedDepthFourier.incompleteFixedDepthQuadraticSum_eq_zero_of_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FixedDepthFourier.card_primePow_mul_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.FixedDepthFourier.quadraticGaussSum_normSq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.FixedDepthFourier.primePowDegenerateQuadraticGaussSum_norm' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FixedDepthFourier.shiftedGrid_frequency_mass_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.FixedDepthFourier.digitBoxFourierCoeff_factorization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FixedDepthFourier.digitBoxFourierCoeff_l1_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.FixedDepthFourier.digitBoxFourierCoeff_interval_l1_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FixedDepthFourier.norm_fixedDepthIncompleteSum_shift_le_uniform' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FixedDepthFourier.norm_fixedDepthIntervalPhaseSum_le_uniform' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FixedDepthFourier.fixedDepth_intervalHitCount_discrepancy_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.FixedDepthFourier.fixedDepth_intervalHitCount_le' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,7 @@
+'Erdos730.digitParityCounts_total' depends on axioms: [propext]
+'Erdos730.digitParityCounts_intDifference' depends on axioms: [propext, Quot.sound]
+'Erdos730.halfDigitParity_intDifference' depends on axioms: [propext, Quot.sound]
+'Erdos730.halfDigitParity_total' depends on axioms: [propext, Quot.sound]
+'Erdos730.halfDigitParity_exactAbsoluteError' depends on axioms: [propext, Quot.sound]
+'Erdos730.halfDigitParity_realAbsoluteError' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.halfDigitParity_probabilityError' depends on axioms: [propext, Classical.choice, Quot.sound]

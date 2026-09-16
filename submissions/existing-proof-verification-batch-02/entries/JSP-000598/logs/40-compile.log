@@ -1,0 +1,9 @@
+'Erdos730.SmallPrimeTail.uniformDepthMainTail_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.SmallPrimeTail.tendsto_uniformDepthMainTail_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.SmallPrimeTail.tendsto_deepestBandMajorant_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.SmallPrimeTail.tendsto_uniformMertensErrorMajorant_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.SmallPrimeTail.weightedFixedDepthBand_sum_le_main_add_error' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,7 @@
+'Erdos730.SmallPrimeDepth.smallPrimeDepth_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.SmallPrimeDepth.localSmallPrimeWitnesses_card_le_depth_sum_add_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.SmallPrimeDepth.normalizedSmallPrimeWitnessCount_le_depth_sum_add_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

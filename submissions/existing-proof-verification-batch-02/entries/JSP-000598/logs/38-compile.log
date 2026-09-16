@@ -1,0 +1,7 @@
+'Erdos730.LowerHalfFourier.lowerHalfTupleResidues_eq_lowerHalfResidues' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.LowerHalfFourier.dft_lowerHalfResidues_eq_digitBoxFourierCoeff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.LowerHalfFourier.dft_lowerHalfResidues_l1_le' depends on axioms: [propext, Classical.choice, Quot.sound]

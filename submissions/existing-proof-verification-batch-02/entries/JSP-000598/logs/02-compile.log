@@ -1,0 +1,14 @@
+'Erdos730.ConsecutiveTransition.exists_exactPrimePowerCofactor_of_dvd' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.ConsecutiveTransition.dvd_centralBinom_succ_iff_of_away' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.ConsecutiveTransition.drop_transition_of_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.ConsecutiveTransition.entry_transition_of_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos730.ConsecutiveTransition.consecutive_primeFactors_eq_iff_transitionConditions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Erdos730.ConsecutiveTransition.exists_obstruction_of_primeFactors_ne' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

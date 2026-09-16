@@ -1,0 +1,1436 @@
+{
+  "schema_version": 1,
+  "jsp": "JSP-000598",
+  "erdos": 730,
+  "title": "Can two distinct central binomial coefficients have exactly the same prime divisors?",
+  "scope": "Infinitely many natural indices n have exactly the same set of prime divisors in choose(2*n,n) and choose(2*(n+1),n+1), hence infinitely many strictly ordered distinct pairs do. The explicit quadratic family has parameter lower density greater than 107/2500. This is not positive natural density of the output indices and no standalone square-root counting bound for all cutoffs is claimed by the replay entry.",
+  "attribution": "Main source header: informal authors Liam Price, Tomodovodoo, Will Blair, GPT Pro; formal authors Will Blair, Codex, Claude Code. Header cites williamjblair/lean-proofs versions 03729c9cbb0b602f5a828bb850c85e84c5a6d460 and 5d10b4d91f257cfbe8c563cf927f543a868845e0 and a proof claim. The selected execution bytes are the plby pinned port. All source bytes and notices remain unchanged; dependency files without author notices do not establish ownership. Do not label this reviewer/uploader an original formalizer.",
+  "target_module": "ErdosProblems.Erdos730",
+  "main_theorem": "Erdos730.erdos_730",
+  "theorems": [
+    "Erdos730.erdos_730_consecutive",
+    "Erdos730.erdos_730",
+    "Erdos730.FullDensityTheorem.candidatePositiveDensity",
+    "Erdos730.FullDensityTheorem.pairSet_infinite",
+    "Erdos730.FullDensityCore.n_expansion",
+    "Erdos730.FullDensityCore.n_strictMono",
+    "Erdos730.FullDensityCore.familyPair_injective",
+    "Erdos730.FullDensityReduction.goodParameters_infinite_of_candidatePositiveDensity",
+    "Erdos730.ConsecutiveTransition.consecutive_primeFactors_eq_iff_transitionConditions",
+    "Erdos730.KummerTransition.not_dvd_centralBinom_primePow_mul_iff",
+    "Erdos730.RangeAssembly.hasCandidatePositiveDensity_of_range_estimates",
+    "Erdos730.FullDensity.mertensReciprocalPrimeInput",
+    "Erdos730.FullDensity.requiredFixedModulusPNTAPInput",
+    "chebyshev_asymptotic_pnt",
+    "WeakPNT_AP",
+    "Erdos730.HigherPowerEvents.tendsto_normalizedHigherPowerWitnessCount_zero",
+    "Erdos730.SmallPrimeEvents.normalizedSmallPrimeWitnessCount_isBoundedUnder",
+    "Erdos730.SmallPrimeEvents.limsup_normalizedSmallPrimeWitnessCount_le",
+    "Erdos730.DivisorSwitching.normalizedTopPrimeWitnessCount_isBoundedUnder",
+    "Erdos730.DivisorSwitching.limsup_normalizedTopPrimeWitnessCount_le"
+  ],
+  "environment": {
+    "lean_toolchain": "leanprover/lean4:v4.33.0",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "LEAN_NUM_THREADS": "1",
+    "compile_flags": [
+      "-j1",
+      "-M8192"
+    ],
+    "platform": "Windows"
+  },
+  "sources": [
+    {
+      "module": "ErdosProblems.Erdos730.AnalyticInputs",
+      "path": "ErdosProblems/Erdos730/AnalyticInputs.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/AnalyticInputs.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/AnalyticInputs.lean",
+      "sha256": "87bcfd22bdacd2cffe0243ad7921664f362869afc03f73581af39bcef95dfffc",
+      "bytes": 2967,
+      "imports": [
+        "Mathlib.NumberTheory.Chebyshev",
+        "Mathlib.NumberTheory.LSeries.PrimesInAP",
+        "Mathlib.NumberTheory.SumPrimeReciprocals"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.KummerTransition",
+      "path": "ErdosProblems/Erdos730/KummerTransition.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/KummerTransition.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/KummerTransition.lean",
+      "sha256": "8585f6c104888cf08e96bf271e1c2f643dbf263ac211b1c7bdc41ece768d7c95",
+      "bytes": 17944,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.ConsecutiveTransition",
+      "path": "ErdosProblems/Erdos730/ConsecutiveTransition.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/ConsecutiveTransition.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/ConsecutiveTransition.lean",
+      "sha256": "909bea78c0327d6c6825951c4d3fe9335d997e803ceffaae1ee2714a1906a6a7",
+      "bytes": 12556,
+      "imports": [
+        "ErdosProblems.Erdos730.KummerTransition"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.FullDensityCore",
+      "path": "ErdosProblems/Erdos730/FullDensityCore.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FullDensityCore.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FullDensityCore.lean",
+      "sha256": "0efbd59fc28ee6263e9be959643986a5ed0b40eb2920216676f26e302d6a61fa",
+      "bytes": 17116,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.DensityEvents",
+      "path": "ErdosProblems/Erdos730/DensityEvents.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/DensityEvents.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/DensityEvents.lean",
+      "sha256": "f6f419d498ca4b2f05f354bad69988a253c64f60c49cd3b79dbda97710d2455b",
+      "bytes": 20768,
+      "imports": [
+        "ErdosProblems.Erdos730.ConsecutiveTransition",
+        "ErdosProblems.Erdos730.FullDensityCore"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.BranchEvents",
+      "path": "ErdosProblems/Erdos730/BranchEvents.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/BranchEvents.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/BranchEvents.lean",
+      "sha256": "66749806af16cf19868195b40b2e8d629e3974ed22b32c7611d6a951ed736854",
+      "bytes": 27640,
+      "imports": [
+        "ErdosProblems.Erdos730.DensityEvents"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.FullDensityBudget",
+      "path": "ErdosProblems/Erdos730/FullDensityBudget.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FullDensityBudget.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FullDensityBudget.lean",
+      "sha256": "2a3b09ddbd4a1657b0079f0e7c802a83ac2a456fc04f175a201c930daf6fb529",
+      "bytes": 13832,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.PositiveDensityBridge",
+      "path": "ErdosProblems/Erdos730/PositiveDensityBridge.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/PositiveDensityBridge.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/PositiveDensityBridge.lean",
+      "sha256": "89672ac43a22140da2cbd07d033c65380cb100949d2840d8e12191622d7f5771",
+      "bytes": 3560,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.DensityAssembly",
+      "path": "ErdosProblems/Erdos730/DensityAssembly.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/DensityAssembly.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/DensityAssembly.lean",
+      "sha256": "f65c9a9aa988243cc346dded7d6eb5da0bca6c778709b5f4883f68c923b38e14",
+      "bytes": 3826,
+      "imports": [
+        "ErdosProblems.Erdos730.DensityEvents",
+        "ErdosProblems.Erdos730.FullDensityBudget",
+        "ErdosProblems.Erdos730.PositiveDensityBridge",
+        "Mathlib.Topology.Algebra.Order.LiminfLimsup"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.PadicIsometry",
+      "path": "ErdosProblems/Erdos730/PadicIsometry.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/PadicIsometry.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/PadicIsometry.lean",
+      "sha256": "80bd7351c6135333df29981887b6825ef74f2754eb54d4f9ce17f1551e39c381",
+      "bytes": 6430,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.HigherPowerCount",
+      "path": "ErdosProblems/Erdos730/HigherPowerCount.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/HigherPowerCount.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/HigherPowerCount.lean",
+      "sha256": "ef755602c94a1366d3b184dfb68df1f552707f39c488f53d4290d6cf911d405a",
+      "bytes": 10955,
+      "imports": [
+        "ErdosProblems.Erdos730.PadicIsometry"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.DigitBoxes",
+      "path": "ErdosProblems/Erdos730/DigitBoxes.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/DigitBoxes.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/DigitBoxes.lean",
+      "sha256": "ce505c6d6d4a530d181a34b731e979791b85b93498409cc89917ce267fee2bbb",
+      "bytes": 6686,
+      "imports": [
+        "ErdosProblems.Erdos730.HigherPowerCount",
+        "ErdosProblems.Erdos730.KummerTransition",
+        "Mathlib.Data.Nat.Digits.Lemmas"
+      ]
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Log.Basic",
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+      "sha256": "21bc8312b14d87e78b42af2d1ab78bfe7ecaa3343f6c32bedd6b2483ef984af5",
+      "bytes": 832,
+      "imports": [
+        "Mathlib.Algebra.Order.Floor.Defs",
+        "Mathlib.Algebra.Order.Floor.Ring",
+        "Mathlib.Algebra.Order.Floor.Semiring",
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Continuity"
+      ]
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.Sobolev",
+      "path": "PrimeNumberTheoremAnd/Sobolev.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Sobolev.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Sobolev.lean",
+      "sha256": "17cedc5898d6a696dca9e557bfaafbe1209e4a5252a62baddebc777c2a3a9bb2",
+      "bytes": 16524,
+      "imports": [
+        "Mathlib.Analysis.Calculus.Deriv.Support",
+        "Mathlib.Analysis.Distribution.SchwartzSpace.Deriv",
+        "Mathlib.Order.Filter.ZeroAndBoundedAtFilter"
+      ]
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.Fourier",
+      "path": "PrimeNumberTheoremAnd/Fourier.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Fourier.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Fourier.lean",
+      "sha256": "5812d352fbc983626ff0b5c1ac51cb35b17008901598feeba9b2382cf10baac0",
+      "bytes": 3562,
+      "imports": [
+        "Mathlib.Analysis.Distribution.SchwartzSpace.Deriv",
+        "Mathlib.MeasureTheory.Integral.IntegralEqImproper",
+        "Mathlib.Topology.ContinuousMap.Bounded.Basic",
+        "Mathlib.Order.Filter.ZeroAndBoundedAtFilter",
+        "Mathlib.Analysis.Fourier.FourierTransformDeriv",
+        "PrimeNumberTheoremAnd.Sobolev"
+      ]
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.Defs",
+      "path": "PrimeNumberTheoremAnd/Defs.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Defs.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Defs.lean",
+      "sha256": "1e3aba80fc36d4a349940394a6b3e5a0a7f7596d115764b3470d255e111532c4",
+      "bytes": 7995,
+      "imports": [
+        "PrimeNumberTheoremAnd.Fourier",
+        "Mathlib.NumberTheory.Chebyshev"
+      ]
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.Mathlib.Analysis.Asymptotics.Asymptotics",
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Asymptotics/Asymptotics.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Mathlib/Analysis/Asymptotics/Asymptotics.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Mathlib/Analysis/Asymptotics/Asymptotics.lean",
+      "sha256": "9ee475ea6d7b4db026c275b9e38326bf88724d2274b948b31fc53d8cf136975d",
+      "bytes": 1823,
+      "imports": [
+        "Mathlib.Analysis.Asymptotics.Lemmas",
+        "Mathlib.Topology.Order.Compact"
+      ]
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.Mathlib.Algebra.Notation.Support",
+      "path": "PrimeNumberTheoremAnd/Mathlib/Algebra/Notation/Support.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Mathlib/Algebra/Notation/Support.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Mathlib/Algebra/Notation/Support.lean",
+      "sha256": "dec487419be00fa77ecfc6273a7451d0c04ea90693ab50566a47ba827c5ab84d",
+      "bytes": 432,
+      "imports": [
+        "Mathlib.Algebra.Notation.Support"
+      ]
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.SmoothExistence",
+      "path": "PrimeNumberTheoremAnd/SmoothExistence.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/SmoothExistence.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/SmoothExistence.lean",
+      "sha256": "5943ee37e08b463e63332c8f3ccc918d734e7bf799705bb3c1a8ff0c35935952",
+      "bytes": 4496,
+      "imports": [
+        "Batteries.Tactic.Lemma",
+        "Mathlib.Geometry.Manifold.PartitionOfUnity",
+        "Mathlib.Tactic.Bound",
+        "PrimeNumberTheoremAnd.Mathlib.Algebra.Notation.Support"
+      ]
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.Wiener",
+      "path": "PrimeNumberTheoremAnd/Wiener.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Wiener.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Wiener.lean",
+      "sha256": "5a45e04a848cd76797928286eb1bbfaef2dfb6e541bf3a848dbc5bb9ae4b9f94",
+      "bytes": 192209,
+      "imports": [
+        "Mathlib.Analysis.Fourier.RiemannLebesgueLemma",
+        "Mathlib.Analysis.Normed.Group.Tannery",
+        "Mathlib.Analysis.SumIntegralComparisons",
+        "Mathlib.NumberTheory.Chebyshev",
+        "Mathlib.NumberTheory.LSeries.PrimesInAP",
+        "Mathlib.NumberTheory.MulChar.Lemmas",
+        "Mathlib.Topology.EMetricSpace.BoundedVariation",
+        "PrimeNumberTheoremAnd.Mathlib.Analysis.Asymptotics.Asymptotics",
+        "PrimeNumberTheoremAnd.Fourier",
+        "PrimeNumberTheoremAnd.SmoothExistence",
+        "Mathlib.Analysis.Convolution"
+      ]
+    },
+    {
+      "module": "PrimeNumberTheoremAnd.Consequences",
+      "path": "PrimeNumberTheoremAnd/Consequences.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Consequences.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/PrimeNumberTheoremAnd/Consequences.lean",
+      "sha256": "c53d6857226b3e597174b7f78a9f937219b9b32e57f98f9188649f1ed2babb80",
+      "bytes": 130087,
+      "imports": [
+        "Mathlib.NumberTheory.Harmonic.Bounds",
+        "PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "PrimeNumberTheoremAnd.Defs",
+        "PrimeNumberTheoremAnd.Wiener"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.PNTAP",
+      "path": "ErdosProblems/Erdos730/PNTAP.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/PNTAP.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/PNTAP.lean",
+      "sha256": "264f51fa7700b512527c168b20a65643370be76f510f03cdf928ce4a4acea475",
+      "bytes": 9455,
+      "imports": [
+        "ErdosProblems.Erdos730.AnalyticInputs",
+        "PrimeNumberTheoremAnd.Consequences"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.Mertens",
+      "path": "ErdosProblems/Erdos730/Mertens.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/Mertens.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/Mertens.lean",
+      "sha256": "7c58ed6c74749a9c81c75f73973c76cac00c1d4cb30695e080bae3023c54208e",
+      "bytes": 37033,
+      "imports": [
+        "ErdosProblems.Erdos730.AnalyticInputs",
+        "Mathlib.NumberTheory.Harmonic.Bounds",
+        "Mathlib.Analysis.SpecialFunctions.Log.InvLog"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.PrimeBands",
+      "path": "ErdosProblems/Erdos730/PrimeBands.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/PrimeBands.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/PrimeBands.lean",
+      "sha256": "3a7296b247960d8d2e48772d5a96726affd7caecc816ba41f3b6f0284494e7e2",
+      "bytes": 14961,
+      "imports": [
+        "ErdosProblems.Erdos730.Mertens",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.TransitionDensity",
+      "path": "ErdosProblems/Erdos730/TransitionDensity.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/TransitionDensity.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/TransitionDensity.lean",
+      "sha256": "edae45c24acfb177d6d946debbf22056a573ce9ad2ff92211fa6e544803535f7",
+      "bytes": 18787,
+      "imports": [
+        "ErdosProblems.Erdos730.BranchEvents",
+        "ErdosProblems.Erdos730.PrimeBands",
+        "ErdosProblems.Erdos730.PNTAP",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.RangeAssembly",
+      "path": "ErdosProblems/Erdos730/RangeAssembly.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/RangeAssembly.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/RangeAssembly.lean",
+      "sha256": "17871426b4205035473227de4bd3383a160eb0553312b11d84e4d19e21e3e895",
+      "bytes": 9780,
+      "imports": [
+        "ErdosProblems.Erdos730.BranchEvents",
+        "ErdosProblems.Erdos730.DensityAssembly",
+        "ErdosProblems.Erdos730.TransitionDensity",
+        "Mathlib.Topology.Algebra.Order.LiminfLimsup"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.DivisorSwitching",
+      "path": "ErdosProblems/Erdos730/DivisorSwitching.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/DivisorSwitching.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/DivisorSwitching.lean",
+      "sha256": "acafed0c95f0c1d4797718b5a51aa65ff17afb70bceeb789a460e5388313c1fa",
+      "bytes": 63058,
+      "imports": [
+        "ErdosProblems.Erdos730.BranchEvents",
+        "ErdosProblems.Erdos730.PNTAP",
+        "ErdosProblems.Erdos730.PrimeBands",
+        "ErdosProblems.Erdos730.TransitionDensity",
+        "ErdosProblems.Erdos730.RangeAssembly"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.DominatedLimit",
+      "path": "ErdosProblems/Erdos730/DominatedLimit.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/DominatedLimit.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/DominatedLimit.lean",
+      "sha256": "9c0701ae9e0cf92a83f3288fb90d014398d0ec50cb303b4985d8593f582e7064",
+      "bytes": 9349,
+      "imports": [
+        "ErdosProblems.Erdos730.HigherPowerCount",
+        "Mathlib.Analysis.Normed.Group.Tannery",
+        "Mathlib.Analysis.PSeries",
+        "Mathlib.Analysis.SpecialFunctions.Log.Base",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.FixedDepthFourier",
+      "path": "ErdosProblems/Erdos730/FixedDepthFourier.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FixedDepthFourier.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FixedDepthFourier.lean",
+      "sha256": "4e294795eb87096bbeae92b1cdc90c2a90e2b1fd73e537385af4048f11b0e2fd",
+      "bytes": 100149,
+      "imports": [
+        "Mathlib.Analysis.Fourier.ZMod",
+        "Mathlib.Data.Nat.Digits.Lemmas",
+        "Mathlib.Data.Nat.Factorization.Basic",
+        "Mathlib.NumberTheory.Harmonic.Bounds",
+        "ErdosProblems.Erdos730.PadicIsometry"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.FiniteBlockCount",
+      "path": "ErdosProblems/Erdos730/FiniteBlockCount.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FiniteBlockCount.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FiniteBlockCount.lean",
+      "sha256": "48f4bc8a8551d6946981376165ce1effba8e196b88549864e83d6a2638d8b5b4",
+      "bytes": 2797,
+      "imports": [
+        "ErdosProblems.Erdos730.FixedDepthFourier"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.FixedDepthDensity",
+      "path": "ErdosProblems/Erdos730/FixedDepthDensity.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FixedDepthDensity.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FixedDepthDensity.lean",
+      "sha256": "46bb6ffc3dcfcdd5f567283516135d82786652ec655587b5e5f99fc74923fafd",
+      "bytes": 43746,
+      "imports": [
+        "ErdosProblems.Erdos730.DigitBoxes",
+        "ErdosProblems.Erdos730.FixedDepthFourier",
+        "ErdosProblems.Erdos730.PrimeBands",
+        "Mathlib.NumberTheory.Chebyshev"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.FixedDepthParity",
+      "path": "ErdosProblems/Erdos730/FixedDepthParity.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FixedDepthParity.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FixedDepthParity.lean",
+      "sha256": "e81b32960479b52a38c9b062634ff716c19d81a5d7c30a8bfd861c6ab6279621",
+      "bytes": 8219,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.ObstructionMaps",
+      "path": "ErdosProblems/Erdos730/ObstructionMaps.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/ObstructionMaps.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/ObstructionMaps.lean",
+      "sha256": "051c8f44c1d65cc6028dd968d39273ce3033f2a9ce7e0c5e16b74d7980c20f5d",
+      "bytes": 11876,
+      "imports": [
+        "ErdosProblems.Erdos730.FullDensityCore"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.FullDensityReduction",
+      "path": "ErdosProblems/Erdos730/FullDensityReduction.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FullDensityReduction.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FullDensityReduction.lean",
+      "sha256": "3c475393f22498bae9eca1aa91223840750d0fceb544d4f5ce059a17205c2080",
+      "bytes": 3327,
+      "imports": [
+        "ErdosProblems.Erdos730.AnalyticInputs",
+        "ErdosProblems.Erdos730.ConsecutiveTransition",
+        "ErdosProblems.Erdos730.DominatedLimit",
+        "ErdosProblems.Erdos730.FixedDepthParity",
+        "ErdosProblems.Erdos730.FullDensityBudget",
+        "ErdosProblems.Erdos730.FullDensityCore",
+        "ErdosProblems.Erdos730.HigherPowerCount",
+        "ErdosProblems.Erdos730.KummerTransition",
+        "ErdosProblems.Erdos730.ObstructionMaps",
+        "ErdosProblems.Erdos730.PadicIsometry",
+        "ErdosProblems.Erdos730.PositiveDensityBridge"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.HigherPowerDecay",
+      "path": "ErdosProblems/Erdos730/HigherPowerDecay.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/HigherPowerDecay.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/HigherPowerDecay.lean",
+      "sha256": "2e684f5f8785ea2d89aa86a303bc3f737b99086add3c463e12e384249c845974",
+      "bytes": 2948,
+      "imports": [
+        "ErdosProblems.Erdos730.DominatedLimit",
+        "Mathlib.Data.Nat.Log"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.HigherPowerDensity",
+      "path": "ErdosProblems/Erdos730/HigherPowerDensity.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/HigherPowerDensity.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/HigherPowerDensity.lean",
+      "sha256": "cef613465ac91f80228f4289dda7c8a269fdfbdaea200e6455804ef755c12f65",
+      "bytes": 4809,
+      "imports": [
+        "ErdosProblems.Erdos730.HigherPowerDecay"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.HigherPowerEvents",
+      "path": "ErdosProblems/Erdos730/HigherPowerEvents.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/HigherPowerEvents.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/HigherPowerEvents.lean",
+      "sha256": "8a4ee42a66852c5824959b8e547b0c8552edfe3c7f960eb3ff8f31efc49eaa88",
+      "bytes": 39028,
+      "imports": [
+        "ErdosProblems.Erdos730.BranchEvents",
+        "ErdosProblems.Erdos730.DigitBoxes",
+        "ErdosProblems.Erdos730.ObstructionMaps",
+        "ErdosProblems.Erdos730.HigherPowerDensity",
+        "ErdosProblems.Erdos730.RangeAssembly"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.LimsupSeries",
+      "path": "ErdosProblems/Erdos730/LimsupSeries.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/LimsupSeries.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/LimsupSeries.lean",
+      "sha256": "0f1229d26d0f2e861eaa5135d3d41ec830acf238022e6ec7e448241824621a0f",
+      "bytes": 7048,
+      "imports": [
+        "Mathlib.Topology.Algebra.InfiniteSum.Real",
+        "Mathlib.Topology.Algebra.Order.LiminfLimsup"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.LowerHalfFourier",
+      "path": "ErdosProblems/Erdos730/LowerHalfFourier.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/LowerHalfFourier.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/LowerHalfFourier.lean",
+      "sha256": "478d25d73b794cb1d3d5b2f31faefdbe93c010f4d6f31442af180d75ff6b6469",
+      "bytes": 8479,
+      "imports": [
+        "ErdosProblems.Erdos730.DigitBoxes",
+        "ErdosProblems.Erdos730.FixedDepthFourier"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.SmallPrimeDepth",
+      "path": "ErdosProblems/Erdos730/SmallPrimeDepth.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/SmallPrimeDepth.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/SmallPrimeDepth.lean",
+      "sha256": "9c38d03ac0d84c298825ad5945764f07fbaa8935550c069c1ec1b0dd579de63a",
+      "bytes": 6692,
+      "imports": [
+        "ErdosProblems.Erdos730.RangeAssembly",
+        "Mathlib.Data.Nat.Log"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.SmallPrimeTail",
+      "path": "ErdosProblems/Erdos730/SmallPrimeTail.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/SmallPrimeTail.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/SmallPrimeTail.lean",
+      "sha256": "1cca72d2a6ed4b3d5e967542c85ff0494bfb179a81a501d4a85acd0b6adbac54",
+      "bytes": 13889,
+      "imports": [
+        "ErdosProblems.Erdos730.FullDensityBudget",
+        "ErdosProblems.Erdos730.PrimeBands"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.SmallPrimeEvents",
+      "path": "ErdosProblems/Erdos730/SmallPrimeEvents.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/SmallPrimeEvents.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/SmallPrimeEvents.lean",
+      "sha256": "06e1d57215c2d69a10a66ca70ea0750cf0e2c152eb128880e84080c96b66516f",
+      "bytes": 57723,
+      "imports": [
+        "ErdosProblems.Erdos730.FixedDepthFourier",
+        "ErdosProblems.Erdos730.FiniteBlockCount",
+        "ErdosProblems.Erdos730.FixedDepthDensity",
+        "ErdosProblems.Erdos730.HigherPowerEvents",
+        "ErdosProblems.Erdos730.LimsupSeries",
+        "ErdosProblems.Erdos730.LowerHalfFourier",
+        "ErdosProblems.Erdos730.PNTAP",
+        "ErdosProblems.Erdos730.SmallPrimeDepth",
+        "ErdosProblems.Erdos730.SmallPrimeTail"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.FullDensityTheorem",
+      "path": "ErdosProblems/Erdos730/FullDensityTheorem.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FullDensityTheorem.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FullDensityTheorem.lean",
+      "sha256": "4ab6fb660d93fa1da1f9fbfc89c018a3152845f9ba167c3486c73ac13eaa9e38",
+      "bytes": 1969,
+      "imports": [
+        "ErdosProblems.Erdos730.DivisorSwitching",
+        "ErdosProblems.Erdos730.FullDensityReduction",
+        "ErdosProblems.Erdos730.HigherPowerEvents",
+        "ErdosProblems.Erdos730.RangeAssembly",
+        "ErdosProblems.Erdos730.SmallPrimeEvents"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.FullDensityTheoremAudit",
+      "path": "ErdosProblems/Erdos730/FullDensityTheoremAudit.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FullDensityTheoremAudit.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/FullDensityTheoremAudit.lean",
+      "sha256": "a946038fd5a62785c179d95d69d03508e5f726891234dec625f6efeac6d247dc",
+      "bytes": 538,
+      "imports": [
+        "ErdosProblems.Erdos730.FullDensityTheorem"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.PNTAPAudit",
+      "path": "ErdosProblems/Erdos730/PNTAPAudit.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/PNTAPAudit.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/PNTAPAudit.lean",
+      "sha256": "f03e8600ec70bfa3c2615da9216e6f14bff9a44d353d9fcd8cc0ec1cc1896d2b",
+      "bytes": 801,
+      "imports": [
+        "ErdosProblems.Erdos730.PNTAP"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730.Proof",
+      "path": "ErdosProblems/Erdos730/Proof.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/Proof.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730/Proof.lean",
+      "sha256": "d187855a8e69ba923c8569a594d82d11625f1ed7afddefc30e2924f23e428fb5",
+      "bytes": 1657,
+      "imports": [
+        "ErdosProblems.Erdos730.AnalyticInputs",
+        "ErdosProblems.Erdos730.BranchEvents",
+        "ErdosProblems.Erdos730.ConsecutiveTransition",
+        "ErdosProblems.Erdos730.DensityAssembly",
+        "ErdosProblems.Erdos730.DensityEvents",
+        "ErdosProblems.Erdos730.DigitBoxes",
+        "ErdosProblems.Erdos730.DivisorSwitching",
+        "ErdosProblems.Erdos730.DominatedLimit",
+        "ErdosProblems.Erdos730.FiniteBlockCount",
+        "ErdosProblems.Erdos730.FixedDepthDensity",
+        "ErdosProblems.Erdos730.FixedDepthFourier",
+        "ErdosProblems.Erdos730.FixedDepthParity",
+        "ErdosProblems.Erdos730.FullDensityBudget",
+        "ErdosProblems.Erdos730.FullDensityCore",
+        "ErdosProblems.Erdos730.FullDensityReduction",
+        "ErdosProblems.Erdos730.FullDensityTheorem",
+        "ErdosProblems.Erdos730.FullDensityTheoremAudit",
+        "ErdosProblems.Erdos730.HigherPowerCount",
+        "ErdosProblems.Erdos730.HigherPowerDecay",
+        "ErdosProblems.Erdos730.HigherPowerDensity",
+        "ErdosProblems.Erdos730.HigherPowerEvents",
+        "ErdosProblems.Erdos730.KummerTransition",
+        "ErdosProblems.Erdos730.LimsupSeries",
+        "ErdosProblems.Erdos730.LowerHalfFourier",
+        "ErdosProblems.Erdos730.Mertens",
+        "ErdosProblems.Erdos730.ObstructionMaps",
+        "ErdosProblems.Erdos730.PNTAP",
+        "ErdosProblems.Erdos730.PNTAPAudit",
+        "ErdosProblems.Erdos730.PadicIsometry",
+        "ErdosProblems.Erdos730.PositiveDensityBridge",
+        "ErdosProblems.Erdos730.PrimeBands",
+        "ErdosProblems.Erdos730.RangeAssembly",
+        "ErdosProblems.Erdos730.SmallPrimeDepth",
+        "ErdosProblems.Erdos730.SmallPrimeEvents",
+        "ErdosProblems.Erdos730.SmallPrimeTail",
+        "ErdosProblems.Erdos730.TransitionDensity"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos730",
+      "path": "ErdosProblems/Erdos730.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos730.lean",
+      "sha256": "d13e84b10e885f802e84f551d250bf9f481bd0224e9c53db947da4c9e2092752",
+      "bytes": 1838,
+      "imports": [
+        "ErdosProblems.Erdos730.Proof"
+      ]
+    }
+  ],
+  "verification": {
+    "status": "verified_unchanged_source",
+    "source_bytes_unchanged": true,
+    "axioms": {
+      "Erdos730.erdos_730_consecutive": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.erdos_730": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.FullDensityTheorem.candidatePositiveDensity": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.FullDensityTheorem.pairSet_infinite": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.FullDensityCore.n_expansion": [
+        "propext",
+        "Quot.sound"
+      ],
+      "Erdos730.FullDensityCore.n_strictMono": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.FullDensityCore.familyPair_injective": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.FullDensityReduction.goodParameters_infinite_of_candidatePositiveDensity": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.ConsecutiveTransition.consecutive_primeFactors_eq_iff_transitionConditions": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.KummerTransition.not_dvd_centralBinom_primePow_mul_iff": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.RangeAssembly.hasCandidatePositiveDensity_of_range_estimates": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.FullDensity.mertensReciprocalPrimeInput": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.FullDensity.requiredFixedModulusPNTAPInput": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "chebyshev_asymptotic_pnt": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "WeakPNT_AP": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.HigherPowerEvents.tendsto_normalizedHigherPowerWitnessCount_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.SmallPrimeEvents.normalizedSmallPrimeWitnessCount_isBoundedUnder": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.SmallPrimeEvents.limsup_normalizedSmallPrimeWitnessCount_le": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.DivisorSwitching.normalizedTopPrimeWitnessCount_isBoundedUnder": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos730.DivisorSwitching.limsup_normalizedTopPrimeWitnessCount_le": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "checker_selected_modules": [
+      "ErdosProblems.Erdos730",
+      "ErdosProblems.Erdos730.TransitionDensity",
+      "ErdosProblems.Erdos730.SmallPrimeTail",
+      "ErdosProblems.Erdos730.SmallPrimeEvents",
+      "ErdosProblems.Erdos730.SmallPrimeDepth",
+      "ErdosProblems.Erdos730.RangeAssembly",
+      "ErdosProblems.Erdos730.Proof",
+      "ErdosProblems.Erdos730.PrimeBands",
+      "ErdosProblems.Erdos730.PositiveDensityBridge",
+      "ErdosProblems.Erdos730.PNTAPAudit",
+      "ErdosProblems.Erdos730.PNTAP",
+      "ErdosProblems.Erdos730.PadicIsometry",
+      "ErdosProblems.Erdos730.ObstructionMaps",
+      "ErdosProblems.Erdos730.Mertens",
+      "ErdosProblems.Erdos730.LowerHalfFourier",
+      "ErdosProblems.Erdos730.LimsupSeries",
+      "ErdosProblems.Erdos730.KummerTransition",
+      "ErdosProblems.Erdos730.HigherPowerEvents",
+      "ErdosProblems.Erdos730.HigherPowerDensity",
+      "ErdosProblems.Erdos730.HigherPowerDecay",
+      "ErdosProblems.Erdos730.HigherPowerCount",
+      "ErdosProblems.Erdos730.FullDensityTheoremAudit",
+      "ErdosProblems.Erdos730.FullDensityTheorem",
+      "ErdosProblems.Erdos730.FullDensityReduction",
+      "ErdosProblems.Erdos730.FullDensityCore",
+      "ErdosProblems.Erdos730.FullDensityBudget",
+      "ErdosProblems.Erdos730.FixedDepthParity",
+      "ErdosProblems.Erdos730.FixedDepthFourier",
+      "ErdosProblems.Erdos730.FixedDepthDensity",
+      "ErdosProblems.Erdos730.FiniteBlockCount",
+      "ErdosProblems.Erdos730.DominatedLimit",
+      "ErdosProblems.Erdos730.DivisorSwitching",
+      "ErdosProblems.Erdos730.DigitBoxes",
+      "ErdosProblems.Erdos730.DensityEvents",
+      "ErdosProblems.Erdos730.DensityAssembly",
+      "ErdosProblems.Erdos730.ConsecutiveTransition",
+      "ErdosProblems.Erdos730.BranchEvents",
+      "ErdosProblems.Erdos730.AnalyticInputs"
+    ],
+    "events": [
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.AnalyticInputs",
+        "exit_code": 0,
+        "seconds": 9.638,
+        "started": "2026-09-16T14:14:32.595699+00:00",
+        "finished": "2026-09-16T14:14:42.234202+00:00",
+        "log": "logs/00-compile.log",
+        "log_sha256": "b0f70d59e1c4b5d7ce2c9d47cfdaca369e8cc0754b62ec2ad6ac7dd8fe34e5f1",
+        "original_log_sha256": "b0f70d59e1c4b5d7ce2c9d47cfdaca369e8cc0754b62ec2ad6ac7dd8fe34e5f1",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.KummerTransition",
+        "exit_code": 0,
+        "seconds": 18.454,
+        "started": "2026-09-16T14:14:42.240935+00:00",
+        "finished": "2026-09-16T14:15:00.694615+00:00",
+        "log": "logs/01-compile.log",
+        "log_sha256": "a49c75c0bc5c2040654dbdea95f00d6acb94a24dd249d5a56a97aef9a92e527e",
+        "original_log_sha256": "a49c75c0bc5c2040654dbdea95f00d6acb94a24dd249d5a56a97aef9a92e527e",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.ConsecutiveTransition",
+        "exit_code": 0,
+        "seconds": 17.025,
+        "started": "2026-09-16T14:15:00.704547+00:00",
+        "finished": "2026-09-16T14:15:17.730029+00:00",
+        "log": "logs/02-compile.log",
+        "log_sha256": "de71d8927e6307bed1178d8a138e0e3aa289ca5f60d747fccf55ce5d4a0ff245",
+        "original_log_sha256": "de71d8927e6307bed1178d8a138e0e3aa289ca5f60d747fccf55ce5d4a0ff245",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.FullDensityCore",
+        "exit_code": 0,
+        "seconds": 19.891,
+        "started": "2026-09-16T14:15:17.738186+00:00",
+        "finished": "2026-09-16T14:15:37.629327+00:00",
+        "log": "logs/03-compile.log",
+        "log_sha256": "77830678416991fcefde35d766f34f53d54121448ab15c4356782559ee0a637f",
+        "original_log_sha256": "77830678416991fcefde35d766f34f53d54121448ab15c4356782559ee0a637f",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.DensityEvents",
+        "exit_code": 0,
+        "seconds": 18.041,
+        "started": "2026-09-16T14:15:37.636749+00:00",
+        "finished": "2026-09-16T14:15:55.677291+00:00",
+        "log": "logs/04-compile.log",
+        "log_sha256": "d0d9dad3a70e153f9bea7f6608adc3a75b761a80609a66428531ad3c86e7945c",
+        "original_log_sha256": "d0d9dad3a70e153f9bea7f6608adc3a75b761a80609a66428531ad3c86e7945c",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.BranchEvents",
+        "exit_code": 0,
+        "seconds": 19.508,
+        "started": "2026-09-16T14:15:55.685099+00:00",
+        "finished": "2026-09-16T14:16:15.192819+00:00",
+        "log": "logs/05-compile.log",
+        "log_sha256": "4f9af6487022a08e5c72df8bf7f041fe6fa80058cb7a89486c903832bdd695ca",
+        "original_log_sha256": "4f9af6487022a08e5c72df8bf7f041fe6fa80058cb7a89486c903832bdd695ca",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.FullDensityBudget",
+        "exit_code": 0,
+        "seconds": 19.727,
+        "started": "2026-09-16T14:16:15.200776+00:00",
+        "finished": "2026-09-16T14:16:34.927925+00:00",
+        "log": "logs/06-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.PositiveDensityBridge",
+        "exit_code": 0,
+        "seconds": 17.122,
+        "started": "2026-09-16T14:16:34.928977+00:00",
+        "finished": "2026-09-16T14:16:52.051421+00:00",
+        "log": "logs/07-compile.log",
+        "log_sha256": "b05c413c5dafb0643b56e1ebbad7a82845b0434149bc507cca1ed14de58b6aa9",
+        "original_log_sha256": "b05c413c5dafb0643b56e1ebbad7a82845b0434149bc507cca1ed14de58b6aa9",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.DensityAssembly",
+        "exit_code": 0,
+        "seconds": 18.498,
+        "started": "2026-09-16T14:16:52.060412+00:00",
+        "finished": "2026-09-16T14:17:10.558303+00:00",
+        "log": "logs/08-compile.log",
+        "log_sha256": "661bb0164e93a8d8179a0652217282fb11a056e8b08092455d3a02b3496f6e0f",
+        "original_log_sha256": "661bb0164e93a8d8179a0652217282fb11a056e8b08092455d3a02b3496f6e0f",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.PadicIsometry",
+        "exit_code": 0,
+        "seconds": 16.285,
+        "started": "2026-09-16T14:17:10.566267+00:00",
+        "finished": "2026-09-16T14:17:26.851058+00:00",
+        "log": "logs/09-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.HigherPowerCount",
+        "exit_code": 0,
+        "seconds": 17.701,
+        "started": "2026-09-16T14:17:26.852177+00:00",
+        "finished": "2026-09-16T14:17:44.553372+00:00",
+        "log": "logs/10-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.DigitBoxes",
+        "exit_code": 0,
+        "seconds": 15.248,
+        "started": "2026-09-16T14:17:44.554589+00:00",
+        "finished": "2026-09-16T14:17:59.802187+00:00",
+        "log": "logs/11-compile.log",
+        "log_sha256": "76290215043a7070db63c072832cececcea54089c6fc8acf708895521d9f9e49",
+        "original_log_sha256": "76290215043a7070db63c072832cececcea54089c6fc8acf708895521d9f9e49",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "PrimeNumberTheoremAnd.Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "exit_code": 0,
+        "seconds": 6.843,
+        "started": "2026-09-16T14:17:59.813552+00:00",
+        "finished": "2026-09-16T14:18:06.656328+00:00",
+        "log": "logs/12-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "PrimeNumberTheoremAnd.Sobolev",
+        "exit_code": 0,
+        "seconds": 11.561,
+        "started": "2026-09-16T14:18:06.657335+00:00",
+        "finished": "2026-09-16T14:18:18.217887+00:00",
+        "log": "logs/13-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "PrimeNumberTheoremAnd.Fourier",
+        "exit_code": 0,
+        "seconds": 9.138,
+        "started": "2026-09-16T14:18:18.218894+00:00",
+        "finished": "2026-09-16T14:18:27.356804+00:00",
+        "log": "logs/14-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "PrimeNumberTheoremAnd.Defs",
+        "exit_code": 0,
+        "seconds": 9.152,
+        "started": "2026-09-16T14:18:27.357840+00:00",
+        "finished": "2026-09-16T14:18:36.509898+00:00",
+        "log": "logs/15-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "PrimeNumberTheoremAnd.Mathlib.Analysis.Asymptotics.Asymptotics",
+        "exit_code": 0,
+        "seconds": 6.433,
+        "started": "2026-09-16T14:18:36.510980+00:00",
+        "finished": "2026-09-16T14:18:42.943579+00:00",
+        "log": "logs/16-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "PrimeNumberTheoremAnd.Mathlib.Algebra.Notation.Support",
+        "exit_code": 0,
+        "seconds": 3.671,
+        "started": "2026-09-16T14:18:42.946871+00:00",
+        "finished": "2026-09-16T14:18:46.617682+00:00",
+        "log": "logs/17-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "PrimeNumberTheoremAnd.SmoothExistence",
+        "exit_code": 0,
+        "seconds": 10.124,
+        "started": "2026-09-16T14:18:46.618695+00:00",
+        "finished": "2026-09-16T14:18:56.742786+00:00",
+        "log": "logs/18-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "PrimeNumberTheoremAnd.Wiener",
+        "exit_code": 0,
+        "seconds": 45.781,
+        "started": "2026-09-16T14:18:56.743867+00:00",
+        "finished": "2026-09-16T14:19:42.525044+00:00",
+        "log": "logs/19-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "PrimeNumberTheoremAnd.Consequences",
+        "exit_code": 0,
+        "seconds": 54.337,
+        "started": "2026-09-16T14:19:42.526167+00:00",
+        "finished": "2026-09-16T14:20:36.863074+00:00",
+        "log": "logs/20-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.PNTAP",
+        "exit_code": 0,
+        "seconds": 12.927,
+        "started": "2026-09-16T14:20:36.864158+00:00",
+        "finished": "2026-09-16T14:20:49.790966+00:00",
+        "log": "logs/21-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.Mertens",
+        "exit_code": 0,
+        "seconds": 15.117,
+        "started": "2026-09-16T14:20:49.791992+00:00",
+        "finished": "2026-09-16T14:21:04.909447+00:00",
+        "log": "logs/22-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.PrimeBands",
+        "exit_code": 0,
+        "seconds": 10.314,
+        "started": "2026-09-16T14:21:04.910672+00:00",
+        "finished": "2026-09-16T14:21:15.224936+00:00",
+        "log": "logs/23-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.TransitionDensity",
+        "exit_code": 0,
+        "seconds": 19.115,
+        "started": "2026-09-16T14:21:15.226232+00:00",
+        "finished": "2026-09-16T14:21:34.341705+00:00",
+        "log": "logs/24-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.RangeAssembly",
+        "exit_code": 0,
+        "seconds": 15.383,
+        "started": "2026-09-16T14:21:34.342842+00:00",
+        "finished": "2026-09-16T14:21:49.725884+00:00",
+        "log": "logs/25-compile.log",
+        "log_sha256": "bd4ac9ae4b8487e26e449e73e1b3c918c6ca5e226b6bc29f996857e6bf44b94f",
+        "original_log_sha256": "bd4ac9ae4b8487e26e449e73e1b3c918c6ca5e226b6bc29f996857e6bf44b94f",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.DivisorSwitching",
+        "exit_code": 0,
+        "seconds": 30.155,
+        "started": "2026-09-16T14:21:49.738214+00:00",
+        "finished": "2026-09-16T14:22:19.893490+00:00",
+        "log": "logs/26-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.DominatedLimit",
+        "exit_code": 0,
+        "seconds": 16.136,
+        "started": "2026-09-16T14:22:19.895704+00:00",
+        "finished": "2026-09-16T14:22:36.032181+00:00",
+        "log": "logs/27-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.FixedDepthFourier",
+        "exit_code": 0,
+        "seconds": 30.109,
+        "started": "2026-09-16T14:22:36.033289+00:00",
+        "finished": "2026-09-16T14:23:06.142405+00:00",
+        "log": "logs/28-compile.log",
+        "log_sha256": "32bed56319a5afb511b9c216a0bf07476a4007be8f8858fa6a0a7f55dd306533",
+        "original_log_sha256": "32bed56319a5afb511b9c216a0bf07476a4007be8f8858fa6a0a7f55dd306533",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.FiniteBlockCount",
+        "exit_code": 0,
+        "seconds": 15.06,
+        "started": "2026-09-16T14:23:06.153178+00:00",
+        "finished": "2026-09-16T14:23:21.213157+00:00",
+        "log": "logs/29-compile.log",
+        "log_sha256": "f57b2e30fe8a8afc755955e3a7f40394fad025636f25f3e94a226d3864598e32",
+        "original_log_sha256": "f57b2e30fe8a8afc755955e3a7f40394fad025636f25f3e94a226d3864598e32",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.FixedDepthDensity",
+        "exit_code": 0,
+        "seconds": 20.668,
+        "started": "2026-09-16T14:23:21.223968+00:00",
+        "finished": "2026-09-16T14:23:41.892126+00:00",
+        "log": "logs/30-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.FixedDepthParity",
+        "exit_code": 0,
+        "seconds": 15.955,
+        "started": "2026-09-16T14:23:41.893405+00:00",
+        "finished": "2026-09-16T14:23:57.848464+00:00",
+        "log": "logs/31-compile.log",
+        "log_sha256": "31eefa0dab2649456a9ab2cea679a2116de3543e7adc2275c6959ce1174de560",
+        "original_log_sha256": "31eefa0dab2649456a9ab2cea679a2116de3543e7adc2275c6959ce1174de560",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.ObstructionMaps",
+        "exit_code": 0,
+        "seconds": 16.231,
+        "started": "2026-09-16T14:23:57.858428+00:00",
+        "finished": "2026-09-16T14:24:14.089265+00:00",
+        "log": "logs/32-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.FullDensityReduction",
+        "exit_code": 0,
+        "seconds": 15.135,
+        "started": "2026-09-16T14:24:14.090569+00:00",
+        "finished": "2026-09-16T14:24:29.225915+00:00",
+        "log": "logs/33-compile.log",
+        "log_sha256": "5044d68f5938d0e4c20302ee032138974ac6a5a18c314c317370ac1cfe612284",
+        "original_log_sha256": "5044d68f5938d0e4c20302ee032138974ac6a5a18c314c317370ac1cfe612284",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.HigherPowerDecay",
+        "exit_code": 0,
+        "seconds": 18.337,
+        "started": "2026-09-16T14:24:29.233811+00:00",
+        "finished": "2026-09-16T14:24:47.570502+00:00",
+        "log": "logs/34-compile.log",
+        "log_sha256": "c559a7aa42dc08502fb2398aeb831c6a9059662515df55f77705521b36bb48cb",
+        "original_log_sha256": "c559a7aa42dc08502fb2398aeb831c6a9059662515df55f77705521b36bb48cb",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.HigherPowerDensity",
+        "exit_code": 0,
+        "seconds": 15.843,
+        "started": "2026-09-16T14:24:47.582814+00:00",
+        "finished": "2026-09-16T14:25:03.425609+00:00",
+        "log": "logs/35-compile.log",
+        "log_sha256": "ce335e666b5f5a1e576b6f35fe7b3dd5e2761cb9d6b3ed35270a8fdfd7a8f01f",
+        "original_log_sha256": "ce335e666b5f5a1e576b6f35fe7b3dd5e2761cb9d6b3ed35270a8fdfd7a8f01f",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.HigherPowerEvents",
+        "exit_code": 0,
+        "seconds": 18.854,
+        "started": "2026-09-16T14:25:03.433687+00:00",
+        "finished": "2026-09-16T14:25:22.287948+00:00",
+        "log": "logs/36-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.LimsupSeries",
+        "exit_code": 0,
+        "seconds": 6.445,
+        "started": "2026-09-16T14:25:22.289145+00:00",
+        "finished": "2026-09-16T14:25:28.734171+00:00",
+        "log": "logs/37-compile.log",
+        "log_sha256": "410def6ebc871ae0a3e1462b0f4c9d086edcd81c3629c2823995ca3fb7b3c1fc",
+        "original_log_sha256": "410def6ebc871ae0a3e1462b0f4c9d086edcd81c3629c2823995ca3fb7b3c1fc",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.LowerHalfFourier",
+        "exit_code": 0,
+        "seconds": 15.687,
+        "started": "2026-09-16T14:25:28.744578+00:00",
+        "finished": "2026-09-16T14:25:44.431114+00:00",
+        "log": "logs/38-compile.log",
+        "log_sha256": "fab7f28180847898cb4b259813b23a9a7b79ca25217fa9d82415e47bdeff2d44",
+        "original_log_sha256": "fab7f28180847898cb4b259813b23a9a7b79ca25217fa9d82415e47bdeff2d44",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.SmallPrimeDepth",
+        "exit_code": 0,
+        "seconds": 15.843,
+        "started": "2026-09-16T14:25:44.441146+00:00",
+        "finished": "2026-09-16T14:26:00.284229+00:00",
+        "log": "logs/39-compile.log",
+        "log_sha256": "327a3e6fe3e31587de4fb2eda5362fd401f3f5cb5538c2c9492f31f1b7dc5676",
+        "original_log_sha256": "327a3e6fe3e31587de4fb2eda5362fd401f3f5cb5538c2c9492f31f1b7dc5676",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.SmallPrimeTail",
+        "exit_code": 0,
+        "seconds": 16.129,
+        "started": "2026-09-16T14:26:00.296931+00:00",
+        "finished": "2026-09-16T14:26:16.425728+00:00",
+        "log": "logs/40-compile.log",
+        "log_sha256": "c3377a59bc20701ebff6be0a324f9e31d80739b84fee003ac7bce1254ec1a8fb",
+        "original_log_sha256": "c3377a59bc20701ebff6be0a324f9e31d80739b84fee003ac7bce1254ec1a8fb",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.SmallPrimeEvents",
+        "exit_code": 0,
+        "seconds": 19.621,
+        "started": "2026-09-16T14:26:16.434298+00:00",
+        "finished": "2026-09-16T14:26:36.055795+00:00",
+        "log": "logs/41-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.FullDensityTheorem",
+        "exit_code": 0,
+        "seconds": 14.695,
+        "started": "2026-09-16T14:26:36.056840+00:00",
+        "finished": "2026-09-16T14:26:50.751860+00:00",
+        "log": "logs/42-compile.log",
+        "log_sha256": "285460a316846b7faaacfea282d4ed2b427e01938c34a94176da82c427f89986",
+        "original_log_sha256": "285460a316846b7faaacfea282d4ed2b427e01938c34a94176da82c427f89986",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.FullDensityTheoremAudit",
+        "exit_code": 0,
+        "seconds": 14.955,
+        "started": "2026-09-16T14:26:50.760885+00:00",
+        "finished": "2026-09-16T14:27:05.716244+00:00",
+        "log": "logs/43-compile.log",
+        "log_sha256": "285460a316846b7faaacfea282d4ed2b427e01938c34a94176da82c427f89986",
+        "original_log_sha256": "285460a316846b7faaacfea282d4ed2b427e01938c34a94176da82c427f89986",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.PNTAPAudit",
+        "exit_code": 0,
+        "seconds": 9.889,
+        "started": "2026-09-16T14:27:05.720522+00:00",
+        "finished": "2026-09-16T14:27:15.609335+00:00",
+        "log": "logs/44-compile.log",
+        "log_sha256": "a1328932aee0615a0194672940043dfce3bef98941ed9dc030469c1774182e9c",
+        "original_log_sha256": "a1328932aee0615a0194672940043dfce3bef98941ed9dc030469c1774182e9c",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730.Proof",
+        "exit_code": 0,
+        "seconds": 15.158,
+        "started": "2026-09-16T14:27:15.619129+00:00",
+        "finished": "2026-09-16T14:27:30.777600+00:00",
+        "log": "logs/45-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos730",
+        "exit_code": 0,
+        "seconds": 18.755,
+        "started": "2026-09-16T14:27:30.779049+00:00",
+        "finished": "2026-09-16T14:27:49.534227+00:00",
+        "log": "logs/46-compile.log",
+        "log_sha256": "3e3007e10d5366ebdea5f70e085de50acdb189ad1b75aebe9fbe84c67917d03c",
+        "original_log_sha256": "3e3007e10d5366ebdea5f70e085de50acdb189ad1b75aebe9fbe84c67917d03c",
+        "redactions": []
+      },
+      {
+        "stage": "audit",
+        "module": "Audit730",
+        "exit_code": 0,
+        "seconds": 18.585,
+        "started": "2026-09-16T14:27:49.543359+00:00",
+        "finished": "2026-09-16T14:28:08.128778+00:00",
+        "log": "logs/47-audit.log",
+        "log_sha256": "3e8e34703c5098790a94ed9283535faed6bba8d5c60bdc9e0c6d04e24f457573",
+        "original_log_sha256": "3e8e34703c5098790a94ed9283535faed6bba8d5c60bdc9e0c6d04e24f457573",
+        "redactions": []
+      },
+      {
+        "stage": "leanchecker",
+        "module": "ErdosProblems.Erdos730",
+        "exit_code": 0,
+        "seconds": 426.866,
+        "started": "2026-09-16T14:28:08.139168+00:00",
+        "finished": "2026-09-16T14:35:15.005415+00:00",
+        "log": "logs/48-leanchecker.log",
+        "log_sha256": "e31c24ef9a33506736b177bbc8426154fac65530a66c215d17f386655ec88b75",
+        "original_log_sha256": "e31c24ef9a33506736b177bbc8426154fac65530a66c215d17f386655ec88b75",
+        "redactions": []
+      }
+    ],
+    "limits": [
+      "The bundled Lean checker reuses the imported environment; Mathlib was not freshly replayed.",
+      "Compilation and replay use Lean's kernel, not independently implemented checkers.",
+      "This is existing-proof evidence intake, not new authorship, acceptance, nomination or an award record."
+    ]
+  },
+  "source_history_notes": [
+    "The execution uses unchanged plby/lean-proofs sources at 8822f7ddef30fadbd92e1c6ab4ed897af356af5e. Earlier williamjblair source versions and the proof claim are credited in the retained source headers; equivalence to every earlier version is not asserted.",
+    "The original problem asks for infinitely many distinct pairs. Both that statement and the stronger consecutive-index infinitude theorem were checked in the completed axiom audit.",
+    "The explicit density bound is a lower density of the family parameter x, with n(x)=84591927504*x^2+7076682*x+142. It is not a positive natural density claim for output indices.",
+    "[PR #40](https://github.com/TheJustinSunPrize/awards/pull/40) already identifies this pinned source and reports source-only review. [Issue #20](https://github.com/TheJustinSunPrize/awards/issues/20) records the omitted infinitude quantifier. [Issue #69](https://github.com/TheJustinSunPrize/awards/issues/69) explicitly concerns only the historical finite witness (87, 88), excludes infinitude and reports kernel verification pending; this packet does not adjudicate that separate recipient request.",
+    "Issue #69 is an open formal recipient request, not a completed kernel-verification record. This packet supplies new execution evidence for an already identified source; it is not a recipient application by this reviewer or uploader."
+  ]
+}
