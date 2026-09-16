@@ -1,0 +1,27 @@
+{
+  "jsp": "JSP-000746",
+  "erdos": 895,
+  "module": "Erdos895",
+  "harness_module": "Audit895",
+  "main_theorem": "Erdos895.erdos_895",
+  "source_repo": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_directory": "src/latest/ErdosProblems",
+  "input_sha256": {
+    "Erdos895.lean": "f1527baff5eba895e1208d27c705487fa52a7ed647ca94935d5e9c1137e77163",
+    "Erdos895/Certificate.cnf": "260b7c50fac4fcc4525f7253eb37a8750bf744cff5bb41e92a314cdea1ccab45",
+    "Erdos895/Certificate.lrat": "2f8729bd57e5ee6d24292e2b51fc72afad884bedf5234b808615568fe9bac582"
+  },
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lean_version": "4.33.0",
+  "informal_authors": [
+    "Ben Barber"
+  ],
+  "formal_authors": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "attribution": "Existing public proof; this packet adds reproducible replay evidence and semantic review, without novelty claims.",
+  "original_problem_url": "https://www.erdosproblems.com/895",
+  "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos895.lean"
+}

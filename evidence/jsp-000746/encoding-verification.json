@@ -1,0 +1,9 @@
+{
+  "source_sha256": "260b7c50fac4fcc4525f7253eb37a8750bf744cff5bb41e92a314cdea1ccab45",
+  "encoding": "Mathematical labels 1..18; edge variables are lexicographically ordered unordered pairs.",
+  "edge_variables": 153,
+  "triangle_clauses": 816,
+  "distinct_summand_schur_clauses": 72,
+  "ordered_exact_match": true,
+  "scope": "Structural correspondence only. LRAT proof validity is checked by Lean compilation/kernel replay."
+}

@@ -1,0 +1,115 @@
+{
+  "jsp": "JSP-000746",
+  "erdos": 895,
+  "source_repo": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_path": "src/latest/ErdosProblems/Erdos895.lean",
+  "source_sha256": {
+    "Erdos895.lean": "f1527baff5eba895e1208d27c705487fa52a7ed647ca94935d5e9c1137e77163",
+    "Erdos895/Certificate.cnf": "260b7c50fac4fcc4525f7253eb37a8750bf744cff5bb41e92a314cdea1ccab45",
+    "Erdos895/Certificate.lrat": "2f8729bd57e5ee6d24292e2b51fc72afad884bedf5234b808615568fe9bac582"
+  },
+  "source_unchanged": true,
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "started_utc": "2026-09-16T10:22:04.191361+00:00",
+  "commands": [
+    {
+      "name": "version",
+      "command": [
+        "lean.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.07,
+      "log": "version.log",
+      "log_sha256": "b8d335ab8351a408bac4208701a6e820c84b47cae026393a5e88ffbd40c5447e"
+    },
+    {
+      "name": "compile-source",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M6144",
+        "-o",
+        "Erdos895.olean",
+        "./Erdos895.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 29.278,
+      "log": "compile-source.log",
+      "log_sha256": "27ef4ccad3541deb3105e2f35910477b36bd3261450f264eb1878a7a128dc92b"
+    },
+    {
+      "name": "compile-audit",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M6144",
+        "-o",
+        "Audit895.olean",
+        "Audit895.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 14.906,
+      "log": "compile-audit.log",
+      "log_sha256": "1a70dad87a8945cefb6a3062e16903c5e919290486cd354e4145073a4c465382"
+    },
+    {
+      "name": "leanchecker",
+      "command": [
+        "leanchecker.exe",
+        "--verbose",
+        "Erdos895"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 21.38,
+      "log": "leanchecker.log",
+      "log_sha256": "c686221b54250b3e2e7407d016eacce441b727d5600d93681758107a35adb6ff"
+    }
+  ],
+  "success": true,
+  "omitted_nonexistent_optional_package_paths": [
+    "Cli/.lake/build/lib/lean"
+  ],
+  "checker_scope": "Bundled leanchecker replays target-module declarations with the same Lean kernel into the pinned imported Mathlib environment. It is neither an independently implemented checker nor a fresh whole-dependency replay.",
+  "finished_utc": "2026-09-16T10:23:09.852964+00:00",
+  "artifacts": [
+    {
+      "path": "Audit895.olean",
+      "sha256": "4d6b8aa0e5976d6fe40183ccdf1120b008e8c140ab2ca1081bd99a6fe836f6dc"
+    },
+    {
+      "path": "Erdos895.olean",
+      "sha256": "e71f3a75d3a2be4b46e4a868c66d36cbf96bed8782be1140c44618026f4e54a6"
+    }
+  ],
+  "target_axioms": {
+    "Erdos895.erdos895_cnf_unsatisfiable": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos895.core_contradiction_fin": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos895.finite_eighteen": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos895.explicit_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos895.erdos_895": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "redaction": "Only machine-specific path fields removed; source/certificate/log bytes and observed results unchanged.",
+  "network_isolation": false
+}

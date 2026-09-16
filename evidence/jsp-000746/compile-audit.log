@@ -1,0 +1,13 @@
+Erdos895.HasIndependentSchurTriple {n : ℕ} (G : SimpleGraph (Fin n)) : Prop
+Erdos895.core_contradiction_fin (R : Fin 18 → Fin 18 → Prop) (htri : ∀ ⦃i j k : Fin 18⦄, ¬(R i j ∧ R i k ∧ R j k))
+  (hadd : ∀ ⦃i j k : Fin 18⦄, ↑i < ↑j → ↑i + ↑j + 1 = ↑k → ¬(¬R i j ∧ ¬R i k ∧ ¬R j k)) : False
+Erdos895.finite_eighteen (G : SimpleGraph (Fin 18)) (hG : G.CliqueFree 3) : Erdos895.HasIndependentSchurTriple G
+Erdos895.explicit_bound {n : ℕ} (hn : 18 ≤ n) (G : SimpleGraph (Fin n)) (hG : G.CliqueFree 3) :
+  Erdos895.HasIndependentSchurTriple G
+Erdos895.erdos_895 :
+  ∃ N, ∀ (n : ℕ), N ≤ n → ∀ (G : SimpleGraph (Fin n)), G.CliqueFree 3 → Erdos895.HasIndependentSchurTriple G
+'Erdos895.erdos895_cnf_unsatisfiable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos895.core_contradiction_fin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos895.finite_eighteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos895.explicit_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos895.erdos_895' depends on axioms: [propext, Classical.choice, Quot.sound]
