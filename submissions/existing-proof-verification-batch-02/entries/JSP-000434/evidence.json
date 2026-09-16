@@ -1,0 +1,824 @@
+{
+  "schema_version": 1,
+  "jsp": "JSP-000434",
+  "erdos": 543,
+  "title": "How many random elements of a finite abelian group make their subset sums cover the group with probability at least one half? Does the binary logarithm of the group order plus a small correction suffice?",
+  "scope": "Let f(N) be the least k such that, for every finite abelian group G of order N, at least half of its k-element subsets A represent every element of G as a sum of a subset of A. There is no real function g with g(N)/log(log N) tending to zero for which f(N) <= log(N)/log(2)+g(N) eventually. For every such g, all sufficiently large primes p give failure of half-completeness in ZMod p at the natural ceiling of that cutoff. The random model is uniform subsets; independent tuples and their collisions are intermediate tools. No exact asymptotic formula for f(N) or failure for every group is asserted.",
+  "attribution": "The unchanged source header credits Q. Tang and ChatGPT for the informal proof, and Codex / GPT-5.6 Sol for the formalization. It separately retains the modified-file Apache 2.0 notice naming Boris Alexeev and ChatGPT. These distinct credit layers are preserved; the present reviewer/uploader claims no original proof or formalization authorship.",
+  "target_module": "ErdosProblems.Erdos543",
+  "main_theorem": "Erdos543.erdos_543",
+  "theorems": [
+    "Erdos543.erdos_543",
+    "Erdos543.not_erdos_543",
+    "Erdos543.ma_tang_prime_cyclic_obstruction",
+    "Erdos543.CoreObstruction.eventually_not_halfComplete_at_primes",
+    "Erdos543.CoreObstruction.eventualPrimeCyclicFailure",
+    "Erdos543.FinalLogic.problem543UpperBound_iff_rounded",
+    "Erdos543.Model.universalF_spec",
+    "Erdos543.Model.universalF_le_iff",
+    "Erdos543.Model.universalF_le_card",
+    "Erdos543.Model.not_halfComplete_zmod_imp_lt_universalF",
+    "Erdos543.IIDTransfer.injectiveGoodCount_eq_factorial_mul_subsetGoodCount",
+    "Erdos543.IIDTransfer.not_halfComplete_of_iidCompleteCount_add_collision_lt",
+    "Erdos543.HalfTransfer.not_halfComplete_zmod_of_prob_indexed_lt_eighth_of_sq_div_lt_quarter",
+    "Erdos543.isLittleO_loglog_of_tendsto_div",
+    "Erdos543.PrimeSequence.tendsto_primeSeq_atTop"
+  ],
+  "environment": {
+    "lean_toolchain": "leanprover/lean4:v4.33.0",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "LEAN_NUM_THREADS": "1",
+    "compile_flags": [
+      "-j1",
+      "-M8192"
+    ],
+    "platform": "Windows"
+  },
+  "sources": [
+    {
+      "module": "ErdosProblems.Erdos543.Model",
+      "path": "ErdosProblems/Erdos543/Model.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/Model.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/Model.lean",
+      "sha256": "3baf2da05c5e6178a3bce3879cdf479c4ed181fe8a391fa9cd9b7de4d3e06e7c",
+      "bytes": 15580,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.Asymptotics",
+      "path": "ErdosProblems/Erdos543/Asymptotics.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/Asymptotics.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/Asymptotics.lean",
+      "sha256": "fd48c714a81039605d31539877bca2aaf233e1bf4e4a633c9e31e315aae2e8be",
+      "bytes": 14228,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.PrimeSequence",
+      "path": "ErdosProblems/Erdos543/PrimeSequence.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/PrimeSequence.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/PrimeSequence.lean",
+      "sha256": "86aebab5a8704c4bf5f266fb3254814e650f290d87577ac63c34b9066da2c7bf",
+      "bytes": 6204,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.LowRankCount",
+      "path": "ErdosProblems/Erdos543/LowRankCount.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/LowRankCount.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/LowRankCount.lean",
+      "sha256": "438431f2b76f863354f2f368f08dfe963bc9ca52834afc8fd0700b31b1b0b452",
+      "bytes": 12057,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.Incidence",
+      "path": "ErdosProblems/Erdos543/Incidence.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/Incidence.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/Incidence.lean",
+      "sha256": "0db02416f4940f9c43beafd734cdf42ec4483690da4c56969046fd4060c7b799",
+      "bytes": 17794,
+      "imports": [
+        "ErdosProblems.Erdos543.LowRankCount"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.FullRankCount",
+      "path": "ErdosProblems/Erdos543/FullRankCount.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/FullRankCount.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/FullRankCount.lean",
+      "sha256": "b6a452e4f59a65bc21d1925e90026cf9a605fc520ba7d7ae04b7cdd4c24a003f",
+      "bytes": 15867,
+      "imports": [
+        "ErdosProblems.Erdos543.LowRankCount"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.FiniteProbability",
+      "path": "ErdosProblems/Erdos543/FiniteProbability.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/FiniteProbability.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/FiniteProbability.lean",
+      "sha256": "eaf812d8d8477a334bb783e9e86256a640c74404c4106af53490d6e92947b027",
+      "bytes": 13632,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.Rank",
+      "path": "ErdosProblems/Erdos543/Rank.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/Rank.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/Rank.lean",
+      "sha256": "bcb460f735450c599f65be049dda6e13bb28aeeb987a2e38805f163cb234ac28",
+      "bytes": 14583,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.LinearFibers",
+      "path": "ErdosProblems/Erdos543/LinearFibers.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/LinearFibers.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/LinearFibers.lean",
+      "sha256": "898f078122f75b0fdaca0f108d6a740b3ed17081b5842a5b95d45a2ca794945a",
+      "bytes": 6464,
+      "imports": [
+        "ErdosProblems.Erdos543.FiniteProbability",
+        "ErdosProblems.Erdos543.Rank"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.Hypercube",
+      "path": "ErdosProblems/Erdos543/Hypercube.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/Hypercube.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/Hypercube.lean",
+      "sha256": "0fb6d8cc5d5c2fcaff0a84e3c8cd4ef59042dd9554b1049a9517f3e9ec38917d",
+      "bytes": 7004,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.LowRankSharp",
+      "path": "ErdosProblems/Erdos543/LowRankSharp.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/LowRankSharp.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/LowRankSharp.lean",
+      "sha256": "473f57ff5525e465dc950d607eedac23e3654d08ac1b51a5182426cb3960aca7",
+      "bytes": 28648,
+      "imports": [
+        "ErdosProblems.Erdos543.Hypercube",
+        "ErdosProblems.Erdos543.LowRankCount"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.Moments",
+      "path": "ErdosProblems/Erdos543/Moments.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/Moments.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/Moments.lean",
+      "sha256": "5086f04f0d1e885dd7369526319bef7dcdff27b8fedb8213361bfedf410f1153",
+      "bytes": 4669,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.MomentBounds",
+      "path": "ErdosProblems/Erdos543/MomentBounds.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/MomentBounds.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/MomentBounds.lean",
+      "sha256": "8eb00a67bdf60b1139d0565c1c69cc7f0415699c5d3e3b28bc5b455015f1f258",
+      "bytes": 18944,
+      "imports": [
+        "ErdosProblems.Erdos543.LowRankCount",
+        "ErdosProblems.Erdos543.Moments"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.StratifiedMoment",
+      "path": "ErdosProblems/Erdos543/StratifiedMoment.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/StratifiedMoment.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/StratifiedMoment.lean",
+      "sha256": "1a277caf906dbaa7a427e15ec13514002ca862bf4c01474d3f9c057086bb5582",
+      "bytes": 33703,
+      "imports": [
+        "ErdosProblems.Erdos543.Incidence",
+        "ErdosProblems.Erdos543.FullRankCount",
+        "ErdosProblems.Erdos543.LinearFibers",
+        "ErdosProblems.Erdos543.LowRankSharp",
+        "ErdosProblems.Erdos543.MomentBounds",
+        "ErdosProblems.Erdos543.Moments"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.MissedEvents",
+      "path": "ErdosProblems/Erdos543/MissedEvents.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/MissedEvents.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/MissedEvents.lean",
+      "sha256": "587ef855a66bfb85040ff17df58a6d8526170ee65581a94ab81a89a4c9be32c3",
+      "bytes": 11270,
+      "imports": [
+        "ErdosProblems.Erdos543.FiniteProbability"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.BonferroniAnalytic",
+      "path": "ErdosProblems/Erdos543/BonferroniAnalytic.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/BonferroniAnalytic.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/BonferroniAnalytic.lean",
+      "sha256": "769334f43c86b30336b9b2849d9f0c4c1e8dfe081f128e8583b7f74cce486d75",
+      "bytes": 12061,
+      "imports": [
+        "ErdosProblems.Erdos543.FiniteProbability"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.IIDTransfer",
+      "path": "ErdosProblems/Erdos543/IIDTransfer.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/IIDTransfer.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/IIDTransfer.lean",
+      "sha256": "f29d2fc0cef238443c6d8e873ca9b3ce30a70df3d019b6ff7540a673d4120b49",
+      "bytes": 17249,
+      "imports": [
+        "Mathlib",
+        "ErdosProblems.Erdos543.Model"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.RankCountAsymptotics",
+      "path": "ErdosProblems/Erdos543/RankCountAsymptotics.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/RankCountAsymptotics.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/RankCountAsymptotics.lean",
+      "sha256": "f4157af7966bd186d487b1cab592641ecf154dfcd97250a2e1b08114693d467e",
+      "bytes": 28344,
+      "imports": [
+        "ErdosProblems.Erdos543.Asymptotics",
+        "ErdosProblems.Erdos543.MomentBounds"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.PoissonAsymptotics",
+      "path": "ErdosProblems/Erdos543/PoissonAsymptotics.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/PoissonAsymptotics.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/PoissonAsymptotics.lean",
+      "sha256": "1b20d0820c1ddc535aaded24dadd200031e4e83a7449cb9461867158cbe8a596",
+      "bytes": 14245,
+      "imports": [
+        "ErdosProblems.Erdos543.Asymptotics",
+        "ErdosProblems.Erdos543.BonferroniAnalytic",
+        "ErdosProblems.Erdos543.RankCountAsymptotics"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.FactorialTail",
+      "path": "ErdosProblems/Erdos543/FactorialTail.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/FactorialTail.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/FactorialTail.lean",
+      "sha256": "803eb9e763c1aa7174f43f7547af5c5b35927ffbc7bdff5abc7e23b5503506fd",
+      "bytes": 9672,
+      "imports": [
+        "ErdosProblems.Erdos543.PoissonAsymptotics"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.PoissonSecondMoment",
+      "path": "ErdosProblems/Erdos543/PoissonSecondMoment.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/PoissonSecondMoment.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/PoissonSecondMoment.lean",
+      "sha256": "33729644ca38b08f65ff1127afd00f1921ed8770e1b4146be35bde5a3df1f777",
+      "bytes": 4448,
+      "imports": [
+        "ErdosProblems.Erdos543.MissedEvents"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.IIDModel",
+      "path": "ErdosProblems/Erdos543/IIDModel.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/IIDModel.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/IIDModel.lean",
+      "sha256": "6d4dc9425cdb1f9ff30cde8a36460869816a45bfb5542501209143d83b9995ba",
+      "bytes": 10809,
+      "imports": [
+        "ErdosProblems.Erdos543.Incidence",
+        "ErdosProblems.Erdos543.Model",
+        "ErdosProblems.Erdos543.FiniteProbability"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.HalfTransfer",
+      "path": "ErdosProblems/Erdos543/HalfTransfer.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/HalfTransfer.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/HalfTransfer.lean",
+      "sha256": "ca58e59dedc702c0629a4b2e40080a2e5556816d2919c1b00469cc8d7f0bc209",
+      "bytes": 10522,
+      "imports": [
+        "ErdosProblems.Erdos543.IIDModel",
+        "ErdosProblems.Erdos543.IIDTransfer",
+        "ErdosProblems.Erdos543.Asymptotics",
+        "ErdosProblems.Erdos543.PrimeSequence"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.FinalLogic",
+      "path": "ErdosProblems/Erdos543/FinalLogic.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/FinalLogic.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/FinalLogic.lean",
+      "sha256": "6d76201f67068329d43ccf2820c53ff5823ac7fa062ac5d4500dd6fd4cad537a",
+      "bytes": 7938,
+      "imports": [
+        "ErdosProblems.Erdos543.Model",
+        "ErdosProblems.Erdos543.Asymptotics",
+        "ErdosProblems.Erdos543.PrimeSequence"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543.CoreObstruction",
+      "path": "ErdosProblems/Erdos543/CoreObstruction.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/CoreObstruction.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543/CoreObstruction.lean",
+      "sha256": "4461830ce5eab050b180f55badf0852c8c8a749d36ce82e673a5cef6525f41bb",
+      "bytes": 33574,
+      "imports": [
+        "ErdosProblems.Erdos543.Model",
+        "ErdosProblems.Erdos543.Asymptotics",
+        "ErdosProblems.Erdos543.PrimeSequence",
+        "ErdosProblems.Erdos543.StratifiedMoment",
+        "ErdosProblems.Erdos543.MissedEvents",
+        "ErdosProblems.Erdos543.BonferroniAnalytic",
+        "ErdosProblems.Erdos543.IIDTransfer",
+        "ErdosProblems.Erdos543.RankCountAsymptotics",
+        "ErdosProblems.Erdos543.PoissonAsymptotics",
+        "ErdosProblems.Erdos543.FactorialTail",
+        "ErdosProblems.Erdos543.PoissonSecondMoment",
+        "ErdosProblems.Erdos543.HalfTransfer",
+        "ErdosProblems.Erdos543.FinalLogic"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos543",
+      "path": "ErdosProblems/Erdos543.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos543.lean",
+      "sha256": "fb6475a9a93db8be176ab1f6aeb887010391a31bf00c34dcf17784acf729c90d",
+      "bytes": 3036,
+      "imports": [
+        "ErdosProblems.Erdos543.CoreObstruction"
+      ]
+    }
+  ],
+  "verification": {
+    "status": "verified_unchanged_source",
+    "source_bytes_unchanged": true,
+    "axioms": {
+      "Erdos543.erdos_543": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos543.not_erdos_543": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos543.ma_tang_prime_cyclic_obstruction": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos543.CoreObstruction.eventually_not_halfComplete_at_primes": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos543.CoreObstruction.eventualPrimeCyclicFailure": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos543.FinalLogic.problem543UpperBound_iff_rounded": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos543.Model.universalF_spec": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos543.Model.universalF_le_iff": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos543.Model.universalF_le_card": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos543.Model.not_halfComplete_zmod_imp_lt_universalF": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos543.IIDTransfer.injectiveGoodCount_eq_factorial_mul_subsetGoodCount": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos543.IIDTransfer.not_halfComplete_of_iidCompleteCount_add_collision_lt": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos543.HalfTransfer.not_halfComplete_zmod_of_prob_indexed_lt_eighth_of_sq_div_lt_quarter": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos543.isLittleO_loglog_of_tendsto_div": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos543.PrimeSequence.tendsto_primeSeq_atTop": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "checker_selected_modules": [
+      "ErdosProblems.Erdos543",
+      "ErdosProblems.Erdos543.StratifiedMoment",
+      "ErdosProblems.Erdos543.RankCountAsymptotics",
+      "ErdosProblems.Erdos543.Rank",
+      "ErdosProblems.Erdos543.PrimeSequence",
+      "ErdosProblems.Erdos543.PoissonSecondMoment",
+      "ErdosProblems.Erdos543.PoissonAsymptotics",
+      "ErdosProblems.Erdos543.Moments",
+      "ErdosProblems.Erdos543.MomentBounds",
+      "ErdosProblems.Erdos543.Model",
+      "ErdosProblems.Erdos543.MissedEvents",
+      "ErdosProblems.Erdos543.LowRankSharp",
+      "ErdosProblems.Erdos543.LowRankCount",
+      "ErdosProblems.Erdos543.LinearFibers",
+      "ErdosProblems.Erdos543.Incidence",
+      "ErdosProblems.Erdos543.IIDTransfer",
+      "ErdosProblems.Erdos543.IIDModel",
+      "ErdosProblems.Erdos543.Hypercube",
+      "ErdosProblems.Erdos543.HalfTransfer",
+      "ErdosProblems.Erdos543.FullRankCount",
+      "ErdosProblems.Erdos543.FiniteProbability",
+      "ErdosProblems.Erdos543.FinalLogic",
+      "ErdosProblems.Erdos543.FactorialTail",
+      "ErdosProblems.Erdos543.CoreObstruction",
+      "ErdosProblems.Erdos543.BonferroniAnalytic",
+      "ErdosProblems.Erdos543.Asymptotics"
+    ],
+    "events": [
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.Model",
+        "exit_code": 0,
+        "seconds": 21.21,
+        "started": "2026-09-16T14:40:11.852989+00:00",
+        "finished": "2026-09-16T14:40:33.063090+00:00",
+        "log": "logs/00-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.Asymptotics",
+        "exit_code": 0,
+        "seconds": 21.168,
+        "started": "2026-09-16T14:40:33.064610+00:00",
+        "finished": "2026-09-16T14:40:54.232521+00:00",
+        "log": "logs/01-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.PrimeSequence",
+        "exit_code": 0,
+        "seconds": 20.193,
+        "started": "2026-09-16T14:40:54.233956+00:00",
+        "finished": "2026-09-16T14:41:14.426741+00:00",
+        "log": "logs/02-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.LowRankCount",
+        "exit_code": 0,
+        "seconds": 21.929,
+        "started": "2026-09-16T14:41:14.428154+00:00",
+        "finished": "2026-09-16T14:41:36.356786+00:00",
+        "log": "logs/03-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.Incidence",
+        "exit_code": 0,
+        "seconds": 21.293,
+        "started": "2026-09-16T14:41:36.359129+00:00",
+        "finished": "2026-09-16T14:41:57.652040+00:00",
+        "log": "logs/04-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.FullRankCount",
+        "exit_code": 0,
+        "seconds": 22.441,
+        "started": "2026-09-16T14:41:57.653420+00:00",
+        "finished": "2026-09-16T14:42:20.094104+00:00",
+        "log": "logs/05-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.FiniteProbability",
+        "exit_code": 0,
+        "seconds": 23.074,
+        "started": "2026-09-16T14:42:20.095783+00:00",
+        "finished": "2026-09-16T14:42:43.169554+00:00",
+        "log": "logs/06-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.Rank",
+        "exit_code": 0,
+        "seconds": 21.696,
+        "started": "2026-09-16T14:42:43.170966+00:00",
+        "finished": "2026-09-16T14:43:04.866931+00:00",
+        "log": "logs/07-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.LinearFibers",
+        "exit_code": 0,
+        "seconds": 20.526,
+        "started": "2026-09-16T14:43:04.868536+00:00",
+        "finished": "2026-09-16T14:43:25.394513+00:00",
+        "log": "logs/08-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.Hypercube",
+        "exit_code": 0,
+        "seconds": 20.88,
+        "started": "2026-09-16T14:43:25.396882+00:00",
+        "finished": "2026-09-16T14:43:46.276951+00:00",
+        "log": "logs/09-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.LowRankSharp",
+        "exit_code": 0,
+        "seconds": 24.06,
+        "started": "2026-09-16T14:43:46.278521+00:00",
+        "finished": "2026-09-16T14:44:10.338474+00:00",
+        "log": "logs/10-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.Moments",
+        "exit_code": 0,
+        "seconds": 20.231,
+        "started": "2026-09-16T14:44:10.340507+00:00",
+        "finished": "2026-09-16T14:44:30.571025+00:00",
+        "log": "logs/11-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.MomentBounds",
+        "exit_code": 0,
+        "seconds": 25.193,
+        "started": "2026-09-16T14:44:30.572457+00:00",
+        "finished": "2026-09-16T14:44:55.765734+00:00",
+        "log": "logs/12-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.StratifiedMoment",
+        "exit_code": 0,
+        "seconds": 25.689,
+        "started": "2026-09-16T14:44:55.767139+00:00",
+        "finished": "2026-09-16T14:45:21.456313+00:00",
+        "log": "logs/13-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.MissedEvents",
+        "exit_code": 0,
+        "seconds": 21.707,
+        "started": "2026-09-16T14:45:21.457746+00:00",
+        "finished": "2026-09-16T14:45:43.164287+00:00",
+        "log": "logs/14-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.BonferroniAnalytic",
+        "exit_code": 0,
+        "seconds": 22.87,
+        "started": "2026-09-16T14:45:43.165252+00:00",
+        "finished": "2026-09-16T14:46:06.035482+00:00",
+        "log": "logs/15-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.IIDTransfer",
+        "exit_code": 0,
+        "seconds": 22.849,
+        "started": "2026-09-16T14:46:06.037435+00:00",
+        "finished": "2026-09-16T14:46:28.886403+00:00",
+        "log": "logs/16-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.RankCountAsymptotics",
+        "exit_code": 0,
+        "seconds": 27.034,
+        "started": "2026-09-16T14:46:28.888036+00:00",
+        "finished": "2026-09-16T14:46:55.921927+00:00",
+        "log": "logs/17-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.PoissonAsymptotics",
+        "exit_code": 0,
+        "seconds": 22.282,
+        "started": "2026-09-16T14:46:55.923429+00:00",
+        "finished": "2026-09-16T14:47:18.205561+00:00",
+        "log": "logs/18-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.FactorialTail",
+        "exit_code": 0,
+        "seconds": 21.746,
+        "started": "2026-09-16T14:47:18.207505+00:00",
+        "finished": "2026-09-16T14:47:39.953565+00:00",
+        "log": "logs/19-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.PoissonSecondMoment",
+        "exit_code": 0,
+        "seconds": 22.371,
+        "started": "2026-09-16T14:47:39.956435+00:00",
+        "finished": "2026-09-16T14:48:02.327650+00:00",
+        "log": "logs/20-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.IIDModel",
+        "exit_code": 0,
+        "seconds": 21.066,
+        "started": "2026-09-16T14:48:02.328764+00:00",
+        "finished": "2026-09-16T14:48:23.394475+00:00",
+        "log": "logs/21-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.HalfTransfer",
+        "exit_code": 0,
+        "seconds": 20.234,
+        "started": "2026-09-16T14:48:23.395963+00:00",
+        "finished": "2026-09-16T14:48:43.630338+00:00",
+        "log": "logs/22-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.FinalLogic",
+        "exit_code": 0,
+        "seconds": 18.126,
+        "started": "2026-09-16T14:48:43.631939+00:00",
+        "finished": "2026-09-16T14:49:01.757986+00:00",
+        "log": "logs/23-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543.CoreObstruction",
+        "exit_code": 0,
+        "seconds": 24.082,
+        "started": "2026-09-16T14:49:01.760653+00:00",
+        "finished": "2026-09-16T14:49:25.842703+00:00",
+        "log": "logs/24-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos543",
+        "exit_code": 0,
+        "seconds": 19.546,
+        "started": "2026-09-16T14:49:25.845584+00:00",
+        "finished": "2026-09-16T14:49:45.391826+00:00",
+        "log": "logs/25-compile.log",
+        "log_sha256": "8971d0d4daa9e8f1695dc8011e88fb1efda91a4987bcd14eb8e89499c3f1e771",
+        "original_log_sha256": "8971d0d4daa9e8f1695dc8011e88fb1efda91a4987bcd14eb8e89499c3f1e771",
+        "redactions": []
+      },
+      {
+        "stage": "audit",
+        "module": "Audit543",
+        "exit_code": 0,
+        "seconds": 18.085,
+        "started": "2026-09-16T14:49:45.399778+00:00",
+        "finished": "2026-09-16T14:50:03.484591+00:00",
+        "log": "logs/26-audit.log",
+        "log_sha256": "4149b009d4a0294c9885c7535073344db0d3f6e8359ca3bf8bfe9fa296aaab76",
+        "original_log_sha256": "4149b009d4a0294c9885c7535073344db0d3f6e8359ca3bf8bfe9fa296aaab76",
+        "redactions": []
+      },
+      {
+        "stage": "leanchecker",
+        "module": "ErdosProblems.Erdos543",
+        "exit_code": 0,
+        "seconds": 255.175,
+        "started": "2026-09-16T14:50:03.496124+00:00",
+        "finished": "2026-09-16T14:54:18.670722+00:00",
+        "log": "logs/27-leanchecker.log",
+        "log_sha256": "9056c609572933c55c1ed3a006c08cee3d3a9e9eb995e55799ec603c83d4e5f3",
+        "original_log_sha256": "9056c609572933c55c1ed3a006c08cee3d3a9e9eb995e55799ec603c83d4e5f3",
+        "redactions": []
+      }
+    ],
+    "limits": [
+      "The bundled Lean checker reuses the imported environment; Mathlib was not freshly replayed.",
+      "Compilation and replay use Lean's kernel, not independently implemented checkers.",
+      "This is existing-proof evidence intake, not new authorship, acceptance, nomination or an award record."
+    ]
+  },
+  "attribution_source_details": {
+    "informal_header": [
+      "Q. Tang",
+      "ChatGPT"
+    ],
+    "formal_header": [
+      "Codex",
+      "GPT-5.6 Sol"
+    ],
+    "retained_notice": "Copyright (c) 2026 Boris Alexeev. Authors: Boris Alexeev, ChatGPT. Apache 2.0; top file explicitly says modified.",
+    "policy": "Retain all source bytes and distinct attribution layers. No inference that uploader is original formalizer; no claim to priority, new proof or prize recipient."
+  },
+  "source_history_notes": [
+    "The main declaration is an alias of the negative theorem not_erdos_543: the proposed little-o(log log N) improvement fails. The finite model is uniform k-element subsets, with an explicit collision-controlled transfer from independent tuples.",
+    "[Jie Ma and Quanyu Tang's paper](https://arxiv.org/abs/2602.05768v2) also establishes a quantitative prime-order bound with coefficient 1/(2 log 2). This verification packet records the qualitative disproof and the selected prime-cyclic obstruction; it does not assert that the stronger coefficient bound was formalized here."
+  ]
+}

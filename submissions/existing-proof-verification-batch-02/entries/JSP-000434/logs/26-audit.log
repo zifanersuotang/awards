@@ -1,0 +1,109 @@
+def Erdos543.Model.SubsetSumComplete.{u_1} : {G : Type u_1} →
+  [AddCommGroup.{u_1} G] → [Fintype.{u_1} G] → Finset.{u_1} G → Prop :=
+fun {G} [AddCommGroup.{u_1} G] [Fintype.{u_1} G] A => ∀ (g : G), ∃ S ⊆ A, Eq.{u_1 + 1} (∑ x ∈ S, x) g
+def Erdos543.Model.HalfComplete.{u_1} : (G : Type u_1) → [AddCommGroup.{u_1} G] → [Fintype.{u_1} G] → ℕ → Prop :=
+fun G [AddCommGroup.{u_1} G] [Fintype.{u_1} G] k =>
+  LE.le.{0} (Erdos543.Model.totalCount.{u_1} G k) (HMul.hMul.{0, 0, 0} 2 (Erdos543.Model.completeCount.{u_1} G k))
+def Erdos543.Model.UniversallyHalfComplete : ℕ → ℕ → Prop :=
+fun N k =>
+  ∀ (G : Type) [inst : AddCommGroup.{0} G] [inst_1 : Fintype.{0} G],
+    Eq.{1} (Fintype.card.{0} G) N → Erdos543.Model.HalfComplete.{0} G k
+def Erdos543.Model.universalF : ℕ → ℕ :=
+fun N => sInf.{0} (Set.ofPred.{0} fun k => Erdos543.Model.UniversallyHalfComplete N k)
+def Erdos543.Model.completeCount.{u_1} : (G : Type u_1) → [AddCommGroup.{u_1} G] → [Fintype.{u_1} G] → ℕ → ℕ :=
+fun G [AddCommGroup.{u_1} G] [Fintype.{u_1} G] k =>
+  Finset.card.{u_1} (Erdos543.Model.goodSets.{u_1} Finset.univ.{u_1} Erdos543.Model.SubsetSumComplete.{u_1} k)
+def Erdos543.Model.totalCount.{u_1} : (G : Type u_1) → [AddCommGroup.{u_1} G] → [Fintype.{u_1} G] → ℕ → ℕ :=
+fun G [AddCommGroup.{u_1} G] [Fintype.{u_1} G] k => Finset.card.{u_1} (Finset.powersetCard.{u_1} k Finset.univ.{u_1})
+def Erdos543.cutoffArgument : (ℕ → ℝ) → ℕ → ℝ :=
+fun g N => HAdd.hAdd.{0, 0, 0} (HDiv.hDiv.{0, 0, 0} (Real.log ↑N) (Real.log 2)) (g N)
+def Erdos543.cutoffSize : (ℕ → ℝ) → ℕ → ℕ :=
+fun g N => Nat.ceil.{0} (Erdos543.cutoffArgument g N)
+def Erdos543.FinalLogic.IsLittleOLogLog : (ℕ → ℝ) → Prop :=
+fun g =>
+  Filter.Tendsto.{0, 0} (fun N => HDiv.hDiv.{0, 0, 0} (g N) (Real.log (Real.log ↑N))) Filter.atTop.{0} (nhds.{0} 0)
+def Erdos543.FinalLogic.Problem543UpperBound : Prop :=
+∃ g,
+  Erdos543.FinalLogic.IsLittleOLogLog g ∧
+    ∀ᶠ (N : ℕ) in Filter.atTop.{0}, LE.le.{0} (↑(Erdos543.Model.universalF N)) (Erdos543.cutoffArgument g N)
+def Erdos543.FinalLogic.EventualPrimeCyclicFailure : Prop :=
+∀ (g : ℕ → ℝ),
+  Erdos543.FinalLogic.IsLittleOLogLog g →
+    ∀ᶠ (i : ℕ) in Filter.atTop.{0},
+      ¬Erdos543.Model.HalfComplete.{0} (ZMod (Erdos543.PrimeSequence.primeSeq i))
+          (Erdos543.cutoffSize g (Erdos543.PrimeSequence.primeSeq i))
+def Erdos543.IIDModel.IndexedComplete.{u_1} : {G : Type u_1} →
+  [AddCommMonoid.{u_1} G] → {k : ℕ} → Erdos543.IIDModel.IIDSpace.{u_1} G k → Prop :=
+fun {G} [AddCommMonoid.{u_1} G] {k} a => ∀ (x : G), ∃ S, Eq.{u_1 + 1} (Erdos543.IIDModel.indexedSum.{u_1} a S) x
+def Erdos543.FiniteProbability.prob.{u_1} : {Ω : Type u_1} → [Fintype.{u_1} Ω] → Set.{u_1} Ω → ℝ :=
+fun {Ω} [Fintype.{u_1} Ω] E =>
+  HDiv.hDiv.{0, 0, 0} ↑(Finset.card.{u_1} {ω | Membership.mem.{u_1, u_1} E ω}) ↑(Fintype.card.{u_1} Ω)
+Erdos543.erdos_543 : ¬∃ g,
+    Erdos543.FinalLogic.IsLittleOLogLog g ∧
+      ∀ᶠ (N : ℕ) in Filter.atTop.{0}, LE.le.{0} (↑(Erdos543.Model.universalF N)) (Erdos543.cutoffArgument g N)
+'Erdos543.erdos_543' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos543.not_erdos_543 : ¬∃ g,
+    Erdos543.FinalLogic.IsLittleOLogLog g ∧
+      ∀ᶠ (N : ℕ) in Filter.atTop.{0}, LE.le.{0} (↑(Erdos543.Model.universalF N)) (Erdos543.cutoffArgument g N)
+'Erdos543.not_erdos_543' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos543.ma_tang_prime_cyclic_obstruction : Erdos543.FinalLogic.EventualPrimeCyclicFailure
+'Erdos543.ma_tang_prime_cyclic_obstruction' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos543.CoreObstruction.eventually_not_halfComplete_at_primes : ∀ {g : ℕ → ℝ},
+  Filter.Tendsto.{0, 0} (fun N => HDiv.hDiv.{0, 0, 0} (g N) (Real.log (Real.log ↑N))) Filter.atTop.{0} (nhds.{0} 0) →
+    ∀ᶠ (N : ℕ) in Filter.atTop.{0},
+      ∀ (hp : Nat.Prime N), ¬Erdos543.Model.HalfComplete.{0} (ZMod N) (Erdos543.cutoffSize g N)
+'Erdos543.CoreObstruction.eventually_not_halfComplete_at_primes' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Erdos543.CoreObstruction.eventualPrimeCyclicFailure : Erdos543.FinalLogic.EventualPrimeCyclicFailure
+'Erdos543.CoreObstruction.eventualPrimeCyclicFailure' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos543.FinalLogic.problem543UpperBound_iff_rounded : Erdos543.FinalLogic.Problem543UpperBound ↔
+  Erdos543.FinalLogic.Problem543RoundedUpperBound
+'Erdos543.FinalLogic.problem543UpperBound_iff_rounded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Erdos543.Model.universalF_spec : ∀ (N : ℕ), Erdos543.Model.UniversallyHalfComplete N (Erdos543.Model.universalF N)
+'Erdos543.Model.universalF_spec' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos543.Model.universalF_le_iff : ∀ {N k : ℕ},
+  LE.le.{0} (Erdos543.Model.universalF N) k ↔ Erdos543.Model.UniversallyHalfComplete N k
+'Erdos543.Model.universalF_le_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos543.Model.universalF_le_card : ∀ (N : ℕ), LE.le.{0} (Erdos543.Model.universalF N) N
+'Erdos543.Model.universalF_le_card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos543.Model.not_halfComplete_zmod_imp_lt_universalF : ∀ {p k : ℕ} [inst : NeZero.{0} p],
+  ¬Erdos543.Model.HalfComplete.{0} (ZMod p) k → LT.lt.{0} k (Erdos543.Model.universalF p)
+'Erdos543.Model.not_halfComplete_zmod_imp_lt_universalF' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@Erdos543.IIDTransfer.injectiveGoodCount_eq_factorial_mul_subsetGoodCount.{u_1} : ∀ {α : Type u_1}
+  [inst : Fintype.{u_1} α] (P : Finset.{u_1} α → Prop) (k : ℕ),
+  Eq.{1} (Erdos543.IIDTransfer.injectiveGoodCount.{u_1} P k)
+    (HMul.hMul.{0, 0, 0} k.factorial (Erdos543.IIDTransfer.subsetGoodCount.{u_1} P k))
+'Erdos543.IIDTransfer.injectiveGoodCount_eq_factorial_mul_subsetGoodCount' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Erdos543.IIDTransfer.not_halfComplete_of_iidCompleteCount_add_collision_lt.{u_1} : ∀ (G : Type u_1)
+  [inst : AddCommGroup.{u_1} G] [inst_1 : Fintype.{u_1} G] (k : ℕ),
+  LT.lt.{0}
+      (HAdd.hAdd.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} 2 (Erdos543.IIDTransfer.iidGoodCount.{u_1} Erdos543.Model.SubsetSumComplete.{u_1} k))
+        (Finset.card.{u_1} (Erdos543.IIDTransfer.collisionTuples.{u_1} G k)))
+      (HPow.hPow.{0, 0, 0} (Fintype.card.{u_1} G) k) →
+    ¬Erdos543.Model.HalfComplete.{u_1} G k
+'Erdos543.IIDTransfer.not_halfComplete_of_iidCompleteCount_add_collision_lt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@Erdos543.HalfTransfer.not_halfComplete_zmod_of_prob_indexed_lt_eighth_of_sq_div_lt_quarter : ∀ {p k : ℕ}
+  [inst : NeZero.{0} p],
+  LT.lt.{0} (Erdos543.FiniteProbability.prob.{0} (Erdos543.IIDModel.indexedCompleteEvent.{0} (ZMod p) k)) (1 / 8) →
+    LT.lt.{0} (HDiv.hDiv.{0, 0, 0} (HPow.hPow.{0, 0, 0} (↑k) 2) ↑p) (1 / 4) →
+      ¬Erdos543.Model.HalfComplete.{0} (ZMod p) k
+'Erdos543.HalfTransfer.not_halfComplete_zmod_of_prob_indexed_lt_eighth_of_sq_div_lt_quarter' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@Erdos543.isLittleO_loglog_of_tendsto_div : ∀ {g : ℕ → ℝ},
+  Filter.Tendsto.{0, 0} (fun N => HDiv.hDiv.{0, 0, 0} (g N) (Real.log (Real.log ↑N))) Filter.atTop.{0} (nhds.{0} 0) →
+    Asymptotics.IsLittleO.{0, 0, 0} Filter.atTop.{0} g fun N => Real.log (Real.log ↑N)
+'Erdos543.isLittleO_loglog_of_tendsto_div' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos543.PrimeSequence.tendsto_primeSeq_atTop : Filter.Tendsto.{0, 0} Erdos543.PrimeSequence.primeSeq Filter.atTop.{0}
+  Filter.atTop.{0}
+'Erdos543.PrimeSequence.tendsto_primeSeq_atTop' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
