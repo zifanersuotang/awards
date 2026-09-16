@@ -1,0 +1,3 @@
+Erdos763.not_erdos_763 :
+  ¬∃ A c, 0 < c ∧ (fun N => ↑(Erdos763.summatoryRepresentationCount A N) - c * ↑N) =O[Filter.atTop] fun _N => 1
+'Erdos763.not_erdos_763' depends on axioms: [propext, Classical.choice, Quot.sound]
