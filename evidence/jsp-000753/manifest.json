@@ -1,0 +1,18 @@
+{
+  ".gitattributes": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992",
+  "inputs.json": "c5446af37375a9e85531eeea4666f0a5b141d242eef500b043e8fe9643d66739",
+  "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "LICENSE.upstream": "41e26750cf7403beef1b82310454ca79eb1da04b1dab82d4d42f377e15c01ea9",
+  "NOTICE": "a6e3af64a9f51f041365b505fb3b8356b965547c094f111642870721fedeedc0",
+  "README.md": "30105854b6c461db50a41a3c167c148f35c069c0068fdeb79c2f89f9a0d8f774",
+  "reproduce.py": "19d361a20267f910638c675c9d83dd531048918009e8dcb9b524210989213ce9",
+  "source/Audit908.lean": "17073db89e857c01390f30abe6b4283000a49e30044328501762dbebe29f5dca",
+  "source/ErdosProblems/Erdos907.lean": "71929e7e6c0c69111f56dbc57d4cf90cff28e9d1e0142dd687d074652a1192d4",
+  "source/ErdosProblems/Erdos908.lean": "53ba65216eb5434752f7e4898ce9f10bf56d43089b795d6fe7e9281dcd9d3297",
+  "statement-review.md": "93f61c568800ab58ba4e13595197e3d65ec57d2f9501702a4972118aa5794ce9",
+  "verified-run/audit-Audit908.log": "1c01557bcfb7be36b202e0f379383a48b2494d3176936bea98f6076005c5ef22",
+  "verified-run/checker-ErdosProblems.log": "c49023c651bbc82e7a5c661e74390cb994bd08d96163dc813eb44afeef2d016a",
+  "verified-run/compile-ErdosProblems_Erdos907.log": "37fc3fa53765f1cfe4b17f96f0866071a2322d786cd4c2864b8a6940c90207da",
+  "verified-run/compile-ErdosProblems_Erdos908.log": "2a8723010f2c6ab2169b87041c582760df545b1e85e88ea88644fe19cdf5225b",
+  "verified-run/verification.json": "7736134f95470b26d8a1aa4f4ff7cb3f480b731a3e9b0f593ab8c4c61aa1d285"
+}

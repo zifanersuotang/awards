@@ -1,0 +1,92 @@
+{
+  "jsp": "JSP-000753",
+  "erdos": 908,
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "main_module": "ErdosProblems.Erdos908",
+  "main_theorem": "Erdos908.erdos_908_measurable",
+  "harness_module": "Audit908",
+  "harness_sha256": "17073db89e857c01390f30abe6b4283000a49e30044328501762dbebe29f5dca",
+  "ordered_modules": [
+    {
+      "module": "ErdosProblems.Erdos907",
+      "path": "ErdosProblems/Erdos907.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos907.lean",
+      "sha256": "71929e7e6c0c69111f56dbc57d4cf90cff28e9d1e0142dd687d074652a1192d4",
+      "bytes": 41671,
+      "imports": [
+        "Mathlib.Algebra.Order.Ring.Star",
+        "Mathlib.Algebra.Ring.Periodic",
+        "Mathlib.Analysis.Normed.Order.Lattice",
+        "Mathlib.Analysis.RCLike.Basic",
+        "Mathlib.Data.Int.Star",
+        "Mathlib.Data.Rat.Star",
+        "Mathlib.Algebra.Order.Star.Real",
+        "Mathlib.Tactic.NormNum.BigOperators",
+        "Mathlib.Topology.Baire.LocallyCompactRegular",
+        "Mathlib.Topology.UniformSpace.Uniformizable"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos908",
+      "path": "ErdosProblems/Erdos908.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos908.lean",
+      "sha256": "53ba65216eb5434752f7e4898ce9f10bf56d43089b795d6fe7e9281dcd9d3297",
+      "bytes": 303826,
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Haar.Basic",
+        "Mathlib.MeasureTheory.Measure.Lebesgue.Basic",
+        "Mathlib.MeasureTheory.Measure.Lebesgue.EqHaar",
+        "Mathlib.MeasureTheory.Measure.Lebesgue.Integral",
+        "Mathlib.MeasureTheory.Measure.Prod",
+        "Mathlib.MeasureTheory.Covering.BesicovitchVectorSpace",
+        "Mathlib.Analysis.BoxIntegral.UnitPartition",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan",
+        "Mathlib.Dynamics.Ergodic.AddCircleAdd",
+        "Mathlib.Dynamics.Ergodic.Function",
+        "Mathlib.Dynamics.Ergodic.Action.OfMinimal",
+        "Mathlib.MeasureTheory.Function.LpSpace.ContinuousCompMeasurePreserving",
+        "Mathlib.MeasureTheory.Function.ContinuousMapDense",
+        "Mathlib.MeasureTheory.Function.Floor",
+        "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+        "Mathlib.MeasureTheory.Integral.IntervalIntegral.Periodic",
+        "Mathlib.MeasureTheory.Integral.Lebesgue.Markov",
+        "Mathlib.Topology.Algebra.InfiniteSum.Real",
+        "ErdosProblems.Erdos907",
+        "Mathlib.Tactic"
+      ]
+    }
+  ],
+  "source_bytes": 345497,
+  "source_audit": "audit-728-799/audit.json",
+  "scope": "Every function whose translate differences are AEMeasurable for Lebesgue volume has a pointwise decomposition into AEMeasurable, additive and residual parts. For each fixed increment, the residual difference vanishes almost everywhere.",
+  "scope_cautions": "The exceptional null set may depend on the increment; no common full-measure set for every increment is asserted. Also disproves the continuous-first-summand wording using Heaviside. Both the corrected measurable theorem and the literal continuous formulation have separate audited targets.",
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/f4e7173d89dfe91022a185427d63452c8ffbf6ae/problems/catalog-0701-0800.md#JSP-000753",
+  "preparation_only": false,
+  "compiled": true,
+  "replayed": true,
+  "resource_plan": "Future coordinator must acquire/release shared mutex separately for each source module. Do not wrap whole multi-module build in a second mutex.",
+  "checker_plan": "Replay every locally compiled proof module, selecting Lean Name-prefix roots and comparing the actual verbose replay module set to this exact local closure. Treat imported Mathlib separately as trusted pinned caches.",
+  "audit_targets": [
+    "Erdos908.erdos_908_measurable",
+    "Erdos908.not_erdos_908"
+  ],
+  "informal_authors_as_credited": [
+    "Miklós Laczkovich"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "verification_limit": "Same Lean kernel. Replay of the entire compiled local source closure, checked against actual verbose module names; imported pinned Mathlib caches are trusted, not freshly replayed. No independently implemented checker.",
+  "module": "ErdosProblems.Erdos908",
+  "statement_scope": "Every function whose translate differences are AEMeasurable for Lebesgue volume has a pointwise decomposition into AEMeasurable, additive and residual parts. For each fixed increment, the residual difference vanishes almost everywhere.",
+  "source_path": "src/latest/ErdosProblems/Erdos908.lean",
+  "source_sha256": {
+    "ErdosProblems/Erdos907.lean": "71929e7e6c0c69111f56dbc57d4cf90cff28e9d1e0142dd687d074652a1192d4",
+    "ErdosProblems/Erdos908.lean": "53ba65216eb5434752f7e4898ce9f10bf56d43089b795d6fe7e9281dcd9d3297",
+    "Audit908.lean": "17073db89e857c01390f30abe6b4283000a49e30044328501762dbebe29f5dca"
+  },
+  "main_source_sha256": "53ba65216eb5434752f7e4898ce9f10bf56d43089b795d6fe7e9281dcd9d3297",
+  "original_problem_url": "https://www.erdosproblems.com/908"
+}

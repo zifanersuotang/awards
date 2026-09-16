@@ -1,0 +1,5 @@
+Erdos908.erdos_908_measurable (f : ℝ → ℝ) :
+  Erdos908.HasMeasurablePositiveDifferences f → Erdos908.HasMeasurableDecomposition f
+'Erdos908.erdos_908_measurable' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos908.not_erdos_908 : ¬∀ (f : ℝ → ℝ), Erdos908.HasMeasurablePositiveDifferences f → Erdos908.HasDecomposition f
+'Erdos908.not_erdos_908' depends on axioms: [propext, Classical.choice, Quot.sound]
