@@ -1,0 +1,475 @@
+{
+  "schema_version": 1,
+  "jsp": "JSP-000493",
+  "erdos": 606,
+  "title": "Which total numbers of determined lines are possible for a planar set of a prescribed number of points?",
+  "scope": "For all sufficiently large n, a natural number m is the number of distinct affine lines determined by some n distinct points of the real plane if and only if ClassifiedValue n m holds. This is the explicit Erdos-Salamon union of low bands, a terminal interval, and the two terminal values choose(n,2)-2 and choose(n,2), with all band endpoints and exclusions printed in the audit. Both realization and impossibility directions are included; no classification for every small n or general-position assumption is claimed.",
+  "attribution": "Existing plby formalization: Paul Erdos and Peter Salamon are credited for the mathematical classification; Codex and GPT-5.6 Sol for formalization. Imported Chapter39/Tucker files separately credit xiangyazi24/proof_in_the_book at commit 8ccc127c6c0109fa30ac61541420101376b24482 and retain their upstream compatibility notices. All selected source bytes and notices are preserved. This is verification evidence, not new-proof or first-formalization authorship.",
+  "target_module": "ErdosProblems.Erdos606",
+  "main_theorem": "Erdos606.erdos_606",
+  "theorems": [
+    "Erdos606.erdos_606",
+    "Erdos606.classifiedValue_possible",
+    "Erdos606.large_richest_line_separation",
+    "Erdos606.pair_defect_ne_one_three",
+    "Erdos606.lineCount_le_choose"
+  ],
+  "environment": {
+    "lean_toolchain": "leanprover/lean4:v4.33.0",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "LEAN_NUM_THREADS": "1",
+    "compile_flags": [
+      "-j1",
+      "-M8192"
+    ],
+    "platform": "Windows"
+  },
+  "sources": [
+    {
+      "module": "ErdosProblems.Erdos95.Barycentric",
+      "path": "ErdosProblems/Erdos95/Barycentric.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/Barycentric.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/Barycentric.lean",
+      "sha256": "fb7cb70842468e9eb3420e839db1ff99c8894e3697d9f6a7acd963c8b40a1c89",
+      "bytes": 26124,
+      "imports": [
+        "Mathlib.AlgebraicTopology.SimplicialComplex.Basic",
+        "Mathlib.Analysis.Normed.Module.FiniteDimension"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos95.External.Chapter39",
+      "path": "ErdosProblems/Erdos95/External/Chapter39.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/External/Chapter39.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/External/Chapter39.lean",
+      "sha256": "f6e06a96337b9ed403e896ec65673f6236e8bf51cf8995fcb3b092b88758666f",
+      "bytes": 91293,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos95.External.Tucker",
+      "path": "ErdosProblems/Erdos95/External/Tucker.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/External/Tucker.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/External/Tucker.lean",
+      "sha256": "635478b4cec2171c401e9faeb6094a8c1bb4f71474ce1d4946ac7ce5064ae7a5",
+      "bytes": 263323,
+      "imports": [
+        "ErdosProblems.Erdos95.External.Chapter39",
+        "Mathlib.Data.Fin.Tuple.Sort"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos95.FineTucker",
+      "path": "ErdosProblems/Erdos95/FineTucker.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/FineTucker.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/FineTucker.lean",
+      "sha256": "70e409be6c938df55b2c2c77bbd09dc1fccc831f00e5e7a2cf153cb19c444377",
+      "bytes": 122667,
+      "imports": [
+        "ErdosProblems.Erdos95.Barycentric",
+        "ErdosProblems.Erdos95.External.Tucker"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos95.Algebraic",
+      "path": "ErdosProblems/Erdos95/Algebraic.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/Algebraic.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/Algebraic.lean",
+      "sha256": "c563fff038f8a2ae6f59224ceae593b8555977459e8df08ee5d151fc971ddfbb",
+      "bytes": 11448,
+      "imports": [
+        "Mathlib.Algebra.MvPolynomial.Degrees",
+        "Mathlib.Algebra.Polynomial.BigOperators",
+        "Mathlib.Algebra.Polynomial.Roots",
+        "Mathlib.Algebra.CharZero.Infinite",
+        "Mathlib.Data.Real.Basic",
+        "Mathlib.LinearAlgebra.Dimension.Constructions",
+        "Mathlib.LinearAlgebra.Dimension.StrongRankCondition",
+        "Mathlib.RingTheory.MvPolynomial.Basic"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos95.Partitioning",
+      "path": "ErdosProblems/Erdos95/Partitioning.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/Partitioning.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/Partitioning.lean",
+      "sha256": "3008088616d9e7e806bd709379f597eb2ed8cacbc95fd69d9fa9e0a35435708e",
+      "bytes": 10874,
+      "imports": [
+        "ErdosProblems.Erdos95.Algebraic",
+        "ErdosProblems.Erdos95.External.Tucker"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos95.StoneTukey",
+      "path": "ErdosProblems/Erdos95/StoneTukey.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/StoneTukey.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/StoneTukey.lean",
+      "sha256": "83f850ff5ec18f38c9265c983ed6e823b1dc02ea405b8f32375f84fecad83865",
+      "bytes": 19711,
+      "imports": [
+        "ErdosProblems.Erdos95.FineTucker",
+        "ErdosProblems.Erdos95.Partitioning"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos95.ElekesSharir",
+      "path": "ErdosProblems/Erdos95/ElekesSharir.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/ElekesSharir.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/ElekesSharir.lean",
+      "sha256": "4f02c87ddcb910dcc07e57928f3cc36f06d46c50968976045850898e63e64e2d",
+      "bytes": 9833,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos95.Geometry",
+      "path": "ErdosProblems/Erdos95/Geometry.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/Geometry.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/Geometry.lean",
+      "sha256": "9ba8040b9739caf8a2058df0dd9e78994347b9fb7efa755b6c7a5f3d42ffe621",
+      "bytes": 7637,
+      "imports": [
+        "ErdosProblems.Erdos95.ElekesSharir"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos95.Hilbert",
+      "path": "ErdosProblems/Erdos95/Hilbert.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/Hilbert.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/Hilbert.lean",
+      "sha256": "d5cb5b257a3f07acabae3da4819edc25f712847831f1d4999e59ee7c5d8a2b5b",
+      "bytes": 25625,
+      "imports": [
+        "ErdosProblems.Erdos95.Algebraic",
+        "ErdosProblems.Erdos95.Geometry"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos95.NonClustering",
+      "path": "ErdosProblems/Erdos95/NonClustering.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/NonClustering.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/NonClustering.lean",
+      "sha256": "6b0c04d073076e3c435ca6b5952a1e586ab017125010fa0b7dd156258bc0b038",
+      "bytes": 42212,
+      "imports": [
+        "ErdosProblems.Erdos95.Algebraic",
+        "ErdosProblems.Erdos95.Geometry",
+        "ErdosProblems.Erdos95.Hilbert",
+        "Mathlib.Algebra.MvPolynomial.PDeriv",
+        "Mathlib.Algebra.Polynomial.Derivation",
+        "Mathlib.Algebra.Polynomial.FieldDivision"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos95.SurfaceFactors",
+      "path": "ErdosProblems/Erdos95/SurfaceFactors.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/SurfaceFactors.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/SurfaceFactors.lean",
+      "sha256": "5153028edcc93de0aca2db759f4814b70f7feba28405a6207addf5f4cdb584c5",
+      "bytes": 9424,
+      "imports": [
+        "ErdosProblems.Erdos95.NonClustering"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos95.SignCells",
+      "path": "ErdosProblems/Erdos95/SignCells.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/SignCells.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos95/SignCells.lean",
+      "sha256": "2ab0ddaca91a9e9fcb4d8e6fe4a5e06eda37c7d9b537a2a250804a932e8c8e89",
+      "bytes": 11599,
+      "imports": [
+        "ErdosProblems.Erdos95.Partitioning",
+        "ErdosProblems.Erdos95.SurfaceFactors",
+        "Mathlib.Analysis.Polynomial.Order"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos606.PlanarIncidence",
+      "path": "ErdosProblems/Erdos606/PlanarIncidence.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos606/PlanarIncidence.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos606/PlanarIncidence.lean",
+      "sha256": "20857c9bddee1a55b728ba0a160a78b3a25503e2fddd493471c2fc69320d4108",
+      "bytes": 115212,
+      "imports": [
+        "ErdosProblems.Erdos95.StoneTukey",
+        "ErdosProblems.Erdos95.Algebraic",
+        "ErdosProblems.Erdos95.SignCells",
+        "Mathlib.Algebra.MvPolynomial.Funext",
+        "Mathlib.Analysis.Convex.SpecificFunctions.Pow",
+        "Mathlib.Algebra.Module.Submodule.Union",
+        "Mathlib.Data.List.Sort",
+        "Mathlib.Analysis.SumIntegralComparisons",
+        "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos606",
+      "path": "ErdosProblems/Erdos606.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos606.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos606.lean",
+      "sha256": "edf0a0e515037528df3a5cada72341fcebd958f46b70bb9635f46189135b1da7",
+      "bytes": 132520,
+      "imports": [
+        "ErdosProblems.Erdos606.PlanarIncidence"
+      ]
+    }
+  ],
+  "verification": {
+    "status": "verified_unchanged_source",
+    "source_bytes_unchanged": true,
+    "axioms": {
+      "Erdos606.erdos_606": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos606.classifiedValue_possible": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos606.large_richest_line_separation": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos606.pair_defect_ne_one_three": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos606.lineCount_le_choose": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "checker_selected_modules": [
+      "ErdosProblems.Erdos606",
+      "ErdosProblems.Erdos606.PlanarIncidence"
+    ],
+    "events": [
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos95.Barycentric",
+        "exit_code": 0,
+        "seconds": 11.966,
+        "started": "2026-09-16T12:32:34.488066+00:00",
+        "finished": "2026-09-16T12:32:46.453810+00:00",
+        "log": "logs/00-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos95.External.Chapter39",
+        "exit_code": 0,
+        "seconds": 28.05,
+        "started": "2026-09-16T12:32:46.455843+00:00",
+        "finished": "2026-09-16T12:33:14.505671+00:00",
+        "log": "logs/01-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos95.External.Tucker",
+        "exit_code": 0,
+        "seconds": 41.05,
+        "started": "2026-09-16T12:33:14.507082+00:00",
+        "finished": "2026-09-16T12:33:55.557192+00:00",
+        "log": "logs/02-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos95.FineTucker",
+        "exit_code": 0,
+        "seconds": 27.867,
+        "started": "2026-09-16T12:33:55.558681+00:00",
+        "finished": "2026-09-16T12:34:23.425951+00:00",
+        "log": "logs/03-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos95.Algebraic",
+        "exit_code": 0,
+        "seconds": 8.203,
+        "started": "2026-09-16T12:34:23.427222+00:00",
+        "finished": "2026-09-16T12:34:31.630487+00:00",
+        "log": "logs/04-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos95.Partitioning",
+        "exit_code": 0,
+        "seconds": 20.898,
+        "started": "2026-09-16T12:34:31.633161+00:00",
+        "finished": "2026-09-16T12:34:52.531318+00:00",
+        "log": "logs/05-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos95.StoneTukey",
+        "exit_code": 0,
+        "seconds": 21.525,
+        "started": "2026-09-16T12:34:52.533430+00:00",
+        "finished": "2026-09-16T12:35:14.058246+00:00",
+        "log": "logs/06-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos95.ElekesSharir",
+        "exit_code": 0,
+        "seconds": 26.649,
+        "started": "2026-09-16T12:35:14.059697+00:00",
+        "finished": "2026-09-16T12:35:40.708551+00:00",
+        "log": "logs/07-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos95.Geometry",
+        "exit_code": 0,
+        "seconds": 25.955,
+        "started": "2026-09-16T12:35:40.709794+00:00",
+        "finished": "2026-09-16T12:36:06.664415+00:00",
+        "log": "logs/08-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos95.Hilbert",
+        "exit_code": 0,
+        "seconds": 26.262,
+        "started": "2026-09-16T12:36:06.665831+00:00",
+        "finished": "2026-09-16T12:36:32.928315+00:00",
+        "log": "logs/09-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos95.NonClustering",
+        "exit_code": 0,
+        "seconds": 30.704,
+        "started": "2026-09-16T12:36:32.929578+00:00",
+        "finished": "2026-09-16T12:37:03.633523+00:00",
+        "log": "logs/10-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos95.SurfaceFactors",
+        "exit_code": 0,
+        "seconds": 18.646,
+        "started": "2026-09-16T12:37:03.634823+00:00",
+        "finished": "2026-09-16T12:37:22.280773+00:00",
+        "log": "logs/11-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos95.SignCells",
+        "exit_code": 0,
+        "seconds": 19.455,
+        "started": "2026-09-16T12:37:22.281782+00:00",
+        "finished": "2026-09-16T12:37:41.736708+00:00",
+        "log": "logs/12-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos606.PlanarIncidence",
+        "exit_code": 0,
+        "seconds": 45.378,
+        "started": "2026-09-16T12:37:41.738179+00:00",
+        "finished": "2026-09-16T12:38:27.116193+00:00",
+        "log": "logs/13-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos606",
+        "exit_code": 0,
+        "seconds": 47.111,
+        "started": "2026-09-16T12:38:27.117662+00:00",
+        "finished": "2026-09-16T12:39:14.228884+00:00",
+        "log": "logs/14-compile.log",
+        "log_sha256": "030afedb5da133182f7c58a230ce7ebcefe988aed58250ceaf106761372ec4ac",
+        "original_log_sha256": "030afedb5da133182f7c58a230ce7ebcefe988aed58250ceaf106761372ec4ac",
+        "redactions": []
+      },
+      {
+        "stage": "audit",
+        "module": "Audit606",
+        "exit_code": 0,
+        "seconds": 18.656,
+        "started": "2026-09-16T12:39:14.237537+00:00",
+        "finished": "2026-09-16T12:39:32.893853+00:00",
+        "log": "logs/15-audit.log",
+        "log_sha256": "c23928e37ab67249e8454d310d4e9e9619cc1669c4e66ece4cbbee401adbc1a8",
+        "original_log_sha256": "c23928e37ab67249e8454d310d4e9e9619cc1669c4e66ece4cbbee401adbc1a8",
+        "redactions": []
+      },
+      {
+        "stage": "leanchecker",
+        "module": "ErdosProblems.Erdos606",
+        "exit_code": 0,
+        "seconds": 39.596,
+        "started": "2026-09-16T12:39:32.905285+00:00",
+        "finished": "2026-09-16T12:40:12.501311+00:00",
+        "log": "logs/16-leanchecker.log",
+        "log_sha256": "3323b96e5335b2f53c2399f5ee7d3ddc635705e95bff4d3235a757e6e4fab51c",
+        "original_log_sha256": "3323b96e5335b2f53c2399f5ee7d3ddc635705e95bff4d3235a757e6e4fab51c",
+        "redactions": []
+      }
+    ],
+    "limits": [
+      "The bundled Lean checker reuses the imported environment; Mathlib was not freshly replayed.",
+      "Compilation and replay use Lean's kernel, not independently implemented checkers.",
+      "This is existing-proof evidence intake, not new authorship, acceptance, nomination or an award record."
+    ]
+  },
+  "source_history_notes": [
+    "The selected bytes are unchanged from plby/lean-proofs commit 8822f7ddef30fadbd92e1c6ab4ed897af356af5e, whose source headers advertise Lean/Mathlib 4.33.0.",
+    "The custom closure includes thirteen Erdos95 support modules, including Chapter39/Tucker adaptations credited to xiangyazi24/proof_in_the_book. These are dependencies, not additional problem registrations.",
+    "The target checker selects ErdosProblems.Erdos606 and its PlanarIncidence descendant. The other thirteen custom modules are compiled first and imported; a target-prefix replay does not independently replay those Erdos95 modules or all of Mathlib.",
+    "The result is eventual in the number n of points. Its explicit classification is not claimed as a complete small-n solution."
+  ]
+}

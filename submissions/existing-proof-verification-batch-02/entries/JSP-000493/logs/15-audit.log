@@ -1,0 +1,57 @@
+@[reducible] def Erdos606.Point : Type :=
+Fin 2 → ℝ
+def Erdos606.lineThrough : Erdos606.Point → Erdos606.Point → AffineSubspace.{0, 0, 0} ℝ Erdos606.Point :=
+fun p q => line[ℝ, p, q]
+def Erdos606.pointPairs : Finset.{0} Erdos606.Point → Finset.{0} (Sym2.{0} Erdos606.Point) :=
+fun P => {e ∈ Finset.sym2.{0} P | ¬Sym2.IsDiag.{0} e}
+def Erdos606.determinedLines : Finset.{0} Erdos606.Point → Finset.{0} (AffineSubspace.{0, 0, 0} ℝ Erdos606.Point) :=
+fun P => Finset.image.{0, 0} Erdos606.lineOfPair (Erdos606.pointPairs P)
+def Erdos606.lineCount : Finset.{0} Erdos606.Point → ℕ :=
+fun P => Finset.card.{0} (Erdos606.determinedLines P)
+def Erdos606.PossibleLineCount : ℕ → ℕ → Prop :=
+fun n m => ∃ P, Eq.{1} (Finset.card.{0} P) n ∧ Eq.{1} (Erdos606.lineCount P) m
+def Erdos606.Mmin : ℕ → ℕ → ℕ :=
+fun n k => HAdd.hAdd.{0, 0, 0} (HSub.hSub.{0, 0, 0} (HMul.hMul.{0, 0, 0} k (HSub.hSub.{0, 0, 0} n k)) (k.choose 2)) 1
+def Erdos606.Mmax : ℕ → ℕ → ℕ :=
+fun n k => HAdd.hAdd.{0, 0, 0} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} k (HSub.hSub.{0, 0, 0} n k)) (k.choose 2)) 1
+def Erdos606.transitionIndex : ℕ → ℕ :=
+fun n => (HAdd.hAdd.{0, 0, 0} n 2).sqrt
+def Erdos606.BandValue : ℕ → ℕ → ℕ → Prop :=
+fun n k m =>
+  LE.le.{0} (Erdos606.Mmin n k) m ∧
+    LE.le.{0} m (Erdos606.Mmax n k) ∧
+      Ne.{1} m (HSub.hSub.{0, 0, 0} (Erdos606.Mmax n k) 1) ∧ Ne.{1} m (HSub.hSub.{0, 0, 0} (Erdos606.Mmax n k) 3)
+def Erdos606.continuumBottom : ℕ → ℕ :=
+fun n =>
+  have K := Erdos606.transitionIndex n;
+  ite.{1}
+    (Eq.{1} (HMul.hMul.{0, 0, 0} K K) (HAdd.hAdd.{0, 0, 0} n 2) ∨
+      Eq.{1} (HMul.hMul.{0, 0, 0} K K) (HAdd.hAdd.{0, 0, 0} n 1))
+    (HSub.hSub.{0, 0, 0} (Erdos606.Mmax n (HSub.hSub.{0, 0, 0} K 1)) 2)
+    (ite.{1} (Eq.{1} (HMul.hMul.{0, 0, 0} K K) n ∨ Eq.{1} (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} K K) 1) n)
+      (Erdos606.Mmax n (HSub.hSub.{0, 0, 0} K 1)) (Erdos606.Mmin n K))
+def Erdos606.ClassifiedValue : ℕ → ℕ → Prop :=
+fun n m =>
+  (∃ k, LT.lt.{0} k (Erdos606.transitionIndex n) ∧ Erdos606.BandValue n k m) ∨
+    LE.le.{0} (Erdos606.continuumBottom n) m ∧ LE.le.{0} m (HSub.hSub.{0, 0, 0} (n.choose 2) 4) ∨
+      Eq.{1} m (HSub.hSub.{0, 0, 0} (n.choose 2) 2) ∨ Eq.{1} m (n.choose 2)
+Erdos606.erdos_606 : ∃ n₀,
+  ∀ (n : ℕ), GE.ge.{0} n n₀ → ∀ (m : ℕ), Erdos606.PossibleLineCount n m ↔ Erdos606.ClassifiedValue n m
+'Erdos606.erdos_606' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos606.classifiedValue_possible : ∀ {n m : ℕ},
+  LE.le.{0} 100 n → Erdos606.ClassifiedValue n m → Erdos606.PossibleLineCount n m
+'Erdos606.classifiedValue_possible' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos606.large_richest_line_separation : ∃ n₁,
+  ∀ (P : Finset.{0} Erdos606.Point),
+    LE.le.{0} n₁ (Finset.card.{0} P) →
+      LT.lt.{0} (Finset.card.{0} P)
+          (HMul.hMul.{0, 0, 0} 3 (HSub.hSub.{0, 0, 0} (Finset.card.{0} P) (Erdos606.maxLineSize P))) →
+        LE.le.{0} (Erdos606.continuumBottom (Finset.card.{0} P)) (Erdos606.lineCount P)
+'Erdos606.large_richest_line_separation' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos606.pair_defect_ne_one_three : ∀ (P : Finset.{0} Erdos606.Point),
+  Ne.{1} (HSub.hSub.{0, 0, 0} ((Finset.card.{0} P).choose 2) (Erdos606.lineCount P)) 1 ∧
+    Ne.{1} (HSub.hSub.{0, 0, 0} ((Finset.card.{0} P).choose 2) (Erdos606.lineCount P)) 3
+'Erdos606.pair_defect_ne_one_three' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos606.lineCount_le_choose : ∀ (P : Finset.{0} Erdos606.Point),
+  LE.le.{0} (Erdos606.lineCount P) ((Finset.card.{0} P).choose 2)
+'Erdos606.lineCount_le_choose' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
