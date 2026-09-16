@@ -1,0 +1,305 @@
+{
+  "jsp": "JSP-000359",
+  "erdos": 440,
+  "status": "verified_existing_public_proof",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_files": [
+    {
+      "module": "ErdosProblems.Erdos440.Constant",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos440/Constant.lean",
+      "raw_sha256": "cdac11977e628fcd830e7118cf2e1bc388701dac9f6f11386c6e711bf2143975",
+      "raw_bytes": 8164,
+      "compiled_sha256": "cdac11977e628fcd830e7118cf2e1bc388701dac9f6f11386c6e711bf2143975",
+      "compiled_bytes": 8164
+    },
+    {
+      "module": "ErdosProblems.Erdos440.Liminf",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos440/Liminf.lean",
+      "raw_sha256": "d05c7b3d93aea38822ca93586c9f2d6c620cd67fdd615d9ab195cd344a442ab3",
+      "raw_bytes": 19077,
+      "compiled_sha256": "d05c7b3d93aea38822ca93586c9f2d6c620cd67fdd615d9ab195cd344a442ab3",
+      "compiled_bytes": 19077
+    },
+    {
+      "module": "ErdosProblems.Erdos440.SharpUpper",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos440/SharpUpper.lean",
+      "raw_sha256": "4edd160fc7d2256091d95bd9d26a53c5a08b5faad508e84bbf5c624fe7ee0a1f",
+      "raw_bytes": 19518,
+      "compiled_sha256": "4edd160fc7d2256091d95bd9d26a53c5a08b5faad508e84bbf5c624fe7ee0a1f",
+      "compiled_bytes": 19518
+    },
+    {
+      "module": "ErdosProblems.Erdos440.SharpConstruction",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos440/SharpConstruction.lean",
+      "raw_sha256": "6c355dddb9aeb117eed083a0dbcec4c09701fc5b0b3d1c63b1db6fbeb4744566",
+      "raw_bytes": 47643,
+      "compiled_sha256": "6c355dddb9aeb117eed083a0dbcec4c09701fc5b0b3d1c63b1db6fbeb4744566",
+      "compiled_bytes": 47643
+    },
+    {
+      "module": "ErdosProblems.Erdos440",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos440.lean",
+      "raw_sha256": "515f2bcd6772184f2f2022e86bf4b920ce5906de6f0c6cbb4aefc004445fc352",
+      "raw_bytes": 25884,
+      "compiled_sha256": "515f2bcd6772184f2f2022e86bf4b920ce5906de6f0c6cbb4aefc004445fc352",
+      "compiled_bytes": 25884
+    }
+  ],
+  "compilation": [
+    {
+      "module": "ErdosProblems.Erdos440.Constant",
+      "exit_code": 0,
+      "elapsed_seconds_including_queue": 138.63616550000006,
+      "log": "logs/compile-ErdosProblems.Erdos440.Constant.log",
+      "log_sha256": "578503bbac3bac8d87790dbd5bf7f1ec749619dbe13be0cd35c20c69496796f8",
+      "output": "",
+      "full_log": "Command: [\"[LEAN_BIN]\\\\lean.exe\", \"-R\", \"[PACK]\\\\.local-source\", \"-j\", \"1\", \"-M\", \"8192\", \"-o\", \"[PACK]\\\\build\\\\ErdosProblems\\\\Erdos440\\\\Constant.olean\", \"[PACK]\\\\.local-source\\\\ErdosProblems\\\\Erdos440\\\\Constant.lean\"]\r\nStarted UTC: 2026-09-16T10:21:09.021119+00:00\r\n[lean-queue] waiting tag=batch1-359-compile-ErdosProblems.Erdos440.Constant wrapper_pid=38424\r\n[lean-queue] acquired tag=batch1-359-compile-ErdosProblems.Erdos440.Constant wait_seconds=120.8\r\n[lean-queue] child_pid=65732 tag=batch1-359-compile-ErdosProblems.Erdos440.Constant\r\n[lean-queue] finished tag=batch1-359-compile-ErdosProblems.Erdos440.Constant exit=0\r\nExit code: 0; elapsed including queue: 138.636s\r\n",
+      "log_hash_rule": "SHA256 of UTF-8 bytes of the decoded full_log JSON string, without BOM; preserve all CR and LF characters exactly. This hashes the complete sanitized log, not the shorter output field.",
+      "source_sha256": "cdac11977e628fcd830e7118cf2e1bc388701dac9f6f11386c6e711bf2143975",
+      "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+      "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)"
+    },
+    {
+      "module": "ErdosProblems.Erdos440.Liminf",
+      "exit_code": 0,
+      "elapsed_seconds_including_queue": 141.2278212000001,
+      "log": "logs/compile-ErdosProblems.Erdos440.Liminf.log",
+      "log_sha256": "e974e2683bb049649d3e980c43e0dacec8ccc0a22d46d40cbce494fdb780df61",
+      "output": "",
+      "full_log": "Command: [\"[LEAN_BIN]\\\\lean.exe\", \"-R\", \"[PACK]\\\\.local-source\", \"-j\", \"1\", \"-M\", \"8192\", \"-o\", \"[PACK]\\\\build\\\\ErdosProblems\\\\Erdos440\\\\Liminf.olean\", \"[PACK]\\\\.local-source\\\\ErdosProblems\\\\Erdos440\\\\Liminf.lean\"]\r\nStarted UTC: 2026-09-16T10:28:34.634774+00:00\r\n[lean-queue] waiting tag=batch1-359-compile-ErdosProblems.Erdos440.Liminf wrapper_pid=23348\r\n[lean-queue] acquired tag=batch1-359-compile-ErdosProblems.Erdos440.Liminf wait_seconds=120.1\r\n[lean-queue] child_pid=51644 tag=batch1-359-compile-ErdosProblems.Erdos440.Liminf\r\n[lean-queue] finished tag=batch1-359-compile-ErdosProblems.Erdos440.Liminf exit=0\r\nExit code: 0; elapsed including queue: 141.228s\r\n",
+      "log_hash_rule": "SHA256 of UTF-8 bytes of the decoded full_log JSON string, without BOM; preserve all CR and LF characters exactly. This hashes the complete sanitized log, not the shorter output field.",
+      "source_sha256": "d05c7b3d93aea38822ca93586c9f2d6c620cd67fdd615d9ab195cd344a442ab3",
+      "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+      "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)"
+    },
+    {
+      "module": "ErdosProblems.Erdos440.SharpUpper",
+      "exit_code": 0,
+      "elapsed_seconds_including_queue": 18.25219560000005,
+      "log": "logs/compile-ErdosProblems.Erdos440.SharpUpper.log",
+      "log_sha256": "849d0e19ed06c2fe83e7483e95f3b1ed8416a0e0f059eb50e5cadc6c5cf09e80",
+      "output": "",
+      "full_log": "Command: [\"[LEAN_BIN]\\\\lean.exe\", \"-R\", \"[PACK]\\\\.local-source\", \"-j\", \"1\", \"-M\", \"8192\", \"-o\", \"[PACK]\\\\build\\\\ErdosProblems\\\\Erdos440\\\\SharpUpper.olean\", \"[PACK]\\\\.local-source\\\\ErdosProblems\\\\Erdos440\\\\SharpUpper.lean\"]\r\nStarted UTC: 2026-09-16T10:33:14.313909+00:00\r\n[lean-queue] waiting tag=batch1-359-compile-ErdosProblems.Erdos440.SharpUpper wrapper_pid=50184\r\n[lean-queue] acquired tag=batch1-359-compile-ErdosProblems.Erdos440.SharpUpper wait_seconds=0.0\r\n[lean-queue] child_pid=14180 tag=batch1-359-compile-ErdosProblems.Erdos440.SharpUpper\r\n[lean-queue] finished tag=batch1-359-compile-ErdosProblems.Erdos440.SharpUpper exit=0\r\nExit code: 0; elapsed including queue: 18.252s\r\n",
+      "log_hash_rule": "SHA256 of UTF-8 bytes of the decoded full_log JSON string, without BOM; preserve all CR and LF characters exactly. This hashes the complete sanitized log, not the shorter output field.",
+      "source_sha256": "4edd160fc7d2256091d95bd9d26a53c5a08b5faad508e84bbf5c624fe7ee0a1f",
+      "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+      "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)"
+    },
+    {
+      "module": "ErdosProblems.Erdos440.SharpConstruction",
+      "exit_code": 0,
+      "elapsed_seconds_including_queue": 20.894051800000852,
+      "log": "logs/compile-ErdosProblems.Erdos440.SharpConstruction.log",
+      "log_sha256": "2d3e88cca276e7503164a6ae86e544790efa1f692d198bbcd6d3e652941e41de",
+      "output": "",
+      "full_log": "Command: [\"[LEAN_BIN]\\\\lean.exe\", \"-R\", \"[PACK]\\\\.local-source\", \"-j\", \"1\", \"-M\", \"8192\", \"-o\", \"[PACK]\\\\build\\\\ErdosProblems\\\\Erdos440\\\\SharpConstruction.olean\", \"[PACK]\\\\.local-source\\\\ErdosProblems\\\\Erdos440\\\\SharpConstruction.lean\"]\r\nStarted UTC: 2026-09-16T10:33:49.352403+00:00\r\n[lean-queue] waiting tag=batch1-359-compile-ErdosProblems.Erdos440.SharpConstruction wrapper_pid=49868\r\n[lean-queue] acquired tag=batch1-359-compile-ErdosProblems.Erdos440.SharpConstruction wait_seconds=0.0\r\n[lean-queue] child_pid=19220 tag=batch1-359-compile-ErdosProblems.Erdos440.SharpConstruction\r\n[lean-queue] finished tag=batch1-359-compile-ErdosProblems.Erdos440.SharpConstruction exit=0\r\nExit code: 0; elapsed including queue: 20.894s\r\n",
+      "log_hash_rule": "SHA256 of UTF-8 bytes of the decoded full_log JSON string, without BOM; preserve all CR and LF characters exactly. This hashes the complete sanitized log, not the shorter output field.",
+      "source_sha256": "6c355dddb9aeb117eed083a0dbcec4c09701fc5b0b3d1c63b1db6fbeb4744566",
+      "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+      "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)"
+    },
+    {
+      "module": "ErdosProblems.Erdos440",
+      "exit_code": 0,
+      "elapsed_seconds_including_queue": 16.41290149999986,
+      "log": "logs/compile-ErdosProblems.Erdos440.log",
+      "log_sha256": "8926f1d0087a4350aa68b61c5d1d8e2fc78d0fbccdc6fa406ed66b6a6dcb7ab7",
+      "output": "'Erdos440.erdos_440' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "full_log": "Command: [\"[LEAN_BIN]\\\\lean.exe\", \"-R\", \"[PACK]\\\\.local-source\", \"-j\", \"1\", \"-M\", \"8192\", \"-o\", \"[PACK]\\\\build\\\\ErdosProblems\\\\Erdos440.olean\", \"[PACK]\\\\.local-source\\\\ErdosProblems\\\\Erdos440.lean\"]\r\nStarted UTC: 2026-09-16T10:35:03.427318+00:00\r\n[lean-queue] waiting tag=batch1-359-compile-ErdosProblems.Erdos440 wrapper_pid=60640\r\n[lean-queue] acquired tag=batch1-359-compile-ErdosProblems.Erdos440 wait_seconds=0.0\r\n[lean-queue] child_pid=51608 tag=batch1-359-compile-ErdosProblems.Erdos440\r\n[lean-queue] finished tag=batch1-359-compile-ErdosProblems.Erdos440 exit=0\r\n'Erdos440.erdos_440' depends on axioms: [propext, Classical.choice, Quot.sound]\r\nExit code: 0; elapsed including queue: 16.413s\r\n",
+      "log_hash_rule": "SHA256 of UTF-8 bytes of the decoded full_log JSON string, without BOM; preserve all CR and LF characters exactly. This hashes the complete sanitized log, not the shorter output field.",
+      "source_sha256": "515f2bcd6772184f2f2022e86bf4b920ce5906de6f0c6cbb4aefc004445fc352",
+      "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+      "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)"
+    },
+    {
+      "module": "Audit359",
+      "exit_code": 0,
+      "elapsed_seconds_including_queue": 14.067678299999898,
+      "log": "logs/compile-Audit359.log",
+      "log_sha256": "bb61d6f2f0437a6ca424924a3faa4527c95276c5ddcf5b26ac150f93c2916436",
+      "output": "Erdos440.erdos_440 :\n  (∀ (A : Erdos440.IncreasingSequence), (fun x => ↑(A.count x)) =O[atTop] fun x => √↑x) ∧\n    (∀ (A : Erdos440.IncreasingSequence), limsup A.ratio atTop ≤ Erdos440.sharpConstant) ∧\n      (∃ A, limsup A.ratio atTop = Erdos440.sharpConstant) ∧\n        (∀ (A : Erdos440.IncreasingSequence), liminf A.ratio atTop ≤ 1) ∧ ∃ A, liminf A.ratio atTop = 1\nAudit359.complete_result :\n  (∀ (A : Erdos440.IncreasingSequence), (fun x => ↑(A.count x)) =O[atTop] fun x => √↑x) ∧\n    (∀ (A : Erdos440.IncreasingSequence), limsup A.ratio atTop ≤ Erdos440.sharpConstant) ∧\n      (∃ A, limsup A.ratio atTop = Erdos440.sharpConstant) ∧\n        (∀ (A : Erdos440.IncreasingSequence), liminf A.ratio atTop ≤ 1) ∧ ∃ A, liminf A.ratio atTop = 1\nErdos440.IncreasingSequence.count_eq_ncard (A : Erdos440.IncreasingSequence) (x : ℕ) :\n  A.count x = {i | A.edgeLcm i ≤ x}.ncard\nErdos440Constant.summable_sharpTerm : Summable Erdos440Constant.sharpTerm\nErdos440Constant.sharpConstant_eq_unshifted_tsum :\n  Erdos440Constant.sharpConstant = ∑' (d : ℕ), Erdos440Constant.unshiftedSharpTerm d\nstructure Erdos440.IncreasingSequence : Type\nnumber of parameters: 0\nfields:\n  Erdos440.IncreasingSequence.value : ℕ → ℕ\n  Erdos440.IncreasingSequence.positive : ∀ (i : ℕ), 0 < self.value i\n  Erdos440.IncreasingSequence.strictMono : StrictMono self.value\nconstructor:\n  Erdos440.IncreasingSequence.mk (value : ℕ → ℕ) (positive : ∀ (i : ℕ), 0 < value i) (strictMono : StrictMono value) :\n    Erdos440.IncreasingSequence\ndef Erdos440.IncreasingSequence.edgeLcm : Erdos440.IncreasingSequence → ℕ → ℕ :=\nfun A i => (A.value i).lcm (A.value (i + 1))\ndef Erdos440.IncreasingSequence.goodEdges : Erdos440.IncreasingSequence → ℕ → Finset ℕ :=\nfun A x => {i ∈ Finset.range x | A.edgeLcm i ≤ x}\ndef Erdos440.IncreasingSequence.count : Erdos440.IncreasingSequence → ℕ → ℕ :=\nfun A x => (A.goodEdges x).card\ndef Erdos440.IncreasingSequence.ratio : Erdos440.IncreasingSequence → ℕ → ℝ :=\nfun A x => ↑(A.count x) / √↑x\ndef Erdos440SharpUpper.IncreasingSequence.sharpKernel : ℕ → ℝ :=\nfun j => 1 / (√↑j * (↑j + 1))\ndef Erdos440SharpUpper.IncreasingSequence.sharpConstant : ℝ :=\n∑' (j : ℕ), Erdos440SharpUpper.IncreasingSequence.sharpKernel j\n'Erdos440.erdos_440' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Audit359.complete_result' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "full_log": "Command: [\"[LEAN_BIN]\\\\lean.exe\", \"-R\", \"[PACK]\\\\.local-source\", \"-j\", \"1\", \"-M\", \"8192\", \"-o\", \"[PACK]\\\\build\\\\Audit359.olean\", \"[PACK]\\\\.local-source\\\\Audit359.lean\"]\r\nStarted UTC: 2026-09-16T10:35:19.848517+00:00\r\n[lean-queue] waiting tag=batch1-359-compile-Audit359 wrapper_pid=56112\r\n[lean-queue] acquired tag=batch1-359-compile-Audit359 wait_seconds=0.0\r\n[lean-queue] child_pid=38124 tag=batch1-359-compile-Audit359\r\n[lean-queue] finished tag=batch1-359-compile-Audit359 exit=0\r\nErdos440.erdos_440 :\r\n  (∀ (A : Erdos440.IncreasingSequence), (fun x => ↑(A.count x)) =O[atTop] fun x => √↑x) ∧\r\n    (∀ (A : Erdos440.IncreasingSequence), limsup A.ratio atTop ≤ Erdos440.sharpConstant) ∧\r\n      (∃ A, limsup A.ratio atTop = Erdos440.sharpConstant) ∧\r\n        (∀ (A : Erdos440.IncreasingSequence), liminf A.ratio atTop ≤ 1) ∧ ∃ A, liminf A.ratio atTop = 1\r\nAudit359.complete_result :\r\n  (∀ (A : Erdos440.IncreasingSequence), (fun x => ↑(A.count x)) =O[atTop] fun x => √↑x) ∧\r\n    (∀ (A : Erdos440.IncreasingSequence), limsup A.ratio atTop ≤ Erdos440.sharpConstant) ∧\r\n      (∃ A, limsup A.ratio atTop = Erdos440.sharpConstant) ∧\r\n        (∀ (A : Erdos440.IncreasingSequence), liminf A.ratio atTop ≤ 1) ∧ ∃ A, liminf A.ratio atTop = 1\r\nErdos440.IncreasingSequence.count_eq_ncard (A : Erdos440.IncreasingSequence) (x : ℕ) :\r\n  A.count x = {i | A.edgeLcm i ≤ x}.ncard\r\nErdos440Constant.summable_sharpTerm : Summable Erdos440Constant.sharpTerm\r\nErdos440Constant.sharpConstant_eq_unshifted_tsum :\r\n  Erdos440Constant.sharpConstant = ∑' (d : ℕ), Erdos440Constant.unshiftedSharpTerm d\r\nstructure Erdos440.IncreasingSequence : Type\r\nnumber of parameters: 0\r\nfields:\r\n  Erdos440.IncreasingSequence.value : ℕ → ℕ\r\n  Erdos440.IncreasingSequence.positive : ∀ (i : ℕ), 0 < self.value i\r\n  Erdos440.IncreasingSequence.strictMono : StrictMono self.value\r\nconstructor:\r\n  Erdos440.IncreasingSequence.mk (value : ℕ → ℕ) (positive : ∀ (i : ℕ), 0 < value i) (strictMono : StrictMono value) :\r\n    Erdos440.IncreasingSequence\r\ndef Erdos440.IncreasingSequence.edgeLcm : Erdos440.IncreasingSequence → ℕ → ℕ :=\r\nfun A i => (A.value i).lcm (A.value (i + 1))\r\ndef Erdos440.IncreasingSequence.goodEdges : Erdos440.IncreasingSequence → ℕ → Finset ℕ :=\r\nfun A x => {i ∈ Finset.range x | A.edgeLcm i ≤ x}\r\ndef Erdos440.IncreasingSequence.count : Erdos440.IncreasingSequence → ℕ → ℕ :=\r\nfun A x => (A.goodEdges x).card\r\ndef Erdos440.IncreasingSequence.ratio : Erdos440.IncreasingSequence → ℕ → ℝ :=\r\nfun A x => ↑(A.count x) / √↑x\r\ndef Erdos440SharpUpper.IncreasingSequence.sharpKernel : ℕ → ℝ :=\r\nfun j => 1 / (√↑j * (↑j + 1))\r\ndef Erdos440SharpUpper.IncreasingSequence.sharpConstant : ℝ :=\r\n∑' (j : ℕ), Erdos440SharpUpper.IncreasingSequence.sharpKernel j\r\n'Erdos440.erdos_440' depends on axioms: [propext, Classical.choice, Quot.sound]\r\n'Audit359.complete_result' depends on axioms: [propext, Classical.choice, Quot.sound]\r\nExit code: 0; elapsed including queue: 14.068s\r\n",
+      "log_hash_rule": "SHA256 of UTF-8 bytes of the decoded full_log JSON string, without BOM; preserve all CR and LF characters exactly. This hashes the complete sanitized log, not the shorter output field.",
+      "source_sha256": "39c16198e29ffc3d709d9aa4e4559a83b033bca07bc9d8e27837833de4c5dfa6",
+      "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+      "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)"
+    }
+  ],
+  "checker": {
+    "jsp": "JSP359",
+    "results": [
+      {
+        "module": "ErdosProblems.Erdos440.Constant",
+        "exit_code": 0,
+        "elapsed_seconds_including_queue": 306.96809570000005,
+        "log": "logs/replay-ErdosProblems.Erdos440.Constant.log",
+        "log_sha256": "6fa9c0996c815ff9b685cd70da9839c7ab85270a6ebf07e25403da50c8485669",
+        "output": "replaying ErdosProblems.Erdos440.Constant\n",
+        "full_log": "Command: [\"[LEAN_BIN]\\\\leanchecker.exe\", \"ErdosProblems.Erdos440.Constant\", \"--verbose\"]\r\nStarted UTC: 2026-09-16T10:23:27.659006+00:00\r\n[lean-queue] waiting tag=batch1-359-replay-ErdosProblems.Erdos440.Constant wrapper_pid=63948\r\n[lean-queue] acquired tag=batch1-359-replay-ErdosProblems.Erdos440.Constant wait_seconds=291.5\r\n[lean-queue] child_pid=52876 tag=batch1-359-replay-ErdosProblems.Erdos440.Constant\r\n[lean-queue] finished tag=batch1-359-replay-ErdosProblems.Erdos440.Constant exit=0\r\nreplaying ErdosProblems.Erdos440.Constant\r\nExit code: 0; elapsed including queue: 306.968s\r\n",
+        "log_hash_rule": "SHA256 of UTF-8 bytes of the decoded full_log JSON string, without BOM; preserve all CR and LF characters exactly. This hashes the complete sanitized log, not the shorter output field.",
+        "command": [
+          "leanchecker",
+          "ErdosProblems.Erdos440.Constant",
+          "--verbose"
+        ]
+      },
+      {
+        "module": "ErdosProblems.Erdos440.Liminf",
+        "exit_code": 0,
+        "elapsed_seconds_including_queue": 138.44182269999965,
+        "log": "logs/replay-ErdosProblems.Erdos440.Liminf.log",
+        "log_sha256": "57894db9562e60483246f05e9169b01551e2bf3110cb47cc6ad1bfdd18d4f328",
+        "output": "replaying ErdosProblems.Erdos440.Liminf\n",
+        "full_log": "Command: [\"[LEAN_BIN]\\\\leanchecker.exe\", \"ErdosProblems.Erdos440.Liminf\", \"--verbose\"]\r\nStarted UTC: 2026-09-16T10:30:55.866197+00:00\r\n[lean-queue] waiting tag=batch1-359-replay-ErdosProblems.Erdos440.Liminf wrapper_pid=39652\r\n[lean-queue] acquired tag=batch1-359-replay-ErdosProblems.Erdos440.Liminf wait_seconds=123.4\r\n[lean-queue] child_pid=67832 tag=batch1-359-replay-ErdosProblems.Erdos440.Liminf\r\n[lean-queue] finished tag=batch1-359-replay-ErdosProblems.Erdos440.Liminf exit=0\r\nreplaying ErdosProblems.Erdos440.Liminf\r\nExit code: 0; elapsed including queue: 138.442s\r\n",
+        "log_hash_rule": "SHA256 of UTF-8 bytes of the decoded full_log JSON string, without BOM; preserve all CR and LF characters exactly. This hashes the complete sanitized log, not the shorter output field.",
+        "command": [
+          "leanchecker",
+          "ErdosProblems.Erdos440.Liminf",
+          "--verbose"
+        ]
+      },
+      {
+        "module": "ErdosProblems.Erdos440.SharpUpper",
+        "exit_code": 0,
+        "elapsed_seconds_including_queue": 16.77853899999991,
+        "log": "logs/replay-ErdosProblems.Erdos440.SharpUpper.log",
+        "log_sha256": "b7e2f36e545fad8cb890d4808516f6922cf59cc6a0ec4d462051963b6ad8175d",
+        "output": "replaying ErdosProblems.Erdos440.SharpUpper\n",
+        "full_log": "Command: [\"[LEAN_BIN]\\\\leanchecker.exe\", \"ErdosProblems.Erdos440.SharpUpper\", \"--verbose\"]\r\nStarted UTC: 2026-09-16T10:33:32.568489+00:00\r\n[lean-queue] waiting tag=batch1-359-replay-ErdosProblems.Erdos440.SharpUpper wrapper_pid=38224\r\n[lean-queue] acquired tag=batch1-359-replay-ErdosProblems.Erdos440.SharpUpper wait_seconds=0.0\r\n[lean-queue] child_pid=59828 tag=batch1-359-replay-ErdosProblems.Erdos440.SharpUpper\r\n[lean-queue] finished tag=batch1-359-replay-ErdosProblems.Erdos440.SharpUpper exit=0\r\nreplaying ErdosProblems.Erdos440.SharpUpper\r\nExit code: 0; elapsed including queue: 16.779s\r\n",
+        "log_hash_rule": "SHA256 of UTF-8 bytes of the decoded full_log JSON string, without BOM; preserve all CR and LF characters exactly. This hashes the complete sanitized log, not the shorter output field.",
+        "command": [
+          "leanchecker",
+          "ErdosProblems.Erdos440.SharpUpper",
+          "--verbose"
+        ]
+      },
+      {
+        "module": "ErdosProblems.Erdos440.SharpConstruction",
+        "exit_code": 0,
+        "elapsed_seconds_including_queue": 53.16950199999974,
+        "log": "logs/replay-ErdosProblems.Erdos440.SharpConstruction.log",
+        "log_sha256": "33861deea4ff33325e467ee320542b0d6ab5feae4598b306adfa1c274f5ce7af",
+        "output": "replaying ErdosProblems.Erdos440.SharpConstruction\n",
+        "full_log": "Command: [\"[LEAN_BIN]\\\\leanchecker.exe\", \"ErdosProblems.Erdos440.SharpConstruction\", \"--verbose\"]\r\nStarted UTC: 2026-09-16T10:34:10.251335+00:00\r\n[lean-queue] waiting tag=batch1-359-replay-ErdosProblems.Erdos440.SharpConstruction wrapper_pid=53304\r\n[lean-queue] acquired tag=batch1-359-replay-ErdosProblems.Erdos440.SharpConstruction wait_seconds=39.5\r\n[lean-queue] child_pid=66956 tag=batch1-359-replay-ErdosProblems.Erdos440.SharpConstruction\r\n[lean-queue] finished tag=batch1-359-replay-ErdosProblems.Erdos440.SharpConstruction exit=0\r\nreplaying ErdosProblems.Erdos440.SharpConstruction\r\nExit code: 0; elapsed including queue: 53.170s\r\n",
+        "log_hash_rule": "SHA256 of UTF-8 bytes of the decoded full_log JSON string, without BOM; preserve all CR and LF characters exactly. This hashes the complete sanitized log, not the shorter output field.",
+        "command": [
+          "leanchecker",
+          "ErdosProblems.Erdos440.SharpConstruction",
+          "--verbose"
+        ]
+      },
+      {
+        "module": "Audit359",
+        "exit_code": 0,
+        "elapsed_seconds_including_queue": 13.29746729999988,
+        "log": "logs/replay-Audit359.log",
+        "log_sha256": "5c97b47ad6ff77e086e71d330e5488a1963e7ac2b768c6cd2b8ffd3958ee1964",
+        "output": "replaying Audit359\n",
+        "full_log": "Command: [\"[LEAN_BIN]\\\\leanchecker.exe\", \"Audit359\", \"--verbose\"]\r\nStarted UTC: 2026-09-16T10:35:33.925958+00:00\r\n[lean-queue] waiting tag=batch1-359-replay-Audit359 wrapper_pid=22968\r\n[lean-queue] acquired tag=batch1-359-replay-Audit359 wait_seconds=0.0\r\n[lean-queue] child_pid=68364 tag=batch1-359-replay-Audit359\r\n[lean-queue] finished tag=batch1-359-replay-Audit359 exit=0\r\nreplaying Audit359\r\nExit code: 0; elapsed including queue: 13.297s\r\n",
+        "log_hash_rule": "SHA256 of UTF-8 bytes of the decoded full_log JSON string, without BOM; preserve all CR and LF characters exactly. This hashes the complete sanitized log, not the shorter output field.",
+        "command": [
+          "leanchecker",
+          "Audit359",
+          "--verbose"
+        ]
+      }
+    ],
+    "complete": true,
+    "scope": "Four upstream leaf modules and the independent typed Audit359 module replayed explicitly, one per invocation. ErdosProblems.Erdos440 main source is compiled only; its CLI prefix would also select child modules. Same Lean kernel, imports trusted; no fresh Mathlib replay.",
+    "independent_implementation": false
+  },
+  "main_theorem": "Erdos440.erdos_440",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "attribution": {
+    "mathematical_authors": [
+      "Paul Erdős",
+      "Endre Szemerédi"
+    ],
+    "additional_upper_bound_contributors": [
+      "Terence Tao",
+      "Wouter van Doorn"
+    ],
+    "formal_authors_as_credited_upstream": [
+      "Codex",
+      "GPT-5.6 Sol"
+    ],
+    "repository_owner": "plby",
+    "new_proof_or_formalization_claim": false
+  },
+  "axiom_audit_output": "'Erdos440.erdos_440' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Audit359.complete_result' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "audit_source": "import ErdosProblems.Erdos440\n\n/- Existing public proof audit.  Mathematical and formal authors remain those\ncredited by the pinned upstream source.  This is a typed re-export, not a new\nmathematical result or a claim of new formalization authorship. -/\n\nopen Filter\n\nnamespace Audit359\n\ntheorem complete_result :\n    (∀ A : Erdos440.IncreasingSequence,\n      (fun x : ℕ ↦ (A.count x : ℝ)) =O[atTop] (fun x : ℕ ↦ Real.sqrt x)) ∧\n    (∀ A : Erdos440.IncreasingSequence,\n      atTop.limsup A.ratio ≤ Erdos440.sharpConstant) ∧\n    (∃ A : Erdos440.IncreasingSequence,\n      atTop.limsup A.ratio = Erdos440.sharpConstant) ∧\n    (∀ A : Erdos440.IncreasingSequence, atTop.liminf A.ratio ≤ 1) ∧\n    (∃ A : Erdos440.IncreasingSequence, atTop.liminf A.ratio = 1) :=\n  Erdos440.erdos_440\n\nend Audit359\n\n#check Erdos440.erdos_440\n#check Audit359.complete_result\n#check Erdos440.IncreasingSequence.count_eq_ncard\n#check Erdos440Constant.summable_sharpTerm\n#check Erdos440Constant.sharpConstant_eq_unshifted_tsum\n#print Erdos440.IncreasingSequence\n#print Erdos440.IncreasingSequence.edgeLcm\n#print Erdos440.IncreasingSequence.goodEdges\n#print Erdos440.IncreasingSequence.count\n#print Erdos440.IncreasingSequence.ratio\n#print Erdos440SharpUpper.IncreasingSequence.sharpKernel\n#print Erdos440SharpUpper.IncreasingSequence.sharpConstant\n#print axioms Erdos440.erdos_440\n#print axioms Audit359.complete_result\n",
+  "audit_source_sha256": "39c16198e29ffc3d709d9aa4e4559a83b033bca07bc9d8e27837833de4c5dfa6",
+  "scope_review": {
+    "definition_and_conclusion_review": {
+      "sequences": "All strictly increasing sequences of positive natural numbers.",
+      "count": "Number of all adjacent indices i for which lcm(a_i,a_(i+1)) ≤ x, at natural-number thresholds x. The finite range restriction is proved exact by mem_goodEdges_iff and count_eq_ncard.",
+      "sharp_constant": "c = sum over d ≥ 1 of 1/(sqrt(d)*(d+1)); the formal d=0 term is zero and convergence is proved.",
+      "conclusions": [
+        "Every counting function is O(sqrt(x)).",
+        "Every normalized limsup is at most c.",
+        "One explicitly constructed infinite sequence attains normalized limsup c.",
+        "Every normalized liminf is at most 1.",
+        "The positive integers attain normalized liminf 1."
+      ],
+      "not_claimed": "No formal decimal approximation of c, no multi-term lcm(a_i,...,a_(i+k)) generalization, and no separate real-threshold bridge theorem is claimed."
+    },
+    "verification_design": {
+      "source_compile": "All five unchanged upstream modules and Audit359.",
+      "explicit_replay_targets": [
+        "ErdosProblems.Erdos440.Constant",
+        "ErdosProblems.Erdos440.Liminf",
+        "ErdosProblems.Erdos440.SharpUpper",
+        "ErdosProblems.Erdos440.SharpConstruction",
+        "Audit359"
+      ],
+      "upstream_main": "Source-compile only; passing ErdosProblems.Erdos440 to the CLI selects its children too. Audit359 explicitly restates all five conjuncts and re-exports the exact main theorem.",
+      "mutex": "Each compile or replay has a separate shared-mutex acquisition and releases it before the next operation.",
+      "independent_implementation": false,
+      "fresh_replay": false,
+      "imports_trusted_during_replay": true
+    },
+    "original_target_type": "Five conjuncts explicitly restated in audit_source; the upstream main theorem itself is also printed by #check and #print axioms.",
+    "dependency_roles": {
+      "Constant": "Convergence and shifted/unshifted equality of the exact sharp series.",
+      "Liminf": "Universal liminf at most 1 via reciprocal-LCM sums and finite nested selection.",
+      "SharpUpper": "Universal upper coefficient using gap sums and finite Abel summation.",
+      "SharpConstruction": "One positive strictly increasing infinite witness; consecutive internal edges, cofinal stage heights, and approach to the same sharp constant.",
+      "Erdos440": "Unified count definitions, exact count bridge, square-root bound, full five-part theorem and attainment of liminf 1."
+    },
+    "public_exposition_limit": "The van Doorn exposition establishes an upper bound only; the stronger liminf and attainment claims are supported by the separate checked Lean modules.",
+    "paper_source": {
+      "repository": "https://github.com/Woett/Mathematical-shorts",
+      "commit": "c0cb2b7cf14c073dff0ef78dd97355a6bf74e018",
+      "commit_date": "2026-02-25T13:00:22Z",
+      "files": [
+        {
+          "path": "Sequences with bounded lcm for consecutive elements.pdf",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "a8d6b897c64936f054bab74712185b75f4b4db46",
+          "size": 137610,
+          "url": "https://api.github.com/repos/Woett/Mathematical-shorts/git/blobs/a8d6b897c64936f054bab74712185b75f4b4db46"
+        }
+      ],
+      "pdf_sha256": "b984d54c1091e3055221956f43cf1a8f4a39a3d935053dc27a4d77f9e0e3c741",
+      "scope": "Two-page upper-bound exposition only; not used as evidence for liminf or sharp-attainment formalization."
+    }
+  },
+  "hash_rules": {
+    "source_files": "raw_sha256 and compiled_sha256 hash the exact downloaded source-file bytes. All five compiled source files are byte-identical to the pinned raw LF downloads.",
+    "full_log": "For each compilation/checker result, SHA256(full_log.encode(\"utf-8\")) equals log_sha256. Decoding the JSON string preserves CR/LF; do not normalize line endings or add a BOM.",
+    "output": "Convenience compiler/checker-output excerpt only; it is not the byte string hashed by log_sha256.",
+    "audit_source": "SHA256 of audit_source encoded as UTF-8 with its existing LF line endings and no BOM equals audit_source_sha256."
+  },
+  "scope": "All strictly increasing positive integer sequences, natural thresholds: O(sqrt(x)) count, universal limsup at most the exact convergent series c=sum(d>=1)1/(sqrt(d)*(d+1)) and an attaining sequence, universal liminf at most 1 and an attaining sequence. Exact count of all qualifying adjacent pairs. No multi-term-LCM generalization or decimal approximation claimed."
+}
