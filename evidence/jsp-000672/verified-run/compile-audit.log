@@ -1,0 +1,8 @@
+Erdos815.not_erdos_815 :
+  ¬∀ (k : ℕ),
+      3 ≤ k →
+        ∃ N,
+          ∀ (n : ℕ),
+            N ≤ n →
+              ∀ (G : SimpleGraph (Fin n)), Erdos815.DegreeThreeCritical G → (SimpleGraph.cycleGraph k).IsContained G
+'Erdos815.not_erdos_815' depends on axioms: [propext, Classical.choice, Quot.sound]

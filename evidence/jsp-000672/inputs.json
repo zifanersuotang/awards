@@ -1,0 +1,31 @@
+{
+  "jsp": "JSP-000672",
+  "erdos": 815,
+  "module": "Erdos815",
+  "harness_module": "Audit815",
+  "main_theorem": "Erdos815.not_erdos_815",
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_path": "src/latest/ErdosProblems/Erdos815.lean",
+  "source_sha256": {
+    "Erdos815.lean": "737cf3d2a181695d3b85a93ebeb9e2d4fd71c5184c4a567baa4c39004139c935",
+    "Audit815.lean": "1329c4689de785e92248b1d228adc8f6c5cf45886801d79e5c28efdc9996e9c9"
+  },
+  "preparation_only": false,
+  "statement_scope": "DegreeThreeCritical means exactly 2n−2 edges and every proper induced subgraph minDegree≤2; arbitrarily large examples omit C23, negating ∀k≥3 eventual property. Even-cycle variant remains open, not claimed.",
+  "scope_cautions": [],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0601-0700.md#JSP-000672",
+  "original_problem_url": "https://www.erdosproblems.com/815",
+  "verification_limit": "Successful observed replay is recorded in verified-run/verification.json.",
+  "informal_authors_as_credited": [
+    "Lothar Narins",
+    "Alexey Pokrovskiy",
+    "Tibor Szabó"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "lean_version": "4.33.0"
+}
