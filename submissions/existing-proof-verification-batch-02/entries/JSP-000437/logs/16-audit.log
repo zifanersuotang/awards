@@ -1,0 +1,60 @@
+def Erdos546.GraphRamseyProperty : {v : ℕ} → SimpleGraph.{0} (Fin v) → ℕ → Prop :=
+fun {v} G N =>
+  ∀ (R : SimpleGraph.{0} (Fin N)), SimpleGraph.IsContained.{0, 0} G R ∨ SimpleGraph.IsContained.{0, 0} G (compl.{0} R)
+def Erdos546.graphRamseyNumber : {v : ℕ} → SimpleGraph.{0} (Fin v) → ℕ :=
+fun {v} G => sInf.{0} (Set.ofPred.{0} fun N => Erdos546.GraphRamseyProperty G N)
+@[reducible] def SimpleGraph.IsContained.{u_4, u_5} : {α : Type u_4} →
+  {β : Type u_5} → SimpleGraph.{u_4} α → SimpleGraph.{u_5} β → Prop :=
+fun {α} {β} A B => Nonempty.{max (u_5 + 1) (u_4 + 1)} (SimpleGraph.Copy.{u_4, u_5} A B)
+structure SimpleGraph.Copy.{u_4, u_5} {α : Type u_4} {β : Type u_5} (A : SimpleGraph.{u_4} α)
+  (B : SimpleGraph.{u_5} β) : Type (max u_4 u_5)
+number of parameters: 4
+fields:
+  SimpleGraph.Copy.toHom.{u_4, u_5} : SimpleGraph.Hom.{u_4, u_5} A B
+  SimpleGraph.Copy.injective'.{u_4,
+    u_5} : Function.Injective.{u_4 + 1, u_5 + 1} ⇑(SimpleGraph.Copy.toHom.{u_4, u_5} self)
+constructor:
+  SimpleGraph.Copy.mk.{u_4, u_5} {α : Type u_4} {β : Type u_5} {A : SimpleGraph.{u_4} α} {B : SimpleGraph.{u_5} β}
+    (toHom : SimpleGraph.Hom.{u_4, u_5} A B) (injective' : Function.Injective.{u_4 + 1, u_5 + 1} ⇑toHom) :
+    SimpleGraph.Copy.{u_4, u_5} A B
+def SimpleGraph.IsIsolated.{u} : {V : Type u} → SimpleGraph.{u} V → V → Prop :=
+fun {V} G v => ∀ (w : V), ¬SimpleGraph.Adj.{u} G v w
+def Erdos546.sqrtScale : ℕ → ℕ :=
+fun m => HAdd.hAdd.{0, 0, 0} m.sqrt 1
+Erdos546.erdos_546 : ∃ C,
+  LT.lt.{0} 0 C ∧
+    ∀ (v : ℕ) (G : SimpleGraph.{0} (Fin v)) [inst : DecidableRel.{1, 1} (SimpleGraph.Adj.{0} G)],
+      (∀ (x : Fin v), ¬SimpleGraph.IsIsolated.{0} G x) →
+        LE.le.{0} (↑(Erdos546.graphRamseyNumber G))
+          (Real.rpow 2 (HMul.hMul.{0, 0, 0} C √↑(Finset.card.{0} (SimpleGraph.edgeFinset.{0} G))))
+'Erdos546.erdos_546' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos546.erdos_546_discrete : ∀ {v : ℕ} (G : SimpleGraph.{0} (Fin v))
+  [inst : DecidableRel.{1, 1} (SimpleGraph.Adj.{0} G)],
+  (∀ (x : Fin v), ¬SimpleGraph.IsIsolated.{0} G x) →
+    LE.le.{0} (Erdos546.graphRamseyNumber G)
+      (HPow.hPow.{0, 0, 0} 2
+        (HMul.hMul.{0, 0, 0} 32768 (Erdos546.sqrtScale (Finset.card.{0} (SimpleGraph.edgeFinset.{0} G)))))
+'Erdos546.erdos_546_discrete' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos546.graphRamseyProperty_exists : ∀ {v : ℕ} (G : SimpleGraph.{0} (Fin v)), ∃ N, Erdos546.GraphRamseyProperty G N
+'Erdos546.graphRamseyProperty_exists' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos546.graphRamseyNumber_spec : ∀ {v : ℕ} (G : SimpleGraph.{0} (Fin v)),
+  Erdos546.GraphRamseyProperty G (Erdos546.graphRamseyNumber G)
+'Erdos546.graphRamseyNumber_spec' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos546.graphRamseyNumber_le_of_property : ∀ {v N : ℕ} {G : SimpleGraph.{0} (Fin v)},
+  Erdos546.GraphRamseyProperty G N → LE.le.{0} (Erdos546.graphRamseyNumber G) N
+'Erdos546.graphRamseyNumber_le_of_property' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos546.graphRamseyNumber_eq_zero_of_noIsolated_of_edgeFinset_card_eq_zero : ∀ {v : ℕ} (G : SimpleGraph.{0} (Fin v))
+  [inst : DecidableRel.{1, 1} (SimpleGraph.Adj.{0} G)],
+  (∀ (x : Fin v), ¬SimpleGraph.IsIsolated.{0} G x) →
+    Eq.{1} (Finset.card.{0} (SimpleGraph.edgeFinset.{0} G)) 0 → Eq.{1} (Erdos546.graphRamseyNumber G) 0
+'Erdos546.graphRamseyNumber_eq_zero_of_noIsolated_of_edgeFinset_card_eq_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@Erdos546.noIsolated_card_le_twice_edges : ∀ {v : ℕ} (G : SimpleGraph.{0} (Fin v))
+  [inst : DecidableRel.{1, 1} (SimpleGraph.Adj.{0} G)],
+  (∀ (x : Fin v), ¬SimpleGraph.IsIsolated.{0} G x) →
+    LE.le.{0} v (HMul.hMul.{0, 0, 0} 2 (Finset.card.{0} (SimpleGraph.edgeFinset.{0} G)))
+'Erdos546.noIsolated_card_le_twice_edges' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos546.sqrtScale_cast_le_two_sqrt : ∀ {m : ℕ},
+  LT.lt.{0} 0 m → LE.le.{0} (↑(Erdos546.sqrtScale m)) (HMul.hMul.{0, 0, 0} 2 √↑m)
+'Erdos546.sqrtScale_cast_le_two_sqrt' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
