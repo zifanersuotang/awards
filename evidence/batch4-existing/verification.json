@@ -1,0 +1,1107 @@
+{
+  "date": "2026-09-16",
+  "proof_source": "https://github.com/plby/lean-proofs",
+  "upstream_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "lean_version": "4.33.0",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "note": "Attributed existing-proof reproduction. Source hashes identify the tested checkout bytes, including inherited CRLF; immutable upstream commit and source paths identify original Git blobs. No source authorship, official acceptance, independently implemented checker, or network-isolated certification is asserted. Previously successful unchanged-source dependency checks may be reused across targets.",
+  "entries": [
+    {
+      "jsp": "JSP-000825",
+      "erdos": 992,
+      "targets": [
+        "Erdos992.not_erdos_992"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos992",
+          "path": "ErdosProblems/Erdos992.lean",
+          "sha256": "1cab9a5e4f6fcccd65fc13a5705be0644c366d4082f44ed65dcc3a7b681d8e55"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos992"
+      ],
+      "axioms_output": "'Erdos992.not_erdos_992' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos992",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 17.837,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "1cab9a5e4f6fcccd65fc13a5705be0644c366d4082f44ed65dcc3a7b681d8e55",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos992-compile.log",
+          "log_sha256": "b621820a37cf6e850fbab40a2aeb7113ac59f630d4bc6f4a2ff1580d5fadb03f"
+        },
+        {
+          "module": "ExistingChecks.Erdos992",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 17.188,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "bf444abde8ea09f5f9d7a6f146b929888f5ba09bbc0a5e75b668ec24c5937674",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos992-compile.log",
+          "log_sha256": "b621820a37cf6e850fbab40a2aeb7113ac59f630d4bc6f4a2ff1580d5fadb03f"
+        },
+        {
+          "module": "ErdosProblems.Erdos992",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 26.997,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "1cab9a5e4f6fcccd65fc13a5705be0644c366d4082f44ed65dcc3a7b681d8e55",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos992-replay.log",
+          "log_sha256": "814212f2ea97536afa128a29fed3c922606b2ba73d175150ca567b72c1282bcf"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-000838",
+      "erdos": 1006,
+      "targets": [
+        "Erdos1006.not_erdos_1006"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1006",
+          "path": "ErdosProblems/Erdos1006.lean",
+          "sha256": "c0cde163af8955caafb0733c17257c3cb06512bed1d6d824c15aebe7ee4f5b81"
+        },
+        {
+          "module": "ErdosProblems.Erdos1006.NesetrilRodl",
+          "path": "ErdosProblems/Erdos1006/NesetrilRodl.lean",
+          "sha256": "b3f5f0c865f7c0a04a39b7879b863f0a7c1c938e5997c807c85ffab93afacfa0"
+        },
+        {
+          "module": "ErdosProblems.Erdos1006.Counting",
+          "path": "ErdosProblems/Erdos1006/Counting.lean",
+          "sha256": "5adccf512840ae6f6314c406646857489d26c0c1ebe6d71e1fe511c912d7e183"
+        },
+        {
+          "module": "ErdosProblems.Erdos1006.Core",
+          "path": "ErdosProblems/Erdos1006/Core.lean",
+          "sha256": "67dcbaf122222a9de9f6b6c6b33eef33662edb35454db26c02c0bbb5e1ec2311"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1006.Core",
+        "ErdosProblems.Erdos1006.Counting",
+        "ErdosProblems.Erdos1006.NesetrilRodl",
+        "ErdosProblems.Erdos1006"
+      ],
+      "axioms_output": "'Erdos1006.not_erdos_1006' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "The target constructs a finite simple graph with no triangles or quadrilaterals that admits no acyclic orientation remaining acyclic after every single-edge reversal. The definitions require exactly one directed arc for each undirected edge and no additional arcs; reversal deletes that arc and inserts its opposite. Directed acyclicity forbids every positive-length directed closed walk. A proved finite construction supplies a graph in which every vertex ordering contains a monotone five-cycle, and the orientation argument converts this into the required counterexample. This answers the original universal question negatively, without assuming the ordered-cycle construction as an external mathematical hypothesis.",
+        "caveat": "The source proves the girth-greater-than-four counterexample sufficient for the original question. It does not establish the stronger Nešetřil–Rödl theorem for every prescribed girth. Source-scope review is separate from actual compilation and kernel replay.",
+        "full_original_problem_coverage": true
+      },
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1006.Core",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 5.458,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "67dcbaf122222a9de9f6b6c6b33eef33662edb35454db26c02c0bbb5e1ec2311",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1006-Core-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1006.Counting",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 17.922,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "5adccf512840ae6f6314c406646857489d26c0c1ebe6d71e1fe511c912d7e183",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1006-Counting-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1006.NesetrilRodl",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 27.446,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "b3f5f0c865f7c0a04a39b7879b863f0a7c1c938e5997c807c85ffab93afacfa0",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1006-NesetrilRodl-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1006",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 16.785,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "c0cde163af8955caafb0733c17257c3cb06512bed1d6d824c15aebe7ee4f5b81",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1006-compile.log",
+          "log_sha256": "9cf10d2bfcb4df1f14a43b642bfe6ad7d407fbd660653559aefb9be8b0c1cc3d"
+        },
+        {
+          "module": "ExistingChecks.Erdos1006",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 16.008,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "a1079dfd1ea85b444b5b1a647b89a42ec0d47fad2b2eb246739d6b69e897b320",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1006-compile.log",
+          "log_sha256": "9cf10d2bfcb4df1f14a43b642bfe6ad7d407fbd660653559aefb9be8b0c1cc3d"
+        },
+        {
+          "module": "ErdosProblems.Erdos1006.Core",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 17.096,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "67dcbaf122222a9de9f6b6c6b33eef33662edb35454db26c02c0bbb5e1ec2311",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1006-Core-replay.log",
+          "log_sha256": "49fb922d6066c846ae5ce81665bca0604dc9b7e70029bb76c9b2861b8b993881"
+        },
+        {
+          "module": "ErdosProblems.Erdos1006.Counting",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 24.019,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "5adccf512840ae6f6314c406646857489d26c0c1ebe6d71e1fe511c912d7e183",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1006-Counting-replay.log",
+          "log_sha256": "7a87797b7bceccf0ba8072da47411a7d4b1f7fdf4e116d5b5b45662323287fed"
+        },
+        {
+          "module": "ErdosProblems.Erdos1006.NesetrilRodl",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 23.639,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "b3f5f0c865f7c0a04a39b7879b863f0a7c1c938e5997c807c85ffab93afacfa0",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1006-NesetrilRodl-replay.log",
+          "log_sha256": "28ca073708802a512751446bb45583a11734d6783e2671df56b3c798d3506d04"
+        },
+        {
+          "module": "ErdosProblems.Erdos1006",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 41.265,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "c0cde163af8955caafb0733c17257c3cb06512bed1d6d824c15aebe7ee4f5b81",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1006-replay.log",
+          "log_sha256": "086d274de585ebaadcc0c957b4a482c492812e405e2f1f8e6dcd561e672bb7fa"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-000868",
+      "erdos": 1046,
+      "targets": [
+        "Erdos1046.erdos_1046"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1046",
+          "path": "ErdosProblems/Erdos1046.lean",
+          "sha256": "830814a79451f8372441939b333ebf99f9b37fc3ea784fb288edb901a0b568ce"
+        },
+        {
+          "module": "ErdosProblems.Erdos1046.Erdos1046Jensen",
+          "path": "ErdosProblems/Erdos1046/Erdos1046Jensen.lean",
+          "sha256": "ef826f33809fa8bd2d3b76098f745fa67bfe59336be3db8137514d688c5b2259"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1046.Erdos1046Jensen",
+        "ErdosProblems.Erdos1046"
+      ],
+      "axioms_output": "'Erdos1046.erdos_1046' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1046.Erdos1046Jensen",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 17.793,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "ef826f33809fa8bd2d3b76098f745fa67bfe59336be3db8137514d688c5b2259",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1046-Erdos1046Jensen-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1046",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 16.502,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "830814a79451f8372441939b333ebf99f9b37fc3ea784fb288edb901a0b568ce",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1046-compile.log",
+          "log_sha256": "d01928b6b59331e0fbbd20734c3d5a2bb087cc43e40dc12c0a3c384d75a98284"
+        },
+        {
+          "module": "ExistingChecks.Erdos1046",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 14.911,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "cb7e8687f55545ac8add070bd521e349e37b4f59b84620bb6c616a84fe1304d2",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1046-compile.log",
+          "log_sha256": "d01928b6b59331e0fbbd20734c3d5a2bb087cc43e40dc12c0a3c384d75a98284"
+        },
+        {
+          "module": "ErdosProblems.Erdos1046.Erdos1046Jensen",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 24.328,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "ef826f33809fa8bd2d3b76098f745fa67bfe59336be3db8137514d688c5b2259",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1046-Erdos1046Jensen-replay.log",
+          "log_sha256": "59dc9e8c3fc90a5b9a4cd84afa3f8926a0810d0a64775b27ed2c4b93cc0c46cb"
+        },
+        {
+          "module": "ErdosProblems.Erdos1046",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 27.662,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "830814a79451f8372441939b333ebf99f9b37fc3ea784fb288edb901a0b568ce",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1046-replay.log",
+          "log_sha256": "0c204b7a8acccbf17bc993be672e700103dc3ccd66f4747789008c300b7ce2fd"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-000896",
+      "erdos": 1078,
+      "targets": [
+        "Erdos1078.erdos_1078"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1078",
+          "path": "ErdosProblems/Erdos1078.lean",
+          "sha256": "050ccee9cfcc515fb227e2a97c9956a283e22022309a2d0d35b57e2cae6e0e97"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1078"
+      ],
+      "axioms_output": "'Erdos1078.erdos_1078' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "The target proves Haxell's transversal-clique conclusion for every r >= 2 and n > 0. Vertices are represented by Fin r x Fin n, with adjacency forbidden within each first-coordinate part. Every vertex must satisfy the exact strict bound 2(r-1)((r-1)n-deg(v)) < rn. Under this condition, the graph contains a clique selecting one vertex from each of the r parts. Equivalently, the minimum degree exceeds (r-3/2-1/(2(r-1)))n; the displayed error tends to zero as r increases. This records an existing finite theorem with explicit parameters and covers the primary asymptotic question, without asserting the later sharp ceiling threshold.",
+        "caveat": "Keep the strict integer degree inequality and r >= 2, n > 0. The error term 1/(2(r-1)) tends to zero with r, not with n at fixed r. Do not describe this target as the later Haxell–Szabó sharp ceiling threshold. The explicit Fin r x Fin n model represents equal-sized labelled parts.",
+        "full_original_problem_coverage": true
+      },
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1078",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 10.708,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "050ccee9cfcc515fb227e2a97c9956a283e22022309a2d0d35b57e2cae6e0e97",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1078-compile.log",
+          "log_sha256": "08560285dfaccb479aac24d7df31e811d666b52aede454ff042abb1ae2a28377"
+        },
+        {
+          "module": "ExistingChecks.Erdos1078",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 8.78,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "ffc3a9107589a24a883b358e0a8923b14c4eff524f91fb8275d2b28300af2880",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1078-compile.log",
+          "log_sha256": "08560285dfaccb479aac24d7df31e811d666b52aede454ff042abb1ae2a28377"
+        },
+        {
+          "module": "ErdosProblems.Erdos1078",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 17.709,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "050ccee9cfcc515fb227e2a97c9956a283e22022309a2d0d35b57e2cae6e0e97",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1078-replay.log",
+          "log_sha256": "22bb3a81fa34f1f3e201f70b0ebf42ad3b760223bc2e963e5fc659e521ce5119"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-000897",
+      "erdos": 1079,
+      "targets": [
+        "Erdos1079.erdos_problem_1079"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1079",
+          "path": "ErdosProblems/Erdos1079.lean",
+          "sha256": "4effe96394640a3685c628160076f356deacdcaae12c37c8e04e49dc23fe9b78"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1079"
+      ],
+      "axioms_output": "'Erdos1079.erdos_problem_1079' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1079",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 9.716,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "4effe96394640a3685c628160076f356deacdcaae12c37c8e04e49dc23fe9b78",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1079-compile.log",
+          "log_sha256": "60580670e7b9d9513fc0245661966a79903a953982f662deef71ef87ad3be06f"
+        },
+        {
+          "module": "ExistingChecks.Erdos1079",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 9.193,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "0db91d3498705aaa5f473b54b374939c7358ff97739313b8479bff8204e037e9",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1079-compile.log",
+          "log_sha256": "2795c256bef3f2c6e2a5e41dfe500fff2fb606c8f3b1eab2d73d8e50ab453fda"
+        },
+        {
+          "module": "ErdosProblems.Erdos1079",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 16.917,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "4effe96394640a3685c628160076f356deacdcaae12c37c8e04e49dc23fe9b78",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1079-replay.log",
+          "log_sha256": "968cad481b577f63c95f0fc229bacf20f1afc0b94c07c48ae7ca1d7c35a2459a"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-000906",
+      "erdos": 1089,
+      "targets": [
+        "Erdos1089.erdos_1089"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1089",
+          "path": "ErdosProblems/Erdos1089.lean",
+          "sha256": "a4970ad7557d5b3e156fccb3b0c1aa479bdd6a8a1b48df30cc8600232491f98c"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1089"
+      ],
+      "axioms_output": "'Erdos1089.erdos_1089' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1089",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 10.222,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "a4970ad7557d5b3e156fccb3b0c1aa479bdd6a8a1b48df30cc8600232491f98c",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1089-compile.log",
+          "log_sha256": "cf29d0b1b68ad021d6756ef6e3fb10f8d91a770cb11003ea10378b1ad462917c"
+        },
+        {
+          "module": "ExistingChecks.Erdos1089",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 9.151,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "67fd4da35bd702da6ec7757c4dfa724898ec0fd0839373cad38561980d441923",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1089-compile.log",
+          "log_sha256": "cf29d0b1b68ad021d6756ef6e3fb10f8d91a770cb11003ea10378b1ad462917c"
+        },
+        {
+          "module": "ErdosProblems.Erdos1089",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 23.419,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "a4970ad7557d5b3e156fccb3b0c1aa479bdd6a8a1b48df30cc8600232491f98c",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1089-replay.log",
+          "log_sha256": "e567e9b942b8d76eb66a0ca3be56eded13bf5a72cede38cb97494062ebf05a5b"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-000925",
+      "erdos": 1114,
+      "targets": [
+        "Erdos1114.erdos_1114"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1114",
+          "path": "ErdosProblems/Erdos1114.lean",
+          "sha256": "cdc4cef2e3d13e53aa5cf692af0380e9c6b245f23694b54697c535263e4b1e63"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1114"
+      ],
+      "axioms_output": "'Erdos1114.erdos_1114' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "The target treats every nonzero real polynomial of degree N+1, with N > 0, whose N+1 roots are the arithmetic progression a+d*j for 0 <= j <= N and d > 0. For any derivative roots b_k specified inside the consecutive open root intervals, it proves that consecutive derivative gaps are nondecreasing from the midpoint toward the right endpoint, together with reflection symmetry giving the corresponding left-hand conclusion. The statement uses the actual roots-and-degree hypotheses, deriving the needed scalar factorization internally. Thus the registered result covers arbitrary translation, positive spacing, and nonzero leading coefficient, with the corrected nonvacuous root indexing.",
+        "caveat": "Use the corrected nonvacuous indexing: degree N+1, roots j=0,...,N, and N derivative roots. The page's degree/root indexing is inconsistent as written. The target assumes the derivative-root selector lies in the appropriate open intervals and satisfies derivative zero; it does not separately construct that selector. The gap inequalities are non-strict. This registration is for the corrected intended statement, not the literally inconsistent wording.",
+        "full_original_problem_coverage": true
+      },
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1114",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 21.235,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "cdc4cef2e3d13e53aa5cf692af0380e9c6b245f23694b54697c535263e4b1e63",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1114-compile.log",
+          "log_sha256": "97ad3894d60d5db766fcc50b8a6a5ebe8bafad6c4fb25ba54746389d182d082b"
+        },
+        {
+          "module": "ExistingChecks.Erdos1114",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 16.057,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "df7d61ec0841a7070ec4e3526b795842f46eff2e698674cc54ba71b6789d9c4c",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1114-compile.log",
+          "log_sha256": "97ad3894d60d5db766fcc50b8a6a5ebe8bafad6c4fb25ba54746389d182d082b"
+        },
+        {
+          "module": "ErdosProblems.Erdos1114",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 26.192,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "cdc4cef2e3d13e53aa5cf692af0380e9c6b245f23694b54697c535263e4b1e63",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1114-replay.log",
+          "log_sha256": "5da61980ccde9cf598e40a5e64fb8cd492d2bf203a426db037bd2cb23fd78db7"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-000985",
+      "erdos": 1180,
+      "targets": [
+        "Erdos1180.erdos_1180"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1180",
+          "path": "ErdosProblems/Erdos1180.lean",
+          "sha256": "5fb33465f99178a4cda2dcdd8e74e2656d836ba695dbe5fcfab4eba716149583"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1180"
+      ],
+      "axioms_output": "'Erdos1180.erdos_1180' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1180",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 12.115,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "5fb33465f99178a4cda2dcdd8e74e2656d836ba695dbe5fcfab4eba716149583",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1180-compile.log",
+          "log_sha256": "376859384b7f3214bfebcc07c10dc27f5a1a806dcfcb8d9502ac405f12c23110"
+        },
+        {
+          "module": "ExistingChecks.Erdos1180",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 8.238,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "10cfe047e87eb29f2b55aa71d44e936a5b2fcf133f42aedac068bd6cf500bdc5",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1180-compile.log",
+          "log_sha256": "376859384b7f3214bfebcc07c10dc27f5a1a806dcfcb8d9502ac405f12c23110"
+        },
+        {
+          "module": "ErdosProblems.Erdos1180",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 17.125,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "5fb33465f99178a4cda2dcdd8e74e2656d836ba695dbe5fcfab4eba716149583",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1180-replay.log",
+          "log_sha256": "4e414d56ca01deb774420f9ec44de07f8e5be76527fb19a5bb9e032b71c3f558"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-000990",
+      "erdos": 1185,
+      "targets": [
+        "Erdos1185.not_erdos_1185"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1185",
+          "path": "ErdosProblems/Erdos1185.lean",
+          "sha256": "19cc0a4206dbed8ac6796dafc9a19a60ec8aa25db089a7d4df4fbb5253699c7c"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1185"
+      ],
+      "axioms_output": "'Erdos1185.not_erdos_1185' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1185",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 134.299,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "19cc0a4206dbed8ac6796dafc9a19a60ec8aa25db089a7d4df4fbb5253699c7c",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1185-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ExistingChecks.Erdos1185",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 14.918,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "5482055e2848efde8bcc1e72d12fc4331009095054cc0800244a5b38b8c11587",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1185-compile.log",
+          "log_sha256": "cdc5a5414721a673ea38327b2698111b62c14c0282d217808a9b12e978d81a60"
+        },
+        {
+          "module": "ErdosProblems.Erdos1185",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 20.79,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "19cc0a4206dbed8ac6796dafc9a19a60ec8aa25db089a7d4df4fbb5253699c7c",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1185-replay.log",
+          "log_sha256": "3c9ee5752899789a393fa23b72c1075e6087e770db95a426b80b25e3809a16be"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-001000",
+      "erdos": 1195,
+      "targets": [
+        "Erdos1195.erdos_1195"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1195",
+          "path": "ErdosProblems/Erdos1195.lean",
+          "sha256": "82e6eff357e65dc3a04aa2853007d759c3c108e117c37a29c4a91c0b0453fa70"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1195"
+      ],
+      "axioms_output": "'Erdos1195.erdos_1195' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1195",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 11.163,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "82e6eff357e65dc3a04aa2853007d759c3c108e117c37a29c4a91c0b0453fa70",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1195-compile.log",
+          "log_sha256": "51da79a9911ff8f7cd579e1a836e247cc40610c5db8c45945c2e4af34a2b9d70"
+        },
+        {
+          "module": "ExistingChecks.Erdos1195",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 7.992,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "96ba02ee4aa9ff202e14ba5f9a7d20f66b883ee95bb7fda26c96f936f9f39fff",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1195-compile.log",
+          "log_sha256": "51da79a9911ff8f7cd579e1a836e247cc40610c5db8c45945c2e4af34a2b9d70"
+        },
+        {
+          "module": "ErdosProblems.Erdos1195",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 21.626,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "82e6eff357e65dc3a04aa2853007d759c3c108e117c37a29c4a91c0b0453fa70",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1195-replay.log",
+          "log_sha256": "67315b76ebb6a05b1853d66eb5bf7fd8c6c9a929214ce8059c6af144028eac02"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-001003",
+      "erdos": 1198,
+      "targets": [
+        "Erdos1198.not_erdos_1198"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1198",
+          "path": "ErdosProblems/Erdos1198.lean",
+          "sha256": "9221687ec040be888e301ecedbf1ffef190f0b3eb924faf66ecfce2fd7a77558"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1198"
+      ],
+      "axioms_output": "'Erdos1198.not_erdos_1198' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1198",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 18.617,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "9221687ec040be888e301ecedbf1ffef190f0b3eb924faf66ecfce2fd7a77558",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1198-compile.log",
+          "log_sha256": "7eff9b19ea813c09158536302141b6b00ecdcc5a24a7d92c49458759279e1827"
+        },
+        {
+          "module": "ExistingChecks.Erdos1198",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 15.85,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "8a263903313e398f2a19ce72d037c47943391519aca0e9c37ea6d5231f700dd7",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1198-compile.log",
+          "log_sha256": "7eff9b19ea813c09158536302141b6b00ecdcc5a24a7d92c49458759279e1827"
+        },
+        {
+          "module": "ErdosProblems.Erdos1198",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 27.492,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "9221687ec040be888e301ecedbf1ffef190f0b3eb924faf66ecfce2fd7a77558",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1198-replay.log",
+          "log_sha256": "03b60ceaf81703e34b7dea55abf8002c088cc17f4df666473019b348e03ed872"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-001010",
+      "erdos": 1205,
+      "targets": [
+        "Erdos1205.erdos_1205"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1205",
+          "path": "ErdosProblems/Erdos1205.lean",
+          "sha256": "46a24f19b91f3e48cfd4f5e8ee98814352f300531535156e869fdabd82259fdd"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1205"
+      ],
+      "axioms_output": "'Erdos1205.erdos_1205' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1205",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 10.468,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "46a24f19b91f3e48cfd4f5e8ee98814352f300531535156e869fdabd82259fdd",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1205-compile.log",
+          "log_sha256": "f504fff742d4ad4a11adb9ddcd38c7d356e5387af55f7e4a5d9ad8d3fc0ee38b"
+        },
+        {
+          "module": "ExistingChecks.Erdos1205",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 7.826,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "47f2a7f14b984fe457e765bdf6d7300b9329c2c728f148bbf4064eb089b1bb5e",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1205-compile.log",
+          "log_sha256": "f504fff742d4ad4a11adb9ddcd38c7d356e5387af55f7e4a5d9ad8d3fc0ee38b"
+        },
+        {
+          "module": "ErdosProblems.Erdos1205",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 17.643,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "46a24f19b91f3e48cfd4f5e8ee98814352f300531535156e869fdabd82259fdd",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1205-replay.log",
+          "log_sha256": "b4be95cba2cc7fe4ed3a5fa5882edef1ea85e0e3aebe881a32ef459f87970eb9"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-001018",
+      "erdos": 1213,
+      "targets": [
+        "Erdos1213.erdos_1213"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1213",
+          "path": "ErdosProblems/Erdos1213.lean",
+          "sha256": "1bff3a147e0693a5d14b757a6c9c31d45f0919104faf17d7c65286a3e756e509"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1213"
+      ],
+      "axioms_output": "'Erdos1213.erdos_1213' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1213",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 6.546,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "1bff3a147e0693a5d14b757a6c9c31d45f0919104faf17d7c65286a3e756e509",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1213-compile.log",
+          "log_sha256": "22f47ebf91eef8171e4dd6f7c05229d0abd944381efc8b82b8b91ce5a8ea7b2a"
+        },
+        {
+          "module": "ExistingChecks.Erdos1213",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 5.739,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "a7392b5c226fdf9e9959c7b66876a0d887c8519eaffc3c7b507014f2d7341bca",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1213-compile.log",
+          "log_sha256": "2c822083263467773ba6830d6027b8fbcbb3b58a1192d4e2ef33d1fa8387f722"
+        },
+        {
+          "module": "ErdosProblems.Erdos1213",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 16.134,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "1bff3a147e0693a5d14b757a6c9c31d45f0919104faf17d7c65286a3e756e509",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1213-replay.log",
+          "log_sha256": "806ded16d50da15fe278769c40ac3799fcf01aa65aded68c3a829471e3febd1d"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-001020",
+      "erdos": 1215,
+      "targets": [
+        "Erdos1215.not_erdos_1215"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos1215",
+          "path": "ErdosProblems/Erdos1215.lean",
+          "sha256": "4ceae8d339dd6840b7c223223dc8a6c4a514ce84ea599a2b7b7725debf70e9af"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215.Topology",
+          "path": "ErdosProblems/Erdos1215/Topology.lean",
+          "sha256": "5654d9eb5fa5fae4405f73e9f66a2e519bde383d51f95e4f21c46bb2622ebe63"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215.Geometry",
+          "path": "ErdosProblems/Erdos1215/Geometry.lean",
+          "sha256": "5987ba61414812b73065dba09c98624e9929d26d33e3690cffdb8363fbed769c"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215.Separator",
+          "path": "ErdosProblems/Erdos1215/Separator.lean",
+          "sha256": "df946582cfab083c4e8a1b5d7e72d53a08e0a60ab14561084b8828687b7bd3d3"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215.Reciprocal",
+          "path": "ErdosProblems/Erdos1215/Reciprocal.lean",
+          "sha256": "282c2e5192698d52bcd86a44495e3872bb15789f000b2b1680b70a9df6ad13f4"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215.Barrier",
+          "path": "ErdosProblems/Erdos1215/Barrier.lean",
+          "sha256": "7c47b5dd20e19d05ddec3d2b19eba8574dbb792147181c02aa9a8bae1f3dca12"
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos1215.Barrier",
+        "ErdosProblems.Erdos1215.Geometry",
+        "ErdosProblems.Erdos1215.Reciprocal",
+        "ErdosProblems.Erdos1215.Separator",
+        "ErdosProblems.Erdos1215.Topology",
+        "ErdosProblems.Erdos1215"
+      ],
+      "axioms_output": "'Erdos1215.not_erdos_1215' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos1215.Barrier",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 8.011,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "7c47b5dd20e19d05ddec3d2b19eba8574dbb792147181c02aa9a8bae1f3dca12",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1215-Barrier-compile.log",
+          "log_sha256": "bb4dde0935e06e399be5e6cffbfae48e4ea3ecfcf38b7f268ce4fdb789fc5eed"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215.Geometry",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 7.5,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "5987ba61414812b73065dba09c98624e9929d26d33e3690cffdb8363fbed769c",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1215-Geometry-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215.Reciprocal",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 8.66,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "282c2e5192698d52bcd86a44495e3872bb15789f000b2b1680b70a9df6ad13f4",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1215-Reciprocal-compile.log",
+          "log_sha256": "02bcffba1928990d3fa6058aa17530f145a337f4db6834f362727dfc0eb88d6a"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215.Separator",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 10.274,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "df946582cfab083c4e8a1b5d7e72d53a08e0a60ab14561084b8828687b7bd3d3",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1215-Separator-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215.Topology",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 7.776,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "5654d9eb5fa5fae4405f73e9f66a2e519bde383d51f95e4f21c46bb2622ebe63",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1215-Topology-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 8.664,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "4ceae8d339dd6840b7c223223dc8a6c4a514ce84ea599a2b7b7725debf70e9af",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos1215-compile.log",
+          "log_sha256": "e46aba6b24552f0a6f75070e229d88b8ad1be419f6b60594bf21de7184bb2580"
+        },
+        {
+          "module": "ExistingChecks.Erdos1215",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 7.924,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "a4a44da02239818d55ac7c35d3e5b23e26185d4b13697c45c959bbd133cd39d5",
+          "tool": "lean.exe",
+          "log": "logs/ExistingChecks-Erdos1215-compile.log",
+          "log_sha256": "e46aba6b24552f0a6f75070e229d88b8ad1be419f6b60594bf21de7184bb2580"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215.Barrier",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 15.635,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "7c47b5dd20e19d05ddec3d2b19eba8574dbb792147181c02aa9a8bae1f3dca12",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1215-Barrier-replay.log",
+          "log_sha256": "65e7ad93244eea0ec3c7a053a680289cb8faa459b38b30e74b6cf34b7ae8d719"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215.Geometry",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 15.427,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "5987ba61414812b73065dba09c98624e9929d26d33e3690cffdb8363fbed769c",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1215-Geometry-replay.log",
+          "log_sha256": "2fe7c1decb6bd349a02b4c804de07aa4645fba0f0d8cf601178404e7d7cbdf1e"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215.Reciprocal",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 16.706,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "282c2e5192698d52bcd86a44495e3872bb15789f000b2b1680b70a9df6ad13f4",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1215-Reciprocal-replay.log",
+          "log_sha256": "3484682f05db23689d88f2923646419e383be4ecf30981ba537d74278d95c1c6"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215.Separator",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 17.659,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "df946582cfab083c4e8a1b5d7e72d53a08e0a60ab14561084b8828687b7bd3d3",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1215-Separator-replay.log",
+          "log_sha256": "6481ed692032bfbc0a4ca1b5e8cb03e5cfc19d589b856cfe6978ce27f3fc7a6f"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215.Topology",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 16.613,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "5654d9eb5fa5fae4405f73e9f66a2e519bde383d51f95e4f21c46bb2622ebe63",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1215-Topology-replay.log",
+          "log_sha256": "dcedb2792d0c5eda4f5244608aba96cccb0eaf075327b4044f466c1a7895aa9b"
+        },
+        {
+          "module": "ErdosProblems.Erdos1215",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 27.119,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "4ceae8d339dd6840b7c223223dc8a6c4a514ce84ea599a2b7b7725debf70e9af",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos1215-replay.log",
+          "log_sha256": "2eb67cff03c4fb4923f106c374c0fd5c01826e1d244d1049d711fe0f5748278d"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+'Erdos1006.not_erdos_1006' depends on axioms: [propext, Classical.choice, Quot.sound]
