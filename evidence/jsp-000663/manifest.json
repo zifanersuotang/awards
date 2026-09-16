@@ -1,0 +1,13 @@
+{
+  "Audit806.lean": "fdf40303677642b93e4188b12a834f306be1ab3fc5fb8aadc0c219d11a051040",
+  "compile-audit.log": "2722b1f8fb70ae3bf783ef5d6c2f3f63fb5dd19eb1d6d31ffce2aa631f509bdd",
+  "compile-source.log": "51a226d9cd9e98a231364c15c29850840a7ebacc087bf6b4cc07878fe2f4d35a",
+  "Erdos806.lean": "beebec5cbb481dbdeb66adcdc5db9323b080bbe783b01b4b2df13ff9b9743abd",
+  "leanchecker.log": "147bd4385fcb475122bb048acf844ea3fca065ccc9aff52d640a3c083462a874",
+  "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "README.md": "c8889974169a404f2cfa4d676f1a4de8a46215138417d36b533c8ee51b5f6b32",
+  "reproduce.py": "1b2ab66d20ec955affb1777b79868b1694ec4eebaf25f47e5ccea03383cfe604",
+  "statement-review.md": "fa8eff822af6ed9ea89ad463be62d595aebfda1c4f730098eac1b85c37c977e1",
+  "verification.json": "6e7bff9f9e98ba9459b696cd709590a4c9adc9b91b828254c2e7b3036f9ee4df",
+  "version.log": "b8d335ab8351a408bac4208701a6e820c84b47cae026393a5e88ffbd40c5447e"
+}

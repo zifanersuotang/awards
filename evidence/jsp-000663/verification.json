@@ -1,0 +1,85 @@
+{
+  "jsp": "JSP-000663",
+  "erdos": 806,
+  "source_repo": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_path": "src/latest/ErdosProblems/Erdos806.lean",
+  "source_sha256": "beebec5cbb481dbdeb66adcdc5db9323b080bbe783b01b4b2df13ff9b9743abd",
+  "source_unchanged": true,
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "stage": "all",
+  "started_utc": "2026-09-16T09:55:37.827263+00:00",
+  "missing_optional_package_build_paths": [
+    "Cli/.lake/build/lib/lean"
+  ],
+  "commands": [
+    {
+      "name": "version",
+      "command": [
+        "lean.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.073,
+      "log": "version.log",
+      "log_sha256": "b8d335ab8351a408bac4208701a6e820c84b47cae026393a5e88ffbd40c5447e"
+    },
+    {
+      "name": "compile-source",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M4096",
+        "-o",
+        "Erdos806.olean",
+        "Erdos806.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 10.442,
+      "log": "compile-source.log",
+      "log_sha256": "51a226d9cd9e98a231364c15c29850840a7ebacc087bf6b4cc07878fe2f4d35a"
+    },
+    {
+      "name": "compile-audit",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M4096",
+        "-o",
+        "Audit806.olean",
+        "Audit806.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.604,
+      "log": "compile-audit.log",
+      "log_sha256": "2722b1f8fb70ae3bf783ef5d6c2f3f63fb5dd19eb1d6d31ffce2aa631f509bdd"
+    },
+    {
+      "name": "leanchecker",
+      "command": [
+        "leanchecker.exe",
+        "--verbose",
+        "Erdos806"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.654,
+      "log": "leanchecker.log",
+      "log_sha256": "147bd4385fcb475122bb048acf844ea3fca065ccc9aff52d640a3c083462a874"
+    }
+  ],
+  "success": true,
+  "checker_scope": "Separate bundled leanchecker uses the same Lean kernel; target-module declarations only, with pinned imported Mathlib environment. Not an independently implemented checker or fresh whole-dependency replay.",
+  "finished_utc": "2026-09-16T09:56:02.627683+00:00",
+  "artifacts": [
+    {
+      "path": "Audit806.olean",
+      "sha256": "5043e9afb5cb29651347168246a49133c2082b7dc5491b07b5896233dea86cc6"
+    },
+    {
+      "path": "Erdos806.olean",
+      "sha256": "a08a2c353a0b24a563d8939af454c886e054bfca7da3565584c83ec7b57479e5"
+    }
+  ],
+  "redaction": "Only machine-specific path fields removed; source, log, exit-code, timing, and hash evidence unchanged.",
+  "portable_wrapper_verification": "Syntax checked only; recorded proof commands themselves ran successfully."
+}

@@ -1,0 +1,13 @@
+Erdos806.erdos_806 (ε : ℝ) :
+  0 < ε →
+    ∀ᶠ (n : ℕ) in Filter.atTop,
+      ∀ A ⊆ Finset.Icc 1 n, ↑A.card ≤ √↑n → ∃ B, Finset.map Nat.castEmbedding A ⊆ B + B ∧ ↑B.card ≤ ε * √↑n
+Erdos806.finite_cover (n q k : ℕ) (hq : 1 < q) (hk : 0 < k) (A : Finset ℕ) (hA : A ⊆ Finset.Icc 1 n) :
+  ∃ B, Finset.map Nat.castEmbedding A ⊆ B + B ∧ B.card ≤ k * q ^ (k - 1) + 2 * (A.card / k + (n / q ^ k + 1))
+'Erdos806.erdos_806' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos806.finite_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos806.finite_cover_coarse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos806.coveringBasis_covers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos806.coveringBasis_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos806.universal_chunk_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos806.rootFloor_sqrt_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
