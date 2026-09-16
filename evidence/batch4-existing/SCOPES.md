@@ -26,6 +26,18 @@ Exact target conjunction: `Erdos988.erdos_988`.
 
 All 1 local source modules compiled and replayed; the independent importing-file axiom report covers every listed target. This uses the same Lean kernel and is not an independent verifier implementation.
 
+## JSP-000824 — Erdős 991
+
+[Pinned main source](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos991.lean)
+
+The target applies to every sequence of n-point subsets of the unit two-sphere that maximize the product of pairwise Euclidean chordal distances among all subsets of the same size. It proves that their spherical-cap discrepancy is little-o of n. The source uses genuine distinct-point finite sets and the actual distance product, and it supplies the normalized surface-area identity in the final theorem rather than assuming that identity. The conclusion is uniform over spherical caps for each selected maximizing configuration. Thus the maximizer hypotheses match those in the original question, and no particular choice or uniqueness of maximizers is required.
+
+This is the qualitative o(n) result. Do not claim the stronger n^(3/4) or n^(2/3) rates mentioned on the webpage. The webpage says the historical attribution of the qualitative statement is uncertain, so preserve the source’s contributor credits without asserting priority for that result.
+
+Exact target conjunction: `Erdos991.erdos_991`.
+
+All 8 local source modules compiled and replayed; the independent importing-file axiom report covers every listed target. This uses the same Lean kernel and is not an independent verifier implementation.
+
 ## JSP-000825 — Erdős 992
 
 [Pinned main source](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos992.lean)

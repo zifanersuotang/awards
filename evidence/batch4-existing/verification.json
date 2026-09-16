@@ -67,6 +67,7 @@
           "runtime_environment": {
             "LEAN_NUM_THREADS": "1"
           },
+          "source_sha256_before": "d332a4882658bc8ab5bbb3906a9348f8da55956e7bfddc0432a93e04aee7fccf",
           "log": "logs/ErdosProblems-Erdos977-replay.log",
           "log_sha256": "04bf70e608fa411c6691350646d31efdff4dbd7b698ed3ac60d722ad1d6b24d7"
         }
@@ -132,6 +133,1128 @@
           "tool": "leanchecker.exe",
           "log": "logs/ErdosProblems-Erdos988-replay.log",
           "log_sha256": "ffdd3c17bf5b4e9f8d34869ffd2d1da8505db745e7c39e0d4397578067e84bf5"
+        }
+      ]
+    },
+    {
+      "jsp": "JSP-000824",
+      "erdos": 991,
+      "targets": [
+        "Erdos991.erdos_991"
+      ],
+      "pinned_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+      "sources": [
+        {
+          "module": "ErdosProblems.Erdos991",
+          "path": "ErdosProblems/Erdos991.lean",
+          "sha256": "2456e3ad2c0c3973e6dd01af0df55556bcec37b76c6b287cc8795ede0c330920",
+          "source_kind": "plby",
+          "source_root": "plby/src/latest",
+          "source_path": "plby/src/latest/ErdosProblems/Erdos991.lean",
+          "provenance": {
+            "repository": "https://github.com/plby/lean-proofs",
+            "commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+            "repository_path": "src/latest/ErdosProblems/Erdos991.lean"
+          }
+        },
+        {
+          "module": "ErdosProblems.Erdos991.LogSeriesBound",
+          "path": "ErdosProblems/Erdos991/LogSeriesBound.lean",
+          "sha256": "1d179f6a5f5a4d34ce958adb0a2307f232acbe2cffb4a15c549a71cad3b500a6",
+          "source_kind": "plby",
+          "source_root": "plby/src/latest",
+          "source_path": "plby/src/latest/ErdosProblems/Erdos991/LogSeriesBound.lean",
+          "provenance": {
+            "repository": "https://github.com/plby/lean-proofs",
+            "commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+            "repository_path": "src/latest/ErdosProblems/Erdos991/LogSeriesBound.lean"
+          }
+        },
+        {
+          "module": "ErdosProblems.Erdos991.Fekete",
+          "path": "ErdosProblems/Erdos991/Fekete.lean",
+          "sha256": "35fcf983cb7b04a2a1329818d57f8de02db9c92288319cae22d65d65cea9f786",
+          "source_kind": "plby",
+          "source_root": "plby/src/latest",
+          "source_path": "plby/src/latest/ErdosProblems/Erdos991/Fekete.lean",
+          "provenance": {
+            "repository": "https://github.com/plby/lean-proofs",
+            "commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+            "repository_path": "src/latest/ErdosProblems/Erdos991/Fekete.lean"
+          }
+        },
+        {
+          "module": "ErdosProblems.Erdos991.EnergyFromLog",
+          "path": "ErdosProblems/Erdos991/EnergyFromLog.lean",
+          "sha256": "c104d7b55f056f69c6bd73d1861c3acf1780dd9e6213104494340eaac6d2e59c",
+          "source_kind": "plby",
+          "source_root": "plby/src/latest",
+          "source_path": "plby/src/latest/ErdosProblems/Erdos991/EnergyFromLog.lean",
+          "provenance": {
+            "repository": "https://github.com/plby/lean-proofs",
+            "commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+            "repository_path": "src/latest/ErdosProblems/Erdos991/EnergyFromLog.lean"
+          }
+        },
+        {
+          "module": "ErdosProblems.Erdos988",
+          "path": "ErdosProblems/Erdos988.lean",
+          "sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96",
+          "source_kind": "plby",
+          "source_root": "plby/src/latest",
+          "source_path": "plby/src/latest/ErdosProblems/Erdos988.lean",
+          "provenance": {
+            "repository": "https://github.com/plby/lean-proofs",
+            "commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+            "repository_path": "src/latest/ErdosProblems/Erdos988.lean"
+          }
+        },
+        {
+          "module": "ErdosProblems.Erdos991.LogPotential",
+          "path": "ErdosProblems/Erdos991/LogPotential.lean",
+          "sha256": "b33064ef39d85c226f974efe9a52b7d324a4a8e41995ca3be39c9a0028965894",
+          "source_kind": "plby",
+          "source_root": "plby/src/latest",
+          "source_path": "plby/src/latest/ErdosProblems/Erdos991/LogPotential.lean",
+          "provenance": {
+            "repository": "https://github.com/plby/lean-proofs",
+            "commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+            "repository_path": "src/latest/ErdosProblems/Erdos991/LogPotential.lean"
+          }
+        },
+        {
+          "module": "ErdosProblems.Erdos991.CapSupEnergy",
+          "path": "ErdosProblems/Erdos991/CapSupEnergy.lean",
+          "sha256": "3f98854a554bc2818b26dcd798df033a25c43468ca01689b5bf8602a2c7b6f3c",
+          "source_kind": "plby",
+          "source_root": "plby/src/latest",
+          "source_path": "plby/src/latest/ErdosProblems/Erdos991/CapSupEnergy.lean",
+          "provenance": {
+            "repository": "https://github.com/plby/lean-proofs",
+            "commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+            "repository_path": "src/latest/ErdosProblems/Erdos991/CapSupEnergy.lean"
+          }
+        },
+        {
+          "module": "ErdosProblems.Erdos991.CapArea",
+          "path": "ErdosProblems/Erdos991/CapArea.lean",
+          "sha256": "e6e918eb8fca4e52ff3f4e0c8fd71fb10a5dcf44ebe351c84481873a4a1a3083",
+          "source_kind": "plby",
+          "source_root": "plby/src/latest",
+          "source_path": "plby/src/latest/ErdosProblems/Erdos991/CapArea.lean",
+          "provenance": {
+            "repository": "https://github.com/plby/lean-proofs",
+            "commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+            "repository_path": "src/latest/ErdosProblems/Erdos991/CapArea.lean"
+          }
+        }
+      ],
+      "compile_order": [
+        "ErdosProblems.Erdos988",
+        "ErdosProblems.Erdos991.CapArea",
+        "ErdosProblems.Erdos991.CapSupEnergy",
+        "ErdosProblems.Erdos991.EnergyFromLog",
+        "ErdosProblems.Erdos991.Fekete",
+        "ErdosProblems.Erdos991.LogPotential",
+        "ErdosProblems.Erdos991.LogSeriesBound",
+        "ErdosProblems.Erdos991"
+      ],
+      "axioms_output": "'Erdos991.erdos_991' depends on axioms: [propext, Classical.choice, Quot.sound]",
+      "checker_limit": "Lean elaboration and leanchecker replay use the same Lean kernel; no external independent verifier certification is asserted.",
+      "scope_review": {
+        "scope": "The target applies to every sequence of n-point subsets of the unit two-sphere that maximize the product of pairwise Euclidean chordal distances among all subsets of the same size. It proves that their spherical-cap discrepancy is little-o of n. The source uses genuine distinct-point finite sets and the actual distance product, and it supplies the normalized surface-area identity in the final theorem rather than assuming that identity. The conclusion is uniform over spherical caps for each selected maximizing configuration. Thus the maximizer hypotheses match those in the original question, and no particular choice or uniqueness of maximizers is required.",
+        "caveat": "This is the qualitative o(n) result. Do not claim the stronger n^(3/4) or n^(2/3) rates mentioned on the webpage. The webpage says the historical attribution of the qualitative statement is uncertain, so preserve the source’s contributor credits without asserting priority for that result.",
+        "full_original_problem_coverage": true
+      },
+      "steps": [
+        {
+          "module": "ErdosProblems.Erdos988",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 23.207,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96",
+          "tool": "lean.exe",
+          "log": "logs/ErdosProblems-Erdos988-compile.log",
+          "log_sha256": "43077b211081a378be3e9d514e1c8081f11472f3a36d00dc04fed767be65e8a1"
+        },
+        {
+          "module": "ErdosProblems.Erdos991.CapArea",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 16.839,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "e6e918eb8fca4e52ff3f4e0c8fd71fb10a5dcf44ebe351c84481873a4a1a3083",
+          "tool": "lean.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "output_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/CapArea.olean",
+              "bytes": 1527864,
+              "sha256": "3628c7afe388949e10c772db5fd0b567f9a94143df28142520cb4c72a14dcc81"
+            }
+          ],
+          "input_artifacts": [],
+          "compile_records": [],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos988",
+              "source_sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos988.olean",
+                  "bytes": 5149640,
+                  "sha256": "1605921a9f07f5eb219f7c7efeda576c05197c1330ea00d56d810104007e2502"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos988-compile.json",
+                "sha256": "f7abda7a8d6278595961b9f1a60ae7799146df4c37a7fed07e9f0e212b2ba8b6"
+              }
+            }
+          ],
+          "source_sha256_before": "e6e918eb8fca4e52ff3f4e0c8fd71fb10a5dcf44ebe351c84481873a4a1a3083",
+          "input_identity_sha256": "dbbd6bd486ed3feaeed2a3d533b4bbfe008906561298ededbbc54c395db6abe3",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ErdosProblems-Erdos991-CapArea-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos991.CapSupEnergy",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 16.141,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "3f98854a554bc2818b26dcd798df033a25c43468ca01689b5bf8602a2c7b6f3c",
+          "tool": "lean.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "output_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/CapSupEnergy.olean",
+              "bytes": 897048,
+              "sha256": "704e74b5b6ea9915de631dd0c1e78847bd734ec0d4bd88a9195f9182452ef724"
+            }
+          ],
+          "input_artifacts": [],
+          "compile_records": [],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos988",
+              "source_sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos988.olean",
+                  "bytes": 5149640,
+                  "sha256": "1605921a9f07f5eb219f7c7efeda576c05197c1330ea00d56d810104007e2502"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos988-compile.json",
+                "sha256": "f7abda7a8d6278595961b9f1a60ae7799146df4c37a7fed07e9f0e212b2ba8b6"
+              }
+            }
+          ],
+          "source_sha256_before": "3f98854a554bc2818b26dcd798df033a25c43468ca01689b5bf8602a2c7b6f3c",
+          "input_identity_sha256": "dbbd6bd486ed3feaeed2a3d533b4bbfe008906561298ededbbc54c395db6abe3",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ErdosProblems-Erdos991-CapSupEnergy-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos991.EnergyFromLog",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 18.828,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "c104d7b55f056f69c6bd73d1861c3acf1780dd9e6213104494340eaac6d2e59c",
+          "tool": "lean.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "output_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/EnergyFromLog.olean",
+              "bytes": 597360,
+              "sha256": "b2181f3a9905dc0e0cbe29248a222e65104c09bf89954f24ac728b693f293b13"
+            }
+          ],
+          "input_artifacts": [],
+          "compile_records": [],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos988",
+              "source_sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos988.olean",
+                  "bytes": 5149640,
+                  "sha256": "1605921a9f07f5eb219f7c7efeda576c05197c1330ea00d56d810104007e2502"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos988-compile.json",
+                "sha256": "f7abda7a8d6278595961b9f1a60ae7799146df4c37a7fed07e9f0e212b2ba8b6"
+              }
+            }
+          ],
+          "source_sha256_before": "c104d7b55f056f69c6bd73d1861c3acf1780dd9e6213104494340eaac6d2e59c",
+          "input_identity_sha256": "dbbd6bd486ed3feaeed2a3d533b4bbfe008906561298ededbbc54c395db6abe3",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ErdosProblems-Erdos991-EnergyFromLog-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos991.Fekete",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 8.916,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "35fcf983cb7b04a2a1329818d57f8de02db9c92288319cae22d65d65cea9f786",
+          "tool": "lean.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "output_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/Fekete.olean",
+              "bytes": 500208,
+              "sha256": "69e0c0f32287a1eef9278c9f5013678192029edffa2362594f99984d6d5f4dfb"
+            }
+          ],
+          "input_artifacts": [],
+          "compile_records": [],
+          "project_imports": [],
+          "source_sha256_before": "35fcf983cb7b04a2a1329818d57f8de02db9c92288319cae22d65d65cea9f786",
+          "input_identity_sha256": "2652763836871bed8193754061c34142e090415cf8b031f813d859bf6f66bc63",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ErdosProblems-Erdos991-Fekete-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos991.LogPotential",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 17.656,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "b33064ef39d85c226f974efe9a52b7d324a4a8e41995ca3be39c9a0028965894",
+          "tool": "lean.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "output_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/LogPotential.olean",
+              "bytes": 342912,
+              "sha256": "2bffc4de95a236f531d9694dbe7dae6c7e0767a5f2b88729b4e2590c8a4e53da"
+            }
+          ],
+          "input_artifacts": [],
+          "compile_records": [],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos988",
+              "source_sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos988.olean",
+                  "bytes": 5149640,
+                  "sha256": "1605921a9f07f5eb219f7c7efeda576c05197c1330ea00d56d810104007e2502"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos988-compile.json",
+                "sha256": "f7abda7a8d6278595961b9f1a60ae7799146df4c37a7fed07e9f0e212b2ba8b6"
+              }
+            }
+          ],
+          "source_sha256_before": "b33064ef39d85c226f974efe9a52b7d324a4a8e41995ca3be39c9a0028965894",
+          "input_identity_sha256": "dbbd6bd486ed3feaeed2a3d533b4bbfe008906561298ededbbc54c395db6abe3",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ErdosProblems-Erdos991-LogPotential-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos991.LogSeriesBound",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 14.712,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "1d179f6a5f5a4d34ce958adb0a2307f232acbe2cffb4a15c549a71cad3b500a6",
+          "tool": "lean.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "output_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/LogSeriesBound.olean",
+              "bytes": 336568,
+              "sha256": "c77f4ec11747ef17f9ef9175b10a971e0bc36415f156ee0ff5cb30e7c636c4ad"
+            }
+          ],
+          "input_artifacts": [],
+          "compile_records": [],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos991.EnergyFromLog",
+              "source_sha256": "c104d7b55f056f69c6bd73d1861c3acf1780dd9e6213104494340eaac6d2e59c",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/EnergyFromLog.olean",
+                  "bytes": 597360,
+                  "sha256": "b2181f3a9905dc0e0cbe29248a222e65104c09bf89954f24ac728b693f293b13"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-EnergyFromLog-compile.json",
+                "sha256": "2a5c7b4d74465655ac0bf7cc83744b43b11aefe43b4ee50291dc2f59f68c110a"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos991.Fekete",
+              "source_sha256": "35fcf983cb7b04a2a1329818d57f8de02db9c92288319cae22d65d65cea9f786",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/Fekete.olean",
+                  "bytes": 500208,
+                  "sha256": "69e0c0f32287a1eef9278c9f5013678192029edffa2362594f99984d6d5f4dfb"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-Fekete-compile.json",
+                "sha256": "0298b99180f62467db4781f3873f50978ef24a2a46dd9d67ac8e1398d32c4dca"
+              }
+            }
+          ],
+          "source_sha256_before": "1d179f6a5f5a4d34ce958adb0a2307f232acbe2cffb4a15c549a71cad3b500a6",
+          "input_identity_sha256": "dbb62fd1d2356eb5d7670297916140410eaa316c8eb06824616a085d1ea22bc7",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ErdosProblems-Erdos991-LogSeriesBound-compile.log",
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "module": "ErdosProblems.Erdos991",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 14.612,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "2456e3ad2c0c3973e6dd01af0df55556bcec37b76c6b287cc8795ede0c330920",
+          "tool": "lean.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "output_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991.olean",
+              "bytes": 139048,
+              "sha256": "d26478fc85391de12a030860883f952a266ff216eeaabfc7a93aa622ba1ebf08"
+            }
+          ],
+          "input_artifacts": [],
+          "compile_records": [],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos991.CapArea",
+              "source_sha256": "e6e918eb8fca4e52ff3f4e0c8fd71fb10a5dcf44ebe351c84481873a4a1a3083",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/CapArea.olean",
+                  "bytes": 1527864,
+                  "sha256": "3628c7afe388949e10c772db5fd0b567f9a94143df28142520cb4c72a14dcc81"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-CapArea-compile.json",
+                "sha256": "1e32a992ed61b125dea527655512b7e2c131bb5d9dd6a978cf6f507cf8c75dfd"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos991.CapSupEnergy",
+              "source_sha256": "3f98854a554bc2818b26dcd798df033a25c43468ca01689b5bf8602a2c7b6f3c",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/CapSupEnergy.olean",
+                  "bytes": 897048,
+                  "sha256": "704e74b5b6ea9915de631dd0c1e78847bd734ec0d4bd88a9195f9182452ef724"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-CapSupEnergy-compile.json",
+                "sha256": "00d974ac635725abdf0b912a473fe21ca7560d4862b6c32fee9ea776259b020c"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos991.EnergyFromLog",
+              "source_sha256": "c104d7b55f056f69c6bd73d1861c3acf1780dd9e6213104494340eaac6d2e59c",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/EnergyFromLog.olean",
+                  "bytes": 597360,
+                  "sha256": "b2181f3a9905dc0e0cbe29248a222e65104c09bf89954f24ac728b693f293b13"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-EnergyFromLog-compile.json",
+                "sha256": "2a5c7b4d74465655ac0bf7cc83744b43b11aefe43b4ee50291dc2f59f68c110a"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos991.Fekete",
+              "source_sha256": "35fcf983cb7b04a2a1329818d57f8de02db9c92288319cae22d65d65cea9f786",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/Fekete.olean",
+                  "bytes": 500208,
+                  "sha256": "69e0c0f32287a1eef9278c9f5013678192029edffa2362594f99984d6d5f4dfb"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-Fekete-compile.json",
+                "sha256": "0298b99180f62467db4781f3873f50978ef24a2a46dd9d67ac8e1398d32c4dca"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos991.LogPotential",
+              "source_sha256": "b33064ef39d85c226f974efe9a52b7d324a4a8e41995ca3be39c9a0028965894",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/LogPotential.olean",
+                  "bytes": 342912,
+                  "sha256": "2bffc4de95a236f531d9694dbe7dae6c7e0767a5f2b88729b4e2590c8a4e53da"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-LogPotential-compile.json",
+                "sha256": "4c081c4412599d439a4fc1c1d07cea718163ca472874a9a16c641025f81a324e"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos991.LogSeriesBound",
+              "source_sha256": "1d179f6a5f5a4d34ce958adb0a2307f232acbe2cffb4a15c549a71cad3b500a6",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/LogSeriesBound.olean",
+                  "bytes": 336568,
+                  "sha256": "c77f4ec11747ef17f9ef9175b10a971e0bc36415f156ee0ff5cb30e7c636c4ad"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-LogSeriesBound-compile.json",
+                "sha256": "7c67dc7640ef69e5c94b4079eb5da813d802740d2653422e9dd326b074a527ae"
+              }
+            }
+          ],
+          "source_sha256_before": "2456e3ad2c0c3973e6dd01af0df55556bcec37b76c6b287cc8795ede0c330920",
+          "input_identity_sha256": "586d98346a6562df0020a37980e9d00704f23acacf1cd2cc64483da90fbb3d5d",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ErdosProblems-Erdos991-compile.log",
+          "log_sha256": "59288aa66cbd9e0ecfbccf180c0cc8dcfd09ad3672f0be4048bbc3e5514b64fd"
+        },
+        {
+          "module": "ExistingChecks.Erdos991",
+          "mode": "compile",
+          "exit_code": 0,
+          "duration_seconds": 14.046,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "fd8edcc2528d86d96e1632bc27bf95916e50f1af067919bb0456e3e82d316582",
+          "tool": "lean.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "output_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ExistingChecks/Erdos991.olean",
+              "bytes": 1480,
+              "sha256": "6417b243342cefbecf117521484651c79d38563013006a8a186e3651cc2e6532"
+            }
+          ],
+          "input_artifacts": [],
+          "compile_records": [],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos991",
+              "source_sha256": "2456e3ad2c0c3973e6dd01af0df55556bcec37b76c6b287cc8795ede0c330920",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991.olean",
+                  "bytes": 139048,
+                  "sha256": "d26478fc85391de12a030860883f952a266ff216eeaabfc7a93aa622ba1ebf08"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-compile.json",
+                "sha256": "4a73820133a0fce2542810fce57d48957b8c6ea94690d924b12ae710435a3484"
+              }
+            }
+          ],
+          "source_sha256_before": "fd8edcc2528d86d96e1632bc27bf95916e50f1af067919bb0456e3e82d316582",
+          "input_identity_sha256": "4d5912046d61f262051b6c4b80085e1276f181c0cabb69b60c0ce204c022e2f6",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ExistingChecks-Erdos991-compile.log",
+          "log_sha256": "59288aa66cbd9e0ecfbccf180c0cc8dcfd09ad3672f0be4048bbc3e5514b64fd"
+        },
+        {
+          "module": "ErdosProblems.Erdos988",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 29.356,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96",
+          "tool": "leanchecker.exe",
+          "log": "logs/ErdosProblems-Erdos988-replay.log",
+          "log_sha256": "ffdd3c17bf5b4e9f8d34869ffd2d1da8505db745e7c39e0d4397578067e84bf5"
+        },
+        {
+          "module": "ErdosProblems.Erdos991.CapArea",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 22.628,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "e6e918eb8fca4e52ff3f4e0c8fd71fb10a5dcf44ebe351c84481873a4a1a3083",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "input_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/CapArea.olean",
+              "bytes": 1527864,
+              "sha256": "3628c7afe388949e10c772db5fd0b567f9a94143df28142520cb4c72a14dcc81"
+            }
+          ],
+          "compile_records": [
+            {
+              "path": "evidence/ErdosProblems-Erdos991-CapArea-compile.json",
+              "sha256": "1e32a992ed61b125dea527655512b7e2c131bb5d9dd6a978cf6f507cf8c75dfd"
+            }
+          ],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos988",
+              "source_sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos988.olean",
+                  "bytes": 5149640,
+                  "sha256": "1605921a9f07f5eb219f7c7efeda576c05197c1330ea00d56d810104007e2502"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos988-compile.json",
+                "sha256": "f7abda7a8d6278595961b9f1a60ae7799146df4c37a7fed07e9f0e212b2ba8b6"
+              }
+            }
+          ],
+          "source_sha256_before": "e6e918eb8fca4e52ff3f4e0c8fd71fb10a5dcf44ebe351c84481873a4a1a3083",
+          "input_identity_sha256": "633c22c007501b9df6152c90ae4b0377f96603350796363d2bfa27d85297e28d",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ErdosProblems-Erdos991-CapArea-replay.log",
+          "log_sha256": "1b724a12f42f16f8b50c9eb5f16ced598ffa2b10922dfe90426463a7d75838ec"
+        },
+        {
+          "module": "ErdosProblems.Erdos991.CapSupEnergy",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 31.087,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "3f98854a554bc2818b26dcd798df033a25c43468ca01689b5bf8602a2c7b6f3c",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "input_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/CapSupEnergy.olean",
+              "bytes": 897048,
+              "sha256": "704e74b5b6ea9915de631dd0c1e78847bd734ec0d4bd88a9195f9182452ef724"
+            }
+          ],
+          "compile_records": [
+            {
+              "path": "evidence/ErdosProblems-Erdos991-CapSupEnergy-compile.json",
+              "sha256": "00d974ac635725abdf0b912a473fe21ca7560d4862b6c32fee9ea776259b020c"
+            }
+          ],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos988",
+              "source_sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos988.olean",
+                  "bytes": 5149640,
+                  "sha256": "1605921a9f07f5eb219f7c7efeda576c05197c1330ea00d56d810104007e2502"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos988-compile.json",
+                "sha256": "f7abda7a8d6278595961b9f1a60ae7799146df4c37a7fed07e9f0e212b2ba8b6"
+              }
+            }
+          ],
+          "source_sha256_before": "3f98854a554bc2818b26dcd798df033a25c43468ca01689b5bf8602a2c7b6f3c",
+          "input_identity_sha256": "3d313a68425fccf5c21b51fc000ae196b312b1ebf5075d43d507073382ea1504",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ErdosProblems-Erdos991-CapSupEnergy-replay.log",
+          "log_sha256": "7c2eaf0920277054072480d756df32dfedbafdd459a9e09945c71b8ed2b91ca4"
+        },
+        {
+          "module": "ErdosProblems.Erdos991.EnergyFromLog",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 32.952,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "c104d7b55f056f69c6bd73d1861c3acf1780dd9e6213104494340eaac6d2e59c",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "input_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/EnergyFromLog.olean",
+              "bytes": 597360,
+              "sha256": "b2181f3a9905dc0e0cbe29248a222e65104c09bf89954f24ac728b693f293b13"
+            }
+          ],
+          "compile_records": [
+            {
+              "path": "evidence/ErdosProblems-Erdos991-EnergyFromLog-compile.json",
+              "sha256": "2a5c7b4d74465655ac0bf7cc83744b43b11aefe43b4ee50291dc2f59f68c110a"
+            }
+          ],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos988",
+              "source_sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos988.olean",
+                  "bytes": 5149640,
+                  "sha256": "1605921a9f07f5eb219f7c7efeda576c05197c1330ea00d56d810104007e2502"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos988-compile.json",
+                "sha256": "f7abda7a8d6278595961b9f1a60ae7799146df4c37a7fed07e9f0e212b2ba8b6"
+              }
+            }
+          ],
+          "source_sha256_before": "c104d7b55f056f69c6bd73d1861c3acf1780dd9e6213104494340eaac6d2e59c",
+          "input_identity_sha256": "54b637ba7289df9ddd2191147803af9cda500fa789f29685929669d9eaed75a8",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ErdosProblems-Erdos991-EnergyFromLog-replay.log",
+          "log_sha256": "bff5c2888ec0bccea75ada1cecd34dc49b70d5a773d20f40cda9c4aa7fc9112a"
+        },
+        {
+          "module": "ErdosProblems.Erdos991.Fekete",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 27.059,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "35fcf983cb7b04a2a1329818d57f8de02db9c92288319cae22d65d65cea9f786",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "input_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/Fekete.olean",
+              "bytes": 500208,
+              "sha256": "69e0c0f32287a1eef9278c9f5013678192029edffa2362594f99984d6d5f4dfb"
+            }
+          ],
+          "compile_records": [
+            {
+              "path": "evidence/ErdosProblems-Erdos991-Fekete-compile.json",
+              "sha256": "0298b99180f62467db4781f3873f50978ef24a2a46dd9d67ac8e1398d32c4dca"
+            }
+          ],
+          "project_imports": [],
+          "source_sha256_before": "35fcf983cb7b04a2a1329818d57f8de02db9c92288319cae22d65d65cea9f786",
+          "input_identity_sha256": "50bcb63ca462f1f8cd26b3b49acdfc0dff09d2f938fcfcefe1add8569cebe591",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ErdosProblems-Erdos991-Fekete-replay.log",
+          "log_sha256": "a132abd4da64df03182f95c318c67e2299dc666ea9f93920bac43dfd32afb637"
+        },
+        {
+          "module": "ErdosProblems.Erdos991.LogPotential",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 31.677,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "b33064ef39d85c226f974efe9a52b7d324a4a8e41995ca3be39c9a0028965894",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "input_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/LogPotential.olean",
+              "bytes": 342912,
+              "sha256": "2bffc4de95a236f531d9694dbe7dae6c7e0767a5f2b88729b4e2590c8a4e53da"
+            }
+          ],
+          "compile_records": [
+            {
+              "path": "evidence/ErdosProblems-Erdos991-LogPotential-compile.json",
+              "sha256": "4c081c4412599d439a4fc1c1d07cea718163ca472874a9a16c641025f81a324e"
+            }
+          ],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos988",
+              "source_sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos988.olean",
+                  "bytes": 5149640,
+                  "sha256": "1605921a9f07f5eb219f7c7efeda576c05197c1330ea00d56d810104007e2502"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos988-compile.json",
+                "sha256": "f7abda7a8d6278595961b9f1a60ae7799146df4c37a7fed07e9f0e212b2ba8b6"
+              }
+            }
+          ],
+          "source_sha256_before": "b33064ef39d85c226f974efe9a52b7d324a4a8e41995ca3be39c9a0028965894",
+          "input_identity_sha256": "e60b0dd77580bdbd322fe6e162dc499701b6fee789adab0d32868e434fa5e302",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ErdosProblems-Erdos991-LogPotential-replay.log",
+          "log_sha256": "8a579a04435b0e7e38c4ee305e14575e5a16a5f0efb23041cc9a8d6ec2efb80f"
+        },
+        {
+          "module": "ErdosProblems.Erdos991.LogSeriesBound",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 29.911,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "1d179f6a5f5a4d34ce958adb0a2307f232acbe2cffb4a15c549a71cad3b500a6",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "input_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/LogSeriesBound.olean",
+              "bytes": 336568,
+              "sha256": "c77f4ec11747ef17f9ef9175b10a971e0bc36415f156ee0ff5cb30e7c636c4ad"
+            }
+          ],
+          "compile_records": [
+            {
+              "path": "evidence/ErdosProblems-Erdos991-LogSeriesBound-compile.json",
+              "sha256": "7c67dc7640ef69e5c94b4079eb5da813d802740d2653422e9dd326b074a527ae"
+            }
+          ],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos991.EnergyFromLog",
+              "source_sha256": "c104d7b55f056f69c6bd73d1861c3acf1780dd9e6213104494340eaac6d2e59c",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/EnergyFromLog.olean",
+                  "bytes": 597360,
+                  "sha256": "b2181f3a9905dc0e0cbe29248a222e65104c09bf89954f24ac728b693f293b13"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-EnergyFromLog-compile.json",
+                "sha256": "2a5c7b4d74465655ac0bf7cc83744b43b11aefe43b4ee50291dc2f59f68c110a"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos991.Fekete",
+              "source_sha256": "35fcf983cb7b04a2a1329818d57f8de02db9c92288319cae22d65d65cea9f786",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/Fekete.olean",
+                  "bytes": 500208,
+                  "sha256": "69e0c0f32287a1eef9278c9f5013678192029edffa2362594f99984d6d5f4dfb"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-Fekete-compile.json",
+                "sha256": "0298b99180f62467db4781f3873f50978ef24a2a46dd9d67ac8e1398d32c4dca"
+              }
+            }
+          ],
+          "source_sha256_before": "1d179f6a5f5a4d34ce958adb0a2307f232acbe2cffb4a15c549a71cad3b500a6",
+          "input_identity_sha256": "e6c621fde9330278159795582bc6bf3962262b52023179aa42d11f2a945d912b",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ErdosProblems-Erdos991-LogSeriesBound-replay.log",
+          "log_sha256": "27de9d73651360467f3fc366fbff48802205064b9fa6b3590bdea2d7c3925e99"
+        },
+        {
+          "module": "ErdosProblems.Erdos991",
+          "mode": "replay",
+          "exit_code": 0,
+          "duration_seconds": 58.308,
+          "lean_version": "4.33.0",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "source_sha256": "2456e3ad2c0c3973e6dd01af0df55556bcec37b76c6b287cc8795ede0c330920",
+          "tool": "leanchecker.exe",
+          "runtime_environment": {
+            "LEAN_NUM_THREADS": "1"
+          },
+          "input_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991.olean",
+              "bytes": 139048,
+              "sha256": "d26478fc85391de12a030860883f952a266ff216eeaabfc7a93aa622ba1ebf08"
+            },
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/CapArea.olean",
+              "bytes": 1527864,
+              "sha256": "3628c7afe388949e10c772db5fd0b567f9a94143df28142520cb4c72a14dcc81"
+            },
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/CapSupEnergy.olean",
+              "bytes": 897048,
+              "sha256": "704e74b5b6ea9915de631dd0c1e78847bd734ec0d4bd88a9195f9182452ef724"
+            },
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/EnergyFromLog.olean",
+              "bytes": 597360,
+              "sha256": "b2181f3a9905dc0e0cbe29248a222e65104c09bf89954f24ac728b693f293b13"
+            },
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/Fekete.olean",
+              "bytes": 500208,
+              "sha256": "69e0c0f32287a1eef9278c9f5013678192029edffa2362594f99984d6d5f4dfb"
+            },
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/LogPotential.olean",
+              "bytes": 342912,
+              "sha256": "2bffc4de95a236f531d9694dbe7dae6c7e0767a5f2b88729b4e2590c8a4e53da"
+            },
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/LogSeriesBound.olean",
+              "bytes": 336568,
+              "sha256": "c77f4ec11747ef17f9ef9175b10a971e0bc36415f156ee0ff5cb30e7c636c4ad"
+            }
+          ],
+          "compile_records": [
+            {
+              "path": "evidence/ErdosProblems-Erdos991-compile.json",
+              "sha256": "4a73820133a0fce2542810fce57d48957b8c6ea94690d924b12ae710435a3484"
+            },
+            {
+              "path": "evidence/ErdosProblems-Erdos991-CapArea-compile.json",
+              "sha256": "1e32a992ed61b125dea527655512b7e2c131bb5d9dd6a978cf6f507cf8c75dfd"
+            },
+            {
+              "path": "evidence/ErdosProblems-Erdos991-CapSupEnergy-compile.json",
+              "sha256": "00d974ac635725abdf0b912a473fe21ca7560d4862b6c32fee9ea776259b020c"
+            },
+            {
+              "path": "evidence/ErdosProblems-Erdos991-EnergyFromLog-compile.json",
+              "sha256": "2a5c7b4d74465655ac0bf7cc83744b43b11aefe43b4ee50291dc2f59f68c110a"
+            },
+            {
+              "path": "evidence/ErdosProblems-Erdos991-Fekete-compile.json",
+              "sha256": "0298b99180f62467db4781f3873f50978ef24a2a46dd9d67ac8e1398d32c4dca"
+            },
+            {
+              "path": "evidence/ErdosProblems-Erdos991-LogPotential-compile.json",
+              "sha256": "4c081c4412599d439a4fc1c1d07cea718163ca472874a9a16c641025f81a324e"
+            },
+            {
+              "path": "evidence/ErdosProblems-Erdos991-LogSeriesBound-compile.json",
+              "sha256": "7c67dc7640ef69e5c94b4079eb5da813d802740d2653422e9dd326b074a527ae"
+            }
+          ],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos988",
+              "source_sha256": "2680a6692deef2988016db04395ccea965fbd11fc5f3c4870d59416c0f2a0d96",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos988.olean",
+                  "bytes": 5149640,
+                  "sha256": "1605921a9f07f5eb219f7c7efeda576c05197c1330ea00d56d810104007e2502"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos988-compile.json",
+                "sha256": "f7abda7a8d6278595961b9f1a60ae7799146df4c37a7fed07e9f0e212b2ba8b6"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos991.CapArea",
+              "source_sha256": "e6e918eb8fca4e52ff3f4e0c8fd71fb10a5dcf44ebe351c84481873a4a1a3083",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/CapArea.olean",
+                  "bytes": 1527864,
+                  "sha256": "3628c7afe388949e10c772db5fd0b567f9a94143df28142520cb4c72a14dcc81"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-CapArea-compile.json",
+                "sha256": "1e32a992ed61b125dea527655512b7e2c131bb5d9dd6a978cf6f507cf8c75dfd"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos991.CapSupEnergy",
+              "source_sha256": "3f98854a554bc2818b26dcd798df033a25c43468ca01689b5bf8602a2c7b6f3c",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/CapSupEnergy.olean",
+                  "bytes": 897048,
+                  "sha256": "704e74b5b6ea9915de631dd0c1e78847bd734ec0d4bd88a9195f9182452ef724"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-CapSupEnergy-compile.json",
+                "sha256": "00d974ac635725abdf0b912a473fe21ca7560d4862b6c32fee9ea776259b020c"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos991.EnergyFromLog",
+              "source_sha256": "c104d7b55f056f69c6bd73d1861c3acf1780dd9e6213104494340eaac6d2e59c",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/EnergyFromLog.olean",
+                  "bytes": 597360,
+                  "sha256": "b2181f3a9905dc0e0cbe29248a222e65104c09bf89954f24ac728b693f293b13"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-EnergyFromLog-compile.json",
+                "sha256": "2a5c7b4d74465655ac0bf7cc83744b43b11aefe43b4ee50291dc2f59f68c110a"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos991.Fekete",
+              "source_sha256": "35fcf983cb7b04a2a1329818d57f8de02db9c92288319cae22d65d65cea9f786",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/Fekete.olean",
+                  "bytes": 500208,
+                  "sha256": "69e0c0f32287a1eef9278c9f5013678192029edffa2362594f99984d6d5f4dfb"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-Fekete-compile.json",
+                "sha256": "0298b99180f62467db4781f3873f50978ef24a2a46dd9d67ac8e1398d32c4dca"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos991.LogPotential",
+              "source_sha256": "b33064ef39d85c226f974efe9a52b7d324a4a8e41995ca3be39c9a0028965894",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/LogPotential.olean",
+                  "bytes": 342912,
+                  "sha256": "2bffc4de95a236f531d9694dbe7dae6c7e0767a5f2b88729b4e2590c8a4e53da"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-LogPotential-compile.json",
+                "sha256": "4c081c4412599d439a4fc1c1d07cea718163ca472874a9a16c641025f81a324e"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos991.LogSeriesBound",
+              "source_sha256": "1d179f6a5f5a4d34ce958adb0a2307f232acbe2cffb4a15c549a71cad3b500a6",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos991/LogSeriesBound.olean",
+                  "bytes": 336568,
+                  "sha256": "c77f4ec11747ef17f9ef9175b10a971e0bc36415f156ee0ff5cb30e7c636c4ad"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos991-LogSeriesBound-compile.json",
+                "sha256": "7c67dc7640ef69e5c94b4079eb5da813d802740d2653422e9dd326b074a527ae"
+              }
+            }
+          ],
+          "source_sha256_before": "2456e3ad2c0c3973e6dd01af0df55556bcec37b76c6b287cc8795ede0c330920",
+          "input_identity_sha256": "34cb2a4017b5defa041e76664bdf9c1c538eaa8019863d81f9cac1836038ebb0",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "log": "logs/ErdosProblems-Erdos991-replay.log",
+          "log_sha256": "7fe9cda897275ac5d028cc14ea402c58656886f2eb13ff829984122f1697589a"
         }
       ]
     },
@@ -1399,6 +2522,23 @@
           "runtime_environment": {
             "LEAN_NUM_THREADS": "1"
           },
+          "output_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos1127.olean",
+              "bytes": 4507536,
+              "sha256": "a30c5ac27d1745f3ee7aa9bb0268327c6d570de34f099a9108d93a2a2d4b6a2a"
+            }
+          ],
+          "input_artifacts": [],
+          "compile_records": [],
+          "project_imports": [],
+          "source_sha256_before": "bac42f447ce3995c6a488f3583fb98be9c97d8e0eed1a2034072741765e9a5b4",
+          "input_identity_sha256": "2652763836871bed8193754061c34142e090415cf8b031f813d859bf6f66bc63",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
           "log": "logs/ErdosProblems-Erdos1127-compile.log",
           "log_sha256": "0377f26be4f68982dba2d199af74bfc72026b0a20b44ea832a0b5bfaf640c310"
         },
@@ -1414,6 +2554,39 @@
           "runtime_environment": {
             "LEAN_NUM_THREADS": "1"
           },
+          "output_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ExistingChecks/Erdos1127.olean",
+              "bytes": 1480,
+              "sha256": "5824f93cb490ede6b5522b296b93a59e5f00857dc3bfa57bbfed4a27c4af03e1"
+            }
+          ],
+          "input_artifacts": [],
+          "compile_records": [],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos1127",
+              "source_sha256": "bac42f447ce3995c6a488f3583fb98be9c97d8e0eed1a2034072741765e9a5b4",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos1127.olean",
+                  "bytes": 4507536,
+                  "sha256": "a30c5ac27d1745f3ee7aa9bb0268327c6d570de34f099a9108d93a2a2d4b6a2a"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos1127-compile.json",
+                "sha256": "e60349ef4d510fd7336bf71c4ba6126789afd8dabe3ada418115974df8998f42"
+              }
+            }
+          ],
+          "source_sha256_before": "827548851779b2c99c91c54503d8d3726a6db3bedaffe37cc903aaadea8c584a",
+          "input_identity_sha256": "a414b1469e4b03b50f71d88f2872aa29f05e53693d5269739bc9f350f00d8ac6",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
           "log": "logs/ExistingChecks-Erdos1127-compile.log",
           "log_sha256": "e0cefe48c108814d02ede1a8211be378a52934b04b09a9f3787b6f353095d328"
         },
@@ -1429,6 +2602,27 @@
           "runtime_environment": {
             "LEAN_NUM_THREADS": "1"
           },
+          "input_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos1127.olean",
+              "bytes": 4507536,
+              "sha256": "a30c5ac27d1745f3ee7aa9bb0268327c6d570de34f099a9108d93a2a2d4b6a2a"
+            }
+          ],
+          "compile_records": [
+            {
+              "path": "evidence/ErdosProblems-Erdos1127-compile.json",
+              "sha256": "e60349ef4d510fd7336bf71c4ba6126789afd8dabe3ada418115974df8998f42"
+            }
+          ],
+          "project_imports": [],
+          "source_sha256_before": "bac42f447ce3995c6a488f3583fb98be9c97d8e0eed1a2034072741765e9a5b4",
+          "input_identity_sha256": "03f144fce79f95e805e36bd5dfcfc984b2e06e67663ccf4a3d079cf87d4302d3",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
           "log": "logs/ErdosProblems-Erdos1127-replay.log",
           "log_sha256": "4054988adcaebc0d59ae2ed35a08a009a8656246f17d13a965826f7ca4a9a3a1"
         }
@@ -1504,6 +2698,14 @@
           "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
           "source_sha256": "aadb17aac37d005bf425ed4cab0e8cf69507ee24014d8c0753c30a00a0a5453d",
           "tool": "lean.exe",
+          "output_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos807/SecondMoment.olean",
+              "bytes": 374144,
+              "sha256": "6eaaf70d10b5227ad1166f205e6a545b724c32ca015b568ea474eaeb87b69c54"
+            }
+          ],
+          "source_sha256_before": "aadb17aac37d005bf425ed4cab0e8cf69507ee24014d8c0753c30a00a0a5453d",
           "log": "logs/ErdosProblems-Erdos807-SecondMoment-compile.log",
           "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
@@ -1516,6 +2718,23 @@
           "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
           "source_sha256": "cdd81d1b44a8462830909429ee003daa429e82093bd982aa64f1282bee3840f4",
           "tool": "lean.exe",
+          "output_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos807/Parameters.olean",
+              "bytes": 930640,
+              "sha256": "1f4c953d72f76ec0e00a1d03a4b578ca1a65ee66889dfb8a6e818b4b23fa632c"
+            }
+          ],
+          "input_artifacts": [],
+          "compile_records": [],
+          "project_imports": [],
+          "source_sha256_before": "cdd81d1b44a8462830909429ee003daa429e82093bd982aa64f1282bee3840f4",
+          "input_identity_sha256": "2652763836871bed8193754061c34142e090415cf8b031f813d859bf6f66bc63",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
           "log": "logs/ErdosProblems-Erdos807-Parameters-compile.log",
           "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
@@ -1528,6 +2747,54 @@
           "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
           "source_sha256": "6bfc35ec3c9a139ca8f6938e64d71976b00193f7942a43fbe40efeba869e27db",
           "tool": "lean.exe",
+          "output_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos1179.olean",
+              "bytes": 4621864,
+              "sha256": "ce808a97f7d19e360ac44fb6175e63d687458ad555b578a1c0d201031c91289c"
+            }
+          ],
+          "input_artifacts": [],
+          "compile_records": [],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos807.Parameters",
+              "source_sha256": "cdd81d1b44a8462830909429ee003daa429e82093bd982aa64f1282bee3840f4",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos807/Parameters.olean",
+                  "bytes": 930640,
+                  "sha256": "1f4c953d72f76ec0e00a1d03a4b578ca1a65ee66889dfb8a6e818b4b23fa632c"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos807-Parameters-compile.json",
+                "sha256": "921a30e5072fb49df24a04fbee8cb8cead1095ce21b753df66e8e754ccbe26aa"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos807.SecondMoment",
+              "source_sha256": "aadb17aac37d005bf425ed4cab0e8cf69507ee24014d8c0753c30a00a0a5453d",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos807/SecondMoment.olean",
+                  "bytes": 374144,
+                  "sha256": "6eaaf70d10b5227ad1166f205e6a545b724c32ca015b568ea474eaeb87b69c54"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos807-SecondMoment-compile.json",
+                "sha256": "e1af9867e60d50f41b6b4dc71fe8be59d0d569566a6f7eeecde962049035eb57"
+              }
+            }
+          ],
+          "source_sha256_before": "6bfc35ec3c9a139ca8f6938e64d71976b00193f7942a43fbe40efeba869e27db",
+          "input_identity_sha256": "74721423866026246f2d00eb762d75bbcbc3fdf0154103b221c727040bae9f32",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
           "log": "logs/ErdosProblems-Erdos1179-compile.log",
           "log_sha256": "e2d0d2aec20bde2b4d368cedf8afce4c8421cd23e874b6487d275ec2ec996245"
         },
@@ -1540,6 +2807,39 @@
           "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
           "source_sha256": "8c13c4736080d42323cf8047981b6d9c41602dc621e40f0b44b020508b794f23",
           "tool": "lean.exe",
+          "output_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ExistingChecks/Erdos1179.olean",
+              "bytes": 1480,
+              "sha256": "15a4f117f454d270e156d684c4c269feb3519c41f4d4dae0f9a1a621a0e72376"
+            }
+          ],
+          "input_artifacts": [],
+          "compile_records": [],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos1179",
+              "source_sha256": "6bfc35ec3c9a139ca8f6938e64d71976b00193f7942a43fbe40efeba869e27db",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos1179.olean",
+                  "bytes": 4621864,
+                  "sha256": "ce808a97f7d19e360ac44fb6175e63d687458ad555b578a1c0d201031c91289c"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos1179-compile.json",
+                "sha256": "6b71153b22664f58a1c69c33a395176f9d51ac53cf78ba33f0ab0f75206ff7e4"
+              }
+            }
+          ],
+          "source_sha256_before": "8c13c4736080d42323cf8047981b6d9c41602dc621e40f0b44b020508b794f23",
+          "input_identity_sha256": "40096165f0a3e88d61cb432372c3f414bad3477d2eeed68280bf9884585e0837",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
           "log": "logs/ExistingChecks-Erdos1179-compile.log",
           "log_sha256": "e2d0d2aec20bde2b4d368cedf8afce4c8421cd23e874b6487d275ec2ec996245"
         },
@@ -1555,6 +2855,27 @@
           "runtime_environment": {
             "LEAN_NUM_THREADS": "1"
           },
+          "input_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos807/SecondMoment.olean",
+              "bytes": 374144,
+              "sha256": "6eaaf70d10b5227ad1166f205e6a545b724c32ca015b568ea474eaeb87b69c54"
+            }
+          ],
+          "compile_records": [
+            {
+              "path": "evidence/ErdosProblems-Erdos807-SecondMoment-compile.json",
+              "sha256": "e1af9867e60d50f41b6b4dc71fe8be59d0d569566a6f7eeecde962049035eb57"
+            }
+          ],
+          "project_imports": [],
+          "source_sha256_before": "aadb17aac37d005bf425ed4cab0e8cf69507ee24014d8c0753c30a00a0a5453d",
+          "input_identity_sha256": "a3b3a633843a67e160e3de45f511a92b25a9363a88ebe422eab156c0aba7fc48",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
           "log": "logs/ErdosProblems-Erdos807-SecondMoment-replay.log",
           "log_sha256": "52ef665d6dba3d67d25f984f871bdefc1c780eb5ee3cf4a93323f93446ae5075"
         },
@@ -1570,6 +2891,27 @@
           "runtime_environment": {
             "LEAN_NUM_THREADS": "1"
           },
+          "input_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos807/Parameters.olean",
+              "bytes": 930640,
+              "sha256": "1f4c953d72f76ec0e00a1d03a4b578ca1a65ee66889dfb8a6e818b4b23fa632c"
+            }
+          ],
+          "compile_records": [
+            {
+              "path": "evidence/ErdosProblems-Erdos807-Parameters-compile.json",
+              "sha256": "921a30e5072fb49df24a04fbee8cb8cead1095ce21b753df66e8e754ccbe26aa"
+            }
+          ],
+          "project_imports": [],
+          "source_sha256_before": "cdd81d1b44a8462830909429ee003daa429e82093bd982aa64f1282bee3840f4",
+          "input_identity_sha256": "625f8f003076f43a7763cbd21c625b2402656cf7f94627af47677e3b9ea8c18c",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
           "log": "logs/ErdosProblems-Erdos807-Parameters-replay.log",
           "log_sha256": "c124a09aea68118c8ce57af866634f787db21de01c76f60c39017c30706338c3"
         },
@@ -1585,6 +2927,58 @@
           "runtime_environment": {
             "LEAN_NUM_THREADS": "1"
           },
+          "input_artifacts": [
+            {
+              "path": ".lake/build/lib/lean/ErdosProblems/Erdos1179.olean",
+              "bytes": 4621864,
+              "sha256": "ce808a97f7d19e360ac44fb6175e63d687458ad555b578a1c0d201031c91289c"
+            }
+          ],
+          "compile_records": [
+            {
+              "path": "evidence/ErdosProblems-Erdos1179-compile.json",
+              "sha256": "6b71153b22664f58a1c69c33a395176f9d51ac53cf78ba33f0ab0f75206ff7e4"
+            }
+          ],
+          "project_imports": [
+            {
+              "module": "ErdosProblems.Erdos807.Parameters",
+              "source_sha256": "cdd81d1b44a8462830909429ee003daa429e82093bd982aa64f1282bee3840f4",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos807/Parameters.olean",
+                  "bytes": 930640,
+                  "sha256": "1f4c953d72f76ec0e00a1d03a4b578ca1a65ee66889dfb8a6e818b4b23fa632c"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos807-Parameters-compile.json",
+                "sha256": "921a30e5072fb49df24a04fbee8cb8cead1095ce21b753df66e8e754ccbe26aa"
+              }
+            },
+            {
+              "module": "ErdosProblems.Erdos807.SecondMoment",
+              "source_sha256": "aadb17aac37d005bf425ed4cab0e8cf69507ee24014d8c0753c30a00a0a5453d",
+              "artifacts": [
+                {
+                  "path": ".lake/build/lib/lean/ErdosProblems/Erdos807/SecondMoment.olean",
+                  "bytes": 374144,
+                  "sha256": "6eaaf70d10b5227ad1166f205e6a545b724c32ca015b568ea474eaeb87b69c54"
+                }
+              ],
+              "compile_evidence": {
+                "path": "evidence/ErdosProblems-Erdos807-SecondMoment-compile.json",
+                "sha256": "e1af9867e60d50f41b6b4dc71fe8be59d0d569566a6f7eeecde962049035eb57"
+              }
+            }
+          ],
+          "source_sha256_before": "6bfc35ec3c9a139ca8f6938e64d71976b00193f7942a43fbe40efeba869e27db",
+          "input_identity_sha256": "192b49d61239744b5e072595b472599dad2ffbfb1fd88ec4a385ca897a74806f",
+          "input_identity_unchanged": true,
+          "dependency_identity_scope": "Direct project imports and every replayed prefix module; transitive reuse requires compatible dependency records. Pinned Mathlib and its packages remain the imported-library boundary.",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_release_archive_sha256": "60d045a2ef45fca55a620b7d55be682e8439ec8d1fc9a8bcd2615da7dffba26a",
+          "mathlib_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
           "log": "logs/ErdosProblems-Erdos1179-replay.log",
           "log_sha256": "79530ea2da9aafeb215f29f9f2614921574be3abbdb8bf1a4b276f98363f221c"
         }
@@ -2181,5 +3575,6 @@
         }
       ]
     }
-  ]
+  ],
+  "identity_record_notes": "Additional artifact and input-identity fields appear only where the original process recorded them; missing historical fields are not reconstructed. Artifact paths are relative to the proof project; compile_records and compile_evidence paths are relative to the local verification project root. Those compile-record hashes identify the original local metadata, not a promise that raw local metadata is included in this privacy-filtered public archive. Source-subplan identities likewise refer to frozen local plan JSON, whose selected provenance fields are embedded alongside those identities. These records do not assert a complete transitive cross-project cache contract."
 }
