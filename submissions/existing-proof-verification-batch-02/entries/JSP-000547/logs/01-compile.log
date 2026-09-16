@@ -1,0 +1,3 @@
+'PrimePowerConvolution448.logPartialSum_le_primePowerMass_convolution' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

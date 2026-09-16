@@ -1,0 +1,4 @@
+'HalberstamComplete448.halberstam_richert_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HalberstamComplete448.halberstam_richert_explicit_source_indexing' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

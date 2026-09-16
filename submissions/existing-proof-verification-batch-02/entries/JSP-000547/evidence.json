@@ -1,0 +1,436 @@
+{
+  "schema_version": 1,
+  "jsp": "JSP-000547",
+  "erdos": 673,
+  "title": "What is the typical growth of the sum of ratios of consecutive ordered divisors of an integer?",
+  "scope": "For G(n), the sum of each positive divisor divided by its next larger divisor, every fixed real threshold is exceeded on a set of natural density one. The ordinary summatory function over 1<=n<=X is asymptotic to X log X with leading constant 1 along natural X, and the average (1/X) times the sum over 1<=n<=X tends to infinity.",
+  "attribution": "Existing plby/lean-proofs source. The primary E673 header credits Paul Erdos and Gerald Tenenbaum for the informal result, and Codex / GPT-5.6 Sol for formalization; original spellings and accents are preserved in the copied header. Imported E459 credits Stijn Cambie for its informal result and Aristotle / Boris Alexeev / Wouter van Doorn for its formalization. Util.Density preserves its Formal Conjectures Authors copyright and modification notice. All 12 source notices remain byte-for-byte intact; these dependency credits are not reassigned as primary E673 authorship. No uploader-as-original-author, priority or recipient claim.",
+  "target_module": "ErdosProblems.Erdos673",
+  "main_theorem": "Erdos673.erdos_673",
+  "theorems": [
+    "Erdos673.divisorSequence_zero",
+    "Erdos673.divisorSequence_last",
+    "Erdos673.tao_lower_bound",
+    "Erdos673.logarithmic_deficit_bound",
+    "Erdos673.G_sublevel_hasNaturalDensity_zero",
+    "Erdos673.hasDensity_of_hasNaturalDensity",
+    "Erdos673.G_tendsToInfinityAlmostAll",
+    "Erdos673.G_deficit_le_weighted_sqrtTau",
+    "Erdos673.GSum_isEquivalent",
+    "Erdos673.G_average_tendsto_atTop",
+    "Erdos673.erdos_673",
+    "Erdos673Mean.weighted_deficit_partialSum_isLittleO",
+    "Erdos673Mean.statisticSum_isEquivalent_of_weighted_sqrtTau_deficit",
+    "HalberstamComplete448.halberstam_richert_explicit"
+  ],
+  "environment": {
+    "lean_toolchain": "leanprover/lean4:v4.33.0",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "LEAN_NUM_THREADS": "1",
+    "compile_flags": [
+      "-j1",
+      "-M8192"
+    ],
+    "platform": "Windows"
+  },
+  "sources": [
+    {
+      "module": "ErdosProblems.Erdos448.HalberstamLean",
+      "path": "ErdosProblems/Erdos448/HalberstamLean.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos448/HalberstamLean.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos448/HalberstamLean.lean",
+      "sha256": "b8bab06498ab275cc8c187d387a6bebae6ef3145499b22551b508fc9baee0260",
+      "bytes": 18462,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos448.PrimePowerConvolution448",
+      "path": "ErdosProblems/Erdos448/PrimePowerConvolution448.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos448/PrimePowerConvolution448.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos448/PrimePowerConvolution448.lean",
+      "sha256": "dbb6902998e22329f76201da6d23dbcaaf29335c63dcbcc0ffc337c8c38acab8",
+      "bytes": 7876,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos448.PrimePowerMassLinear448",
+      "path": "ErdosProblems/Erdos448/PrimePowerMassLinear448.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos448/PrimePowerMassLinear448.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos448/PrimePowerMassLinear448.lean",
+      "sha256": "5b0fd274c89eeef61b39df635f95e0ae6cdce64cf91c38cbdfe5409fff03555f",
+      "bytes": 18215,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos448.HalberstamComplete448",
+      "path": "ErdosProblems/Erdos448/HalberstamComplete448.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos448/HalberstamComplete448.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos448/HalberstamComplete448.lean",
+      "sha256": "29375ab25f4e9921417a2337ea877af76dc3310250ac878591a5da7c12e234da",
+      "bytes": 3774,
+      "imports": [
+        "ErdosProblems.Erdos448.HalberstamLean",
+        "ErdosProblems.Erdos448.PrimePowerConvolution448",
+        "ErdosProblems.Erdos448.PrimePowerMassLinear448"
+      ]
+    },
+    {
+      "module": "UnitFractions.ForMathlib.IntegralRPow",
+      "path": "UnitFractions/ForMathlib/IntegralRPow.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/UnitFractions/ForMathlib/IntegralRPow.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/UnitFractions/ForMathlib/IntegralRPow.lean",
+      "sha256": "884ed8b4343eb10c4e5fa123069c9ac584d74123aea3173974bf3afdb6c48134",
+      "bytes": 3978,
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.ImproperIntegrals",
+        "Mathlib.Analysis.SpecialFunctions.Integrals.Basic"
+      ]
+    },
+    {
+      "module": "UnitFractions.ForMathlib.Misc",
+      "path": "UnitFractions/ForMathlib/Misc.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/UnitFractions/ForMathlib/Misc.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/UnitFractions/ForMathlib/Misc.lean",
+      "sha256": "99e31b4fcb5ff24d26b0c9261ca280f4d96aea91e9f1cde7b8ae59a43361f3dd",
+      "bytes": 5104,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "UnitFractions.ForMathlib.BasicEstimates",
+      "path": "UnitFractions/ForMathlib/BasicEstimates.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/UnitFractions/ForMathlib/BasicEstimates.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/UnitFractions/ForMathlib/BasicEstimates.lean",
+      "sha256": "1475f84517f02f43f91563e7852b147d677d661d57e7cac6b4b3120570613775",
+      "bytes": 157200,
+      "imports": [
+        "Mathlib",
+        "UnitFractions.ForMathlib.IntegralRPow",
+        "UnitFractions.ForMathlib.Misc"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos448.MertensEulerProduct448",
+      "path": "ErdosProblems/Erdos448/MertensEulerProduct448.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos448/MertensEulerProduct448.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos448/MertensEulerProduct448.lean",
+      "sha256": "57210ffb010a692a0d07d4c9ef677c2cac52fe263900d83680456e439da0573e",
+      "bytes": 8433,
+      "imports": [
+        "UnitFractions.ForMathlib.BasicEstimates"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos459",
+      "path": "ErdosProblems/Erdos459.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos459.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos459.lean",
+      "sha256": "0de424a33b7a767875335659a66925ea828ecc2c4b4afaa3bb4447c27ad6dd23",
+      "bytes": 74235,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos673.Mean",
+      "path": "ErdosProblems/Erdos673/Mean.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos673/Mean.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos673/Mean.lean",
+      "sha256": "acc6021a2e5762713714b9865e3f3bf164362b53ea9c0e867e4f94d6a97bdcd8",
+      "bytes": 29287,
+      "imports": [
+        "ErdosProblems.Erdos448.HalberstamComplete448",
+        "ErdosProblems.Erdos448.MertensEulerProduct448"
+      ]
+    },
+    {
+      "module": "Util.Density",
+      "path": "Util/Density.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/Util/Density.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/Util/Density.lean",
+      "sha256": "42bab8e8913462b6c0ef71cb7d4694d64c7c74a5ec4365827610f55947c57b0a",
+      "bytes": 4653,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos673",
+      "path": "ErdosProblems/Erdos673.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos673.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos673.lean",
+      "sha256": "891f603f64df531fb7cde16146ebdb5a2625b02e31bc99c7ba95c1ea411314b8",
+      "bytes": 38910,
+      "imports": [
+        "ErdosProblems.Erdos448.HalberstamComplete448",
+        "ErdosProblems.Erdos448.MertensEulerProduct448",
+        "ErdosProblems.Erdos459",
+        "ErdosProblems.Erdos673.Mean",
+        "Mathlib.NumberTheory.Harmonic.EulerMascheroni",
+        "Util.Density"
+      ]
+    }
+  ],
+  "verification": {
+    "status": "verified_unchanged_source",
+    "source_bytes_unchanged": true,
+    "axioms": {
+      "Erdos673.divisorSequence_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos673.divisorSequence_last": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos673.tao_lower_bound": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos673.logarithmic_deficit_bound": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos673.G_sublevel_hasNaturalDensity_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos673.hasDensity_of_hasNaturalDensity": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos673.G_tendsToInfinityAlmostAll": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos673.G_deficit_le_weighted_sqrtTau": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos673.GSum_isEquivalent": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos673.G_average_tendsto_atTop": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos673.erdos_673": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos673Mean.weighted_deficit_partialSum_isLittleO": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos673Mean.statisticSum_isEquivalent_of_weighted_sqrtTau_deficit": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "HalberstamComplete448.halberstam_richert_explicit": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "checker_selected_modules": [
+      "ErdosProblems.Erdos673",
+      "ErdosProblems.Erdos673.Mean"
+    ],
+    "events": [
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos448.HalberstamLean",
+        "exit_code": 0,
+        "seconds": 22.965,
+        "started": "2026-09-16T12:23:12.669388+00:00",
+        "finished": "2026-09-16T12:23:35.634027+00:00",
+        "log": "logs/00-compile.log",
+        "log_sha256": "5fc87e2440093da2ae9c096e6b8e02edd1083feb6189622f70e5de582e4d7c05",
+        "original_log_sha256": "5fc87e2440093da2ae9c096e6b8e02edd1083feb6189622f70e5de582e4d7c05",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos448.PrimePowerConvolution448",
+        "exit_code": 0,
+        "seconds": 20.465,
+        "started": "2026-09-16T12:23:35.643442+00:00",
+        "finished": "2026-09-16T12:23:56.108864+00:00",
+        "log": "logs/01-compile.log",
+        "log_sha256": "3bd3c60101769bde62f88df1101c2780eb6c4702ee8070677314819c53bf28a1",
+        "original_log_sha256": "3bd3c60101769bde62f88df1101c2780eb6c4702ee8070677314819c53bf28a1",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos448.PrimePowerMassLinear448",
+        "exit_code": 0,
+        "seconds": 25.931,
+        "started": "2026-09-16T12:23:56.117947+00:00",
+        "finished": "2026-09-16T12:24:22.049083+00:00",
+        "log": "logs/02-compile.log",
+        "log_sha256": "616f56db2991168f402c3fc319a6c65458465ee28f83f69ef4d331f62129951f",
+        "original_log_sha256": "616f56db2991168f402c3fc319a6c65458465ee28f83f69ef4d331f62129951f",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos448.HalberstamComplete448",
+        "exit_code": 0,
+        "seconds": 20.54,
+        "started": "2026-09-16T12:24:22.058913+00:00",
+        "finished": "2026-09-16T12:24:42.598929+00:00",
+        "log": "logs/03-compile.log",
+        "log_sha256": "90a99f1fa12ccdf6e218e7cd518c1c2f5fb65be9b95d8df29e3eb1af9e3e6801",
+        "original_log_sha256": "90a99f1fa12ccdf6e218e7cd518c1c2f5fb65be9b95d8df29e3eb1af9e3e6801",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "UnitFractions.ForMathlib.IntegralRPow",
+        "exit_code": 0,
+        "seconds": 10.21,
+        "started": "2026-09-16T12:24:42.608120+00:00",
+        "finished": "2026-09-16T12:24:52.817953+00:00",
+        "log": "logs/04-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "UnitFractions.ForMathlib.Misc",
+        "exit_code": 0,
+        "seconds": 20.262,
+        "started": "2026-09-16T12:24:52.819250+00:00",
+        "finished": "2026-09-16T12:25:13.081400+00:00",
+        "log": "logs/05-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "UnitFractions.ForMathlib.BasicEstimates",
+        "exit_code": 0,
+        "seconds": 52.805,
+        "started": "2026-09-16T12:25:13.082667+00:00",
+        "finished": "2026-09-16T12:26:05.887469+00:00",
+        "log": "logs/06-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos448.MertensEulerProduct448",
+        "exit_code": 0,
+        "seconds": 20.775,
+        "started": "2026-09-16T12:26:05.888690+00:00",
+        "finished": "2026-09-16T12:26:26.663352+00:00",
+        "log": "logs/07-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos459",
+        "exit_code": 0,
+        "seconds": 67.633,
+        "started": "2026-09-16T12:26:26.664574+00:00",
+        "finished": "2026-09-16T12:27:34.297624+00:00",
+        "log": "logs/08-compile.log",
+        "log_sha256": "8f697a6ccfddc6698dbd0c2a8498ef389433a35f3c11bc954ba5522f4f025197",
+        "original_log_sha256": "8f697a6ccfddc6698dbd0c2a8498ef389433a35f3c11bc954ba5522f4f025197",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos673.Mean",
+        "exit_code": 0,
+        "seconds": 28.789,
+        "started": "2026-09-16T12:27:34.305727+00:00",
+        "finished": "2026-09-16T12:28:03.094554+00:00",
+        "log": "logs/09-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "Util.Density",
+        "exit_code": 0,
+        "seconds": 19.601,
+        "started": "2026-09-16T12:28:03.096287+00:00",
+        "finished": "2026-09-16T12:28:22.697741+00:00",
+        "log": "logs/10-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos673",
+        "exit_code": 0,
+        "seconds": 27.281,
+        "started": "2026-09-16T12:28:22.698965+00:00",
+        "finished": "2026-09-16T12:28:49.980120+00:00",
+        "log": "logs/11-compile.log",
+        "log_sha256": "0dd027d76ba3551c4f8ebb1425ea2d04aa57d47a2ea379aa2c1d47019eef7448",
+        "original_log_sha256": "0dd027d76ba3551c4f8ebb1425ea2d04aa57d47a2ea379aa2c1d47019eef7448",
+        "redactions": []
+      },
+      {
+        "stage": "audit",
+        "module": "Audit673",
+        "exit_code": 0,
+        "seconds": 19.114,
+        "started": "2026-09-16T12:28:49.990397+00:00",
+        "finished": "2026-09-16T12:29:09.104698+00:00",
+        "log": "logs/12-audit.log",
+        "log_sha256": "95b41826f7d98fc3901f5278c50625793934ea9bf14d23177813e14bfceb6ee4",
+        "original_log_sha256": "95b41826f7d98fc3901f5278c50625793934ea9bf14d23177813e14bfceb6ee4",
+        "redactions": []
+      },
+      {
+        "stage": "leanchecker",
+        "module": "ErdosProblems.Erdos673",
+        "exit_code": 0,
+        "seconds": 33.435,
+        "started": "2026-09-16T12:29:09.116111+00:00",
+        "finished": "2026-09-16T12:29:42.550850+00:00",
+        "log": "logs/13-leanchecker.log",
+        "log_sha256": "b83079f98a0ad74b1e3a9d35c0dbac7707377bc06c5148766971b4342be39944",
+        "original_log_sha256": "b83079f98a0ad74b1e3a9d35c0dbac7707377bc06c5148766971b4342be39944",
+        "redactions": []
+      }
+    ],
+    "limits": [
+      "The bundled Lean checker reuses the imported environment; Mathlib was not freshly replayed.",
+      "Compilation and replay use Lean's kernel, not independently implemented checkers.",
+      "This is existing-proof evidence intake, not new authorship, acceptance, nomination or an award record."
+    ]
+  }
+}

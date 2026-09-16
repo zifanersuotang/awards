@@ -1,0 +1,116 @@
+def Nat.divisors : ℕ → Finset.{0} ℕ :=
+fun n => {d ∈ Finset.Ico.{0} 1 (HAdd.hAdd.{0, 0, 0} n 1) | Dvd.dvd.{0} d n}
+def Erdos673.divisorSequence : (n : ℕ) → OrderEmbedding.{0, 0} (Fin (Finset.card.{0} n.divisors)) ℕ :=
+fun n => Finset.orderEmbOfFin.{0} n.divisors ⋯
+def Erdos673.G : ℕ → ℝ :=
+fun n =>
+  ∑ i,
+    HDiv.hDiv.{0, 0, 0} ↑((Erdos673.divisorSequence n) ⟨↑i, ⋯⟩)
+      ↑((Erdos673.divisorSequence n) ⟨HAdd.hAdd.{0, 0, 0} (↑i) 1, ⋯⟩)
+def Erdos673.TendsToInfinityAlmostAll : (ℕ → ℝ) → Prop :=
+fun f => ∀ (C : ℝ), Set.HasDensity.{0} (Set.ofPred.{0} fun n => LT.lt.{0} C (f n)) 1
+@[reducible] def Set.partialDensity.{u_1} : {β : Type u_1} →
+  [inst : Preorder.{u_1} β] →
+    [LocallyFiniteOrderBot.{u_1} β] → Set.{u_1} β → optParam.{u_1 + 1} (Set.{u_1} β) Set.univ.{u_1} → β → ℝ :=
+fun {β} [Preorder.{u_1} β] [LocallyFiniteOrderBot.{u_1} β] S A b =>
+  HDiv.hDiv.{0, 0, 0} ↑(Set.ncard.{u_1} (Inter.inter.{u_1} (Inter.inter.{u_1} S A) (Set.Iio.{u_1} b)))
+    ↑(Set.ncard.{u_1} (Inter.inter.{u_1} A (Set.Iio.{u_1} b)))
+def Set.HasDensity.{u_1} : {β : Type u_1} →
+  [inst : Preorder.{u_1} β] →
+    [LocallyFiniteOrderBot.{u_1} β] → Set.{u_1} β → ℝ → optParam.{u_1 + 1} (Set.{u_1} β) Set.univ.{u_1} → Prop :=
+fun {β} [Preorder.{u_1} β] [LocallyFiniteOrderBot.{u_1} β] S α A =>
+  Filter.Tendsto.{u_1, 0} (fun b => Set.partialDensity.{u_1} S A b) Filter.atTop.{u_1} (nhds.{0} α)
+def Erdos459.has_natural_density : Set.{0} ℕ → ℝ → Prop :=
+fun A d =>
+  Filter.Tendsto.{0, 0}
+    (fun n => HDiv.hDiv.{0, 0, 0} ↑(Finset.card.{0} ({k ∈ Finset.range n | Membership.mem.{0, 0} A k})) ↑n)
+    Filter.atTop.{0} (nhds.{0} d)
+def Erdos673.GSum : ℕ → ℝ :=
+fun X => ∑ n ∈ Finset.Icc.{0} 1 X, Erdos673.G n
+def Asymptotics.IsEquivalent.{u_1, u_6} : {α : Type u_1} →
+  {E' : Type u_6} → [SeminormedAddCommGroup.{u_6} E'] → Filter.{u_1} α → (α → E') → (α → E') → Prop :=
+fun {α} {E'} [SeminormedAddCommGroup.{u_6} E'] l u v =>
+  Asymptotics.IsLittleO.{u_1, u_6, u_6} l (HSub.hSub.{max u_1 u_6, max u_1 u_6, max u_1 u_6} u v) v
+def Erdos673Mean.statisticSum : (ℕ → ℝ) → ℕ → ℝ :=
+fun G X => HalberstamScratch.partialSum G X
+def HalberstamScratch.partialSum : (ℕ → ℝ) → ℕ → ℝ :=
+fun h N => ∑ n ∈ Finset.Icc.{0} 1 N, h n
+@Erdos673.divisorSequence_zero : ∀ {n : ℕ} (hn : Ne.{1} n 0), Eq.{1} ((Erdos673.divisorSequence n) ⟨0, ⋯⟩) 1
+'Erdos673.divisorSequence_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos673.divisorSequence_last : ∀ {n : ℕ} (hn : Ne.{1} n 0),
+  Eq.{1} ((Erdos673.divisorSequence n) ⟨HSub.hSub.{0, 0, 0} (Finset.card.{0} n.divisors) 1, ⋯⟩) n
+'Erdos673.divisorSequence_last' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos673.tao_lower_bound : ∀ {n m : ℕ},
+  Ne.{1} n 0 →
+    LT.lt.{0} 1 m →
+      Dvd.dvd.{0} m n →
+        LE.le.{0} (HDiv.hDiv.{0, 0, 0} ↑(Finset.card.{0} (HDiv.hDiv.{0, 0, 0} n m).divisors) ↑m) (Erdos673.G n)
+'Erdos673.tao_lower_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos673.logarithmic_deficit_bound : ∀ {n : ℕ},
+  Ne.{1} n 0 →
+    LE.le.{0} (HSub.hSub.{0, 0, 0} (↑(Finset.card.{0} n.divisors)) (Erdos673.G n)) (HAdd.hAdd.{0, 0, 0} 1 (Real.log ↑n))
+'Erdos673.logarithmic_deficit_bound' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos673.G_sublevel_hasNaturalDensity_zero : ∀ (C : ℝ),
+  Erdos459.has_natural_density (Set.ofPred.{0} fun n => LE.le.{0} (Erdos673.G n) C) 0
+'Erdos673.G_sublevel_hasNaturalDensity_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos673.hasDensity_of_hasNaturalDensity : ∀ (S : Set.{0} ℕ) (d : ℝ),
+  Erdos459.has_natural_density S d → Set.HasDensity.{0} S d
+'Erdos673.hasDensity_of_hasNaturalDensity' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos673.G_tendsToInfinityAlmostAll : Erdos673.TendsToInfinityAlmostAll Erdos673.G
+'Erdos673.G_tendsToInfinityAlmostAll' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos673.G_deficit_le_weighted_sqrtTau : ∀ (n : ℕ),
+  LE.le.{0} (HSub.hSub.{0, 0, 0} (↑(Finset.card.{0} n.divisors)) (Erdos673.G n))
+    (HMul.hMul.{0, 0, 0} (Erdos673Mean.sqrtTau n) √(HAdd.hAdd.{0, 0, 0} 1 (Real.log ↑n)))
+'Erdos673.G_deficit_le_weighted_sqrtTau' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos673.GSum_isEquivalent : Asymptotics.IsEquivalent.{0, 0} Filter.atTop.{0} (fun X => Erdos673.GSum X) fun X =>
+  HMul.hMul.{0, 0, 0} (↑X) (Real.log ↑X)
+'Erdos673.GSum_isEquivalent' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos673.G_average_tendsto_atTop : Filter.Tendsto.{0, 0} (fun X => HDiv.hDiv.{0, 0, 0} (Erdos673.GSum X) ↑X)
+  Filter.atTop.{0} Filter.atTop.{0}
+'Erdos673.G_average_tendsto_atTop' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos673.erdos_673 : Erdos673.TendsToInfinityAlmostAll Erdos673.G ∧
+  (Asymptotics.IsEquivalent.{0, 0} Filter.atTop.{0} (fun X => Erdos673.GSum X) fun X =>
+      HMul.hMul.{0, 0, 0} (↑X) (Real.log ↑X)) ∧
+    Filter.Tendsto.{0, 0} (fun X => HDiv.hDiv.{0, 0, 0} (Erdos673.GSum X) ↑X) Filter.atTop.{0} Filter.atTop.{0}
+'Erdos673.erdos_673' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos673Mean.weighted_deficit_partialSum_isLittleO : ∀ (D : ℕ → ℝ),
+  (∀ (n : ℕ), LE.le.{0} 0 (D n)) →
+    (∀ (n : ℕ), LE.le.{0} (D n) (HMul.hMul.{0, 0, 0} (Erdos673Mean.sqrtTau n) √(HAdd.hAdd.{0, 0, 0} 1 (Real.log ↑n)))) →
+      Asymptotics.IsLittleO.{0, 0, 0} Filter.atTop.{0} (fun N => HalberstamScratch.partialSum D N) fun N =>
+        HMul.hMul.{0, 0, 0} (↑N) (Real.log ↑N)
+'Erdos673Mean.weighted_deficit_partialSum_isLittleO' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos673Mean.statisticSum_isEquivalent_of_weighted_sqrtTau_deficit : ∀ (G : ℕ → ℝ),
+  (∀ (n : ℕ), LE.le.{0} 0 (HSub.hSub.{0, 0, 0} (↑(Finset.card.{0} n.divisors)) (G n))) →
+    (∀ (n : ℕ),
+        LE.le.{0} (HSub.hSub.{0, 0, 0} (↑(Finset.card.{0} n.divisors)) (G n))
+          (HMul.hMul.{0, 0, 0} (Erdos673Mean.sqrtTau n) √(HAdd.hAdd.{0, 0, 0} 1 (Real.log ↑n)))) →
+      Asymptotics.IsEquivalent.{0, 0} Filter.atTop.{0} (fun X => Erdos673Mean.statisticSum G X) fun X =>
+        HMul.hMul.{0, 0, 0} (↑X) (Real.log ↑X)
+'Erdos673Mean.statisticSum_isEquivalent_of_weighted_sqrtTau_deficit' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+HalberstamComplete448.halberstam_richert_explicit : ∀ (h : ℕ → ℝ),
+  Eq.{1} (h 0) 0 →
+    Eq.{1} (h 1) 1 →
+      (∀ {m n : ℕ}, m.Coprime n → Eq.{1} (h (HMul.hMul.{0, 0, 0} m n)) (HMul.hMul.{0, 0, 0} (h m) (h n))) →
+        (∀ (n : ℕ), LE.le.{0} 0 (h n)) →
+          ∀ (lambda1 lambda2 : ℝ),
+            LE.le.{0} 0 lambda1 →
+              LE.le.{0} 0 lambda2 →
+                LT.lt.{0} lambda2 2 →
+                  (∀ (p : ℕ),
+                      Nat.Prime p →
+                        ∀ (j : ℕ),
+                          LE.le.{0} (h (HPow.hPow.{0, 0, 0} p (HAdd.hAdd.{0, 0, 0} j 1)))
+                            (HMul.hMul.{0, 0, 0} lambda1 (HPow.hPow.{0, 0, 0} lambda2 j))) →
+                    ∀ (N : ℕ),
+                      LE.le.{0} 2 N →
+                        LE.le.{0} (HalberstamScratch.partialSum h N)
+                          (HMul.hMul.{0, 0, 0}
+                            (HDiv.hDiv.{0, 0, 0}
+                              (HMul.hMul.{0, 0, 0}
+                                (HAdd.hAdd.{0, 0, 0} (HalberstamScratch.explicitMassConstant lambda1 lambda2) 1) ↑N)
+                              (Real.log ↑N))
+                            (∏ p ∈ (HAdd.hAdd.{0, 0, 0} N 1).primesBelow,
+                              ∑' (j : ℕ), HDiv.hDiv.{0, 0, 0} (h (HPow.hPow.{0, 0, 0} p j)) ↑(HPow.hPow.{0, 0, 0} p j)))
+'HalberstamComplete448.halberstam_richert_explicit' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

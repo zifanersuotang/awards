@@ -1,0 +1,2 @@
+'HalberstamScratch.prime_power_local_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HalberstamScratch.halberstam_richert_of_mass_convolution' depends on axioms: [propext, Classical.choice, Quot.sound]
