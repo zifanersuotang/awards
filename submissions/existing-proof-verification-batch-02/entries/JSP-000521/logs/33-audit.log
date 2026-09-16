@@ -1,0 +1,104 @@
+def SimpleGraph.IsRegularOfDegree.{u_1} : {V : Type u_1} →
+  (G : SimpleGraph.{u_1} V) → [SimpleGraph.LocallyFinite.{u_1} G] → ℕ → Prop :=
+fun {V} G [SimpleGraph.LocallyFinite.{u_1} G] d => ∀ (v : V), Eq.{1} (SimpleGraph.degree.{u_1} G v) d
+structure SimpleGraph.Copy.{u_4, u_5} {α : Type u_4} {β : Type u_5} (A : SimpleGraph.{u_4} α)
+  (B : SimpleGraph.{u_5} β) : Type (max u_4 u_5)
+number of parameters: 4
+fields:
+  SimpleGraph.Copy.toHom.{u_4, u_5} : SimpleGraph.Hom.{u_4, u_5} A B
+  SimpleGraph.Copy.injective'.{u_4,
+    u_5} : Function.Injective.{u_4 + 1, u_5 + 1} ⇑(SimpleGraph.Copy.toHom.{u_4, u_5} self)
+constructor:
+  SimpleGraph.Copy.mk.{u_4, u_5} {α : Type u_4} {β : Type u_5} {A : SimpleGraph.{u_4} α} {B : SimpleGraph.{u_5} β}
+    (toHom : SimpleGraph.Hom.{u_4, u_5} A B) (injective' : Function.Injective.{u_4 + 1, u_5 + 1} ⇑toHom) :
+    SimpleGraph.Copy.{u_4, u_5} A B
+def SimpleGraph.chromaticNumber.{u} : {V : Type u} → SimpleGraph.{u} V → ℕ∞ :=
+fun {V} G => ⨅ n, ⨅ (_ : Membership.mem.{0, 0} (Set.ofPred.{0} (SimpleGraph.Colorable.{u} G)) n), ↑n
+def Erdos641.IsCycleGraph.{u_1} : {V : Type u_1} → [Fintype.{u_1} V] → SimpleGraph.{u_1} V → Prop :=
+fun {V} [Fintype.{u_1} V] C => SimpleGraph.Connected.{u_1} C ∧ SimpleGraph.IsRegularOfDegree.{u_1} C 2
+def Erdos641.HasCommonVertexCycles.{u_1} : {V : Type u_1} → [Fintype.{u_1} V] → SimpleGraph.{u_1} V → ℕ → Prop :=
+fun {V} [Fintype.{u_1} V] G r =>
+  ∃ m,
+    LT.lt.{0} 0 m ∧
+      ∃ C,
+        (∀ (i : Fin r), Erdos641.IsCycleGraph.{0} (C i)) ∧
+          (∀ ⦃i j : Fin r⦄, Ne.{1} i j → Disjoint.{0} (C i) (C j)) ∧
+            Nonempty.{max (u_1 + 1) 1} (SimpleGraph.Copy.{0, u_1} (⨆ i, C i) G)
+def Erdos641.ErdosHajnalProperty : (ℕ → ℕ) → Prop :=
+fun F =>
+  ∀ (r : ℕ),
+    LE.le.{0} 1 r →
+      ∀ (V : Type) [inst : Fintype.{0} V] (G : SimpleGraph.{0} V),
+        LE.le.{0} (↑(F r)) (SimpleGraph.chromaticNumber.{0} G) → Erdos641.HasCommonVertexCycles.{0} G r
+def Erdos182.ContainsRegularSubgraph.{u_1} : {V : Type u_1} → [Fintype.{u_1} V] → SimpleGraph.{u_1} V → ℕ → Prop :=
+fun {V} [Fintype.{u_1} V] G k =>
+  ∃ H,
+    Set.Nonempty.{u_1} (SimpleGraph.Subgraph.verts.{u_1} H) ∧
+      ∀ (v : ↑(SimpleGraph.Subgraph.verts.{u_1} H)),
+        Eq.{1} (Set.ncard.{u_1} (SimpleGraph.neighborSet.{u_1} (SimpleGraph.Subgraph.coe.{u_1} H) v)) k
+def Erdos182.IsRegularSubgraphFree.{u_1} : {V : Type u_1} → [Fintype.{u_1} V] → SimpleGraph.{u_1} V → ℕ → Prop :=
+fun {V} [Fintype.{u_1} V] G k => ¬Erdos182.ContainsRegularSubgraph.{u_1} G k
+@[reducible] def Erdos641.JSSVertex : ℕ → Type :=
+fun n => (i : Fin (Erdos182.prsLayerCount n)) × Fin (Erdos182.prsLayerSize n ↑i)
+@[reducible] def Erdos641.JSSOutcome : ℕ → Type :=
+fun n => Erdos182.FiniteChoiceOutcome.{0, 0} (Erdos641.JSSCoordinate n) (Erdos641.JSSVertex n)
+def Erdos641.jssOutcomeSpace : (n : ℕ) → Finset.{0} (Erdos641.JSSOutcome n) :=
+fun n => Erdos182.finiteChoiceSpace.{0, 0} Erdos641.jssAllowed
+def Erdos641.jssGraph : {n : ℕ} →
+  (ω : Erdos641.JSSOutcome n) →
+    Membership.mem.{0, 0} (Erdos641.jssOutcomeSpace n) ω → SimpleGraph.{0} (Erdos641.JSSVertex n) :=
+fun {n} ω hω =>
+  SimpleGraph.mk.{0}
+    (fun a b =>
+      (∃ c, Eq.{1} c.source a ∧ Eq.{1} (Erdos641.jssTarget ω hω c) b) ∨
+        ∃ c, Eq.{1} c.source b ∧ Eq.{1} (Erdos641.jssTarget ω hω c) a)
+    ⋯ ⋯
+@Erdos641.isRegularOfDegree_four_sup : ∀ {m : ℕ} {C D : SimpleGraph.{0} (Fin m)},
+  SimpleGraph.IsRegularOfDegree.{0} C 2 →
+    SimpleGraph.IsRegularOfDegree.{0} D 2 → Disjoint.{0} C D → SimpleGraph.IsRegularOfDegree.{0} (C ⊔ D) 4
+'Erdos641.isRegularOfDegree_four_sup' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos641.containsRegularSubgraph_four_of_commonVertexCycles.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V]
+  {G : SimpleGraph.{u_1} V}, Erdos641.HasCommonVertexCycles.{u_1} G 2 → Erdos182.ContainsRegularSubgraph.{u_1} G 4
+'Erdos641.containsRegularSubgraph_four_of_commonVertexCycles' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@Erdos641.not_hasCommonVertexCycles_of_four_free.{u_1} : ∀ {V : Type u_1} [inst : Fintype.{u_1} V]
+  {G : SimpleGraph.{u_1} V}, Erdos182.IsRegularSubgraphFree.{u_1} G 4 → ¬Erdos641.HasCommonVertexCycles.{u_1} G 2
+'Erdos641.not_hasCommonVertexCycles_of_four_free' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos641.exists_four_regular_free_high_chromatic : ∀ (k : ℕ),
+  ∃ n ω,
+    ∃ (hω : Membership.mem.{0, 0} (Erdos641.jssOutcomeSpace n) ω),
+      LE.le.{0} (↑k) (SimpleGraph.chromaticNumber.{0} (Erdos641.jssGraph ω hω)) ∧
+        Erdos182.IsRegularSubgraphFree.{0} (Erdos641.jssGraph ω hω) 4
+'Erdos641.exists_four_regular_free_high_chromatic' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos641.not_erdos_641 : ¬∃ F, Erdos641.ErdosHajnalProperty F
+'Erdos641.not_erdos_641' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos641.eventually_exists_regularFree_not_colorable : ∀ (q : ℕ),
+  LT.lt.{0} 0 q →
+    ∀ᶠ (n : ℕ) in Filter.atTop.{0},
+      ∃ ω,
+        ∃ (hω : Membership.mem.{0, 0} (Erdos641.jssOutcomeSpace n) ω),
+          Erdos182.IsRegularSubgraphFree.{0} (Erdos641.jssGraph ω hω) 4 ∧
+            ¬Nonempty.{1} (SimpleGraph.Coloring.{0, 0} (Erdos641.jssGraph ω hω) (Fin q))
+'Erdos641.eventually_exists_regularFree_not_colorable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@Erdos182.BipartiteGraph.containsRegularSubgraph_of_copy.{u_1,
+    u_2} : ∀ {X : Type u_1} {Y : Type u_2} [inst : Fintype.{u_1} X] [inst_1 : Fintype.{u_2} Y] {P : SimpleGraph.{u_1} X}
+  {G : SimpleGraph.{u_2} Y} {k : ℕ} (f : SimpleGraph.Copy.{u_1, u_2} P G),
+  Erdos182.ContainsRegularSubgraph.{u_1} P k → Erdos182.ContainsRegularSubgraph.{u_2} G k
+'Erdos182.BipartiteGraph.containsRegularSubgraph_of_copy' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@Erdos182.BipartiteGraph.containsRegularSubgraph_of_regular_support_mono.{u_1} : ∀ {X : Type u_1}
+  [inst : Fintype.{u_1} X] {G P : SimpleGraph.{u_1} X} {k : ℕ},
+  LE.le.{u_1} P G →
+    Set.Nonempty.{u_1} (SimpleGraph.support.{u_1} P) →
+      (∀ (v : X),
+          Membership.mem.{u_1, u_1} (SimpleGraph.support.{u_1} P) v →
+            Eq.{1} (Set.ncard.{u_1} (SimpleGraph.neighborSet.{u_1} P v)) k) →
+        Erdos182.ContainsRegularSubgraph.{u_1} G k
+'Erdos182.BipartiteGraph.containsRegularSubgraph_of_regular_support_mono' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+Erdos641.erdos_641 : ¬∃ F, Erdos641.ErdosHajnalProperty F
