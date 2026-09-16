@@ -1,0 +1,77 @@
+{
+  "jsp": "JSP-000767",
+  "erdos": 924,
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "main_module": "ErdosProblems.Erdos924",
+  "main_theorem": "Erdos924.erdos_924",
+  "harness_module": "Audit924",
+  "harness_sha256": "25fe1794d8b2f9b527b6a85ffcd685521fafac6f20f3a0d3b8000c39245a744b",
+  "ordered_modules": [
+    {
+      "module": "ErdosProblems.Erdos1098",
+      "path": "ErdosProblems/Erdos1098.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos1098.lean",
+      "sha256": "038d18909625c6a005928f3a4620ae9349e4f5db0527f6fe2d97bac7ec37f787",
+      "bytes": 29078,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos161.Ramsey",
+      "path": "ErdosProblems/Erdos161/Ramsey.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos161/Ramsey.lean",
+      "sha256": "70134fdb4739073fb84e049d46148d46432e92bcf47a19d22b7e34d2252ce754",
+      "bytes": 11497,
+      "imports": [
+        "Mathlib",
+        "ErdosProblems.Erdos1098"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos924",
+      "path": "ErdosProblems/Erdos924.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos924.lean",
+      "sha256": "a8d53748db08fb9149ed3b85faab20cf0a9acaf321884762cb865902c3c4a0b4",
+      "bytes": 55082,
+      "imports": [
+        "Mathlib",
+        "ErdosProblems.Erdos161.Ramsey"
+      ]
+    }
+  ],
+  "source_bytes": 95657,
+  "source_audit": "audit-728-799/audit.json",
+  "scope": "Every k>=2,l>=3 admits finite K_(l+1)-free graph edge Ramsey for K_l in k colors.",
+  "scope_cautions": "Exact complete-graph instance of Nesetril–Rodl needed by problem; arbitrary target-graph strengthening not required.",
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/f4e7173d89dfe91022a185427d63452c8ffbf6ae/problems/catalog-0701-0800.md#JSP-000767",
+  "preparation_only": false,
+  "compiled": true,
+  "replayed": true,
+  "resource_plan": "Future coordinator must acquire/release shared mutex separately for each source module. Do not wrap whole multi-module build in a second mutex.",
+  "checker_plan": "Replay every locally compiled proof module, selecting Lean Name-prefix roots and comparing the actual verbose replay module set to this exact local closure. Treat imported Mathlib separately as trusted pinned caches.",
+  "audit_targets": [
+    "Erdos924.erdos_924"
+  ],
+  "informal_authors_as_credited": [
+    "Jaroslav Nešetřil",
+    "Vojtěch Rödl"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "verification_limit": "Same Lean kernel. Replay of the entire compiled local source closure, checked against actual verbose module names; imported pinned Mathlib caches are trusted, not freshly replayed. No independently implemented checker.",
+  "module": "ErdosProblems.Erdos924",
+  "statement_scope": "Every k>=2,l>=3 admits finite K_(l+1)-free graph edge Ramsey for K_l in k colors.",
+  "source_path": "src/latest/ErdosProblems/Erdos924.lean",
+  "source_sha256": {
+    "ErdosProblems/Erdos1098.lean": "038d18909625c6a005928f3a4620ae9349e4f5db0527f6fe2d97bac7ec37f787",
+    "ErdosProblems/Erdos161/Ramsey.lean": "70134fdb4739073fb84e049d46148d46432e92bcf47a19d22b7e34d2252ce754",
+    "ErdosProblems/Erdos924.lean": "a8d53748db08fb9149ed3b85faab20cf0a9acaf321884762cb865902c3c4a0b4",
+    "Audit924.lean": "25fe1794d8b2f9b527b6a85ffcd685521fafac6f20f3a0d3b8000c39245a744b"
+  },
+  "main_source_sha256": "a8d53748db08fb9149ed3b85faab20cf0a9acaf321884762cb865902c3c4a0b4",
+  "original_problem_url": "https://www.erdosproblems.com/924"
+}
