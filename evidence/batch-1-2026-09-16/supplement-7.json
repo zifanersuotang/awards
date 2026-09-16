@@ -1,0 +1,3942 @@
+{
+  "jsp": "JSP-000060",
+  "erdos": 27,
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_files": [
+    {
+      "module": "ErdosProblems.Erdos277",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos277.lean",
+      "raw_sha256": "141c43ae0e8cc4de9a88dc8731c2565414d17b61ccfaa52792d543a8ba285989",
+      "raw_bytes": 60831,
+      "compiled_sha256": "a7326e95c7ca40c6a305e29f7f98aa0f329fee1e3f1ee373c404bd56642d8cd5",
+      "compiled_bytes": 62195
+    },
+    {
+      "module": "ErdosProblems.Erdos281",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos281.lean",
+      "raw_sha256": "2d6af01e6bbb0d6d18158975fb81c39cae23f6b6436eb3f70ac8bf3705afa1ec",
+      "raw_bytes": 46773,
+      "compiled_sha256": "d4ba23be868e3d7873a00ea072ed0e462948b37ebb2cd8f9b32b897cce5c6883",
+      "compiled_bytes": 47968
+    },
+    {
+      "module": "UnitFractions.ForMathlib.IntegralRPow",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/UnitFractions/ForMathlib/IntegralRPow.lean",
+      "raw_sha256": "884ed8b4343eb10c4e5fa123069c9ac584d74123aea3173974bf3afdb6c48134",
+      "raw_bytes": 3978,
+      "compiled_sha256": "aab38aeb568c48422f8428a8cf456b7d5c649be5359896c48c401dbf73de7bee",
+      "compiled_bytes": 4061
+    },
+    {
+      "module": "UnitFractions.ForMathlib.Misc",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/UnitFractions/ForMathlib/Misc.lean",
+      "raw_sha256": "99e31b4fcb5ff24d26b0c9261ca280f4d96aea91e9f1cde7b8ae59a43361f3dd",
+      "raw_bytes": 5104,
+      "compiled_sha256": "0529a95d028e862dd584ff7a921a427de264f20a4f18ea809543e54382a13bcc",
+      "compiled_bytes": 5244
+    },
+    {
+      "module": "UnitFractions.ForMathlib.BasicEstimates",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/UnitFractions/ForMathlib/BasicEstimates.lean",
+      "raw_sha256": "1475f84517f02f43f91563e7852b147d677d661d57e7cac6b4b3120570613775",
+      "raw_bytes": 157200,
+      "compiled_sha256": "6f0ba5d3ea2642aa0e66cf9868d5d04b726d37b575fa65a9f7e7e977c80bcd5d",
+      "compiled_bytes": 160545
+    },
+    {
+      "module": "ErdosProblems.Erdos27",
+      "url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos27.lean",
+      "raw_sha256": "f62e2a0ebf8c227d15a14513d2d2dc624a293cf90d8193079af72b0dd2d415c3",
+      "raw_bytes": 93736,
+      "compiled_sha256": "51aaf6b9c5643f1be38bd0c362a171fb428fc24ea5a8612293739cf5d1d41bd9",
+      "compiled_bytes": 95906
+    }
+  ],
+  "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "runtime": {
+    "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+    "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+    "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+    "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+    "dependency_artifact_fingerprint": null,
+    "imported_mathlib_and_standard_libraries_trusted": true,
+    "automatic_cache_eligible": false
+  },
+  "compilation": [
+    {
+      "schema": "configured-pack-bound-run-v1",
+      "module": "ErdosProblems.Erdos277",
+      "mode": "compile",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\ErdosProblems\\Erdos277.olean",
+        "SOURCE_ROOT\\ErdosProblems\\Erdos277.lean"
+      ],
+      "started_at_utc": "2026-09-16T13:22:37.982004+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 23.89,
+      "log": "logs/compile-ErdosProblems.Erdos277-b8a1e4318c9244ffa9f94a7ad60359a3.log",
+      "output": "'Erdos277.erdos_277' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "log_sha256": "6e9fe0d393d64ddb79b9c267b35ed65e37553784cc37ef71411b82465c0c9e29",
+      "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+      "source_sha256": "a7326e95c7ca40c6a305e29f7f98aa0f329fee1e3f1ee373c404bd56642d8cd5",
+      "source_bytes": 62195,
+      "source_before": {
+        "kind": "upstream",
+        "module": "ErdosProblems.Erdos277",
+        "sha256": "a7326e95c7ca40c6a305e29f7f98aa0f329fee1e3f1ee373c404bd56642d8cd5",
+        "bytes": 62195,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/ErdosProblems/Erdos277.lean",
+        "raw_sha256": "141c43ae0e8cc4de9a88dc8731c2565414d17b61ccfaa52792d543a8ba285989",
+        "raw_bytes": 60831
+      },
+      "source_after": {
+        "kind": "upstream",
+        "module": "ErdosProblems.Erdos277",
+        "sha256": "a7326e95c7ca40c6a305e29f7f98aa0f329fee1e3f1ee373c404bd56642d8cd5",
+        "bytes": 62195,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/ErdosProblems/Erdos277.lean",
+        "raw_sha256": "141c43ae0e8cc4de9a88dc8731c2565414d17b61ccfaa52792d543a8ba285989",
+        "raw_bytes": 60831
+      },
+      "artifact_bundle_before": {
+        "module": "ErdosProblems.Erdos277",
+        "files": [
+          {
+            "path": "build/ErdosProblems/Erdos277.olean",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos277.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos277.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "4283b177e873a9b4ec811bfc33d0126aa948ba591c4701b18da1e96ac7fbb045",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "artifact_bundle_after": {
+        "module": "ErdosProblems.Erdos277",
+        "files": [
+          {
+            "path": "build/ErdosProblems/Erdos277.olean",
+            "present": true,
+            "bytes": 1767728,
+            "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+          },
+          {
+            "path": "build/ErdosProblems/Erdos277.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos277.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "configured_local_artifacts_before": [],
+      "configured_local_artifacts_after": [],
+      "compile_receipt_sha256": null,
+      "matched_modules": [],
+      "child_environment": {
+        "LEAN_NUM_THREADS": "1",
+        "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+      },
+      "runtime": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+        "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+        "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+        "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+        "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+        "dependency_artifact_fingerprint": null,
+        "imported_mathlib_and_standard_libraries_trusted": true,
+        "automatic_cache_eligible": false
+      },
+      "runtime_unchanged": true,
+      "configuration_sha256": "a6d279c476ff7b06bed1249f9a7eb4564c3a3c97c27c158fcbd20fb0b3e1b1cb",
+      "binding_passed": true,
+      "automatic_cache_eligible": false,
+      "receipt_archive": "logs/compile-ErdosProblems.Erdos277-b8a1e4318c9244ffa9f94a7ad60359a3.json"
+    },
+    {
+      "schema": "configured-pack-bound-run-v1",
+      "module": "ErdosProblems.Erdos281",
+      "mode": "compile",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\ErdosProblems\\Erdos281.olean",
+        "SOURCE_ROOT\\ErdosProblems\\Erdos281.lean"
+      ],
+      "started_at_utc": "2026-09-16T13:24:38.278331+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 25.031,
+      "log": "logs/compile-ErdosProblems.Erdos281-dac1e484c7b743808e40755348149516.log",
+      "output": "'Erdos281.erdos_281' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "log_sha256": "4a7315b0f350436f854cc16d2dba7561056c795332c7f84ded0c4e94ac8eafc2",
+      "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+      "source_sha256": "d4ba23be868e3d7873a00ea072ed0e462948b37ebb2cd8f9b32b897cce5c6883",
+      "source_bytes": 47968,
+      "source_before": {
+        "kind": "upstream",
+        "module": "ErdosProblems.Erdos281",
+        "sha256": "d4ba23be868e3d7873a00ea072ed0e462948b37ebb2cd8f9b32b897cce5c6883",
+        "bytes": 47968,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/ErdosProblems/Erdos281.lean",
+        "raw_sha256": "2d6af01e6bbb0d6d18158975fb81c39cae23f6b6436eb3f70ac8bf3705afa1ec",
+        "raw_bytes": 46773
+      },
+      "source_after": {
+        "kind": "upstream",
+        "module": "ErdosProblems.Erdos281",
+        "sha256": "d4ba23be868e3d7873a00ea072ed0e462948b37ebb2cd8f9b32b897cce5c6883",
+        "bytes": 47968,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/ErdosProblems/Erdos281.lean",
+        "raw_sha256": "2d6af01e6bbb0d6d18158975fb81c39cae23f6b6436eb3f70ac8bf3705afa1ec",
+        "raw_bytes": 46773
+      },
+      "artifact_bundle_before": {
+        "module": "ErdosProblems.Erdos281",
+        "files": [
+          {
+            "path": "build/ErdosProblems/Erdos281.olean",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos281.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos281.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "e512ede756deebc0e264fa0d1d371f323b0d4bafbf28b6c5bce684699842ac4a",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "artifact_bundle_after": {
+        "module": "ErdosProblems.Erdos281",
+        "files": [
+          {
+            "path": "build/ErdosProblems/Erdos281.olean",
+            "present": true,
+            "bytes": 1656184,
+            "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+          },
+          {
+            "path": "build/ErdosProblems/Erdos281.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos281.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "configured_local_artifacts_before": [
+        {
+          "module": "ErdosProblems.Erdos277",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos277.olean",
+              "present": true,
+              "bytes": 1767728,
+              "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "configured_local_artifacts_after": [
+        {
+          "module": "ErdosProblems.Erdos277",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos277.olean",
+              "present": true,
+              "bytes": 1767728,
+              "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "compile_receipt_sha256": null,
+      "matched_modules": [],
+      "child_environment": {
+        "LEAN_NUM_THREADS": "1",
+        "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+      },
+      "runtime": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+        "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+        "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+        "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+        "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+        "dependency_artifact_fingerprint": null,
+        "imported_mathlib_and_standard_libraries_trusted": true,
+        "automatic_cache_eligible": false
+      },
+      "runtime_unchanged": true,
+      "configuration_sha256": "a6d279c476ff7b06bed1249f9a7eb4564c3a3c97c27c158fcbd20fb0b3e1b1cb",
+      "binding_passed": true,
+      "automatic_cache_eligible": false,
+      "receipt_archive": "logs/compile-ErdosProblems.Erdos281-dac1e484c7b743808e40755348149516.json"
+    },
+    {
+      "schema": "configured-pack-bound-run-v1",
+      "module": "UnitFractions.ForMathlib.IntegralRPow",
+      "mode": "compile",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\UnitFractions\\ForMathlib\\IntegralRPow.olean",
+        "SOURCE_ROOT\\UnitFractions\\ForMathlib\\IntegralRPow.lean"
+      ],
+      "started_at_utc": "2026-09-16T13:25:59.523718+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 8.781,
+      "log": "logs/compile-UnitFractions.ForMathlib.IntegralRPow-a022a0a4d6bd4ddebb607efc96c2a6a9.log",
+      "output": "",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+      "source_sha256": "aab38aeb568c48422f8428a8cf456b7d5c649be5359896c48c401dbf73de7bee",
+      "source_bytes": 4061,
+      "source_before": {
+        "kind": "upstream",
+        "module": "UnitFractions.ForMathlib.IntegralRPow",
+        "sha256": "aab38aeb568c48422f8428a8cf456b7d5c649be5359896c48c401dbf73de7bee",
+        "bytes": 4061,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/UnitFractions/ForMathlib/IntegralRPow.lean",
+        "raw_sha256": "884ed8b4343eb10c4e5fa123069c9ac584d74123aea3173974bf3afdb6c48134",
+        "raw_bytes": 3978
+      },
+      "source_after": {
+        "kind": "upstream",
+        "module": "UnitFractions.ForMathlib.IntegralRPow",
+        "sha256": "aab38aeb568c48422f8428a8cf456b7d5c649be5359896c48c401dbf73de7bee",
+        "bytes": 4061,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/UnitFractions/ForMathlib/IntegralRPow.lean",
+        "raw_sha256": "884ed8b4343eb10c4e5fa123069c9ac584d74123aea3173974bf3afdb6c48134",
+        "raw_bytes": 3978
+      },
+      "artifact_bundle_before": {
+        "module": "UnitFractions.ForMathlib.IntegralRPow",
+        "files": [
+          {
+            "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "f328d5207846b63fbc749cffc2e194068816b32632d032da859dddd584eddf48",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "artifact_bundle_after": {
+        "module": "UnitFractions.ForMathlib.IntegralRPow",
+        "files": [
+          {
+            "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+            "present": true,
+            "bytes": 172064,
+            "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+          },
+          {
+            "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "configured_local_artifacts_before": [
+        {
+          "module": "ErdosProblems.Erdos277",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos277.olean",
+              "present": true,
+              "bytes": 1767728,
+              "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos281",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos281.olean",
+              "present": true,
+              "bytes": 1656184,
+              "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "configured_local_artifacts_after": [
+        {
+          "module": "ErdosProblems.Erdos277",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos277.olean",
+              "present": true,
+              "bytes": 1767728,
+              "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos281",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos281.olean",
+              "present": true,
+              "bytes": 1656184,
+              "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "compile_receipt_sha256": null,
+      "matched_modules": [],
+      "child_environment": {
+        "LEAN_NUM_THREADS": "1",
+        "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+      },
+      "runtime": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+        "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+        "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+        "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+        "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+        "dependency_artifact_fingerprint": null,
+        "imported_mathlib_and_standard_libraries_trusted": true,
+        "automatic_cache_eligible": false
+      },
+      "runtime_unchanged": true,
+      "configuration_sha256": "a6d279c476ff7b06bed1249f9a7eb4564c3a3c97c27c158fcbd20fb0b3e1b1cb",
+      "binding_passed": true,
+      "automatic_cache_eligible": false,
+      "receipt_archive": "logs/compile-UnitFractions.ForMathlib.IntegralRPow-a022a0a4d6bd4ddebb607efc96c2a6a9.json"
+    },
+    {
+      "schema": "configured-pack-bound-run-v1",
+      "module": "UnitFractions.ForMathlib.Misc",
+      "mode": "compile",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\UnitFractions\\ForMathlib\\Misc.olean",
+        "SOURCE_ROOT\\UnitFractions\\ForMathlib\\Misc.lean"
+      ],
+      "started_at_utc": "2026-09-16T13:26:50.536185+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 15.797,
+      "log": "logs/compile-UnitFractions.ForMathlib.Misc-412896eb4c2d4dfeada53293b4e04538.log",
+      "output": "",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+      "source_sha256": "0529a95d028e862dd584ff7a921a427de264f20a4f18ea809543e54382a13bcc",
+      "source_bytes": 5244,
+      "source_before": {
+        "kind": "upstream",
+        "module": "UnitFractions.ForMathlib.Misc",
+        "sha256": "0529a95d028e862dd584ff7a921a427de264f20a4f18ea809543e54382a13bcc",
+        "bytes": 5244,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/UnitFractions/ForMathlib/Misc.lean",
+        "raw_sha256": "99e31b4fcb5ff24d26b0c9261ca280f4d96aea91e9f1cde7b8ae59a43361f3dd",
+        "raw_bytes": 5104
+      },
+      "source_after": {
+        "kind": "upstream",
+        "module": "UnitFractions.ForMathlib.Misc",
+        "sha256": "0529a95d028e862dd584ff7a921a427de264f20a4f18ea809543e54382a13bcc",
+        "bytes": 5244,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/UnitFractions/ForMathlib/Misc.lean",
+        "raw_sha256": "99e31b4fcb5ff24d26b0c9261ca280f4d96aea91e9f1cde7b8ae59a43361f3dd",
+        "raw_bytes": 5104
+      },
+      "artifact_bundle_before": {
+        "module": "UnitFractions.ForMathlib.Misc",
+        "files": [
+          {
+            "path": "build/UnitFractions/ForMathlib/Misc.olean",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "62e2e379aeec076f3f0a76e281b6c77ff4c9e59718939acac012c8203f49d20c",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "artifact_bundle_after": {
+        "module": "UnitFractions.ForMathlib.Misc",
+        "files": [
+          {
+            "path": "build/UnitFractions/ForMathlib/Misc.olean",
+            "present": true,
+            "bytes": 211808,
+            "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+          },
+          {
+            "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "configured_local_artifacts_before": [
+        {
+          "module": "ErdosProblems.Erdos277",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos277.olean",
+              "present": true,
+              "bytes": 1767728,
+              "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos281",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos281.olean",
+              "present": true,
+              "bytes": 1656184,
+              "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.IntegralRPow",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+              "present": true,
+              "bytes": 172064,
+              "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "configured_local_artifacts_after": [
+        {
+          "module": "ErdosProblems.Erdos277",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos277.olean",
+              "present": true,
+              "bytes": 1767728,
+              "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos281",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos281.olean",
+              "present": true,
+              "bytes": 1656184,
+              "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.IntegralRPow",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+              "present": true,
+              "bytes": 172064,
+              "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "compile_receipt_sha256": null,
+      "matched_modules": [],
+      "child_environment": {
+        "LEAN_NUM_THREADS": "1",
+        "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+      },
+      "runtime": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+        "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+        "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+        "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+        "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+        "dependency_artifact_fingerprint": null,
+        "imported_mathlib_and_standard_libraries_trusted": true,
+        "automatic_cache_eligible": false
+      },
+      "runtime_unchanged": true,
+      "configuration_sha256": "a6d279c476ff7b06bed1249f9a7eb4564c3a3c97c27c158fcbd20fb0b3e1b1cb",
+      "binding_passed": true,
+      "automatic_cache_eligible": false,
+      "receipt_archive": "logs/compile-UnitFractions.ForMathlib.Misc-412896eb4c2d4dfeada53293b4e04538.json"
+    },
+    {
+      "schema": "configured-pack-bound-run-v1",
+      "module": "UnitFractions.ForMathlib.BasicEstimates",
+      "mode": "compile",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\UnitFractions\\ForMathlib\\BasicEstimates.olean",
+        "SOURCE_ROOT\\UnitFractions\\ForMathlib\\BasicEstimates.lean"
+      ],
+      "started_at_utc": "2026-09-16T13:31:48.388014+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 39.219,
+      "log": "logs/compile-UnitFractions.ForMathlib.BasicEstimates-b334845d12354c29a5c139f413a99b72.log",
+      "output": "",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+      "source_sha256": "6f0ba5d3ea2642aa0e66cf9868d5d04b726d37b575fa65a9f7e7e977c80bcd5d",
+      "source_bytes": 160545,
+      "source_before": {
+        "kind": "upstream",
+        "module": "UnitFractions.ForMathlib.BasicEstimates",
+        "sha256": "6f0ba5d3ea2642aa0e66cf9868d5d04b726d37b575fa65a9f7e7e977c80bcd5d",
+        "bytes": 160545,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/UnitFractions/ForMathlib/BasicEstimates.lean",
+        "raw_sha256": "1475f84517f02f43f91563e7852b147d677d661d57e7cac6b4b3120570613775",
+        "raw_bytes": 157200
+      },
+      "source_after": {
+        "kind": "upstream",
+        "module": "UnitFractions.ForMathlib.BasicEstimates",
+        "sha256": "6f0ba5d3ea2642aa0e66cf9868d5d04b726d37b575fa65a9f7e7e977c80bcd5d",
+        "bytes": 160545,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/UnitFractions/ForMathlib/BasicEstimates.lean",
+        "raw_sha256": "1475f84517f02f43f91563e7852b147d677d661d57e7cac6b4b3120570613775",
+        "raw_bytes": 157200
+      },
+      "artifact_bundle_before": {
+        "module": "UnitFractions.ForMathlib.BasicEstimates",
+        "files": [
+          {
+            "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "0cf23c79f172feb05479d538f5c956e6c84826725b7b28f90e8de418fb9a7172",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "artifact_bundle_after": {
+        "module": "UnitFractions.ForMathlib.BasicEstimates",
+        "files": [
+          {
+            "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean",
+            "present": true,
+            "bytes": 4395536,
+            "sha256": "4c9997dc160fd013661f5b61c60b6b48d451f34c20866eda097a8f6251c67d84"
+          },
+          {
+            "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "29b7c1b6f1c75126dfc32bf911ea267fc918a879a78a543e193edc2e40c9cea1",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "configured_local_artifacts_before": [
+        {
+          "module": "ErdosProblems.Erdos277",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos277.olean",
+              "present": true,
+              "bytes": 1767728,
+              "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos281",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos281.olean",
+              "present": true,
+              "bytes": 1656184,
+              "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.IntegralRPow",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+              "present": true,
+              "bytes": 172064,
+              "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.Misc",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean",
+              "present": true,
+              "bytes": 211808,
+              "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "configured_local_artifacts_after": [
+        {
+          "module": "ErdosProblems.Erdos277",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos277.olean",
+              "present": true,
+              "bytes": 1767728,
+              "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos281",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos281.olean",
+              "present": true,
+              "bytes": 1656184,
+              "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.IntegralRPow",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+              "present": true,
+              "bytes": 172064,
+              "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.Misc",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean",
+              "present": true,
+              "bytes": 211808,
+              "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "compile_receipt_sha256": null,
+      "matched_modules": [],
+      "child_environment": {
+        "LEAN_NUM_THREADS": "1",
+        "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+      },
+      "runtime": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+        "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+        "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+        "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+        "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+        "dependency_artifact_fingerprint": null,
+        "imported_mathlib_and_standard_libraries_trusted": true,
+        "automatic_cache_eligible": false
+      },
+      "runtime_unchanged": true,
+      "configuration_sha256": "a6d279c476ff7b06bed1249f9a7eb4564c3a3c97c27c158fcbd20fb0b3e1b1cb",
+      "binding_passed": true,
+      "automatic_cache_eligible": false,
+      "receipt_archive": "logs/compile-UnitFractions.ForMathlib.BasicEstimates-b334845d12354c29a5c139f413a99b72.json"
+    },
+    {
+      "schema": "configured-pack-bound-run-v1",
+      "module": "ErdosProblems.Erdos27",
+      "mode": "compile",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "SOURCE_ROOT",
+        "-o",
+        "PACKAGE\\build\\ErdosProblems\\Erdos27.olean",
+        "SOURCE_ROOT\\ErdosProblems\\Erdos27.lean"
+      ],
+      "started_at_utc": "2026-09-16T13:33:13.599363+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 25.313,
+      "log": "logs/compile-ErdosProblems.Erdos27-4307d9c61a844e77affeb245eb1683d8.log",
+      "output": "'Erdos27.not_erdos_27' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "log_sha256": "78942dfdc43b050b706d34f365a35dbd130bf8e95a4279bda3fa5eaedd0e4c36",
+      "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+      "source_sha256": "51aaf6b9c5643f1be38bd0c362a171fb428fc24ea5a8612293739cf5d1d41bd9",
+      "source_bytes": 95906,
+      "source_before": {
+        "kind": "upstream",
+        "module": "ErdosProblems.Erdos27",
+        "sha256": "51aaf6b9c5643f1be38bd0c362a171fb428fc24ea5a8612293739cf5d1d41bd9",
+        "bytes": 95906,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/ErdosProblems/Erdos27.lean",
+        "raw_sha256": "f62e2a0ebf8c227d15a14513d2d2dc624a293cf90d8193079af72b0dd2d415c3",
+        "raw_bytes": 93736
+      },
+      "source_after": {
+        "kind": "upstream",
+        "module": "ErdosProblems.Erdos27",
+        "sha256": "51aaf6b9c5643f1be38bd0c362a171fb428fc24ea5a8612293739cf5d1d41bd9",
+        "bytes": 95906,
+        "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+        "repository_path": "src/latest/ErdosProblems/Erdos27.lean",
+        "raw_sha256": "f62e2a0ebf8c227d15a14513d2d2dc624a293cf90d8193079af72b0dd2d415c3",
+        "raw_bytes": 93736
+      },
+      "artifact_bundle_before": {
+        "module": "ErdosProblems.Erdos27",
+        "files": [
+          {
+            "path": "build/ErdosProblems/Erdos27.olean",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos27.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos27.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "5ee79e9f3e65db80c1922942aeb2f48f3b8d67c12ab6a7ee84ae52e6f8bd1a86",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "artifact_bundle_after": {
+        "module": "ErdosProblems.Erdos27",
+        "files": [
+          {
+            "path": "build/ErdosProblems/Erdos27.olean",
+            "present": true,
+            "bytes": 2365368,
+            "sha256": "490c8b32f67549bbdc48635fbd46966ecd88a259e21f8780c09167888621d937"
+          },
+          {
+            "path": "build/ErdosProblems/Erdos27.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/ErdosProblems/Erdos27.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "eb5d1b3f2ed919e221d98d279b4fdd346670a79f0a7f985edf876b5d8c8c4e1f",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "configured_local_artifacts_before": [
+        {
+          "module": "ErdosProblems.Erdos277",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos277.olean",
+              "present": true,
+              "bytes": 1767728,
+              "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos281",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos281.olean",
+              "present": true,
+              "bytes": 1656184,
+              "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.IntegralRPow",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+              "present": true,
+              "bytes": 172064,
+              "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.Misc",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean",
+              "present": true,
+              "bytes": 211808,
+              "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.BasicEstimates",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean",
+              "present": true,
+              "bytes": 4395536,
+              "sha256": "4c9997dc160fd013661f5b61c60b6b48d451f34c20866eda097a8f6251c67d84"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "29b7c1b6f1c75126dfc32bf911ea267fc918a879a78a543e193edc2e40c9cea1",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "configured_local_artifacts_after": [
+        {
+          "module": "ErdosProblems.Erdos277",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos277.olean",
+              "present": true,
+              "bytes": 1767728,
+              "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos281",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos281.olean",
+              "present": true,
+              "bytes": 1656184,
+              "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.IntegralRPow",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+              "present": true,
+              "bytes": 172064,
+              "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.Misc",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean",
+              "present": true,
+              "bytes": 211808,
+              "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.BasicEstimates",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean",
+              "present": true,
+              "bytes": 4395536,
+              "sha256": "4c9997dc160fd013661f5b61c60b6b48d451f34c20866eda097a8f6251c67d84"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "29b7c1b6f1c75126dfc32bf911ea267fc918a879a78a543e193edc2e40c9cea1",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "compile_receipt_sha256": null,
+      "matched_modules": [],
+      "child_environment": {
+        "LEAN_NUM_THREADS": "1",
+        "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+      },
+      "runtime": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+        "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+        "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+        "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+        "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+        "dependency_artifact_fingerprint": null,
+        "imported_mathlib_and_standard_libraries_trusted": true,
+        "automatic_cache_eligible": false
+      },
+      "runtime_unchanged": true,
+      "configuration_sha256": "a6d279c476ff7b06bed1249f9a7eb4564c3a3c97c27c158fcbd20fb0b3e1b1cb",
+      "binding_passed": true,
+      "automatic_cache_eligible": false,
+      "receipt_archive": "logs/compile-ErdosProblems.Erdos27-4307d9c61a844e77affeb245eb1683d8.json"
+    },
+    {
+      "schema": "configured-pack-bound-run-v1",
+      "module": "JSP060Audit",
+      "mode": "compile",
+      "command": [
+        "LEAN_BIN\\lean.exe",
+        "-j",
+        "1",
+        "-M",
+        "6144",
+        "-R",
+        "PACKAGE",
+        "-o",
+        "PACKAGE\\build\\JSP060Audit.olean",
+        "PACKAGE\\JSP060Audit.lean"
+      ],
+      "started_at_utc": "2026-09-16T13:36:47.771832+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 14.609,
+      "log": "logs/compile-JSP060Audit-c16a89e887234805b59a69ac851b23ef.log",
+      "output": "'Erdos27.erdos_27' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos27.not_erdos_27' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos27.uncovered_hasIntDensity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos27.exists_uncovered_at_fixed_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos27.factorial_inv_le_uncoveredDensity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP060Audit.density_unique' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP060Audit.almostCovering_iff_naturalDensity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP060Audit.finite_density_question_false' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP060Audit.original_question_false' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "log_sha256": "5d0c31943fc9e1e1ec1c5be41307160b70b83d5604046c527361813d42278f58",
+      "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+      "source_sha256": "e31dddd01ed4a6be06025cf3626d92faaaf5690b05b69ee49a98fd11e589992e",
+      "source_bytes": 2769,
+      "source_before": {
+        "kind": "typed_audit",
+        "module": "JSP060Audit",
+        "sha256": "e31dddd01ed4a6be06025cf3626d92faaaf5690b05b69ee49a98fd11e589992e",
+        "bytes": 2769
+      },
+      "source_after": {
+        "kind": "typed_audit",
+        "module": "JSP060Audit",
+        "sha256": "e31dddd01ed4a6be06025cf3626d92faaaf5690b05b69ee49a98fd11e589992e",
+        "bytes": 2769
+      },
+      "artifact_bundle_before": {
+        "module": "JSP060Audit",
+        "files": [
+          {
+            "path": "build/JSP060Audit.olean",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/JSP060Audit.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/JSP060Audit.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "bd29e95f4d8f756058fc2e2792c3a8e5fcd9eca2eaf835376a268c94bf3ae55d",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "artifact_bundle_after": {
+        "module": "JSP060Audit",
+        "files": [
+          {
+            "path": "build/JSP060Audit.olean",
+            "present": true,
+            "bytes": 42640,
+            "sha256": "a33718ba18ad0adb094afc20dd67d6b8f7609e5e025938a206a0daa68708c66a"
+          },
+          {
+            "path": "build/JSP060Audit.olean.private",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          },
+          {
+            "path": "build/JSP060Audit.olean.server",
+            "present": false,
+            "bytes": null,
+            "sha256": null
+          }
+        ],
+        "sha256": "ff32959d2233f534fcf1630f70ec169ba54301f5a7b2e15667a91abb7ff7e059",
+        "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+      },
+      "configured_local_artifacts_before": [
+        {
+          "module": "ErdosProblems.Erdos277",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos277.olean",
+              "present": true,
+              "bytes": 1767728,
+              "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos281",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos281.olean",
+              "present": true,
+              "bytes": 1656184,
+              "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.IntegralRPow",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+              "present": true,
+              "bytes": 172064,
+              "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.Misc",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean",
+              "present": true,
+              "bytes": 211808,
+              "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.BasicEstimates",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean",
+              "present": true,
+              "bytes": 4395536,
+              "sha256": "4c9997dc160fd013661f5b61c60b6b48d451f34c20866eda097a8f6251c67d84"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "29b7c1b6f1c75126dfc32bf911ea267fc918a879a78a543e193edc2e40c9cea1",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos27",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos27.olean",
+              "present": true,
+              "bytes": 2365368,
+              "sha256": "490c8b32f67549bbdc48635fbd46966ecd88a259e21f8780c09167888621d937"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos27.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos27.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "eb5d1b3f2ed919e221d98d279b4fdd346670a79f0a7f985edf876b5d8c8c4e1f",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "configured_local_artifacts_after": [
+        {
+          "module": "ErdosProblems.Erdos277",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos277.olean",
+              "present": true,
+              "bytes": 1767728,
+              "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos281",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos281.olean",
+              "present": true,
+              "bytes": 1656184,
+              "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.IntegralRPow",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+              "present": true,
+              "bytes": 172064,
+              "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.Misc",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean",
+              "present": true,
+              "bytes": 211808,
+              "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "UnitFractions.ForMathlib.BasicEstimates",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean",
+              "present": true,
+              "bytes": 4395536,
+              "sha256": "4c9997dc160fd013661f5b61c60b6b48d451f34c20866eda097a8f6251c67d84"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "29b7c1b6f1c75126dfc32bf911ea267fc918a879a78a543e193edc2e40c9cea1",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        {
+          "module": "ErdosProblems.Erdos27",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos27.olean",
+              "present": true,
+              "bytes": 2365368,
+              "sha256": "490c8b32f67549bbdc48635fbd46966ecd88a259e21f8780c09167888621d937"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos27.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos27.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "eb5d1b3f2ed919e221d98d279b4fdd346670a79f0a7f985edf876b5d8c8c4e1f",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        }
+      ],
+      "compile_receipt_sha256": null,
+      "matched_modules": [],
+      "child_environment": {
+        "LEAN_NUM_THREADS": "1",
+        "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+      },
+      "runtime": {
+        "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+        "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+        "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+        "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+        "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+        "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+        "dependency_artifact_fingerprint": null,
+        "imported_mathlib_and_standard_libraries_trusted": true,
+        "automatic_cache_eligible": false
+      },
+      "runtime_unchanged": true,
+      "configuration_sha256": "a6d279c476ff7b06bed1249f9a7eb4564c3a3c97c27c158fcbd20fb0b3e1b1cb",
+      "binding_passed": true,
+      "automatic_cache_eligible": false,
+      "receipt_archive": "logs/compile-JSP060Audit-c16a89e887234805b59a69ac851b23ef.json"
+    }
+  ],
+  "checker": {
+    "targets": [
+      {
+        "schema": "configured-pack-bound-run-v1",
+        "module": "ErdosProblems.Erdos277",
+        "mode": "checker",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "--verbose",
+          "ErdosProblems.Erdos277"
+        ],
+        "started_at_utc": "2026-09-16T13:23:02.261494+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 14.516,
+        "log": "logs/checker-ErdosProblems.Erdos277-513567ca928e4e4594d4fe561352a3d5.log",
+        "output": "replaying ErdosProblems.Erdos277\n",
+        "log_sha256": "2c78b1cc84a19a010273be07df28c31e2d7110451fabd7cac8b4935b1f984414",
+        "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+        "source_sha256": "a7326e95c7ca40c6a305e29f7f98aa0f329fee1e3f1ee373c404bd56642d8cd5",
+        "source_bytes": 62195,
+        "source_before": {
+          "kind": "upstream",
+          "module": "ErdosProblems.Erdos277",
+          "sha256": "a7326e95c7ca40c6a305e29f7f98aa0f329fee1e3f1ee373c404bd56642d8cd5",
+          "bytes": 62195,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/ErdosProblems/Erdos277.lean",
+          "raw_sha256": "141c43ae0e8cc4de9a88dc8731c2565414d17b61ccfaa52792d543a8ba285989",
+          "raw_bytes": 60831
+        },
+        "source_after": {
+          "kind": "upstream",
+          "module": "ErdosProblems.Erdos277",
+          "sha256": "a7326e95c7ca40c6a305e29f7f98aa0f329fee1e3f1ee373c404bd56642d8cd5",
+          "bytes": 62195,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/ErdosProblems/Erdos277.lean",
+          "raw_sha256": "141c43ae0e8cc4de9a88dc8731c2565414d17b61ccfaa52792d543a8ba285989",
+          "raw_bytes": 60831
+        },
+        "artifact_bundle_before": {
+          "module": "ErdosProblems.Erdos277",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos277.olean",
+              "present": true,
+              "bytes": 1767728,
+              "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "artifact_bundle_after": {
+          "module": "ErdosProblems.Erdos277",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos277.olean",
+              "present": true,
+              "bytes": 1767728,
+              "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos277.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "configured_local_artifacts_before": [],
+        "configured_local_artifacts_after": [],
+        "compile_receipt_sha256": "febc33ea5c3e70935daca5244701a81d250d7072cec8bab856dde0c92964624a",
+        "matched_modules": [
+          "ErdosProblems.Erdos277"
+        ],
+        "child_environment": {
+          "LEAN_NUM_THREADS": "1",
+          "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+        },
+        "runtime": {
+          "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+          "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "dependency_artifact_fingerprint": null,
+          "imported_mathlib_and_standard_libraries_trusted": true,
+          "automatic_cache_eligible": false
+        },
+        "runtime_unchanged": true,
+        "configuration_sha256": "a6d279c476ff7b06bed1249f9a7eb4564c3a3c97c27c158fcbd20fb0b3e1b1cb",
+        "binding_passed": true,
+        "automatic_cache_eligible": false,
+        "receipt_archive": "logs/checker-ErdosProblems.Erdos277-513567ca928e4e4594d4fe561352a3d5.json"
+      },
+      {
+        "schema": "configured-pack-bound-run-v1",
+        "module": "ErdosProblems.Erdos281",
+        "mode": "checker",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "--verbose",
+          "ErdosProblems.Erdos281"
+        ],
+        "started_at_utc": "2026-09-16T13:25:03.705918+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 15.312,
+        "log": "logs/checker-ErdosProblems.Erdos281-f9827fe82a404552acea4eb38685a9b0.log",
+        "output": "replaying ErdosProblems.Erdos281\n",
+        "log_sha256": "1711fb772b8e6d6ab485fc591a7208def0d6285ddd9fbcf45acbd40b73a7a0de",
+        "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+        "source_sha256": "d4ba23be868e3d7873a00ea072ed0e462948b37ebb2cd8f9b32b897cce5c6883",
+        "source_bytes": 47968,
+        "source_before": {
+          "kind": "upstream",
+          "module": "ErdosProblems.Erdos281",
+          "sha256": "d4ba23be868e3d7873a00ea072ed0e462948b37ebb2cd8f9b32b897cce5c6883",
+          "bytes": 47968,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/ErdosProblems/Erdos281.lean",
+          "raw_sha256": "2d6af01e6bbb0d6d18158975fb81c39cae23f6b6436eb3f70ac8bf3705afa1ec",
+          "raw_bytes": 46773
+        },
+        "source_after": {
+          "kind": "upstream",
+          "module": "ErdosProblems.Erdos281",
+          "sha256": "d4ba23be868e3d7873a00ea072ed0e462948b37ebb2cd8f9b32b897cce5c6883",
+          "bytes": 47968,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/ErdosProblems/Erdos281.lean",
+          "raw_sha256": "2d6af01e6bbb0d6d18158975fb81c39cae23f6b6436eb3f70ac8bf3705afa1ec",
+          "raw_bytes": 46773
+        },
+        "artifact_bundle_before": {
+          "module": "ErdosProblems.Erdos281",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos281.olean",
+              "present": true,
+              "bytes": 1656184,
+              "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "artifact_bundle_after": {
+          "module": "ErdosProblems.Erdos281",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos281.olean",
+              "present": true,
+              "bytes": 1656184,
+              "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos281.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "configured_local_artifacts_before": [
+          {
+            "module": "ErdosProblems.Erdos277",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos277.olean",
+                "present": true,
+                "bytes": 1767728,
+                "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "configured_local_artifacts_after": [
+          {
+            "module": "ErdosProblems.Erdos277",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos277.olean",
+                "present": true,
+                "bytes": 1767728,
+                "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "compile_receipt_sha256": "d0f65a0122e9a0ef67565f8d2d0bc868781df7bcd8527449532bf3e9f4c14e2b",
+        "matched_modules": [
+          "ErdosProblems.Erdos281"
+        ],
+        "child_environment": {
+          "LEAN_NUM_THREADS": "1",
+          "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+        },
+        "runtime": {
+          "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+          "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "dependency_artifact_fingerprint": null,
+          "imported_mathlib_and_standard_libraries_trusted": true,
+          "automatic_cache_eligible": false
+        },
+        "runtime_unchanged": true,
+        "configuration_sha256": "a6d279c476ff7b06bed1249f9a7eb4564c3a3c97c27c158fcbd20fb0b3e1b1cb",
+        "binding_passed": true,
+        "automatic_cache_eligible": false,
+        "receipt_archive": "logs/checker-ErdosProblems.Erdos281-f9827fe82a404552acea4eb38685a9b0.json"
+      },
+      {
+        "schema": "configured-pack-bound-run-v1",
+        "module": "UnitFractions.ForMathlib.IntegralRPow",
+        "mode": "checker",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "--verbose",
+          "UnitFractions.ForMathlib.IntegralRPow"
+        ],
+        "started_at_utc": "2026-09-16T13:26:08.708101+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 10.25,
+        "log": "logs/checker-UnitFractions.ForMathlib.IntegralRPow-12c8f536f2c442c0b8f7a0b3fc2989f4.log",
+        "output": "replaying UnitFractions.ForMathlib.IntegralRPow\n",
+        "log_sha256": "91a7b0e7dd5f71fbe90bba691990f0ae00752b3e47287eb5cd27e0483dad3bec",
+        "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+        "source_sha256": "aab38aeb568c48422f8428a8cf456b7d5c649be5359896c48c401dbf73de7bee",
+        "source_bytes": 4061,
+        "source_before": {
+          "kind": "upstream",
+          "module": "UnitFractions.ForMathlib.IntegralRPow",
+          "sha256": "aab38aeb568c48422f8428a8cf456b7d5c649be5359896c48c401dbf73de7bee",
+          "bytes": 4061,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/UnitFractions/ForMathlib/IntegralRPow.lean",
+          "raw_sha256": "884ed8b4343eb10c4e5fa123069c9ac584d74123aea3173974bf3afdb6c48134",
+          "raw_bytes": 3978
+        },
+        "source_after": {
+          "kind": "upstream",
+          "module": "UnitFractions.ForMathlib.IntegralRPow",
+          "sha256": "aab38aeb568c48422f8428a8cf456b7d5c649be5359896c48c401dbf73de7bee",
+          "bytes": 4061,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/UnitFractions/ForMathlib/IntegralRPow.lean",
+          "raw_sha256": "884ed8b4343eb10c4e5fa123069c9ac584d74123aea3173974bf3afdb6c48134",
+          "raw_bytes": 3978
+        },
+        "artifact_bundle_before": {
+          "module": "UnitFractions.ForMathlib.IntegralRPow",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+              "present": true,
+              "bytes": 172064,
+              "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "artifact_bundle_after": {
+          "module": "UnitFractions.ForMathlib.IntegralRPow",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+              "present": true,
+              "bytes": 172064,
+              "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "configured_local_artifacts_before": [
+          {
+            "module": "ErdosProblems.Erdos277",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos277.olean",
+                "present": true,
+                "bytes": 1767728,
+                "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos281",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos281.olean",
+                "present": true,
+                "bytes": 1656184,
+                "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "configured_local_artifacts_after": [
+          {
+            "module": "ErdosProblems.Erdos277",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos277.olean",
+                "present": true,
+                "bytes": 1767728,
+                "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos281",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos281.olean",
+                "present": true,
+                "bytes": 1656184,
+                "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "compile_receipt_sha256": "a87fab347790f9b1320ba10e7ec3c2a6c9ab1faa593e6b20892ccc0f2911ead9",
+        "matched_modules": [
+          "UnitFractions.ForMathlib.IntegralRPow"
+        ],
+        "child_environment": {
+          "LEAN_NUM_THREADS": "1",
+          "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+        },
+        "runtime": {
+          "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+          "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "dependency_artifact_fingerprint": null,
+          "imported_mathlib_and_standard_libraries_trusted": true,
+          "automatic_cache_eligible": false
+        },
+        "runtime_unchanged": true,
+        "configuration_sha256": "a6d279c476ff7b06bed1249f9a7eb4564c3a3c97c27c158fcbd20fb0b3e1b1cb",
+        "binding_passed": true,
+        "automatic_cache_eligible": false,
+        "receipt_archive": "logs/checker-UnitFractions.ForMathlib.IntegralRPow-12c8f536f2c442c0b8f7a0b3fc2989f4.json"
+      },
+      {
+        "schema": "configured-pack-bound-run-v1",
+        "module": "UnitFractions.ForMathlib.Misc",
+        "mode": "checker",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "--verbose",
+          "UnitFractions.ForMathlib.Misc"
+        ],
+        "started_at_utc": "2026-09-16T13:27:06.762070+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 196.031,
+        "log": "logs/checker-UnitFractions.ForMathlib.Misc-826ef25fe2664347bc490a6c9480a603.log",
+        "output": "replaying UnitFractions.ForMathlib.Misc\n",
+        "log_sha256": "a77804c3e560c3fc1a5eebf91656210b3ddf8bbfdaf3c1c6f83c261ae9eb06af",
+        "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+        "source_sha256": "0529a95d028e862dd584ff7a921a427de264f20a4f18ea809543e54382a13bcc",
+        "source_bytes": 5244,
+        "source_before": {
+          "kind": "upstream",
+          "module": "UnitFractions.ForMathlib.Misc",
+          "sha256": "0529a95d028e862dd584ff7a921a427de264f20a4f18ea809543e54382a13bcc",
+          "bytes": 5244,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/UnitFractions/ForMathlib/Misc.lean",
+          "raw_sha256": "99e31b4fcb5ff24d26b0c9261ca280f4d96aea91e9f1cde7b8ae59a43361f3dd",
+          "raw_bytes": 5104
+        },
+        "source_after": {
+          "kind": "upstream",
+          "module": "UnitFractions.ForMathlib.Misc",
+          "sha256": "0529a95d028e862dd584ff7a921a427de264f20a4f18ea809543e54382a13bcc",
+          "bytes": 5244,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/UnitFractions/ForMathlib/Misc.lean",
+          "raw_sha256": "99e31b4fcb5ff24d26b0c9261ca280f4d96aea91e9f1cde7b8ae59a43361f3dd",
+          "raw_bytes": 5104
+        },
+        "artifact_bundle_before": {
+          "module": "UnitFractions.ForMathlib.Misc",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean",
+              "present": true,
+              "bytes": 211808,
+              "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "artifact_bundle_after": {
+          "module": "UnitFractions.ForMathlib.Misc",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean",
+              "present": true,
+              "bytes": 211808,
+              "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "configured_local_artifacts_before": [
+          {
+            "module": "ErdosProblems.Erdos277",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos277.olean",
+                "present": true,
+                "bytes": 1767728,
+                "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos281",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos281.olean",
+                "present": true,
+                "bytes": 1656184,
+                "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.IntegralRPow",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+                "present": true,
+                "bytes": 172064,
+                "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "configured_local_artifacts_after": [
+          {
+            "module": "ErdosProblems.Erdos277",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos277.olean",
+                "present": true,
+                "bytes": 1767728,
+                "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos281",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos281.olean",
+                "present": true,
+                "bytes": 1656184,
+                "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.IntegralRPow",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+                "present": true,
+                "bytes": 172064,
+                "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "compile_receipt_sha256": "fce788a71607178844545e4fa5df81bd0b1132e4dce8831f92ff4de548bbf1ec",
+        "matched_modules": [
+          "UnitFractions.ForMathlib.Misc"
+        ],
+        "child_environment": {
+          "LEAN_NUM_THREADS": "1",
+          "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+        },
+        "runtime": {
+          "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+          "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "dependency_artifact_fingerprint": null,
+          "imported_mathlib_and_standard_libraries_trusted": true,
+          "automatic_cache_eligible": false
+        },
+        "runtime_unchanged": true,
+        "configuration_sha256": "a6d279c476ff7b06bed1249f9a7eb4564c3a3c97c27c158fcbd20fb0b3e1b1cb",
+        "binding_passed": true,
+        "automatic_cache_eligible": false,
+        "receipt_archive": "logs/checker-UnitFractions.ForMathlib.Misc-826ef25fe2664347bc490a6c9480a603.json"
+      },
+      {
+        "schema": "configured-pack-bound-run-v1",
+        "module": "UnitFractions.ForMathlib.BasicEstimates",
+        "mode": "checker",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "--verbose",
+          "UnitFractions.ForMathlib.BasicEstimates"
+        ],
+        "started_at_utc": "2026-09-16T13:32:28.019485+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 14.828,
+        "log": "logs/checker-UnitFractions.ForMathlib.BasicEstimates-2dc05325107e447c8fd3175c0beba54e.log",
+        "output": "replaying UnitFractions.ForMathlib.BasicEstimates\n",
+        "log_sha256": "fa7d3e90a5e27765192978ddc7077ff2d639e3b89962281c2e239e1c4cb768ca",
+        "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+        "source_sha256": "6f0ba5d3ea2642aa0e66cf9868d5d04b726d37b575fa65a9f7e7e977c80bcd5d",
+        "source_bytes": 160545,
+        "source_before": {
+          "kind": "upstream",
+          "module": "UnitFractions.ForMathlib.BasicEstimates",
+          "sha256": "6f0ba5d3ea2642aa0e66cf9868d5d04b726d37b575fa65a9f7e7e977c80bcd5d",
+          "bytes": 160545,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/UnitFractions/ForMathlib/BasicEstimates.lean",
+          "raw_sha256": "1475f84517f02f43f91563e7852b147d677d661d57e7cac6b4b3120570613775",
+          "raw_bytes": 157200
+        },
+        "source_after": {
+          "kind": "upstream",
+          "module": "UnitFractions.ForMathlib.BasicEstimates",
+          "sha256": "6f0ba5d3ea2642aa0e66cf9868d5d04b726d37b575fa65a9f7e7e977c80bcd5d",
+          "bytes": 160545,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/UnitFractions/ForMathlib/BasicEstimates.lean",
+          "raw_sha256": "1475f84517f02f43f91563e7852b147d677d661d57e7cac6b4b3120570613775",
+          "raw_bytes": 157200
+        },
+        "artifact_bundle_before": {
+          "module": "UnitFractions.ForMathlib.BasicEstimates",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean",
+              "present": true,
+              "bytes": 4395536,
+              "sha256": "4c9997dc160fd013661f5b61c60b6b48d451f34c20866eda097a8f6251c67d84"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "29b7c1b6f1c75126dfc32bf911ea267fc918a879a78a543e193edc2e40c9cea1",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "artifact_bundle_after": {
+          "module": "UnitFractions.ForMathlib.BasicEstimates",
+          "files": [
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean",
+              "present": true,
+              "bytes": 4395536,
+              "sha256": "4c9997dc160fd013661f5b61c60b6b48d451f34c20866eda097a8f6251c67d84"
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "29b7c1b6f1c75126dfc32bf911ea267fc918a879a78a543e193edc2e40c9cea1",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "configured_local_artifacts_before": [
+          {
+            "module": "ErdosProblems.Erdos277",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos277.olean",
+                "present": true,
+                "bytes": 1767728,
+                "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos281",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos281.olean",
+                "present": true,
+                "bytes": 1656184,
+                "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.IntegralRPow",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+                "present": true,
+                "bytes": 172064,
+                "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.Misc",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean",
+                "present": true,
+                "bytes": 211808,
+                "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "configured_local_artifacts_after": [
+          {
+            "module": "ErdosProblems.Erdos277",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos277.olean",
+                "present": true,
+                "bytes": 1767728,
+                "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos281",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos281.olean",
+                "present": true,
+                "bytes": 1656184,
+                "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.IntegralRPow",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+                "present": true,
+                "bytes": 172064,
+                "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.Misc",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean",
+                "present": true,
+                "bytes": 211808,
+                "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "compile_receipt_sha256": "2c0795d41cae64ada4d26fcb35af7e5ca2813608805e4ea1b343aa95cd7ea7f0",
+        "matched_modules": [
+          "UnitFractions.ForMathlib.BasicEstimates"
+        ],
+        "child_environment": {
+          "LEAN_NUM_THREADS": "1",
+          "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+        },
+        "runtime": {
+          "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+          "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "dependency_artifact_fingerprint": null,
+          "imported_mathlib_and_standard_libraries_trusted": true,
+          "automatic_cache_eligible": false
+        },
+        "runtime_unchanged": true,
+        "configuration_sha256": "a6d279c476ff7b06bed1249f9a7eb4564c3a3c97c27c158fcbd20fb0b3e1b1cb",
+        "binding_passed": true,
+        "automatic_cache_eligible": false,
+        "receipt_archive": "logs/checker-UnitFractions.ForMathlib.BasicEstimates-2dc05325107e447c8fd3175c0beba54e.json"
+      },
+      {
+        "schema": "configured-pack-bound-run-v1",
+        "module": "ErdosProblems.Erdos27",
+        "mode": "checker",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "--verbose",
+          "ErdosProblems.Erdos27"
+        ],
+        "started_at_utc": "2026-09-16T13:33:39.325620+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 14.265,
+        "log": "logs/checker-ErdosProblems.Erdos27-a669047c88734e3981e42368175b63ab.log",
+        "output": "replaying ErdosProblems.Erdos27\n",
+        "log_sha256": "834e03af63b9a93cb5c597b016e64b11e203e33083530dbf9059c603422d0f7f",
+        "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+        "source_sha256": "51aaf6b9c5643f1be38bd0c362a171fb428fc24ea5a8612293739cf5d1d41bd9",
+        "source_bytes": 95906,
+        "source_before": {
+          "kind": "upstream",
+          "module": "ErdosProblems.Erdos27",
+          "sha256": "51aaf6b9c5643f1be38bd0c362a171fb428fc24ea5a8612293739cf5d1d41bd9",
+          "bytes": 95906,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/ErdosProblems/Erdos27.lean",
+          "raw_sha256": "f62e2a0ebf8c227d15a14513d2d2dc624a293cf90d8193079af72b0dd2d415c3",
+          "raw_bytes": 93736
+        },
+        "source_after": {
+          "kind": "upstream",
+          "module": "ErdosProblems.Erdos27",
+          "sha256": "51aaf6b9c5643f1be38bd0c362a171fb428fc24ea5a8612293739cf5d1d41bd9",
+          "bytes": 95906,
+          "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+          "repository_path": "src/latest/ErdosProblems/Erdos27.lean",
+          "raw_sha256": "f62e2a0ebf8c227d15a14513d2d2dc624a293cf90d8193079af72b0dd2d415c3",
+          "raw_bytes": 93736
+        },
+        "artifact_bundle_before": {
+          "module": "ErdosProblems.Erdos27",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos27.olean",
+              "present": true,
+              "bytes": 2365368,
+              "sha256": "490c8b32f67549bbdc48635fbd46966ecd88a259e21f8780c09167888621d937"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos27.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos27.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "eb5d1b3f2ed919e221d98d279b4fdd346670a79f0a7f985edf876b5d8c8c4e1f",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "artifact_bundle_after": {
+          "module": "ErdosProblems.Erdos27",
+          "files": [
+            {
+              "path": "build/ErdosProblems/Erdos27.olean",
+              "present": true,
+              "bytes": 2365368,
+              "sha256": "490c8b32f67549bbdc48635fbd46966ecd88a259e21f8780c09167888621d937"
+            },
+            {
+              "path": "build/ErdosProblems/Erdos27.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/ErdosProblems/Erdos27.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "eb5d1b3f2ed919e221d98d279b4fdd346670a79f0a7f985edf876b5d8c8c4e1f",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "configured_local_artifacts_before": [
+          {
+            "module": "ErdosProblems.Erdos277",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos277.olean",
+                "present": true,
+                "bytes": 1767728,
+                "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos281",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos281.olean",
+                "present": true,
+                "bytes": 1656184,
+                "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.IntegralRPow",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+                "present": true,
+                "bytes": 172064,
+                "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.Misc",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean",
+                "present": true,
+                "bytes": 211808,
+                "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.BasicEstimates",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean",
+                "present": true,
+                "bytes": 4395536,
+                "sha256": "4c9997dc160fd013661f5b61c60b6b48d451f34c20866eda097a8f6251c67d84"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "29b7c1b6f1c75126dfc32bf911ea267fc918a879a78a543e193edc2e40c9cea1",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "configured_local_artifacts_after": [
+          {
+            "module": "ErdosProblems.Erdos277",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos277.olean",
+                "present": true,
+                "bytes": 1767728,
+                "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos281",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos281.olean",
+                "present": true,
+                "bytes": 1656184,
+                "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.IntegralRPow",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+                "present": true,
+                "bytes": 172064,
+                "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.Misc",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean",
+                "present": true,
+                "bytes": 211808,
+                "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.BasicEstimates",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean",
+                "present": true,
+                "bytes": 4395536,
+                "sha256": "4c9997dc160fd013661f5b61c60b6b48d451f34c20866eda097a8f6251c67d84"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "29b7c1b6f1c75126dfc32bf911ea267fc918a879a78a543e193edc2e40c9cea1",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "compile_receipt_sha256": "9ea3d265fd4b0af661f33e3fb08f2029719568e1a29e83e338571f4ef29a5182",
+        "matched_modules": [
+          "ErdosProblems.Erdos27"
+        ],
+        "child_environment": {
+          "LEAN_NUM_THREADS": "1",
+          "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+        },
+        "runtime": {
+          "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+          "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "dependency_artifact_fingerprint": null,
+          "imported_mathlib_and_standard_libraries_trusted": true,
+          "automatic_cache_eligible": false
+        },
+        "runtime_unchanged": true,
+        "configuration_sha256": "a6d279c476ff7b06bed1249f9a7eb4564c3a3c97c27c158fcbd20fb0b3e1b1cb",
+        "binding_passed": true,
+        "automatic_cache_eligible": false,
+        "receipt_archive": "logs/checker-ErdosProblems.Erdos27-a669047c88734e3981e42368175b63ab.json"
+      },
+      {
+        "schema": "configured-pack-bound-run-v1",
+        "module": "JSP060Audit",
+        "mode": "checker",
+        "command": [
+          "LEAN_BIN\\leanchecker.exe",
+          "--verbose",
+          "JSP060Audit"
+        ],
+        "started_at_utc": "2026-09-16T13:37:02.667149+00:00",
+        "exit_code": 0,
+        "elapsed_seconds": 13.813,
+        "log": "logs/checker-JSP060Audit-d52ba095627840668aa53bef688ed624.log",
+        "output": "replaying JSP060Audit\n",
+        "log_sha256": "18b5d686388b7e0a0e85aa5c9bc9b0ca7fc200ede88fe9b535b7acf7463477b2",
+        "log_hash_normalization": "Exact UTF-8 bytes of embedded output, without BOM",
+        "source_sha256": "e31dddd01ed4a6be06025cf3626d92faaaf5690b05b69ee49a98fd11e589992e",
+        "source_bytes": 2769,
+        "source_before": {
+          "kind": "typed_audit",
+          "module": "JSP060Audit",
+          "sha256": "e31dddd01ed4a6be06025cf3626d92faaaf5690b05b69ee49a98fd11e589992e",
+          "bytes": 2769
+        },
+        "source_after": {
+          "kind": "typed_audit",
+          "module": "JSP060Audit",
+          "sha256": "e31dddd01ed4a6be06025cf3626d92faaaf5690b05b69ee49a98fd11e589992e",
+          "bytes": 2769
+        },
+        "artifact_bundle_before": {
+          "module": "JSP060Audit",
+          "files": [
+            {
+              "path": "build/JSP060Audit.olean",
+              "present": true,
+              "bytes": 42640,
+              "sha256": "a33718ba18ad0adb094afc20dd67d6b8f7609e5e025938a206a0daa68708c66a"
+            },
+            {
+              "path": "build/JSP060Audit.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/JSP060Audit.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "ff32959d2233f534fcf1630f70ec169ba54301f5a7b2e15667a91abb7ff7e059",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "artifact_bundle_after": {
+          "module": "JSP060Audit",
+          "files": [
+            {
+              "path": "build/JSP060Audit.olean",
+              "present": true,
+              "bytes": 42640,
+              "sha256": "a33718ba18ad0adb094afc20dd67d6b8f7609e5e025938a206a0daa68708c66a"
+            },
+            {
+              "path": "build/JSP060Audit.olean.private",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            },
+            {
+              "path": "build/JSP060Audit.olean.server",
+              "present": false,
+              "bytes": null,
+              "sha256": null
+            }
+          ],
+          "sha256": "ff32959d2233f534fcf1630f70ec169ba54301f5a7b2e15667a91abb7ff7e059",
+          "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+        },
+        "configured_local_artifacts_before": [
+          {
+            "module": "ErdosProblems.Erdos277",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos277.olean",
+                "present": true,
+                "bytes": 1767728,
+                "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos281",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos281.olean",
+                "present": true,
+                "bytes": 1656184,
+                "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.IntegralRPow",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+                "present": true,
+                "bytes": 172064,
+                "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.Misc",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean",
+                "present": true,
+                "bytes": 211808,
+                "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.BasicEstimates",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean",
+                "present": true,
+                "bytes": 4395536,
+                "sha256": "4c9997dc160fd013661f5b61c60b6b48d451f34c20866eda097a8f6251c67d84"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "29b7c1b6f1c75126dfc32bf911ea267fc918a879a78a543e193edc2e40c9cea1",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos27",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos27.olean",
+                "present": true,
+                "bytes": 2365368,
+                "sha256": "490c8b32f67549bbdc48635fbd46966ecd88a259e21f8780c09167888621d937"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos27.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos27.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "eb5d1b3f2ed919e221d98d279b4fdd346670a79f0a7f985edf876b5d8c8c4e1f",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "configured_local_artifacts_after": [
+          {
+            "module": "ErdosProblems.Erdos277",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos277.olean",
+                "present": true,
+                "bytes": 1767728,
+                "sha256": "c4bd0de73e367bc4a5f0c50d70c320848f294de8c701b1e9ca8243b9ae184756"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos277.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "faf8e63c3da55cd0ecda7d3eb029803e7fca1f2fdb9e33848e10362ad6e3901a",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos281",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos281.olean",
+                "present": true,
+                "bytes": 1656184,
+                "sha256": "c0c77187ddde2150900d8b252118223e015a8de076c7226647cdb186f0865cc0"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos281.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "aea2b00b2a492d545f2604fe7a1ea04cf261696f5b52d5067e2de6b0e25d52e8",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.IntegralRPow",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean",
+                "present": true,
+                "bytes": 172064,
+                "sha256": "f66b68dff449ef1df6a49b3505e15904f290a77e35fe1747eab013166b267e8b"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/IntegralRPow.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "594c352ea87b0592f3dd23c6545800a7e649af5f1d12ee621f054282741eab3c",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.Misc",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean",
+                "present": true,
+                "bytes": 211808,
+                "sha256": "5d815df23b9e5b06d0244091bd9c33c47c9e776c3ee28939c2098ab4105a344d"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/Misc.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "a74488b7faaafeb3a299a4f5a98d1b5c0445de66e6f9f1eaa3d7e1aa90d6553b",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "UnitFractions.ForMathlib.BasicEstimates",
+            "files": [
+              {
+                "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean",
+                "present": true,
+                "bytes": 4395536,
+                "sha256": "4c9997dc160fd013661f5b61c60b6b48d451f34c20866eda097a8f6251c67d84"
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/UnitFractions/ForMathlib/BasicEstimates.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "29b7c1b6f1c75126dfc32bf911ea267fc918a879a78a543e193edc2e40c9cea1",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          },
+          {
+            "module": "ErdosProblems.Erdos27",
+            "files": [
+              {
+                "path": "build/ErdosProblems/Erdos27.olean",
+                "present": true,
+                "bytes": 2365368,
+                "sha256": "490c8b32f67549bbdc48635fbd46966ecd88a259e21f8780c09167888621d937"
+              },
+              {
+                "path": "build/ErdosProblems/Erdos27.olean.private",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              },
+              {
+                "path": "build/ErdosProblems/Erdos27.olean.server",
+                "present": false,
+                "bytes": null,
+                "sha256": null
+              }
+            ],
+            "sha256": "eb5d1b3f2ed919e221d98d279b4fdd346670a79f0a7f985edf876b5d8c8c4e1f",
+            "hash_rule": "Canonical UTF-8 JSON of module/files; sorted keys, compact separators, absent parts retained"
+          }
+        ],
+        "compile_receipt_sha256": "e2c0a5f4ce34dba79824ae7298ecc3297ae42b28f7c982decdae7e387a2e66e9",
+        "matched_modules": [
+          "JSP060Audit"
+        ],
+        "child_environment": {
+          "LEAN_NUM_THREADS": "1",
+          "LEAN_PATH": "PACKAGE\\build;MATHLIB\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;MATHLIB\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean"
+        },
+        "runtime": {
+          "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+          "lean_commit": "d8b18978322de05a8f3dba51ef03cf5461676c17",
+          "lean_executable_sha256": "dd86e9b24990b1da425ea4af910f016e4db8f9a25c9ddad27bc6bee3690e677f",
+          "leanchecker_sha256": "e1ab36b0ea3d0310e3058cda1dce1c072f78c5938303e8596fa3f24267c715ce",
+          "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "mathlib_lake_manifest_sha256": "56f0aa1ff2fe546d0356da6f12f15c1242a3a6d6199315ec9860be9c31209453",
+          "dependency_artifact_fingerprint": null,
+          "imported_mathlib_and_standard_libraries_trusted": true,
+          "automatic_cache_eligible": false
+        },
+        "runtime_unchanged": true,
+        "configuration_sha256": "a6d279c476ff7b06bed1249f9a7eb4564c3a3c97c27c158fcbd20fb0b3e1b1cb",
+        "binding_passed": true,
+        "automatic_cache_eligible": false,
+        "receipt_archive": "logs/checker-JSP060Audit-d52ba095627840668aa53bef688ed624.json"
+      }
+    ],
+    "complete": true,
+    "same_lean_implementation": true,
+    "completeness_scope": "All configured explicit checker targets; compile-only imports are not independently replayed here",
+    "explicit_checker_targets": [
+      "ErdosProblems.Erdos277",
+      "ErdosProblems.Erdos281",
+      "UnitFractions.ForMathlib.IntegralRPow",
+      "UnitFractions.ForMathlib.Misc",
+      "UnitFractions.ForMathlib.BasicEstimates",
+      "ErdosProblems.Erdos27",
+      "JSP060Audit"
+    ],
+    "compile_only_modules": [],
+    "all_configured_modules_compiled": true,
+    "all_configured_modules_explicitly_replayed": true,
+    "compile_only_boundary": "Compile-only modules have validated compilation receipts; their imported declarations are trusted during leaf/Audit replay. Audit replay is not replay of those imported declarations.",
+    "imported_mathlib_and_standard_libraries_trusted": true,
+    "fresh_replay": false,
+    "output_bundles_bound": true,
+    "dependency_artifact_fingerprint": null,
+    "automatic_cache_eligible": false
+  },
+  "main_theorem": "Erdos27.not_erdos_27",
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axioms_by_declaration": {
+    "Erdos27.erdos_27": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos27.not_erdos_27": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos27.uncovered_hasIntDensity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos27.exists_uncovered_at_fixed_ratio": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos27.factorial_inv_le_uncoveredDensity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP060Audit.density_unique": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP060Audit.almostCovering_iff_naturalDensity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP060Audit.finite_density_question_false": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "JSP060Audit.original_question_false": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "axiom_audit_output": "'Erdos27.erdos_27' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos27.not_erdos_27' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos27.uncovered_hasIntDensity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos27.exists_uncovered_at_fixed_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos27.factorial_inv_le_uncoveredDensity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP060Audit.density_unique' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP060Audit.almostCovering_iff_naturalDensity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP060Audit.finite_density_question_false' depends on axioms: [propext, Classical.choice, Quot.sound]\n'JSP060Audit.original_question_false' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "audit_source": "import ErdosProblems.Erdos27\n\nopen Filter Topology\n\n/- Existing public proof evidence; upstream source is unchanged.\n   This file states the original question with actual natural density.\n   Prepared only: no successful elaboration or axiom result is asserted yet. -/\nnamespace JSP060Audit\n\ndef NaturalDensityAlmostCovering (C : ℝ) (N : ℕ) (ε : ℝ) : Prop :=\n  ∃ A : Erdos27.ResidueSystem,\n    (∀ n ∈ A.moduli, N ≤ n ∧ (n : ℝ) ≤ C * N) ∧\n    ∃ d : ℝ,\n      Erdos281.HasIntDensity\n        {z : ℤ | ∀ n ∈ A.moduli, (z : ZMod n) ≠ A.residue n} d ∧ d ≤ ε\n\ntheorem density_unique (A : Erdos27.ResidueSystem) (d : ℝ)\n    (hd : Erdos281.HasIntDensity A.uncovered d) :\n    d = A.uncoveredDensity := by\n  exact tendsto_nhds_unique hd (Erdos27.uncovered_hasIntDensity A)\n\ntheorem almostCovering_iff_naturalDensity (C : ℝ) (N : ℕ) (ε : ℝ) :\n    Erdos27.IsEpsilonAlmostCovering C N ε ↔\n      NaturalDensityAlmostCovering C N ε := by\n  constructor\n  · rintro ⟨A, hw, hε⟩\n    exact ⟨A, hw, A.uncoveredDensity, Erdos27.uncovered_hasIntDensity A, hε⟩\n  · rintro ⟨A, hw, d, hd, hε⟩\n    refine ⟨A, hw, ?_⟩\n    exact (density_unique A d hd) ▸ hε\n\n/- Explicit reexport of the finite-period endpoint; all moduli are distinct\n   and positive by the ResidueSystem structure, with no extra hypothesis. -/\ntheorem finite_density_question_false :\n    ¬ (∃ C : ℝ, 1 < C ∧\n      ∀ ε : ℝ, 0 < ε → ∀ N : ℕ, 1 ≤ N →\n        ∃ A : Erdos27.ResidueSystem,\n          (∀ n ∈ A.moduli, N ≤ n ∧ (n : ℝ) ≤ C * N) ∧\n          A.uncoveredDensity ≤ ε) :=\n  Erdos27.not_erdos_27\n\n/- The literal original question, now with the natural density of the\n   uncovered integers, rather than an opaque almost-covering predicate. -/\ntheorem original_question_false :\n    ¬ (∃ C : ℝ, 1 < C ∧\n      ∀ ε : ℝ, 0 < ε → ∀ N : ℕ, 1 ≤ N →\n        ∃ A : Erdos27.ResidueSystem,\n          (∀ n ∈ A.moduli, N ≤ n ∧ (n : ℝ) ≤ C * N) ∧\n          ∃ d : ℝ,\n            Erdos281.HasIntDensity\n              {z : ℤ | ∀ n ∈ A.moduli, (z : ZMod n) ≠ A.residue n} d ∧\n            d ≤ ε) := by\n  rintro ⟨C, hC, hall⟩\n  apply Erdos27.not_erdos_27\n  refine ⟨C, hC, ?_⟩\n  intro ε hε N hN\n  exact (almostCovering_iff_naturalDensity C N ε).mpr (hall ε hε N hN)\n\n#print axioms Erdos27.erdos_27\n#print axioms Erdos27.not_erdos_27\n#print axioms Erdos27.uncovered_hasIntDensity\n#print axioms Erdos27.exists_uncovered_at_fixed_ratio\n#print axioms Erdos27.factorial_inv_le_uncoveredDensity\n#print axioms density_unique\n#print axioms almostCovering_iff_naturalDensity\n#print axioms finite_density_question_false\n#print axioms original_question_false\n\nend JSP060Audit\n",
+  "scope": "Complete for the literal original assertion that no fixed C > 1 supplies an epsilon-almost-covering system with distinct positive moduli in [N, C N] for every epsilon > 0 and every positive integer N. Does not establish the stronger uniform or asymptotic density estimates of the original paper.",
+  "scope_review_markdown": "# JSP-000060 / Erdős 27 — source-level scope review\n\n**Verdict: complete for the literal original yes/no question; local verification passed.** All seven compilations and seven explicit target replays completed with exit code 0 and successful binding checks. The typed Audit compiled and replayed. All nine requested axiom reports contain exactly `propext`, `Classical.choice` and `Quot.sound`. This review does not certify the stronger quantitative conclusions of the original paper or constitute official prize verification.\n\nThe catalogue snapshot is [`f4e7173d89dfe91022a185427d63452c8ffbf6ae`](https://github.com/TheJustinSunPrize/awards/blob/f4e7173d89dfe91022a185427d63452c8ffbf6ae/problems/catalog-0001-0100.md#jsp-000060). The question, 2007 solution and covering-system paper identify the mapping, rather than an arithmetic relationship between JSP and Erdős numbers. Historical Lean/eligibility/prize fields do not constitute a current claim or permission to claim an award.\n\n## Original statement and exact quantifiers\n\nThe [Erdős 27 page](https://www.erdosproblems.com/forum/thread/27) asks for a fixed C > 1 such that, for every ε > 0 and positive integer N, some finite system of congruence classes with distinct positive moduli in [N, CN] misses integers of density at most ε. In symbols its affirmative assertion is\n\n`∃ C > 1, ∀ ε > 0, ∀ N ≥ 1, ∃ A, InWindow A C N ∧ density(uncovered A) ≤ ε`.\n\nThe final upstream declarations `Erdos27.erdos_27` and `Erdos27.not_erdos_27` negate exactly this assertion. This quantifier pattern allows its refutation to choose one obstructed scale N and one positive ε for each proposed C. It does not require a positive density bound at every sufficiently large scale.\n\nThe original mathematical source is [Filaseta–Ford–Konyagin–Pomerance–Yu, arXiv:math/0507374](https://arxiv.org/abs/math/0507374), published as [JAMS 20 (2007), 495–517](https://doi.org/10.1090/s0894-0347-06-00549-2). The [author-hosted final paper](https://math.dartmouth.edu/~carlp/PDF/covfinal.pdf) proves stronger uniform and asymptotic density conclusions. The existing Lean endpoint does not state those conclusions. Neither the stronger theorem nor the minimum-modulus results of later papers are claimed here.\n\n## Definitions and non-vacuity\n\nThe [fixed entry source](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos27.lean#L52) uses `ResidueSystem.moduli : Finset ℕ`; distinctness is built in. `modulus_pos` requires every member to be positive. The arbitrary dependent function `residue : (n : ℕ) → ZMod n` specifies one class per selected modulus; values outside the finset are irrelevant. Any ordered finite family of distinct positive moduli can be represented in this way, and sorting the finset recovers such a family. No coprimality, multiplicity or choice-of-residue restriction is added.\n\n`InWindow` requires N ≤ n and n ≤ C N for every selected modulus. The closed interval agrees with the website question. The common period is the least common multiple of the selected moduli and is proved positive, including the empty finset case where the period is 1. An empty family misses every integer and has density 1; it cannot counterfeit an arbitrarily small ε witness.\n\n`uncovered` is literally the set of integers outside every specified residue class. `uncoveredMod` counts its representatives in `[0, period)`, and `uncoveredDensity` divides that count by the positive period. The source proves periodicity and then `uncovered_hasIntDensity` using `Erdos281.dens_periodic`. The latter's `HasIntDensity` is ordinary two-sided natural density: the limit of the count in `[-M,M]` divided by `2M+1`. Thus this is not an unconstrained number called density, an empty infimum, or a limsup substituted for an existing density. Periodic integer sets have the same ordinary one-sided and two-sided densities; the prepared typed audit uses the explicitly proved two-sided convention.\n\nThe new `JSP060Audit` file proves uniqueness of that density, an equivalence between the finite-period almost-covering definition and existence of the actual natural density, and a fully typed negation with all C/ε/N quantifiers and residue-system conditions exposed. These short bridge proofs have now compiled and replayed successfully. They add no mathematical solution claim and no hypothetical assumption. Preparation wording in the unchanged Audit source records its creation stage, not the current verification status.\n\n## Proof chain and the positive-density bridge\n\nThe six-module local closure is fixed at [`8822f7ddef30fadbd92e1c6ab4ed897af356af5e`](https://github.com/plby/lean-proofs/tree/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest); raw and checkout hashes are in `source-manifest.json`. It contains 8,297 lines, with Mathlib imports treated separately.\n\nThe entry splits each modulus into its small-prime and large-prime factors, proves the required coprimality, and partitions residue classes using the finite Chinese remainder theorem. The imported `Erdos277.residualDensity_list` supplies the finite probability lower bound by an independent-product term minus a dependency error. `BasicEstimates`, with `IntegralRPow` and `Misc`, supplies the analytic Euler-product estimate used to bound the error by a multiple of `(log Q)/Q`. Sparse smooth numbers at a suitably large chosen square scale leave enough good fibers. A positive residual fiber gives an uncovered integer, yielding\n\n`∀ K ≥ 1, ∃ N > 0, ∀ A, InNatWindow A K N → uncovered A ≠ ∅`.\n\nThis alone is a non-covering conclusion. The final source additionally proves the essential **uniformity over every system at the selected scale**: its common period divides `(K N)!`, so any nonempty uncovered residue set has density at least `1 / (K N)!`. Given real C, choose K = ceil(C), select the above scale N, and set ε = `1 / (2 (K N)!)`. Every system in [N, CN] then has uncovered density greater than ε. This refutes the entire original assertion. It would be insufficient to cite only a single missed integer without the shared factorial bound; that bridge is present as `factorial_inv_le_uncoveredDensity`.\n\nOnly finite congruence-system lemmas from `Erdos277` and periodic-density infrastructure from `Erdos281` are needed for this argument. Compilation/checking those dependency modules does not by itself audit the unrelated complete original questions #277 or #281. No external UNSAT certificate, execution oracle or new assumption was identified in the comment/string-masked lexical scan; the nine requested transitive axiom reports have now been observed, each containing exactly the three standard axioms listed above.\n\n## Attribution and availability\n\nThe entry's informal-author list agrees with the five authors of the original paper. Its formal-author list is **Codex; GPT-5.6 Sol** and its additional author notice is **OpenAI Codex**. **Boris Alexeev** appears in the copyright notice. Preserve these roles; neither repository ownership nor copyright establishes formalizer identity beyond the notices or a prize recipient.\n\nThe `Erdos281` dependency separately credits informal authors Neel Somani and GPT-5.2 Pro, and formal authors Aristotle, Gemini 3.0 Flash and JakeMallen. These are dependency notices, not an attribution of the #27 mathematical result. `Erdos277` has its own source notices and references, while the three `UnitFractions.ForMathlib` files mention Lean 3 to Lean 4 porting/compatibility and do not identify an individual author in their headers.\n\nThe #27 and #277 files contain explicit Apache 2.0 notices. The repository's [short licence file](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/LICENSE) does not establish blanket coverage for every imported file. This evidence package only links unchanged upstream proof source and asserts no blanket redistribution grant. Its header mentions `tex/27.tex`, which is absent from the pinned repository tree; that missing exposition is not silently treated as reviewed evidence. A separate [Erdos27.md](https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/ErdosProblems/Erdos27.md) exists as a short version-link index, but the authoritative formal endpoint for this package is the pinned Lean source.\n\n## Completed verification and remaining limits\n\nAll six upstream modules and the audit compiled and explicitly replayed, including the 2,170-line main proof. The fixed [LeanChecker source](https://github.com/leanprover/lean4/blob/d8b18978322de05a8f3dba51ef03cf5461676c17/src/LeanChecker.lean#L81) converts arguments with `String.toName` and uses [structural `Name.isPrefixOf`](https://github.com/leanprover/lean4/blob/d8b18978322de05a8f3dba51ef03cf5461676c17/src/Lean/Data/Name.lean#L55). Thus `ErdosProblems.Erdos27` would select a genuine descendant `ErdosProblems.Erdos27.Part`, but not `ErdosProblems.Erdos277`. Every target in this closure is a structural leaf. Each actual checker receipt reports exactly its requested module, including the main module itself. There are no compile-only modules.\n\nEach pair ran as a separately released external mutex group with `LEAN_NUM_THREADS=1`. All seven groups finished and the driver exited successfully. The strict assembler validated the intended Lean/Mathlib revisions, exact source bytes before and after each step, unchanged compiled object bundles, replay-to-compilation receipt hashes, full disk log bytes and all nine axiom reports. Every requested declaration actually reported `propext`, `Classical.choice` and `Quot.sound`, with no additional axiom. Public log hashes cover the exact UTF-8 bytes of embedded output without a BOM; object bundle hashes retain explicit absence of optional `.olean.private` and `.olean.server` files. Cached Mathlib and standard-library imports remain trusted and are not fully fingerprinted. The bundled checker uses the same Lean implementation and is not official prize verification.\n\nThe completed source compilation, exact target replay, typed bridge and axiom reports strengthen the evidence for the literal question. They do not extend the claim to the stronger paper theorem or independently verify the imported Mathlib/standard-library objects. The original manifest and migration record remain immutable preparation snapshots; current runtime results are recorded in `public-evidence.json`.\n",
+  "attribution": {
+    "mathematical_authors": [
+      "Michael Filaseta",
+      "Kevin Ford",
+      "Sergei Konyagin",
+      "Carl Pomerance",
+      "Gang Yu"
+    ],
+    "formal_source_notice": [
+      "Codex",
+      "GPT-5.6 Sol"
+    ],
+    "additional_source_author_notice": "OpenAI Codex",
+    "copyright_notice": "Boris Alexeev, 2026",
+    "dependency_Erdos281_notice": {
+      "informal": [
+        "Neel Somani",
+        "GPT-5.2 Pro"
+      ],
+      "formal": [
+        "Aristotle",
+        "Gemini 3.0 Flash",
+        "JakeMallen"
+      ]
+    },
+    "attribution_note": "Repository ownership/copyright is not a finding of sole formalizer identity or prize recipient.",
+    "paper_title": "Sieving by large integers and covering systems of congruences",
+    "paper_url": "https://arxiv.org/abs/math/0507374",
+    "paper_final_url": "https://math.dartmouth.edu/~carlp/PDF/covfinal.pdf",
+    "paper_doi_url": "https://doi.org/10.1090/s0894-0347-06-00549-2"
+  },
+  "registration_status": "verified_ready",
+  "official_verification": false,
+  "first_formalization_claim": false,
+  "third_party_source_redistributed": false,
+  "automatic_cache_eligible": false,
+  "artifact_binding_scope": "Exact configured target .olean/private/server bundles and bounded configured local inputs; non-target Mathlib/standard artifacts remain trusted, not fully fingerprinted"
+}
