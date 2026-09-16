@@ -1,0 +1,9 @@
+# JSP-000799 / Erdős 960: statement review
+
+[Original problem](https://www.erdosproblems.com/960).
+
+The definition f(r,k,n) is the least ordinary-line count that forces an r-point subset all of whose joining lines are ordinary relative to the entire n-point configuration, under the condition that no k points are collinear. NoKCollinear checks all k-element subsets; HasOrdinaryClique uses distinct pairs in an r-element subset. The audited theorem assumes r>=3 and k>=4. For every n>=72 it gives the explicit lower bound n^2/12-(10/3)n+1 and a Turan-type quadratic upper bound, and it separately concludes that f is neither o(n^2) nor O(n). The source contains an actual planar cubic realization with injective parameterization and bounded collinearity, not merely an abstract graph claimed to be geometric. This resolves the nontrivial negative asymptotic question; it does not classify the excluded small r or k cases, determine a sharp leading constant, or claim a new construction by the submitting account.
+
+The root review inspected the pinned original definitions and terminal declarations. Original mathematical/formal credits and all copyright/license notices remain byte-for-byte intact in every proof file. This documents existing public work and makes no claim of new proof authorship, recipient identity, or worldwide priority by the submitting account.
+
+This statement review is not a claim of compilation success. Actual success, if present, is recorded only in verified-run/verification.json with the audited target names, individual axiom sets, and successful command logs. The checker must replay exactly the compiled local proof closure. It uses Lean's own kernel and trusts imported pinned Mathlib/package caches; it is not an independently implemented checker or a fresh whole-Mathlib replay.

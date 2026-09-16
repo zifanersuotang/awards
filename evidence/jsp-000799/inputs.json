@@ -1,0 +1,120 @@
+{
+  "jsp": "JSP-000799",
+  "erdos": 960,
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "main_module": "ErdosProblems.Erdos960",
+  "main_theorem": "Erdos960.erdos_960",
+  "harness_module": "Audit960",
+  "harness_sha256": "a4c7843a7992b05bfae44b77e2a9c006ab7c317edf512b7201720484a8734dd9",
+  "ordered_modules": [
+    {
+      "module": "ErdosProblems.Erdos735.SylvesterGallai",
+      "path": "ErdosProblems/Erdos735/SylvesterGallai.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos735/SylvesterGallai.lean",
+      "sha256": "a5392875af2e4c59168731bbc9dd454531bc8e72ad4ee563c859d3b05714c283",
+      "bytes": 24179,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos735.AvoidingOrdinary",
+      "path": "ErdosProblems/Erdos735/AvoidingOrdinary.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos735/AvoidingOrdinary.lean",
+      "sha256": "001d952574206dc4837ff45a76cc138ea4e43dcbf8a648c32412c2bc44dfbff9",
+      "bytes": 27121,
+      "imports": [
+        "ErdosProblems.Erdos735.SylvesterGallai"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos735.ProjectiveDuality",
+      "path": "ErdosProblems/Erdos735/ProjectiveDuality.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos735/ProjectiveDuality.lean",
+      "sha256": "cedac7291017a5348de0f1a6f6301efd27126ba485c056776581025e2abfd404",
+      "bytes": 23298,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos735.Primal",
+      "path": "ErdosProblems/Erdos735/Primal.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos735/Primal.lean",
+      "sha256": "583581b1758fae628e1991b0bb6f3e0eb61d69ec5971c89d9142dbcd994e746b",
+      "bytes": 127738,
+      "imports": [
+        "Mathlib",
+        "ErdosProblems.Erdos735.SylvesterGallai",
+        "ErdosProblems.Erdos735.AvoidingOrdinary",
+        "ErdosProblems.Erdos735.ProjectiveDuality"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos735.OrdinaryLineReduction",
+      "path": "ErdosProblems/Erdos735/OrdinaryLineReduction.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos735/OrdinaryLineReduction.lean",
+      "sha256": "efbfea379dd5a79c36548a90bbbbe0cf7074a5e82cb4fa58fa6dabbcbeb66cab",
+      "bytes": 17663,
+      "imports": [
+        "ErdosProblems.Erdos735.Primal"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos960",
+      "path": "ErdosProblems/Erdos960.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos960.lean",
+      "sha256": "ca3dc881a958cd457b46cef709a28cdd401fd11d6967f33589b2f974d958b733",
+      "bytes": 66589,
+      "imports": [
+        "ErdosProblems.Erdos735.OrdinaryLineReduction",
+        "Mathlib.Combinatorics.SimpleGraph.Extremal.Turan",
+        "Mathlib.Combinatorics.SimpleGraph.DegreeSum",
+        "Mathlib.Combinatorics.SimpleGraph.Bipartite",
+        "Mathlib.Analysis.Complex.Trigonometric",
+        "Mathlib.Data.ZMod.Basic"
+      ]
+    }
+  ],
+  "source_bytes": 286588,
+  "source_audit": "audit-728-799/audit.json",
+  "scope": "For r>=3,k>=4 ordinary-line forcing threshold bounded below by n²/12-O(n), neither o(n²) nor O(n).",
+  "scope_cautions": "Includes honest geometric cubic construction and extremal threshold definition; trivial small r/k cases not part of nontrivial negative resolution.",
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/f4e7173d89dfe91022a185427d63452c8ffbf6ae/problems/catalog-0701-0800.md#JSP-000799",
+  "preparation_only": false,
+  "compiled": true,
+  "replayed": true,
+  "resource_plan": "Future coordinator must acquire/release shared mutex separately for each source module. Do not wrap whole multi-module build in a second mutex.",
+  "checker_plan": "Replay every locally compiled proof module, selecting Lean Name-prefix roots and comparing the actual verbose replay module set to this exact local closure. Treat imported Mathlib separately as trusted pinned caches.",
+  "audit_targets": [
+    "Erdos960.erdos_960"
+  ],
+  "informal_authors_as_credited": [
+    "Boris Alexeev",
+    "Matthew Putterman",
+    "Mehtaab Sawhney",
+    "Mark Sellke",
+    "Gregory Valiant",
+    "OpenAI internal model"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "verification_limit": "Same Lean kernel. Replay of the entire compiled local source closure, checked against actual verbose module names; imported pinned Mathlib caches are trusted, not freshly replayed. No independently implemented checker.",
+  "module": "ErdosProblems.Erdos960",
+  "statement_scope": "For r>=3,k>=4 ordinary-line forcing threshold bounded below by n²/12-O(n), neither o(n²) nor O(n).",
+  "source_path": "src/latest/ErdosProblems/Erdos960.lean",
+  "source_sha256": {
+    "ErdosProblems/Erdos735/SylvesterGallai.lean": "a5392875af2e4c59168731bbc9dd454531bc8e72ad4ee563c859d3b05714c283",
+    "ErdosProblems/Erdos735/AvoidingOrdinary.lean": "001d952574206dc4837ff45a76cc138ea4e43dcbf8a648c32412c2bc44dfbff9",
+    "ErdosProblems/Erdos735/ProjectiveDuality.lean": "cedac7291017a5348de0f1a6f6301efd27126ba485c056776581025e2abfd404",
+    "ErdosProblems/Erdos735/Primal.lean": "583581b1758fae628e1991b0bb6f3e0eb61d69ec5971c89d9142dbcd994e746b",
+    "ErdosProblems/Erdos735/OrdinaryLineReduction.lean": "efbfea379dd5a79c36548a90bbbbe0cf7074a5e82cb4fa58fa6dabbcbeb66cab",
+    "ErdosProblems/Erdos960.lean": "ca3dc881a958cd457b46cef709a28cdd401fd11d6967f33589b2f974d958b733",
+    "Audit960.lean": "a4c7843a7992b05bfae44b77e2a9c006ab7c317edf512b7201720484a8734dd9"
+  },
+  "main_source_sha256": "ca3dc881a958cd457b46cef709a28cdd401fd11d6967f33589b2f974d958b733",
+  "original_problem_url": "https://www.erdosproblems.com/960"
+}

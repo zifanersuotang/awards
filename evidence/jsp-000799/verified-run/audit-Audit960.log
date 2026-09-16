@@ -1,0 +1,8 @@
+Erdos960.erdos_960 {r k : ℕ} (hr : 3 ≤ r) (hk : 4 ≤ k) :
+  (∀ (n : ℕ),
+      72 ≤ n →
+        ↑n ^ 2 / 12 - 10 / 3 * ↑n + 1 ≤ ↑(Erdos960.f r k n) ∧
+          ↑(Erdos960.f r k n) ≤ (1 - 1 / ↑(r - 1)) * ↑n ^ 2 / 2 + 1) ∧
+    (¬(fun n => ↑(Erdos960.f r k n)) =o[Filter.atTop] fun n => ↑n ^ 2) ∧
+      ¬(fun n => ↑(Erdos960.f r k n)) =O[Filter.atTop] fun n => ↑n
+'Erdos960.erdos_960' depends on axioms: [propext, Classical.choice, Quot.sound]

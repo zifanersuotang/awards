@@ -1,0 +1,233 @@
+{
+  "jsp": "JSP-000799",
+  "erdos": 960,
+  "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "source_sha256": {
+    "ErdosProblems/Erdos735/SylvesterGallai.lean": "a5392875af2e4c59168731bbc9dd454531bc8e72ad4ee563c859d3b05714c283",
+    "ErdosProblems/Erdos735/AvoidingOrdinary.lean": "001d952574206dc4837ff45a76cc138ea4e43dcbf8a648c32412c2bc44dfbff9",
+    "ErdosProblems/Erdos735/ProjectiveDuality.lean": "cedac7291017a5348de0f1a6f6301efd27126ba485c056776581025e2abfd404",
+    "ErdosProblems/Erdos735/Primal.lean": "583581b1758fae628e1991b0bb6f3e0eb61d69ec5971c89d9142dbcd994e746b",
+    "ErdosProblems/Erdos735/OrdinaryLineReduction.lean": "efbfea379dd5a79c36548a90bbbbe0cf7074a5e82cb4fa58fa6dabbcbeb66cab",
+    "ErdosProblems/Erdos960.lean": "ca3dc881a958cd457b46cef709a28cdd401fd11d6967f33589b2f974d958b733",
+    "Audit960.lean": "a4c7843a7992b05bfae44b77e2a9c006ab7c317edf512b7201720484a8734dd9"
+  },
+  "main_theorem": "Erdos960.erdos_960",
+  "fingerprint": "35999e75fbc8e9dcd8f66f8661bff1db9e9cd15ebf4c6cf96bc9f0e670c01c63",
+  "started_utc": "2026-09-16T13:36:47.816429+00:00",
+  "success": true,
+  "steps": [
+    {
+      "stage": "compile",
+      "name": "ErdosProblems.Erdos735.SylvesterGallai",
+      "fingerprint": "35999e75fbc8e9dcd8f66f8661bff1db9e9cd15ebf4c6cf96bc9f0e670c01c63",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M4096",
+        "-o",
+        "<packet>\\verified-run\\lib\\ErdosProblems\\Erdos735\\SylvesterGallai.olean",
+        "./ErdosProblems/Erdos735/SylvesterGallai.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 19.9,
+      "log": "compile-ErdosProblems_Erdos735_SylvesterGallai.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "LEAN_NUM_THREADS": "1",
+      "olean": "lib/ErdosProblems/Erdos735/SylvesterGallai.olean",
+      "olean_sha256": "bc0cb808bef24f9659d3a1b1fb7155fd8e53e5040b822d344ad12a277e5b4ea9"
+    },
+    {
+      "stage": "compile",
+      "name": "ErdosProblems.Erdos735.AvoidingOrdinary",
+      "fingerprint": "35999e75fbc8e9dcd8f66f8661bff1db9e9cd15ebf4c6cf96bc9f0e670c01c63",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M4096",
+        "-o",
+        "<packet>\\verified-run\\lib\\ErdosProblems\\Erdos735\\AvoidingOrdinary.olean",
+        "./ErdosProblems/Erdos735/AvoidingOrdinary.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 19.991,
+      "log": "compile-ErdosProblems_Erdos735_AvoidingOrdinary.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "LEAN_NUM_THREADS": "1",
+      "olean": "lib/ErdosProblems/Erdos735/AvoidingOrdinary.olean",
+      "olean_sha256": "d2749b84eb20c3ede675ed67974ccad4bd21249e1a8cdb1677651328828335ad"
+    },
+    {
+      "stage": "compile",
+      "name": "ErdosProblems.Erdos735.ProjectiveDuality",
+      "fingerprint": "35999e75fbc8e9dcd8f66f8661bff1db9e9cd15ebf4c6cf96bc9f0e670c01c63",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M4096",
+        "-o",
+        "<packet>\\verified-run\\lib\\ErdosProblems\\Erdos735\\ProjectiveDuality.olean",
+        "./ErdosProblems/Erdos735/ProjectiveDuality.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 17.36,
+      "log": "compile-ErdosProblems_Erdos735_ProjectiveDuality.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "LEAN_NUM_THREADS": "1",
+      "olean": "lib/ErdosProblems/Erdos735/ProjectiveDuality.olean",
+      "olean_sha256": "c1c85509b49a87147c5b2aa255b7f9696b34fdc4e8d3e7103f6c8e8e5d83778b"
+    },
+    {
+      "stage": "compile",
+      "name": "ErdosProblems.Erdos735.Primal",
+      "fingerprint": "35999e75fbc8e9dcd8f66f8661bff1db9e9cd15ebf4c6cf96bc9f0e670c01c63",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M4096",
+        "-o",
+        "<packet>\\verified-run\\lib\\ErdosProblems\\Erdos735\\Primal.olean",
+        "./ErdosProblems/Erdos735/Primal.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 44.378,
+      "log": "compile-ErdosProblems_Erdos735_Primal.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "LEAN_NUM_THREADS": "1",
+      "olean": "lib/ErdosProblems/Erdos735/Primal.olean",
+      "olean_sha256": "f5734b01fe55e55284f50063d70d82a7995cf3809e297f0df4ac0cd21994e2da"
+    },
+    {
+      "stage": "compile",
+      "name": "ErdosProblems.Erdos735.OrdinaryLineReduction",
+      "fingerprint": "35999e75fbc8e9dcd8f66f8661bff1db9e9cd15ebf4c6cf96bc9f0e670c01c63",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M4096",
+        "-o",
+        "<packet>\\verified-run\\lib\\ErdosProblems\\Erdos735\\OrdinaryLineReduction.olean",
+        "./ErdosProblems/Erdos735/OrdinaryLineReduction.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 14.997,
+      "log": "compile-ErdosProblems_Erdos735_OrdinaryLineReduction.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "LEAN_NUM_THREADS": "1",
+      "olean": "lib/ErdosProblems/Erdos735/OrdinaryLineReduction.olean",
+      "olean_sha256": "a936dc6db07d8cc1c3ec0e502ad36329739b4ec43fbc1a97d2f5cd21e56f3afd"
+    },
+    {
+      "stage": "compile",
+      "name": "ErdosProblems.Erdos960",
+      "fingerprint": "35999e75fbc8e9dcd8f66f8661bff1db9e9cd15ebf4c6cf96bc9f0e670c01c63",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M4096",
+        "-o",
+        "<packet>\\verified-run\\lib\\ErdosProblems\\Erdos960.olean",
+        "./ErdosProblems/Erdos960.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 26.453,
+      "log": "compile-ErdosProblems_Erdos960.log",
+      "log_sha256": "5c59af9034e1561c55f7982da8e5a733ea5c03c04c1805bd4c3d0b82283e53e1",
+      "LEAN_NUM_THREADS": "1",
+      "olean": "lib/ErdosProblems/Erdos960.olean",
+      "olean_sha256": "544ab54d4973ce2dd69a6f79a13d462ed854b89bc9bcec6d1fad4baba4ddf118"
+    },
+    {
+      "stage": "audit",
+      "name": "Audit960",
+      "fingerprint": "35999e75fbc8e9dcd8f66f8661bff1db9e9cd15ebf4c6cf96bc9f0e670c01c63",
+      "command": [
+        "lean.exe",
+        "-j1",
+        "-M4096",
+        "-o",
+        "<packet>\\verified-run\\lib\\Audit960.olean",
+        "./Audit960.lean"
+      ],
+      "exit_code": 0,
+      "seconds": 13.837,
+      "log": "audit-Audit960.log",
+      "log_sha256": "9e393cf1faeb0236f7a8ae6014b298466f53160f05deacec0834771879d66cd7",
+      "LEAN_NUM_THREADS": "1",
+      "olean": "lib/Audit960.olean",
+      "olean_sha256": "45df8daa45376f430b3427b979e5b8d3cf1ff9f76efabfd1c3ac43306440f394",
+      "audited_targets": {
+        "Erdos960.erdos_960": [
+          "Classical.choice",
+          "Quot.sound",
+          "propext"
+        ]
+      },
+      "target_axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "stage": "checker",
+      "name": "ErdosProblems",
+      "fingerprint": "35999e75fbc8e9dcd8f66f8661bff1db9e9cd15ebf4c6cf96bc9f0e670c01c63",
+      "command": [
+        "leanchecker.exe",
+        "--verbose",
+        "ErdosProblems"
+      ],
+      "exit_code": 0,
+      "seconds": 62.0,
+      "log": "checker-ErdosProblems.log",
+      "log_sha256": "4f75cd5b7459e9216c301cb80328187fa7722f15b22a13e9bba5749321fd4108",
+      "LEAN_NUM_THREADS": "1",
+      "replayed_modules": [
+        "ErdosProblems.Erdos960",
+        "ErdosProblems.Erdos735.SylvesterGallai",
+        "ErdosProblems.Erdos735.ProjectiveDuality",
+        "ErdosProblems.Erdos735.Primal",
+        "ErdosProblems.Erdos735.OrdinaryLineReduction",
+        "ErdosProblems.Erdos735.AvoidingOrdinary"
+      ]
+    }
+  ],
+  "network_isolation": false,
+  "LEAN_NUM_THREADS": "1",
+  "imported_mathlib_cache_used": true,
+  "expected_replayed_modules": [
+    "ErdosProblems.Erdos735.AvoidingOrdinary",
+    "ErdosProblems.Erdos735.OrdinaryLineReduction",
+    "ErdosProblems.Erdos735.Primal",
+    "ErdosProblems.Erdos735.ProjectiveDuality",
+    "ErdosProblems.Erdos735.SylvesterGallai",
+    "ErdosProblems.Erdos960"
+  ],
+  "checker_selectors": [
+    "ErdosProblems"
+  ],
+  "checker_scope": "Same Lean kernel. Replay of the entire compiled local source closure, checked against actual verbose module names; imported pinned Mathlib caches are trusted, not freshly replayed. No independently implemented checker.",
+  "actual_replayed_modules": [
+    "ErdosProblems.Erdos735.AvoidingOrdinary",
+    "ErdosProblems.Erdos735.OrdinaryLineReduction",
+    "ErdosProblems.Erdos735.Primal",
+    "ErdosProblems.Erdos735.ProjectiveDuality",
+    "ErdosProblems.Erdos735.SylvesterGallai",
+    "ErdosProblems.Erdos960"
+  ],
+  "target_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "audited_targets": {
+    "Erdos960.erdos_960": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "finished_utc": "2026-09-16T14:13:27.086843+00:00"
+}
