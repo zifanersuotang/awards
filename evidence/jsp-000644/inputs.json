@@ -1,0 +1,84 @@
+{
+  "jsp": "JSP-000644",
+  "erdos": 784,
+  "source_repository": "https://github.com/plby/lean-proofs",
+  "source_commit": "8822f7ddef30fadbd92e1c6ab4ed897af356af5e",
+  "main_module": "ErdosProblems.Erdos784",
+  "main_theorem": "Erdos784.erdos_784",
+  "harness_module": "Audit784",
+  "harness_sha256": "a94affce8ae4c0791a08de8658eb0831eba7503e153b3a9da8ff602e2a84af53",
+  "ordered_modules": [
+    {
+      "module": "ErdosProblems.Erdos784.Erdos784Analytic",
+      "path": "ErdosProblems/Erdos784/Erdos784Analytic.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos784/Erdos784Analytic.lean",
+      "sha256": "5cdbd656ce16a5b2b2f70a2660f8f6cfe5dc090837dfd2167d4572e85493bdc5",
+      "bytes": 40454,
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+        "Mathlib.Analysis.Complex.ExponentialBounds",
+        "Mathlib.NumberTheory.AbelSummation",
+        "Mathlib.NumberTheory.ArithmeticFunction.Misc",
+        "Mathlib.NumberTheory.Chebyshev",
+        "Mathlib.NumberTheory.SumPrimeReciprocals",
+        "Mathlib.Data.Nat.Totient",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos784",
+      "path": "ErdosProblems/Erdos784.lean",
+      "upstream_path": "src/latest/ErdosProblems/Erdos784.lean",
+      "sha256": "2c0b970b43ab3ac5e387ccfe36fd0569af8d9499a076e06c26628fe62ed5aff3",
+      "bytes": 76912,
+      "imports": [
+        "ErdosProblems.Erdos784.Erdos784Analytic",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Data.Nat.Factorization.Basic",
+        "Mathlib.NumberTheory.Primorial",
+        "Mathlib.NumberTheory.AbelSummation",
+        "Mathlib.NumberTheory.ArithmeticFunction.Misc",
+        "Mathlib.NumberTheory.Chebyshev",
+        "Mathlib.NumberTheory.SumPrimeReciprocals",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring"
+      ]
+    }
+  ],
+  "source_bytes": 117366,
+  "source_audit": "audit-603-656/audit.json",
+  "scope": "For each positive reciprocal-mass budget C, the uniform eventual lower bound K*N/(log N)^c for the number of unsieved integers holds exactly when C<1 if modulus 1 is allowed, and exactly when C<=1 if all moduli are at least 2. The positive constants c,K and threshold may depend on C, but not on N or the sifting set.",
+  "scope_cautions": [],
+  "catalog_url": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0601-0700.md#JSP-000644",
+  "preparation_only": false,
+  "compiled": true,
+  "replayed": true,
+  "resource_plan": "Future coordinator must acquire/release shared mutex separately for each source module. Do not wrap whole multi-module build in a second mutex.",
+  "checker_plan": "Replay every locally compiled proof module, selecting Lean Name-prefix roots and comparing the actual verbose replay module set to this exact local closure. Treat imported Mathlib separately as trusted pinned caches.",
+  "audit_targets": [
+    "Erdos784.erdos_784",
+    "Erdos784.erdos_784_corrected"
+  ],
+  "informal_authors_as_credited": [
+    "Imre Ruzsa",
+    "Andreas Weingartner"
+  ],
+  "formal_authors_as_credited": [
+    "Codex",
+    "GPT-5.6 Sol"
+  ],
+  "verification_limit": "Same Lean kernel. Replay of the entire compiled local source closure, checked against actual verbose module names; imported pinned Mathlib caches are trusted, not freshly replayed. No independently implemented checker.",
+  "module": "ErdosProblems.Erdos784",
+  "statement_scope": "For each positive reciprocal-mass budget C, the uniform eventual lower bound K*N/(log N)^c for the number of unsieved integers holds exactly when C<1 if modulus 1 is allowed, and exactly when C<=1 if all moduli are at least 2. The positive constants c,K and threshold may depend on C, but not on N or the sifting set.",
+  "source_path": "src/latest/ErdosProblems/Erdos784.lean",
+  "source_sha256": {
+    "ErdosProblems/Erdos784/Erdos784Analytic.lean": "5cdbd656ce16a5b2b2f70a2660f8f6cfe5dc090837dfd2167d4572e85493bdc5",
+    "ErdosProblems/Erdos784.lean": "2c0b970b43ab3ac5e387ccfe36fd0569af8d9499a076e06c26628fe62ed5aff3",
+    "Audit784.lean": "a94affce8ae4c0791a08de8658eb0831eba7503e153b3a9da8ff602e2a84af53"
+  },
+  "main_source_sha256": "2c0b970b43ab3ac5e387ccfe36fd0569af8d9499a076e06c26628fe62ed5aff3",
+  "original_problem_url": "https://www.erdosproblems.com/784"
+}

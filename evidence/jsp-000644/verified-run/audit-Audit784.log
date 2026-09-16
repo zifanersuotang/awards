@@ -1,0 +1,4 @@
+Erdos784.erdos_784 {C : ℝ} (_hC : 0 < C) : Erdos784.LiteralAnswer C ↔ C < 1
+'Erdos784.erdos_784' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos784.erdos_784_corrected {C : ℝ} (hC : 0 < C) : Erdos784.CorrectedAnswer C ↔ C ≤ 1
+'Erdos784.erdos_784_corrected' depends on axioms: [propext, Classical.choice, Quot.sound]

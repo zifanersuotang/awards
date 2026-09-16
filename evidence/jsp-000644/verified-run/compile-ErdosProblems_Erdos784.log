@@ -1,0 +1,3 @@
+'Erdos784.erdos_784' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos784.erdos_784_corrected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos784.correctedAnswer_one' depends on axioms: [propext, Classical.choice, Quot.sound]

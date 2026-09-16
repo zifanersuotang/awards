@@ -1,0 +1,9 @@
+# JSP-000644 / Erdős 784: statement review
+
+[Original problem](https://www.erdosproblems.com/784).
+
+This packet distinguishes the literal and corrected hypotheses. LiteralAdmissible allows moduli in [1,N]; Admissible restricts them to [2,N]. Both bound the sum of reciprocal moduli by C. The surviving integers are those in [1,N] divisible by none of the selected moduli. HasPolylogLowerBound is the explicit inequality K*N/(log N)^c <= number of surviving integers. It quantifies positive exponent c, positive multiplicative constant K, and one threshold N0 before every N >= N0 and every admissible sifting set A; these constants may depend on C, not on A or N. For each positive C, `erdos_784` classifies the literal bound by C<1, while `erdos_784_corrected` classifies the corrected bound by C<=1. Thus the nontrivial endpoint C=1 without modulus 1 is explicitly covered and separately audited. The simple obstruction from modulus 1 is not used as a substitute for that corrected theorem. No classification at nonpositive budgets is advertised.
+
+The root review inspected the pinned original definitions and terminal declarations. Original mathematical/formal credits and all copyright/license notices remain byte-for-byte intact in every proof file. This documents existing public work and makes no claim of new proof authorship, recipient identity, or worldwide priority by the submitting account.
+
+This statement review is not a claim of compilation success. Actual success, if present, is recorded only in verified-run/verification.json with the audited target names, individual axiom sets, and successful command logs. The checker must replay exactly the compiled local proof closure. It uses Lean's own kernel and trusts imported pinned Mathlib/package caches; it is not an independently implemented checker or a fresh whole-Mathlib replay.
