@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "jsp": "JSP-000428",
+  "erdos": 534,
+  "title": "How large can a pairwise noncoprime subset of an integer interval containing a specified integer be?",
+  "scope": "For every N>=2, some nonempty initial segment q1<...<qj of the distinct prime divisors of N gives a maximum-cardinality subset of [1,N] containing N with gcd(a,b)>1 for distinct members: take all integers divisible by one of 2q1,...,2qj or by q1*...*qj. The theorem proves both candidate admissibility and domination of every admissible family, establishing the refined Ahlswede-Khachatrian result; it does not assert the earlier two-case formula or uniqueness of all maximizers.",
+  "attribution": "Existing plby/lean-proofs source. The original header credits Rudolf Ahlswede and Levon H. Khachatrian mathematically, and Codex / GPT-5.6 Sol for formalization; all source bytes and notices are preserved with no uploader-as-original-author, priority, recipient or new-proof claim.",
+  "target_module": "ErdosProblems.Erdos534",
+  "main_theorem": "Erdos534.erdos_534",
+  "theorems": [
+    "Erdos534.candidate_admissible",
+    "Erdos534.exists_qOptimal_candidate_of_odd",
+    "Erdos534.erdos_534_aux",
+    "Erdos534.erdos_534"
+  ],
+  "environment": {
+    "lean_toolchain": "leanprover/lean4:v4.33.0",
+    "mathlib_commit": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "LEAN_NUM_THREADS": "1",
+    "compile_flags": [
+      "-j1",
+      "-M8192"
+    ],
+    "platform": "Windows"
+  },
+  "sources": [
+    {
+      "module": "ErdosProblems.Erdos534.Erdos534Core",
+      "path": "ErdosProblems/Erdos534/Erdos534Core.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534/Erdos534Core.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534/Erdos534Core.lean",
+      "sha256": "8893c2935aa85871990de50c712eb8428f5c7219d794173af10a33c303aea308",
+      "bytes": 189472,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos534.Erdos534PrimeCounting",
+      "path": "ErdosProblems/Erdos534/Erdos534PrimeCounting.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534/Erdos534PrimeCounting.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534/Erdos534PrimeCounting.lean",
+      "sha256": "82c023419ebbc8f7405b46e6708c7f834c47ad2c3ab265032766f6b9f5a65e88",
+      "bytes": 21722,
+      "imports": [
+        "ErdosProblems.Erdos534.Erdos534Core"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos534.Erdos534FiniteCertificate",
+      "path": "ErdosProblems/Erdos534/Erdos534FiniteCertificate.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534/Erdos534FiniteCertificate.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534/Erdos534FiniteCertificate.lean",
+      "sha256": "19dbd8d693ecbc16b7c4f4c5aa58069692ce0f1c25d7425d0e3d490b22043964",
+      "bytes": 50176,
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos534.Erdos534PrimeExpansion",
+      "path": "ErdosProblems/Erdos534/Erdos534PrimeExpansion.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534/Erdos534PrimeExpansion.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534/Erdos534PrimeExpansion.lean",
+      "sha256": "01eaaca8052ad4fd4ec8dfc8f8d25060124bf2348e64d3d1a9d6a3ca3e3ed4fa",
+      "bytes": 3706,
+      "imports": [
+        "ErdosProblems.Erdos534.Erdos534PrimeCounting",
+        "ErdosProblems.Erdos534.Erdos534FiniteCertificate"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos534.Erdos534Sieve",
+      "path": "ErdosProblems/Erdos534/Erdos534Sieve.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534/Erdos534Sieve.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534/Erdos534Sieve.lean",
+      "sha256": "900f1eef1c56182486e4a19d996aecb84e4f328d62cd240f838fc22895f75606",
+      "bytes": 48338,
+      "imports": [
+        "ErdosProblems.Erdos534.Erdos534PrimeExpansion"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos534.Erdos534Assembly",
+      "path": "ErdosProblems/Erdos534/Erdos534Assembly.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534/Erdos534Assembly.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534/Erdos534Assembly.lean",
+      "sha256": "0c5bc8d80a6e4924287ecfa39cd530d89dc10758eca9193fd21b73a5444703de",
+      "bytes": 46292,
+      "imports": [
+        "ErdosProblems.Erdos534.Erdos534Sieve"
+      ]
+    },
+    {
+      "module": "ErdosProblems.Erdos534",
+      "path": "ErdosProblems/Erdos534.lean",
+      "source_url": "https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534.lean",
+      "raw_url": "https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos534.lean",
+      "sha256": "bd17013a31f54a445731095064bd22ffd0a5af550db40d028cd2382ab5fe5fb7",
+      "bytes": 1379,
+      "imports": [
+        "ErdosProblems.Erdos534.Erdos534Assembly"
+      ]
+    }
+  ],
+  "verification": {
+    "status": "verified_unchanged_source",
+    "source_bytes_unchanged": true,
+    "axioms": {
+      "Erdos534.candidate_admissible": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos534.exists_qOptimal_candidate_of_odd": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos534.erdos_534_aux": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "Erdos534.erdos_534": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "checker_selected_modules": [
+      "ErdosProblems.Erdos534",
+      "ErdosProblems.Erdos534.Erdos534Sieve",
+      "ErdosProblems.Erdos534.Erdos534PrimeExpansion",
+      "ErdosProblems.Erdos534.Erdos534PrimeCounting",
+      "ErdosProblems.Erdos534.Erdos534FiniteCertificate",
+      "ErdosProblems.Erdos534.Erdos534Core",
+      "ErdosProblems.Erdos534.Erdos534Assembly"
+    ],
+    "events": [
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos534.Erdos534Core",
+        "exit_code": 0,
+        "seconds": 58.844,
+        "started": "2026-09-16T12:43:06.676235+00:00",
+        "finished": "2026-09-16T12:44:05.520595+00:00",
+        "log": "logs/00-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos534.Erdos534PrimeCounting",
+        "exit_code": 0,
+        "seconds": 25.346,
+        "started": "2026-09-16T12:44:05.521924+00:00",
+        "finished": "2026-09-16T12:44:30.868041+00:00",
+        "log": "logs/01-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos534.Erdos534FiniteCertificate",
+        "exit_code": 0,
+        "seconds": 402.495,
+        "started": "2026-09-16T12:44:30.871352+00:00",
+        "finished": "2026-09-16T12:51:13.365876+00:00",
+        "log": "logs/02-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos534.Erdos534PrimeExpansion",
+        "exit_code": 0,
+        "seconds": 16.469,
+        "started": "2026-09-16T12:51:13.368455+00:00",
+        "finished": "2026-09-16T12:51:29.837533+00:00",
+        "log": "logs/03-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos534.Erdos534Sieve",
+        "exit_code": 0,
+        "seconds": 33.487,
+        "started": "2026-09-16T12:51:29.840215+00:00",
+        "finished": "2026-09-16T12:52:03.326753+00:00",
+        "log": "logs/04-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos534.Erdos534Assembly",
+        "exit_code": 0,
+        "seconds": 17.3,
+        "started": "2026-09-16T12:52:03.329510+00:00",
+        "finished": "2026-09-16T12:52:20.629512+00:00",
+        "log": "logs/05-compile.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "redactions": []
+      },
+      {
+        "stage": "compile",
+        "module": "ErdosProblems.Erdos534",
+        "exit_code": 0,
+        "seconds": 15.306,
+        "started": "2026-09-16T12:52:20.630926+00:00",
+        "finished": "2026-09-16T12:52:35.936503+00:00",
+        "log": "logs/06-compile.log",
+        "log_sha256": "2d1776d4a56307291eb60347a02ec092bc8c2457d9ffda1d2af0ad0e364faf1e",
+        "original_log_sha256": "2d1776d4a56307291eb60347a02ec092bc8c2457d9ffda1d2af0ad0e364faf1e",
+        "redactions": []
+      },
+      {
+        "stage": "audit",
+        "module": "Audit534",
+        "exit_code": 0,
+        "seconds": 15.402,
+        "started": "2026-09-16T12:52:35.945527+00:00",
+        "finished": "2026-09-16T12:52:51.347412+00:00",
+        "log": "logs/07-audit.log",
+        "log_sha256": "9acb7009746358b3064307cf6f1c3dc4c97660c561501175b37faa394d672879",
+        "original_log_sha256": "9acb7009746358b3064307cf6f1c3dc4c97660c561501175b37faa394d672879",
+        "redactions": []
+      },
+      {
+        "stage": "leanchecker",
+        "module": "ErdosProblems.Erdos534",
+        "exit_code": 0,
+        "seconds": 199.063,
+        "started": "2026-09-16T12:52:51.355825+00:00",
+        "finished": "2026-09-16T12:56:10.418494+00:00",
+        "log": "logs/08-leanchecker.log",
+        "log_sha256": "fb5b8506bb20b5a76c79e3c4934afe854f4db0da38f5c993fd66500269b0303f",
+        "original_log_sha256": "fb5b8506bb20b5a76c79e3c4934afe854f4db0da38f5c993fd66500269b0303f",
+        "redactions": []
+      }
+    ],
+    "limits": [
+      "The bundled Lean checker reuses the imported environment; Mathlib was not freshly replayed.",
+      "Compilation and replay use Lean's kernel, not independently implemented checkers.",
+      "This is existing-proof evidence intake, not new authorship, acceptance, nomination or an award record."
+    ]
+  }
+}

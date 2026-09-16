@@ -1,0 +1,45 @@
+def Erdos534.interval : ℕ → Finset.{0} ℕ :=
+fun N => Finset.Icc.{0} 1 N
+def Erdos534.Admissible : ℕ → Finset.{0} ℕ → Prop :=
+fun N A => A ⊆ Erdos534.interval N ∧ Membership.mem.{0, 0} A N ∧ Set.Pairwise.{0} ↑A fun a b => LT.lt.{0} 1 (a.gcd b)
+def Erdos534.QAdmissible : ℕ → Finset.{0} ℕ → Prop :=
+fun N A =>
+  A ⊆ Erdos534.interval N ∧
+    (∀ (a : ℕ), Membership.mem.{0, 0} A a → LT.lt.{0} 1 (a.gcd N)) ∧
+      Set.Pairwise.{0} ↑A fun a b => LT.lt.{0} 1 (a.gcd b)
+def Erdos534.QOptimal : ℕ → Finset.{0} ℕ → Prop :=
+fun N A =>
+  Erdos534.QAdmissible N A ∧
+    ∀ (B : Finset.{0} ℕ), Erdos534.QAdmissible N B → LE.le.{0} (Finset.card.{0} B) (Finset.card.{0} A)
+def Erdos534.primePrefix : ℕ → ℕ → Finset.{0} ℕ :=
+fun N q => {x ∈ N.primeFactors | LE.le.{0} x q}
+def Erdos534.prefixProduct : ℕ → ℕ → ℕ :=
+fun N q => ∏ p ∈ Erdos534.primePrefix N q, p
+def Erdos534.candidate : ℕ → ℕ → Finset.{0} ℕ :=
+fun N q =>
+  {m ∈ Erdos534.interval N |
+    Dvd.dvd.{0} (Erdos534.prefixProduct N q) m ∨
+      ∃ p, Membership.mem.{0, 0} (Erdos534.primePrefix N q) p ∧ Dvd.dvd.{0} (HMul.hMul.{0, 0, 0} 2 p) m}
+@Erdos534.candidate_admissible : ∀ {N q : ℕ},
+  Membership.mem.{0, 0} N.primeFactors q → Erdos534.Admissible N (Erdos534.candidate N q)
+'Erdos534.candidate_admissible' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@Erdos534.exists_qOptimal_candidate_of_odd : ∀ {N : ℕ},
+  LE.le.{0} 2 N →
+    ¬Dvd.dvd.{0} 2 N → ∃ q, Membership.mem.{0, 0} N.primeFactors q ∧ Erdos534.QOptimal N (Erdos534.candidate N q)
+'Erdos534.exists_qOptimal_candidate_of_odd' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos534.erdos_534_aux : ∀ (N : ℕ),
+  LE.le.{0} 2 N →
+    ∃ q,
+      Membership.mem.{0, 0} N.primeFactors q ∧
+        Erdos534.Admissible N (Erdos534.candidate N q) ∧
+          ∀ (A : Finset.{0} ℕ),
+            Erdos534.Admissible N A → LE.le.{0} (Finset.card.{0} A) (Finset.card.{0} (Erdos534.candidate N q))
+'Erdos534.erdos_534_aux' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+Erdos534.erdos_534 : ∀ (N : ℕ),
+  LE.le.{0} 2 N →
+    ∃ q,
+      Membership.mem.{0, 0} N.primeFactors q ∧
+        Erdos534.Admissible N (Erdos534.candidate N q) ∧
+          ∀ (A : Finset.{0} ℕ),
+            Erdos534.Admissible N A → LE.le.{0} (Finset.card.{0} A) (Finset.card.{0} (Erdos534.candidate N q))
+'Erdos534.erdos_534' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
